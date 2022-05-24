@@ -1,8 +1,9 @@
 
-export const HomePage =()=>{
+export const HomePage = () => {
 
     return <section className="home-page">
 
-        <h2>HEY AMIT!!!</h2>
+        <h2>HELLO FROM HOME PAGE</h2>
+
     </section>
 }
