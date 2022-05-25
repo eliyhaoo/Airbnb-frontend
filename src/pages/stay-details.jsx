@@ -28,20 +28,53 @@ export const StayDetails = ({ history }) => {
         })();
     }, [])
 
+    const getAmenities = () => {
+        return stay.amenities.splice(0, 10)
+    }
 
     if (!stay) return <div className="loader">Loading...</div>
     return <section className="stay-details-page">
-        <h2>HELLO FROM STAY DETAILS</h2>
+        <h1 className="stay-name-details">{stay.name}</h1>
+
+        <div className="stay-details-container">
+            <div className="stay-review-details">
+                <span className="num-of-reviews">{stay.reviews.length} reviews </span>
+                {stay.host.isSuperhost && <span className="superhost">Superhost </span>}
+                <span className="city-address">{stay.address.city}</span>,
+                <span className="country-address">{stay.address.country}</span>
+            </div>
+
+            <div className="activity-details">
+                <span>Share </span>
+                <span>Save</span>
+            </div>
+        </div>
+
         <div className="details-img-container">
-
             {stay.imgUrls.map((imgUrl, idx) => <img className={`img${idx + 1}`} key={idx} src={imgUrl} alt="house" />)}
+        </div>
 
+        <div className="stay-display-info">
+            <section className="stay-summary-container">
+                <div className="stay-summary">
+                    <h2>{stay.title} hosted by {stay.host.fullname}</h2>
+                    <h5>{stay.guests} guests · {stay.bedrooms} bedrooms · {stay.beds} beds · {stay.bathrooms} baths</h5>
+                </div>
+                {/* <img src={stay.host.thumbnailUrl} alt="profile" /> */}
+
+                {/* <StayReserve /> */}
+            </section>
         </div>
 
 
+        <section className="stay-amenities">
 
-        {/* <StayReserve />
-        <ReviewList />
+            {getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}
+        </section>
+
+
+
+        {/* <ReviewList />
         <StayMap /> */}
     </section>
 }

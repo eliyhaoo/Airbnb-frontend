@@ -88,10 +88,11 @@ function _loadStays() {
 const stays = [
     {
         "name": "Westin Kaanapali KORVN 2BR",
+        "title": "Enjoy loft life in our small paradise",
         "summary": "Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.",
         "propertyType": "Serviced apartment",
         "roomType": "Entire home",
-        "capacity": 8,
+        "guests": 8,
         "bedrooms": 2,
         "beds": 4,
         "amenities": [
@@ -282,11 +283,12 @@ const stays = [
     },
     {
         "name": "Belle chambre à côté Metro Papineau",
+        "title": "Tiny home",
         "summary": "Chambre dans un bel appartement moderne avec balcon, ascenseur et terrasse. Private room in a beautiful modern apartment  with balcony, elevator and patio. La chambre est fermée avec une lit double. Vous aurez accès à une salle de bain avec une douche, terrasse. L'appartement est climatisé.  Votre chambre est équipé d'une connexion Wi-Fi illimité. Vous serez proche du centre ville, au pied du pont Jacques Cartier et à distance de marche de toutes les commodités (métro, supermarché, pharmacie",
         "propertyType": "Apartment",
         "roomType": "Private room",
         "bedType": "Real Bed",
-        "capacity": 2,
+        "guests": 2,
         "bedrooms": 1,
         "beds": 1,
         "amenities": [
@@ -310,7 +312,7 @@ const stays = [
             "_id": "622f3401e36c59e6164fabab",
             "fullname": "Angel",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small",
-            "isSuperhost": false
+            "isSuperhost": true
         },
         "address": {
             "country": "Canada",
@@ -385,11 +387,12 @@ const stays = [
     },
     {
         "name": "M&M Space MM2  Apartamento no centro da cidade",
+        "title": "Earthen home",
         "summary": "O apartamento fica perto de arte e cultura e dos mais belos monumentos da cidade. Belos jardins e paisagens da cidade e do rio Douro ficam perto e podem ser apreciadas.  Existem restaurantes típicos e de comida internacional ao redor do apartamento.   O espaço fica numa rua típica da cidade, cheia da sua magia e magnetismo e é muito pratico e confortável. O espaço é excelente para quem pretende visitar e conhecer a zona histórica e turística do Porto. Transportes públicos ficam próximos.",
         "propertyType": "Apartment",
         "roomType": "Entire home/apt",
         "bedType": "Real Bed",
-        "capacity": 4,
+        "guests": 4,
         "bedrooms": 2,
         "beds": 2,
         "amenities": [
