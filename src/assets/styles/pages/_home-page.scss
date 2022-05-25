@@ -1,3 +1,19 @@
 .home-page{
     height: 150vh;
+    .hero{
+        background-image: url(https://kumba-app1.herokuapp.com/img/wp2.bacf91a9.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        height: 70vh;
+        width:100%;
+
+        img{
+            width:100%;
+            height: 100%;
+        
+            grid-column: 1/-1;
+
+        }
+    }
 }

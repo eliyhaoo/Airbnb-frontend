@@ -164,7 +164,7 @@ const stays = [
             "country": "United States",
             "location": {
                 "lat": -156.6917,
-                "lan": 20.93792
+                "lng": 20.93792
             },
             "city": "Maui",
             "countryCode": "US"
@@ -312,13 +312,13 @@ const stays = [
             "_id": "629f3401e36c5996164fabab",
             "fullname": "Angel",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small",
-            "isSuperhost": true
+            "isSuperhost": false
         },
         "address": {
             "country": "Canada",
             "location": {
                 "lat": -73.54985,
-                "lan": 45.52797
+                "lng": 45.52797
             },
             "countryCode": "CA",
             "city": "Montreal"
@@ -1040,7 +1040,11 @@ const stays = [
             "country": "Portugal",
             "location": {
                 "lat": -8.60154,
+<<<<<<< HEAD
                 "lan": 41.14834
+=======
+                "lng": 41.14834
+>>>>>>> bd25b138d117c616624f75285540f46a3fa7b1c6
             },
             "countryCode": "PT",
             "city": "Porto"
