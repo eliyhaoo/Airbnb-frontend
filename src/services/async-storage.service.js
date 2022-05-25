@@ -1040,11 +1040,7 @@ const stays = [
             "country": "Portugal",
             "location": {
                 "lat": -8.60154,
-<<<<<<< HEAD
-                "lan": 41.14834
-=======
                 "lng": 41.14834
->>>>>>> bd25b138d117c616624f75285540f46a3fa7b1c6
             },
             "countryCode": "PT",
             "city": "Porto"
