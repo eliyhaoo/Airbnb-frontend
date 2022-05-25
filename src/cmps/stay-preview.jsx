@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export const StayPreview = ({ stay }) => {
-    console.log(stay)
     return <Link to={`/stay/${stay._id}`}><div className="stay-preview flex direction-column">
         <img className="preview-img" src={stay.imgUrls[0]} alt="house" />
         <div className="preview-details-container">
