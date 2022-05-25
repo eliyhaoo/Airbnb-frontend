@@ -1,7 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     font-family: roboto-regular;
     font-size: rem(14px);
 }
@@ -11,3 +12,12 @@ body {
     margin:0;
 }
 
+
+a {
+    text-decoration: none;
+    color: $secondary;
+
+    :hover {
+        text-decoration: none;
+    }
+}
