@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-export const StayPreview = () => {
-
+export const StayPreview = ({stay}) => {
     return <div className="stay-preview">
-        <h2>HELLO FROM STAY PREVIEW</h2>
-        {/* <Link to={`/stay/${stay._id}`}>STAY DETAILS</Link> */}
-        <Link to={`/stay/....`}>STAY DETAILS</Link>
+
+       Name: {stay.name} 
+       <img src={stay.imgUrls[0]} alt="house" />
+        <Link to={`/stay/${stay._id}`}>bye</Link>
 
     </div>
 }

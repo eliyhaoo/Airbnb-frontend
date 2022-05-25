@@ -5,10 +5,12 @@ import thunk from 'redux-thunk'
 
 
 import { userReducer } from './reducers/user.reducer'
+import { stayReducer } from './reducers/stay.reducer'
 
 
 const rootReducer = combineReducers({
     userModule: userReducer,
+    stayModule: stayReducer
    
 })
 

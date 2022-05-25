@@ -2,16 +2,11 @@
     {
         "name": "Westin Kaanapali KORVN 2BR",
         "summary": "Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.",
-        // "interaction": "There are activities programs and concierge activities booking services at this resort.",
-        // "houseRules": "No smoking; No Pets; This resort's rules apply. Please call the resort directly to verify details.",
         "propertyType": "Serviced apartment",
         "roomType": "Entire home",
-        // "bedType": "Real Bed",
-        // "cancellationPolicy": "strict_14_with_grace_period",
         "capacity": 8,
         "bedrooms": 2,
         "beds": 4,
-        // "numOfReviews": 9,
         "amenities": [
             "TV",
             "Cable TV",
@@ -73,57 +68,37 @@
         "host": {
             "_id": "622f3403e36c59e6164faf93",
             "fullname": "Patty And Beckett",
-            // "location": "Eureka, California, United States",
-            // "about": "Adventurous couple loves to travel :)",
-            // "responseTime": "within an hour",
-            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small",
-            // "pictureUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium",
-            // "isSuperhost": true,
-            // "id": "36133410"
+            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "isSuperhost": false
         },
         "address": {
-            // "street": "Lahaina, HI, United States",
             "country": "United States",
-            "city": "Maui",
             "location": {
                 "lat": -156.6917,
                 "lan": 20.93792
             },
+            "city": "Maui",
             "countryCode": "US"
         },
-        // "id": "12223067",
         "bathrooms": 2,
         "price": 595,
-        // "securityDeposit": 500,
-        // "cleaningFee": null,
-        // "extraPeople": 0,
         "reviewScores": {
-            "accuracy": 5,
-            "cleanliness": 4,
-            "checkin": 5,
-            "communication": 5,
-            "location": 4,
-            "value": 5,
-            "rating": 4.5
+            "accuracy": 4.5,
+            "cleanliness": 4.8,
+            "checkin": 4.5,
+            "communication": 4.5,
+            "location": 4.5,
+            "value": 4.5,
+            "rating": 4.8
         },
         "reviews": [
             {
-                "at": "March 2020",
+                "at": "2016-06-12T04:00:00.000Z",
                 "by": {
                     "_id": "622f3407e36c59e6164fc004",
                     "fullname": "Kiesha",
-                    "imgUrl": "https://robohash.org/10711825?set=set1",
-                    // "id": "10711825"
+                    "imgUrl": "https://robohash.org/4.5711825?set=set1"
                 },
-                // "rate": {
-                //     "accuracy": 5,
-                //     "cleanliness": 4,
-                //     "checkin": 5,
-                //     "communication": 5,
-                //     "location": 4,
-                //     "value": 5,
-                //     "rating": 4.5
-                // },
                 "txt": "I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter."
             },
             {
@@ -159,7 +134,7 @@
             {
                 "at": "2017-04-07T04:00:00.000Z",
                 "by": {
-                    "_id": "622f3403e36c59e6164fb105",
+                    "_id": "622f3403e36c59e6164fb4.55",
                     "fullname": "Duyen",
                     "imgUrl": "https://robohash.org/26215688?set=set1",
                     "id": "26215688"
@@ -201,8 +176,8 @@
                 "by": {
                     "_id": "622f3405e36c59e6164fb713",
                     "fullname": "Kimberly",
-                    "imgUrl": "https://robohash.org/100535039?set=set1",
-                    "id": "100535039"
+                    "imgUrl": "https://robohash.org/4.50535039?set=set1",
+                    "id": "4.50535039"
                 },
                 "txt": "We love Westin Kaanapalli"
             }
@@ -219,16 +194,12 @@
     {
         "name": "Belle chambre à côté Metro Papineau",
         "summary": "Chambre dans un bel appartement moderne avec balcon, ascenseur et terrasse. Private room in a beautiful modern apartment  with balcony, elevator and patio. La chambre est fermée avec une lit double. Vous aurez accès à une salle de bain avec une douche, terrasse. L'appartement est climatisé.  Votre chambre est équipé d'une connexion Wi-Fi illimité. Vous serez proche du centre ville, au pied du pont Jacques Cartier et à distance de marche de toutes les commodités (métro, supermarché, pharmacie",
-        "interaction": "J'adore recevoir mes invités personnellement mais il arrive que je ne puis être sur place lors de votre arrivée.",
-        "houseRules": "",
         "propertyType": "Apartment",
         "roomType": "Private room",
         "bedType": "Real Bed",
-        "cancellationPolicy": "moderate",
         "capacity": 2,
         "bedrooms": 1,
         "beds": 1,
-        "numOfReviews": 4,
         "amenities": [
             "TV",
             "Wifi",
@@ -249,15 +220,10 @@
         "host": {
             "_id": "622f3401e36c59e6164fabab",
             "fullname": "Angel",
-            "location": "Montreal, Québec, Canada",
-            "about": "",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small",
-            "pictureUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_x_medium",
-            "isSuperhost": false,
-            "id": "80344827"
+            "isSuperhost": false
         },
         "address": {
-            "street": "Montréal, QC, Canada",
             "country": "Canada",
             "location": {
                 "lat": -73.54985,
@@ -273,13 +239,13 @@
         "cleaningFee": 8,
         "extraPeople": 15,
         "reviewScores": {
-            "accuracy": 10,
+            "accuracy": 4.5,
             "cleanliness": 9,
-            "checkin": 10,
-            "communication": 10,
+            "checkin": 4.5,
+            "communication": 4.5,
             "location": 9,
-            "value": 10,
-            "rating": 100
+            "value": 4.5,
+            "rating": 4.50
         },
         "reviews": [
             {
@@ -287,8 +253,7 @@
                 "by": {
                     "_id": "622f3407e36c59e6164fc058",
                     "fullname": "Rowan",
-                    "imgUrl": "https://robohash.org/81703602?set=set1",
-                    "id": "81703602"
+                    "imgUrl": "https://robohash.org/81703602?set=set1"
                 },
                 "txt": "The place was great, as was the host! I would recommend staying here."
             },
@@ -297,8 +262,7 @@
                 "by": {
                     "_id": "622f3403e36c59e6164fb274",
                     "fullname": "Adriana",
-                    "imgUrl": "https://robohash.org/64310987?set=set1",
-                    "id": "64310987"
+                    "imgUrl": "https://robohash.org/6434.5987?set=set1"
                 },
                 "txt": "J'ai adoré rester là. Très acceuillant."
             },
@@ -307,8 +271,7 @@
                 "by": {
                     "_id": "622f3405e36c59e6164fb87c",
                     "fullname": "Emma",
-                    "imgUrl": "https://robohash.org/23709900?set=set1",
-                    "id": "23709900"
+                    "imgUrl": "https://robohash.org/23709900?set=set1"
                 },
                 "txt": "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !"
             },
@@ -317,34 +280,29 @@
                 "by": {
                     "_id": "622f3408e36c59e6164fc082",
                     "fullname": "Jeffery",
-                    "imgUrl": "https://robohash.org/44882622?set=set1",
-                    "id": "44882622"
+                    "imgUrl": "https://robohash.org/44882622?set=set1"
                 },
                 "txt": "Angel was warm and welcoming and has a beautiful apartment. I'd recommend his place to anyone visiting downtown Montreal!"
             }
         ],
         "_id": "622f337a75c7d36e498aaaf9",
         "imgUrls": [
-            "074.jpeg",
-            "077.jpeg",
-            "060.jpeg",
-            "110.jpeg",
-            "086.jpeg"
+            "https://a0.muscache.com/im/pictures/dc023ef2-b8e1-4462-a78c-95faeda6f4b0.jpg?im_w=960",
+            "https://a0.muscache.com/im/pictures/c20c2ad3-d2f0-469f-aa7f-49fd28665054.jpg?im_w=720",
+            "https://a0.muscache.com/im/pictures/510ac8fc-2786-4117-a3f5-f43f362c1df1.jpg?im_w=720",
+            "https://a0.muscache.com/im/pictures/e316d7aa-24e3-4492-a882-56299d805061.jpg?im_w=1200",
+            "https://a0.muscache.com/im/pictures/192ed2e7-6237-40a8-b234-fc5aaf325be9.jpg?im_w=1200"
         ]
     },
     {
         "name": "M&M Space MM2  Apartamento no centro da cidade",
         "summary": "O apartamento fica perto de arte e cultura e dos mais belos monumentos da cidade. Belos jardins e paisagens da cidade e do rio Douro ficam perto e podem ser apreciadas.  Existem restaurantes típicos e de comida internacional ao redor do apartamento.   O espaço fica numa rua típica da cidade, cheia da sua magia e magnetismo e é muito pratico e confortável. O espaço é excelente para quem pretende visitar e conhecer a zona histórica e turística do Porto. Transportes públicos ficam próximos.",
-        "interaction": "Será prestada ajuda aos hospedes, 24 horas por dia, desde que solicitada.",
-        "houseRules": "- Devem respeitar o restantes hospedes a morar no prédio evitando barulhos excessivos. - Animais de estimação: Questionar o proprietário. Podem ser permitidos a um custo extra a acordar. e em casos excepcionais. Fumar: Podem fumar na varanda desde que cumpram as regras de segurança necessárias. - Ter cuidado com o manuseamento dos equipamentos existentes na casa. Dão-se informações se solicitado. - Levar o lixo utilizado para os contentores no exterior. São fornecidos sacos extra para o feito. - Ter uma boa estadia.",
         "propertyType": "Apartment",
         "roomType": "Entire home/apt",
         "bedType": "Real Bed",
-        "cancellationPolicy": "moderate",
         "capacity": 4,
         "bedrooms": 2,
         "beds": 2,
-        "numOfReviews": 18,
         "amenities": [
             "TV",
             "Cable TV",
@@ -403,16 +361,10 @@
         "host": {
             "_id": "622f3403e36c59e6164fb266",
             "fullname": "Maria",
-            "location": "Porto, Porto District, Portugal",
-            "about": "Simples, muito comunicativa, mas de elevado sentido de responsabilidade, de organização e de confiança.\r\nGosto muito de contacto humano, sem o qual não me sinto estável. Adoro conhecer pessoas de culturas diferentes.\r\nFaço várias viagens, mas de curta duração, pois tenho necessidade de sentir o lar e a família. Por ser assim, tento fazer tudo para que os meus hospedes se sintam confortáveis como em suas casas.",
-            "responseTime": "within an hour",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/c9b876fc-b30e-4951-8f88-af9add00939e.jpg?aki_policy=profile_small",
-            "pictureUrl": "https://a0.muscache.com/im/pictures/c9b876fc-b30e-4951-8f88-af9add00939e.jpg?aki_policy=profile_x_medium",
-            "isSuperhost": true,
-            "id": "78704763"
+            "isSuperhost": true
         },
         "address": {
-            "street": "Porto, Porto, Portugal",
             "country": "Portugal",
             "location": {
                 "lat": -8.60154,
@@ -429,12 +381,12 @@
         "extraPeople": 0,
         "reviewScores": {
             "accuracy": 9,
-            "cleanliness": 10,
-            "checkin": 10,
-            "communication": 10,
+            "cleanliness": 4.5,
+            "checkin": 4.5,
+            "communication": 4.5,
             "location": 9,
-            "value": 10,
-            "rating": 96
+            "value": 4.5,
+            "rating": 4.7
         },
         "reviews": [
             {
@@ -448,7 +400,7 @@
                 "txt": "Mes parents ont passé un excellent séjour à Porto dans l'appartement de Maria qui est bien équipé, confortable et très propre. Il est situé au coeur du centre ville et tout est accessible à pied. Si vous venez en voiture, prévoir de se garer dans le parking souterrain payant juste à côté. Mes parents remercient chaudement Maria et son mari qui ont été adorables, notamment par leur accueil chaleureux."
             },
             {
-                "at": "2016-08-10T04:00:00.000Z",
+                "at": "2016-08-4.5T04:00:00.000Z",
                 "by": {
                     "_id": "622f3404e36c59e6164fb4e7",
                     "fullname": "Mario R.",
@@ -460,7 +412,7 @@
             {
                 "at": "2016-08-14T04:00:00.000Z",
                 "by": {
-                    "_id": "622f3403e36c59e6164fb110",
+                    "_id": "622f3403e36c59e6164fb14.5",
                     "fullname": "Patricia",
                     "imgUrl": "https://robohash.org/16580426?set=set1",
                     "id": "16580426"
@@ -482,8 +434,8 @@
                 "by": {
                     "_id": "622f3403e36c59e6164fb27c",
                     "fullname": "Marie Odile",
-                    "imgUrl": "https://robohash.org/110925120?set=set1",
-                    "id": "110925120"
+                    "imgUrl": "https://robohash.org/14.5925120?set=set1",
+                    "id": "14.5925120"
                 },
                 "txt": "L appartement de Maria est tres bien situe, propre et surtout tres calme. Il ne manque rien . Maria nous a tres bien recus . Je recommande cet appartement."
             },
@@ -538,7 +490,7 @@
                 "txt": "Apartamento agradable, muy limpio y muy bien equipado, en zona tranquila pero accesible para llegar a todos lados de a pie. Maria y Arturo nos recibieron con un rico vino del Douro y galletitas y muy buenas recomendaciones para pasear y comer."
             },
             {
-                "at": "2017-10-17T04:00:00.000Z",
+                "at": "2017-4.5-17T04:00:00.000Z",
                 "by": {
                     "_id": "622f3405e36c59e6164fb78f",
                     "fullname": "Nataliia",
@@ -580,7 +532,7 @@
             {
                 "at": "2018-06-24T04:00:00.000Z",
                 "by": {
-                    "_id": "622f3402e36c59e6164fad10",
+                    "_id": "622f3402e36c59e6164fad4.5",
                     "fullname": "João",
                     "imgUrl": "https://robohash.org/43281546?set=set1",
                     "id": "43281546"
@@ -620,11 +572,11 @@
         ],
         "_id": "622f337a75c7d36e498aaafa",
         "imgUrls": [
-            "112.jpeg",
-            "080.jpeg",
-            "140.jpeg",
-            "042.jpeg",
-            "055.jpeg"
+            "https://a0.muscache.com/im/pictures/miso/Hosting-49101668/original/539250c1-d0f5-46e6-b5b0-642344b27c83.jpeg?im_w=1200",
+            "https://a0.muscache.com/im/pictures/miso/Hosting-49101668/original/e6da0c8e-b112-46dd-88e8-dbe78c178876.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/miso/Hosting-49101668/original/0c91753f-f3b1-44c5-b7e7-e58a0ac9166f.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/miso/Hosting-49101668/original/56336a38-5e61-4448-8cc6-80228d007c12.jpeg?im_w=720",
+            "https://a0.muscache.com/im/pictures/miso/Hosting-49101668/original/89393fe0-4e25-4d40-92c6-59f6e0191e67.jpeg?im_w=720"
         ]
     }
 ]
