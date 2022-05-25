@@ -1,5 +1,13 @@
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { setIsInHomePage } from "../store/actions/system.action"
 
 export const HomePage = () => {
+
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(setIsInHomePage(true))
+    },[])
 
     return <section className="home-page full">
 

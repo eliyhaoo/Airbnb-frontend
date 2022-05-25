@@ -1,57 +1,63 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StaySearch } from './stay-search'
-import {eventBusService}from '../services/event-bus.service'
+import { useDispatch, useSelector } from 'react-redux'
+import { setIsInHomePage } from '../store/actions/system.action'
 
 export const AppHeader = () => {
 
+    const gIsInHomePage = useRef()
     const [isSearchOpen, setSearchToggle] = useState(true)
-    const [isInExplore ,setIsInExplore] = useState(false)
+    const { isInHomePage } = useSelector(storeState => storeState.systemModule)
     
-    let removeOnEnterExploreEvent
 
     useEffect(() => {
-        console.log('CMP MOUNTEDDDDD',isInExplore);
+        gIsInHomePage.current = isInHomePage 
         window.addEventListener('scroll', onScroll)
-        removeOnEnterExploreEvent = eventBusService.on('enter-explore',onEnterAndExitExplore)
         return ()=>{
            window.removeEventListener('scroll',onScroll)
-           removeOnEnterExploreEvent()
         }
     }, [])
 
+    useEffect(() => {
+        gIsInHomePage.current = isInHomePage 
+        if(gIsInHomePage.current){
+            console.log('Homie');
+            setSearchToggle(true)
+        }else{
+            setSearchToggle(false)
+
+        }
+        console.log('NANANSFOiaMFOISAMLKSAM:LSANMFKLA',gIsInHomePage);
+    
+    }, [isInHomePage])
+
+
     const onScroll = () => {
-        if (isInExplore) return
-        console.log('isInExplore',isInExplore);
+        // console.log('G HOMIEW',gIsInHomePage.current);
+        // console.log('G OPEN SESMI',isSearchOpen);
+        if (!gIsInHomePage.current) return
     const position = window.pageYOffset
     if (position>80){
         setSearchToggle(false)
+        // console.log('yoooo');
         
     } else {
         setSearchToggle(true)
     }
     }
-    const onEnterAndExitExplore = (boolean)=>{
-        console.log('Boolean',boolean);
-        setIsInExplore(true)
-        setSearchToggle(boolean)
-        // if (!boolean){
-        //     console.log('Setting state',boolean)
-        //     setIsInExplore(true)
-        // } 
-        // else{
-        //     setIsInExplore(false)
-        // }  
-    }
 
+    // console.log('gIs IN HOMNE', gIsInHomePage.current);
+    console.log('gIs SADSEAAAAARRRCCCGHHIN HOMNE', isSearchOpen);
     
     return <header className={`app-header full ${isSearchOpen? '':'close'}`}>
         <div className="header-container main-layout">
             <div className="header-content-container flex space-between align-center">
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
-                { !isSearchOpen && <StaySearch />}
+                {!isSearchOpen && <StaySearch />}
                 <nav className="main-nav"> 
-                    <NavLink to='/explore'>Explore</NavLink>
+                    {/* <NavLink onClick={()=>{dispatch(setIsInHomePsage(false))}} to='/explore'>Explore</NavLink> */}
+                    <NavLink  to='/explore'>Explore</NavLink>
                     <a href="/">Become a host</a>
                 </nav>
             </div>
