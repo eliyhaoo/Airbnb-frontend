@@ -14,9 +14,15 @@
         grid-template-columns: 70% 30%;
         line-height: 0.1rem;
 
+
         *:not(.preview-rating) {
             grid-column: 1;
         }
+
+        *:not(.preview-rating, .preview-country-city) {
+            margin-top: 3px;
+        }
+
 
         .preview-rating {
             grid-column: 2;
@@ -24,9 +30,14 @@
             justify-self: flex-end;
         }
 
-        .preview-country-city {
-            font-family: roboto-bold;
+        .preview-country-city,
+        .preview-price-span {
+            font-family: montserrat-bold;
+        }
 
+        .preview-room-type,
+        .preview-beds {
+            color: $subtext;
         }
     }
 }
