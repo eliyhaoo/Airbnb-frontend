@@ -4,6 +4,7 @@ import './assets/styles/main.scss'
 import routes from './routes.js'
 import { AppHeader } from './cmps/app-header'
 import { AppFooter } from './cmps/app-footer'
+import { UserMsg } from './cmps/user-msg'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
       </Switch>
+      <UserMsg />
       <AppFooter />
 
     </div>
