@@ -6,17 +6,28 @@ import { stayService } from '../../services/stay.service.js'
 export function loadStays() {
     return async dispatch => {
         try {
-            const stays= await stayService.query()
+            const stays = await stayService.query()
             dispatch({
-                type:'SET_STAYS',
+                type: 'SET_STAYS',
                 stays
             })
-       
+
         } catch (err) {
             console.log('UserActions: err in loadUsers', err)
-        // } finally {
-        //     dispatch({ type: 'LOADING_DONE' })
+            // } finally {
+            //     dispatch({ type: 'LOADING_DONE' })
         }
+    }
+}
+
+export function setStayInStore(stay) {
+    return dispatch => {
+
+        dispatch({
+            type: 'SET_STAY',
+            stay
+        })
+
     }
 }
 

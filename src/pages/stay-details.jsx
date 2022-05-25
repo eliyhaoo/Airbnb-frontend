@@ -7,20 +7,23 @@ import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { ReviewList } from "../cmps/details-cmps/review-list"
 import { useState } from 'react'
-
+import { useDispatch } from 'react-redux'
+import { setStayInStore } from '../store/actions/stay.action'
 
 
 export const StayDetails = ({ history }) => {
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
-
+    // const dispatch = useDispatch()
 
     useEffect(() => {
         (async () => {
             try {
                 const stay = await stayService.getById(stayId)
                 setStay(stay)
+
                 if (!stay) history.push('/explore')
+                // dispatch(setStayInStore(stay))
                 showSuccessMsg('ELIII')
             } catch (err) {
                 console.error(err)
@@ -31,7 +34,7 @@ export const StayDetails = ({ history }) => {
     const getAmenities = () => {
         return stay.amenities.splice(0, 10)
     }
-
+    console.log('stay', stay)
     if (!stay) return <div className="loader">Loading...</div>
     return <section className="stay-details-page">
         <h1 className="stay-name-details">{stay.name}</h1>
@@ -63,7 +66,7 @@ export const StayDetails = ({ history }) => {
                 {/* <img src={stay.host.thumbnailUrl} alt="profile" /> */}
 
                 <div className="stay-display-order">
-                    <StayReserve />
+                    <StayReserve stay={stay} />
                 </div>
             </section>
         </div>
@@ -73,9 +76,6 @@ export const StayDetails = ({ history }) => {
 
             {getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}
         </section>
-
-
-
         {/* <ReviewList /> */}
 
         {/* WORKS WITH ORIGINAL LATLNG */}

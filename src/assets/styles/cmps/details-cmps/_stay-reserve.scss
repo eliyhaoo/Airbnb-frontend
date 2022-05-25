@@ -1,0 +1,19 @@
+.stay-reserve {
+    width: 250px;
+    border: 1px solid #00000030;
+    border-radius: 13px;
+    box-shadow: 0 0 5px 5px #00000015;
+    margin: 0 auto 30px;
+    margin-inline-end: 0;
+    padding: 20px;
+
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 13%;
+    // transition: .5s;
+    // width: 350px;
+    // z-index: 1;
+    .reviews-count-span {
+        text-decoration: underline;
+    }
+}
