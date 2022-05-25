@@ -6,7 +6,7 @@ import { StayFilter } from '../cmps/explore-cmps/stay-filter'
 
 import { loadStays } from "../store/actions/stay.action"
 
-export const Explore = () => {
+export const ExplorePage = () => {
 
     const dispatch = useDispatch()
     const { stays } = useSelector(storeState => storeState.stayModule)
