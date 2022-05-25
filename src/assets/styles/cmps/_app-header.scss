@@ -1,3 +1,28 @@
 .app-header {
+
+    position:fixed;
     border-bottom: 1px solid;
+    height: 20vh;
+    width:100%;
+    padding: 20px 0;
+    background-color: blue;
+    transition: background-color 0.6s;
+    z-index: 10;
+
+    .header-container {
+        height: 100%;
+
+        .header-content-container {
+            * {
+                align-self: flex-start;
+            }
+            h2{
+                margin:0
+            }
+        }
+    }
+    &.close{
+        height:unset;
+        background-color: white;
+    }
 }
