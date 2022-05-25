@@ -1,9 +1,10 @@
 import { StayPreview } from './stay-preview'
 
-export const StayList = () => {
 
+export const StayList = ({stays}) => {
+    console.log('stays',stays);
     return <section className="stay-list">
-        <h2>HELLO FROM STAY LIST</h2>
-        <StayPreview />
+
+        {stays.map(stay=><StayPreview key={stay._id} stay={stay}/>)} 
     </section>
 }
