@@ -1,0 +1,32 @@
+.stay-preview {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    .preview-img {
+        border-radius: 12px;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    .preview-details-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        line-height: 0.1rem;
+
+        *:not(.preview-rating) {
+            grid-column: 1;
+        }
+
+        .preview-rating {
+            grid-column: 2;
+            grid-row: 1;
+            justify-self: flex-end;
+        }
+
+        .preview-country-city {
+            font-family: roboto-bold;
+
+        }
+    }
+}

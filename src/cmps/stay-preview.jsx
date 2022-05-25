@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
-export const StayPreview = ({stay}) => {
-    return <div className="stay-preview">
+export const StayPreview = ({ stay }) => {
+    console.log(stay)
+    return <Link to={`/stay/${stay._id}`}><div className="stay-preview flex direction-column">
+        <img className="preview-img" src={stay.imgUrls[0]} alt="house" />
+        <div className="preview-details-container">
+            <p className="preview-country-city">{stay.address.city}, {stay.address.country}</p>
+            <p className="preview-room-type">{stay.roomType}</p>
+            <p className="preview-beds">{stay.beds} beds</p>
+            <p className="preview-rating">{stay.reviewScores.rating}</p>
+        </div>
 
-       Name: {stay.name} 
-       <img src={stay.imgUrls[0]} alt="house" />
-        <Link to={`/stay/${stay._id}`}>bye</Link>
-
-    </div>
+    </div></Link>
 }
