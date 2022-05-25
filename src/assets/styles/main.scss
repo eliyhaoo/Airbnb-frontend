@@ -1,3 +1,39 @@
-// Basics
+//SETUP
+@import './setup/variables';
+@import './setup/functions';
+@import './setup/mixins';
+@import './setup/typography';
 
-@import './basics/base'
+
+// BASICS
+@import './basics/base';
+@import './basics/layout';
+@import './basics/helpers';
+
+// PAGES
+@import './pages/home-page';
+@import './pages/explore-page';
+@import './pages/stay-details-page';
+
+// CMPS
+@import './cmps/app-header';
+@import './cmps/app-footer';
+@import './cmps/stay-search';
+
+// EXPLORE CMPS
+
+@import './cmps/explore-cmps/stay-filter';
+@import './cmps/explore-cmps/stay-list';
+@import './cmps/explore-cmps/stay-preview';
+
+// Details CMPS
+
+@import './cmps/details-cmps/review-list';
+@import './cmps/details-cmps/stay-map';
+@import './cmps/details-cmps/stay-reserve';
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+[
+    {
+        "_id" : "61f907caa7cf68001696d591",
+        "hostId" : "61f3b204da15b10b90629e58",
+        "buyerId" : "61f3b2ddda15b10b90629e59",
+        "stayId" : "61ef1c92652f5891aa7bc38a",
+        "totalPrice" : "2822.8",
+        "startDate" : "Thu Feb 17 2022",
+        "endDate" : "Sat Feb 26 2022",
+        "guests" : {
+            "total" : 6,
+            "adults" : 4,
+            "children" : 2,
+            "infants" : 0
+        },
+        "status" : "Approved"
+    }
+]
