@@ -62,7 +62,9 @@ export const StayDetails = ({ history }) => {
                 </div>
                 {/* <img src={stay.host.thumbnailUrl} alt="profile" /> */}
 
-                {/* <StayReserve /> */}
+                <div className="stay-display-order">
+                    <StayReserve />
+                </div>
             </section>
         </div>
 
@@ -74,7 +76,9 @@ export const StayDetails = ({ history }) => {
 
 
 
-        {/* <ReviewList />
-        <StayMap /> */}
+        {/* <ReviewList /> */}
+
+        {/* WORKS WITH ORIGINAL LATLNG */}
+        {/* <StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} /> */}
     </section>
 }
