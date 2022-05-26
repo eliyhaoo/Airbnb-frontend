@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import filterImg from '../assets/svg/filter.svg'
 
 import { StayList } from "../cmps/stay-list"
 import { StayFilter } from '../cmps/explore-cmps/stay-filter'
@@ -20,8 +21,8 @@ export const ExplorePage = ({ history }) => {
 
     // const className = isModalOpen ? 'explore-page screen' : 'explore-page'
     return <section className="explore-page">
-        <div className="filter-btns-container flex">
-            <button className="filter-btn" onClick={() => showFilterModal(true)} >Filters</button>
+        <div className="filter-btns-container flex align-center">
+            <button className="filter-btn" onClick={() => showFilterModal(true)} ><div className="img-container flex align-center"><img className="filter-img-btn" src={filterImg} /></div>Filters</button>
         </div>
         {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
         <StayList stays={stays} />
