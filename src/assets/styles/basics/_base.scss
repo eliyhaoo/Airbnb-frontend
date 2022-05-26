@@ -11,8 +11,6 @@ html {
 body {
 
     margin:0;
-}
-
 
 a {
     text-decoration: none;
@@ -21,4 +19,11 @@ a {
     :hover {
         text-decoration: none;
     }
+}
+
+button{
+    background-color: unset;
+    border:none;
+}
+
 }

@@ -1,9 +1,26 @@
 .stay-search {
-    border: 1px solid black;
-    background-color: yellow;
+    border: 1px solid $borderClr;
+    background-color: $backgroundClr;
     align-self: center;
     justify-self: center;
     width: 400px;
-    height: 40px;
-    border-radius: 12px;
+    height: 48px;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+
+    >*  {
+        flex-grow: 1;
+        border-inline-end: 1px solid $borderClr;
+    }
+
+    .search-guest{
+
+        .search-guest-btn{
+            flex-grow: 1;
+        }
+    }
+  
+
+
+    transition: box-shadow 0.2s ease;
 }
