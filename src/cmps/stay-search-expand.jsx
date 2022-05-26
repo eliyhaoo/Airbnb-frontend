@@ -1,3 +1,5 @@
+import searchSvg from '../assets/svg/searchsvg.svg'
+
 export const StaySearchExpand = () => {
 
 
@@ -9,16 +11,30 @@ export const StaySearchExpand = () => {
         </div>
         <div className="search-date-expand">
             <div>When</div>
+            <span>Any week</span>
+            
         </div>
         <div className="search-guest-expand flex space-between align-center">
-            <div>Guests</div>
+            <div>
+            <div>Who</div>
+            <span>Add guest</span>
 
-            <div className="btn-search-expand-container">
-
-                <button className="src-btn-expand-container">
-                    <span className="src-span"><span className="src-color-span"></span >sear</span>
-                </button>
             </div>
+
+
+            <button className="src-btn-expand-container flex align-center" ><img src={searchSvg} alt="btn" />Search </button>
+            </div >
+
+            
+
+
+
+            {/* <div className="btn-search-expand-container"> */}
+
+                {/* <button className="src-btn-expand-container">
+                <img src={searchSvg} alt="btn" />
+                </button> */}
+            {/* </div> */}
 
             {/* <div className="search-guest-expand flex space-between">
             <div>Guests</div>
@@ -26,7 +42,6 @@ export const StaySearchExpand = () => {
                 <button className="search-btn-expand flex align-center" ></button>
             </div> */}
 
-        </div >
         {/* 
     <button  className="search-location">
         AnyWhere
