@@ -56,23 +56,26 @@ export const StayDetails = ({ history }) => {
             {stay.imgUrls.map((imgUrl, idx) => <img className={`img${idx + 1}`} key={idx} src={imgUrl} alt="house" />)}
         </div>
 
-        <div className="stay-display-info">
-            <section className="stay-summary-container">
+        <section className="stay-display-info">
+            <div className="stay-summary-container">
                 <div className="stay-info">
                     <h2>{stay.title} hosted by {stay.host.fullname}</h2>
                     <h4>{stay.guests} guests<span className="dot">·</span>{stay.bedrooms} bedrooms<span className="dot">·</span> {stay.beds} beds<span className="dot">·</span> {stay.bathrooms} baths</h4>
+                    <p>{stay.summary}</p>
                 </div>
                 {/* <img src={stay.host.thumbnailUrl} alt="profile" /> */}
-            </section>
-            <div className="stay-reserve">
-                <StayReserve stay={stay} />
+                <div className="stay-amenities">{getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}</div>
             </div>
 
-        </div>
+            <StayReserve stay={stay} />
 
 
 
-        {getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}
+
+        </section>
+
+
+
     </section>
     {/* <ReviewList /> */ }
 
