@@ -63,14 +63,9 @@ export const StayDetails = ({ history }) => {
                     <h4>{stay.guests} guests<span className="dot">·</span>{stay.bedrooms} bedrooms<span className="dot">·</span> {stay.beds} beds<span className="dot">·</span> {stay.bathrooms} baths</h4>
                 </div>
                 {/* <img src={stay.host.thumbnailUrl} alt="profile" /> */}
-
-                <div className="stay-display-order">
-                    <StayReserve stay={stay} />
-                </div>
             </section>
-
             <div className="stay-reserve">
-                <StayReserve />
+                <StayReserve stay={stay} />
             </div>
 
         </div>
