@@ -70,11 +70,8 @@ export const StayDetails = ({ history }) => {
             </div>
 
             <StayReserve stay={stay} />
-
-
-
-
         </section>
+        <ReviewList stay={stay} />
 
 
 
