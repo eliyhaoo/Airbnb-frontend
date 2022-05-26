@@ -1,0 +1,13 @@
+
+.review-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .review-list>*{
+        flex: 1 1;
+    }
+}
+
+
+
+
