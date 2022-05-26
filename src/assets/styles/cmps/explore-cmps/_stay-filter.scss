@@ -1,114 +1,130 @@
 .stay-filter {
 
-    .modal-title {
-        text-align: center;
+    .modal-head-container {
+        min-height: 64px;
     }
 
-    .filter-form {
-        border-top: 1px solid rgb(235, 235, 235);
-        padding: 10px;
-        overflow-y: scroll;
-        max-height: 60vh;
-        // input[type=checkbox]:active {
-        //     background-color: $secondary;
-        // }
+    .close-modal-btn {
+        left: 15px;
+        position: absolute;
+        width: 18px;
+        text-align: left;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 15px;
+        &:hover {
+            background-color: $footer;
         }
 
-        .span {
-            margin-left: 21px;
-            color: $subtext;
-        }
-
-        & .filter-type:not(:first-child) {
-            border-top: 1px solid rgb(235, 235, 235);
-            margin-bottom: 2em;
-            margin-top: 2em;
-        }
-
-        h2 {
-            margin-bottom: 1em;
-            margin-top: 1em;
-        }
-
-        p {
-            margin: 0
-        }
-
-
-
-    }
-
-
-
-
-
-    /* Black w/ opacity */
-    .filter-modal {
-        z-index: 20;
-        position: fixed;
-        width: 50%;
-        left: 50%;
-        transform: translate(-50%, -20%);
-        background: #fefefe;
-        padding: 7px;
-        border-radius: 10px;
-        animation-duration: 400ms;
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-
-        .filter-footer {
-            border-top: 1px solid rgb(235, 235, 235);
-            padding: 5px;
-
-            p {
-                text-decoration: underline;
-                font-weight: 500;
-                cursor: pointer;
-            }
-
-            button {
-                // border: 1px solid $border;
-                background-color: $secondary;
-                color: $backgroundClr;
-                margin-top: 5px;
-                margin-inline-end: 10px;
-                padding: 16px 28px;
-                border-radius: 10px;
-
-                &:hover {
-                    background-color: black;
-                }
-            }
-        }
-
-        .filter-form-btn {
-            border: 1px solid $border;
-            margin-top: 5px;
-            margin-inline-end: 10px;
-            padding: 16px 28px;
-            border-radius: 25px;
-
-            &:hover {
-                border: 1px solid $secondary;
-            }
-
-            &:active {
-                background-color: $secondary;
-                color: $backgroundClr;
-                border: unset;
-            }
+        .close-modal-img {
+            transform: translate(10%, 10%);
+            width: 17px;
+            height: 17px;
         }
     }
-
 
 }
 
+.modal-title {
+    margin: 0 auto;
+    // align-self: center;
+    text-align: center;
+    font-size: 1.2em;
+}
 
+.filter-form {
+    border-top: 1px solid rgb(235, 235, 235);
+    padding: 10px;
+    overflow-y: scroll;
+    max-height: 60vh;
+    // input[type=checkbox]:active {
+    //     background-color: $secondary;
+    // }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .span {
+        margin-left: 21px;
+        color: $subtext;
+    }
+
+    & .filter-type:not(:first-child) {
+        border-top: 1px solid rgb(235, 235, 235);
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+
+    h2 {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    p {
+        margin: 0
+    }
+}
+
+/* Black w/ opacity */
+.filter-modal {
+    z-index: 20;
+    position: fixed;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: #fefefe;
+    border-radius: 10px;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+    .filter-footer {
+        border-top: 1px solid rgb(235, 235, 235);
+        padding: 5px;
+
+        p {
+            text-decoration: underline;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        button {
+            // border: 1px solid $border;
+            background-color: $secondary;
+            color: $backgroundClr;
+            margin-top: 5px;
+            margin-inline-end: 10px;
+            padding: 16px 28px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: black;
+            }
+        }
+    }
+
+    .filter-form-btn {
+        border: 1px solid $border;
+        margin-top: 5px;
+        margin-inline-end: 10px;
+        padding: 16px 28px;
+        border-radius: 25px;
+
+        &:hover {
+            border: 1px solid $secondary;
+        }
+
+        &:active {
+            background-color: $secondary;
+            color: $backgroundClr;
+            border: unset;
+        }
+    }
+}
 
 .screen {
     position: fixed;

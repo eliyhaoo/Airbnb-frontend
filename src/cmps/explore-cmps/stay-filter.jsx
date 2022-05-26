@@ -1,4 +1,4 @@
-import { AppFooter } from "../app-footer"
+import closeModalImg from "../../assets/svg/close-modal.svg"
 
 export const StayFilter = ({ showFilterModal, history }) => {
     const onCloseModal = () => {
@@ -6,9 +6,12 @@ export const StayFilter = ({ showFilterModal, history }) => {
         history.push('/explore')
     }
     return <div className="stay-filter">
-        <div onClick={() => onCloseModal()} className="screen"></div>
+        <div className="screen" onClick={() => onCloseModal()} ></div>
         <div className="filter-modal">
-            <h3 className="modal-title">Filters</h3>
+            <div className="modal-head-container flex align-center">
+                <button className="close-modal-btn" onClick={() => onCloseModal()}><img className="close-modal-img" src={closeModalImg} /></button>
+                <h3 className="modal-title">Filters</h3>
+            </div>
             <form className="filter-form">
                 <div className="filter-type price-range">
                     <h2>Price range</h2>
@@ -102,5 +105,5 @@ export const StayFilter = ({ showFilterModal, history }) => {
             </div>
 
         </div>
-    </div>
+    </div >
 }
