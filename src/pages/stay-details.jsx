@@ -7,28 +7,30 @@ import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { ReviewList } from "../cmps/details-cmps/review-list"
 import { useState } from 'react'
+// import { setStayInStore } from '../store/actions/stay.action'
+import { setIsInHomePage } from '../store/actions/system.action'
 import { useDispatch } from 'react-redux'
-import { setStayInStore } from '../store/actions/stay.action'
 
 
 export const StayDetails = ({ history }) => {
+    const dispatch = useDispatch()
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
-    // const dispatch = useDispatch()
 
     useEffect(() => {
         (async () => {
+            dispatch(setIsInHomePage(false))
             try {
                 const stay = await stayService.getById(stayId)
                 setStay(stay)
-
+                
                 if (!stay) history.push('/explore')
                 // dispatch(setStayInStore(stay))
-                showSuccessMsg('ELIII')
-            } catch (err) {
-                console.error(err)
-            }
-        })();
+                    showSuccessMsg('ELIII')
+                } catch (err) {
+                    console.error(err)
+                }
+            })();
     }, [])
 
     const getAmenities = () => {
