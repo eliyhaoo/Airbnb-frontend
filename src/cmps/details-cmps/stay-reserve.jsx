@@ -1,7 +1,7 @@
 
 export const StayReserve = () => {
 
-    return <div className="stay-reserve">
+    return <div className="stay-reserve-container">
         {/* <h2>HELLO FROM STAY RESERVE</h2> */}
         <div className="reserve-form-header">
             <p><span>$288</span>/night</p>

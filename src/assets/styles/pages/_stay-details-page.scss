@@ -37,6 +37,33 @@
         }
     }
 
+    .stay-display-info{
+        display: grid;
+        grid-template-columns:2fr 1fr;
+        padding-top: 48px;
+        padding-bottom: 24px;
+
+        grid-template-areas: 
+        "info reserve";
+        
+        .stay-display-order{
+            grid-area:reserve;
+        }
+
+
+        .dot{
+            font-size: 2rem;
+            line-height: 1;
+            margin: 0 5px;
+        }
+    }
+
+
+
+
+
+
+
     .stay-amenities{
         width: 500px;
         display: grid;
@@ -48,7 +75,7 @@
 
 
 
-    
+
 
 }
 
