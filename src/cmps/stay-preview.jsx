@@ -9,8 +9,6 @@ export const StayPreview = ({ stay }) => {
             <p className="preview-beds">{stay.beds} beds</p>
             <p className="preview-rating">{stay.reviewScores.rating}★</p>
             <p className="preview-price"><span className="price-span">${stay.price}</span> night</p>
-
         </div>
-
     </div></Link>
 }
