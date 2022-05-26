@@ -15,5 +15,22 @@
             grid-column: 1/-1;
 
         }
+
     }
+
+    // .grid-test{
+        // display:grid;
+        // grid-template-columns: $layoutPadding 1fr $layoutPadding;
+
+        // .test {
+        //     background-color: yellow;
+        //     position: fixed;
+        //     z-index: 200;
+        //     top:400px;
+        //     height: 50px;
+        //     width: 400px;
+        //     left:500px;
+        //     grid-column: 2;
+        // }
+    // }
 }

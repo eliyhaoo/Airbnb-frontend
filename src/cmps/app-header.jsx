@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StaySearch } from './stay-search'
 import { useSelector } from 'react-redux'
+import { StaySearchExpand } from './stay-search-expand'
 
 
 export const AppHeader = () => {
@@ -34,20 +35,26 @@ export const AppHeader = () => {
     }
 
 
-    return <header className={`app-header full ${isSearchOpen ? '' : 'close'}`}>
+    return <header className={`app-header full main-layout ${isSearchOpen ? '' : 'close'}`}>
 
-        <div className="header-container main-layout">
+        <div className="header-container full main-layout">
 
             <div className="header-content-container flex space-between align-center">
+
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
+
                 {!isSearchOpen && <StaySearch />}
+
                 <nav className="main-nav">
                     <NavLink to='/explore'>Explore</NavLink>
                     <a href="/">Become a host</a>
                 </nav>
-            </div>
 
-            {isSearchOpen && <StaySearch className="big-searchbar"/>}
+            </div>
+            
+            <StaySearchExpand/>
+            {/* {isSearchOpen && <StaySearch className="big-searchbar"/>} */}
+            
         </div>
     </header>
 }

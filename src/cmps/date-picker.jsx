@@ -16,7 +16,7 @@ const DateRangePickerDay = styled(MuiDateRangePickerDay)(
       color: theme.palette.common.white,
       '&:hover, &:focus': {
         backgroundColor: theme.palette.primary.dark,
-      },
+      }, 
     }),
     ...(isStartOfHighlighting && {
       borderTopLeftRadius: '50%',
