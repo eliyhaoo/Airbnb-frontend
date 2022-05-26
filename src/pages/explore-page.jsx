@@ -7,7 +7,7 @@ import { StayFilter } from '../cmps/explore-cmps/stay-filter'
 import { loadStays } from "../store/actions/stay.action"
 import { setIsInHomePage } from "../store/actions/system.action"
 
-export const ExplorePage = () => {
+export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
     const { stays } = useSelector(storeState => storeState.stayModule)
     const [isModalOpen, showFilterModal] = useState(false)
@@ -20,8 +20,10 @@ export const ExplorePage = () => {
 
     // const className = isModalOpen ? 'explore-page screen' : 'explore-page'
     return <section className="explore-page">
-        <button onClick={() => showFilterModal(true)} className="filter-btn">Filters</button>
-        {isModalOpen && <StayFilter showFilterModal={showFilterModal} />}
+        <div className="filter-btns-container flex">
+            <button className="filter-btn" onClick={() => showFilterModal(true)} >Filters</button>
+        </div>
+        {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
         <StayList stays={stays} />
 
     </section>
