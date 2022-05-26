@@ -7,28 +7,30 @@ import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { ReviewList } from "../cmps/details-cmps/review-list"
 import { useState } from 'react'
+// import { setStayInStore } from '../store/actions/stay.action'
+import { setIsInHomePage } from '../store/actions/system.action'
 import { useDispatch } from 'react-redux'
-import { setStayInStore } from '../store/actions/stay.action'
 
 
 export const StayDetails = ({ history }) => {
+    const dispatch = useDispatch()
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
-    // const dispatch = useDispatch()
 
     useEffect(() => {
         (async () => {
+            dispatch(setIsInHomePage(false))
             try {
                 const stay = await stayService.getById(stayId)
                 setStay(stay)
-
+                
                 if (!stay) history.push('/explore')
                 // dispatch(setStayInStore(stay))
-                showSuccessMsg('ELIII')
-            } catch (err) {
-                console.error(err)
-            }
-        })();
+                    showSuccessMsg('ELIII')
+                } catch (err) {
+                    console.error(err)
+                }
+            })();
     }, [])
 
     const getAmenities = () => {
@@ -56,23 +58,23 @@ export const StayDetails = ({ history }) => {
             {stay.imgUrls.map((imgUrl, idx) => <img className={`img${idx + 1}`} key={idx} src={imgUrl} alt="house" />)}
         </div>
 
-        <div className="stay-display-info">
-            <section className="stay-summary-container">
+        <section className="stay-display-info">
+            <div className="stay-summary-container">
                 <div className="stay-info">
                     <h2>{stay.title} hosted by {stay.host.fullname}</h2>
                     <h4>{stay.guests} guests<span className="dot">·</span>{stay.bedrooms} bedrooms<span className="dot">·</span> {stay.beds} beds<span className="dot">·</span> {stay.bathrooms} baths</h4>
+                    <p>{stay.summary}</p>
                 </div>
                 {/* <img src={stay.host.thumbnailUrl} alt="profile" /> */}
-            </section>
-            <div className="stay-reserve">
-                <StayReserve stay={stay} />
+                <div className="stay-amenities">{getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}</div>
             </div>
 
-        </div>
+            <StayReserve stay={stay} />
+        </section>
+        <ReviewList stay={stay} />
 
 
 
-        {getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}
     </section>
     {/* <ReviewList /> */ }
 
