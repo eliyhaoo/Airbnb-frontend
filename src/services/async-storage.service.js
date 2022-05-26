@@ -187,7 +187,7 @@ const stays = [
                 "by": {
                     "_id": "627f3407e36c59e6164fc004",
                     "fullname": "Kiesha",
-                    "imgUrl": "https://robohash.org/4.5711825?set=set1"
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
                 "txt": "I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter."
             },
@@ -311,7 +311,7 @@ const stays = [
         "host": {
             "_id": "629f3401e36c5996164fabab",
             "fullname": "Angel",
-            "thumbnailUrl": "https://a0.muscache.com/im/pictures/12be1141-74de-4f04-bf28-82c3ed589d11.jpg?aki_policy=profile_small",
+            "thumbnailUrl": "https://randomuser.me/api/portraits/men/35.jpg",
             "isSuperhost": false
         },
         "address": {
@@ -344,7 +344,7 @@ const stays = [
                 "by": {
                     "_id": "682f3407e36c59e6564fc058",
                     "fullname": "Rowan",
-                    "imgUrl": "https://robohash.org/81703602?set=set1"
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
                 "txt": "The place was great, as was the host! I would recommend staying here."
             },
@@ -353,7 +353,7 @@ const stays = [
                 "by": {
                     "_id": "626f3403p36c59e6164fb274",
                     "fullname": "Adriana",
-                    "imgUrl": "https://robohash.org/6434.5987?set=set1"
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
                 "txt": "J'ai adoré rester là. Très acceuillant."
             },
@@ -362,7 +362,7 @@ const stays = [
                 "by": {
                     "_id": "6229340586c59e6164fb87c",
                     "fullname": "Emma",
-                    "imgUrl": "https://robohash.org/23709900?set=set1"
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
                 "txt": "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !"
             },
@@ -371,7 +371,7 @@ const stays = [
                 "by": {
                     "_id": "622f3408736c59e6364fc082",
                     "fullname": "Jeffery",
-                    "imgUrl": "https://robohash.org/44882622?set=set1"
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
                 "txt": "Angel was warm and welcoming and has a beautiful apartment. I'd recommend his place to anyone visiting downtown Montreal!"
             }

@@ -1,0 +1,27 @@
+.review{
+    padding: 10px;
+    flex-basis: 50%;
+    padding-inline-end: 100px;
+    
+    p{
+        line-height: 24px;
+        width: 500px;
+        white-space: wrap;
+    }
+    .review-user-info{
+        display: flex;
+        gap: 10px;
+        img{
+            border-radius: 50%;
+            height: 55px;
+            object-fit: cover;
+            width: 55px;
+        }
+    }
+  
+    
+}
+
+
+
+

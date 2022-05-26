@@ -39,7 +39,7 @@
 
     .stay-display-info{
         display: grid;
-        grid-template-columns:2fr 1fr;
+        grid-template-columns:1.4fr 1fr;
         padding-top: 48px;
         padding-bottom: 24px;
 
@@ -50,11 +50,27 @@
             grid-area:reserve;
         }
 
-
         .dot{
             font-size: 2rem;
             line-height: 1;
             margin: 0 5px;
+        }
+        .stay-info{
+
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $border;
+            padding-bottom: 20px;
+            img{
+            border-radius: 50%;
+            height: 56px;
+            object-fit: cover;
+            width: 56px;
+            transform: scale(1.2);
+            }
+            h2{
+                margin-bottom: 8px;
+            }
         }
     }
 
@@ -62,13 +78,7 @@
         width: 500px;
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(250px,250px))
-
     }
-
-
-
-
-
 
 
 }
