@@ -1,34 +1,16 @@
 // import { userService } from "../services/user.service.js";
 // import { showErrorMsg } from '../services/event-bus.service.js'
-import { stayService } from '../../services/stay.service.js'
 
 
-export function loadStays() {
-    return async dispatch => {
-        try {
-            const stays = await stayService.query()
-            dispatch({
-                type: 'SET_STAYS',
-                stays
-            })
-
-        } catch (err) {
-            console.log('UserActions: err in loadUsers', err)
-            // } finally {
-            //     dispatch({ type: 'LOADING_DONE' })
-        }
-    }
-}
-
-export function setStayInStore(stay) {
+export function setIsInHomePage(isInHomePage) {
+    console.log('is IN HOME PAEG',isInHomePage);
     return dispatch => {
-
-        dispatch({
-            type: 'SET_STAY',
-            stay
-        })
-
-    }
+            dispatch({
+                type:'SET_VISIT_HOME_PAGE',
+                isInHomePage
+            })
+        } 
+     
 }
 
 // export function removeUser(userId) {

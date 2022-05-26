@@ -1,21 +1,18 @@
+import { useEffect } from "react"
+import { useSelector } from "react-redux"
 
-export const StayReserve = () => {
+export const StayReserve = ({ stay }) => {
 
-    return <div className="stay-reserve-container">
-        {/* <h2>HELLO FROM STAY RESERVE</h2> */}
-        <div className="reserve-form-header">
-            <p><span>$288</span>/night</p>
-            <p>
-                <span>IMG STAR</span>
-                <span className="avg-review-check-reserve">4.5 .</span>
-                <span className="reviews">20 reviews</span>
-            </p>
-        </div>
-        <div className="reserve-data">
-            <div className="reserve-dates">
+    // const { stay } = useSelector(storeState => storeState.stayModule)
+    // useEffect(() => {
+    //     console.log('staystaystaystay', stay)
+    // }, [stay])
 
-            </div>
-            <div className="reserve-guests"></div>
-        </div>
+    if (!stay) return <div>Loading...</div>
+    return <div className="stay-reserve">
+        <p className="stay-reserve-price"><span className="price-span">${stay.price}</span> night</p>
+        <p className="preview-rating">★{stay.reviewScores.rating} · <span className="reviews-count-span">{stay.reviews.length} reviews</span></p>
+
+
     </div>
 }
