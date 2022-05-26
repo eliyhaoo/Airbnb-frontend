@@ -6,9 +6,7 @@ import { showSuccessMsg } from '../services/event-bus.service'
 import { stayService } from '../services/stay.service'
 import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
-import { ReviewList } from "../cmps/details-cmps/review-list"
 import { StayReview } from "../cmps/details-cmps/stay-review"
-// import { setStayInStore } from '../store/actions/stay.action'
 import { setIsInHomePage } from '../store/actions/system.action'
 import { useDispatch } from 'react-redux'
 
@@ -18,6 +16,7 @@ export const StayDetails = ({ history }) => {
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
 
+
     useEffect(() => {
         (async () => {
             dispatch(setIsInHomePage(false))
@@ -26,7 +25,6 @@ export const StayDetails = ({ history }) => {
                 setStay(stay)
 
                 if (!stay) history.push('/explore')
-                // dispatch(setStayInStore(stay))
                 showSuccessMsg('ELIII')
             } catch (err) {
                 console.error(err)
@@ -37,6 +35,8 @@ export const StayDetails = ({ history }) => {
     const getAmenities = () => {
         return stay.amenities.splice(0, 10)
     }
+
+
 
     if (!stay) return <div className="loader">Loading...</div>
     return <section className="stay-details-page">
@@ -78,6 +78,10 @@ export const StayDetails = ({ history }) => {
 
         <StayReview stay={stay} />
     </section>
+
+
+
+
 
 
     {/* WORKS WITH ORIGINAL LATLNG */ }
