@@ -1,4 +1,7 @@
 .stay-details-page{
+    h1{
+        line-height: 1.428em;
+    }
     
     .details-img-container{
         width: 100%;
@@ -59,7 +62,7 @@
 
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid $footerborder;
+            border-bottom: 1px solid $footer;
             padding-bottom: 20px;
             img{
             border-radius: 50%;

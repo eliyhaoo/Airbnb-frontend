@@ -1,6 +1,9 @@
+
+
 import { ReviewList } from "../details-cmps/review-list"
 
 export const StayReview = ({ stay }) => {
+
 
 
     return <section className="stay-review">
@@ -41,18 +44,6 @@ export const StayReview = ({ stay }) => {
 
         </div>
 
-        {/* 
-        <div className="review-stats">
-            <div className="raiting-container">
-                <span>Accuracy </span>
-                <div className="stats-container">
-                    <div className="stats-bar-container">
-                        <div className="stats-bar-value"></div>
-                        <span>{stay.reviewScores.accuracy}</span>
-                    </div>
-                </div>
-            </div>
-        </div> */}
 
         <ReviewList stay={stay} />
     </section>

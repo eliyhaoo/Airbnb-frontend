@@ -274,6 +274,7 @@ const stays = [
         ],
         "_id": "622f337a95c7d36e298aa8f8",
         "imgUrls": [
+            // "https://res.cloudinary.com/projectairbnb/image/upload/v1653584249/751e1606-5d0d-44a9-aa8f-c5c62cf32481_l8jmtn.webp",
             "https://a0.muscache.com/im/pictures/d0d6baeb-a86e-4f13-ab45-58552329ed2f.jpg?im_w=1200",
             "https://a0.muscache.com/im/pictures/624b831a-066e-4391-88b8-23a21f7ebcb4.jpg?im_w=720",
             "https://a0.muscache.com/im/pictures/dca9b192-3fac-45fe-8deb-e165d231b8fe.jpg?im_w=1440",
@@ -3572,3 +3573,7 @@ const stays = [
         ]
     }
 ]
+
+
+
+
