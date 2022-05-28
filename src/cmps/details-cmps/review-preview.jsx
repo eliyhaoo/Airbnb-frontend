@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+
+
 export const ReviewPreview = ({ review }) => {
 
     const [isLongTxtShown, setLongTxt] = useState(false)
@@ -18,6 +20,10 @@ export const ReviewPreview = ({ review }) => {
         <p>{(isLongTxtShown) ? review.txt : review.txt.slice(0, 200).trim() + ((review.txt.length > 100) ? '...' : '')}</p>
         {(review.txt.length > 100) && <span className='btn' onClick={toogleShowTxt}>{isLongTxtShown ? 'Show less' : 'Show more >'}</span>}
 
+
+
     </div>
+
+
 
 }

@@ -1,6 +1,7 @@
 
 
 import { ReviewList } from "../details-cmps/review-list"
+import { AddReview } from './add-review'
 
 export const StayReview = ({ stay }) => {
 
@@ -43,9 +44,11 @@ export const StayReview = ({ stay }) => {
             </div>
 
         </div>
-
-
         <ReviewList stay={stay} />
+
+
+        <AddReview stay={stay} />
+
     </section>
 
 
