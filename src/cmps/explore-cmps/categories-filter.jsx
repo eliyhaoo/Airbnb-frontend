@@ -1,5 +1,5 @@
 import { stayService } from '../../services/stay.service'
-
+//kkkk
 export const CategoriesFilter = () => {
     const categories = stayService.getCategories()
     return (
