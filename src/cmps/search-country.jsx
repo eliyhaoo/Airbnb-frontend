@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-export const SearchCountry = () => {
+export const SearchCountry = ({selectedRegion,setSelectedRegion}) => {
 
-    const [selectedRegion,setSelectedRegion] =useState('Im flexible')
+    
 
     const onCloseModal = () => {
         // showFilterModal(false)

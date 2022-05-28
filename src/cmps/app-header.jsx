@@ -30,7 +30,10 @@ export const AppHeader = () => {
 
     const onScroll = () => {
  
-        if (!gIsInHomePage.current) return
+        if (!gIsInHomePage.current) {
+            setSearchToggle(false)
+            return
+        }
         const position = window.pageYOffset
         position > 80 ?setSearchToggle(false) :setSearchToggle(true)
      
@@ -39,6 +42,11 @@ export const AppHeader = () => {
     const onCloseSearchBig=()=>{
         setModalOpen(null)
         setIsBig(false)
+    }
+
+    const onSmallSearchClick =(field)=>{
+        setSearchToggle(true)
+        setModalOpen(field)
     }
 
 
@@ -50,7 +58,7 @@ export const AppHeader = () => {
 
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
 
-                {!isSearchOpen && <StaySearch />}
+                {!isSearchOpen && <StaySearch setModalOpen={onSmallSearchClick} />}
 
                 <nav className="main-nav">
                     <NavLink to='/explore'>Explore</NavLink>
@@ -59,8 +67,7 @@ export const AppHeader = () => {
 
             </div>
             
-            <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen}/>
-            {/* {isSearchOpen && <StaySearch className="big-searchbar"/>} */}
+            {isSearchOpen &&  <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen}/>}
             
         </div>
         

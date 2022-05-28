@@ -25,6 +25,7 @@
                 box-shadow:rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
+     
 
 
         input {
@@ -45,6 +46,12 @@
                 background-color: $hoover;
                 border-radius: 40px;
                 
+            }
+
+            &.open {
+                background-color: $backgroundClr;
+                border-radius: 40px;
+                box-shadow:rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
 
