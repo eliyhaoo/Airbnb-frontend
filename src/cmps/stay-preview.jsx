@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CarouselComponent } from './carousel.component'
+import { CarouselComponent } from "./explore-cmps/carousel.component";
 export const StayPreview = ({ stay }) => {
     return <Link to={`/stay/${stay._id}`}><div className="stay-preview flex direction-column">
         <CarouselComponent stayImgUrls={stay.imgUrls} />
