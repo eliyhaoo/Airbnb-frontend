@@ -13,12 +13,30 @@ export const stayService = {
     getById,
     save,
     remove,
+    getCategories
     // getEmptyStay,
     // subscribe,
     // unsubscribe
-    
+
 }
 
+const gCategories = [{ title: 'Design', img: 'design' },
+{ title: 'Desert', img: 'desert' },
+{ title: 'Vineyards', img: 'vineyards' },
+{ title: 'National Parks', img: 'nationalparks' },
+{ title: 'Islands', img: 'islands' },
+{ title: 'Artric', img: 'artric' },
+{ title: 'Beachfront', img: 'beachfront' },
+{ title: 'Iconic Cities', img: 'iconiccities' },
+{ title: 'Amazing Pools', img: 'amazingpools' },
+{ title: 'Boats', img: 'boats' },
+{ title: 'Luxe', img: 'luxe' }
+]
+
+function getCategories() {
+    const categories = gCategories
+    return categories
+}
 
 function query() {
     return storageService.query(STORAGE_KEY)
@@ -40,7 +58,7 @@ async function save(stay) {
     if (stay._id) {
         savedStay = await storageService.put(STORAGE_KEY, stay)
         // stayChannel.postMessage(getActionUpdateStay(savedStay))
-        
+
     } else {
         // Later, owner is set by the backend
         // stay.owner = userService.getLoggedinUser()

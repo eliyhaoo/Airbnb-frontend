@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App main-layout">
       <AppHeader />
-
       <Switch>
         {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
       </Switch>
