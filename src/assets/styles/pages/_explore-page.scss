@@ -6,15 +6,15 @@
         position: sticky;
         background-color: white;
         z-index: 2000;
-        padding: 8px 0 8px 0;
+        padding: 8px 0 0 0;
 
     }
 
     .filter-btn {
+        align-self: baseline;
         width: 80px;
         cursor: pointer;
         right: 0;
-        align-self: flex-end;
         padding: 15px;
         border-radius: 8px;
         background-color: transparent;

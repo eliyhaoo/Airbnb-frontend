@@ -15,33 +15,52 @@ export const StayReview = ({ stay }) => {
         <div className="reviews-stats-container">
             <div className="reviews-stats">
                 <div className="review-cleanliness">Cleanliness</div>
-                <div>{stay.reviewScores.cleanliness}</div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-communication">Communication</div>
-                <div>{stay.reviewScores.communication}</div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-checkin">Check-in</div>
-                <div>{stay.reviewScores.checkin}</div>
+                <div className="review-rates-container flex space-between ">
+                    <div><meter value={stay.reviewScores.cleanliness} max="5"></meter></div>
+                    <div>{stay.reviewScores.cleanliness.toFixed(1)}</div>
+                </div>
             </div>
 
             <div className="reviews-stats">
                 <div className="review-accurcay">Accuracy</div>
-                <div>{stay.reviewScores.accuracy}</div>
+                <div className="review-rates-container flex space-between ">
+                    <div><meter value={stay.reviewScores.accuracy} max="5"></meter></div>
+                    <div>{stay.reviewScores.accuracy.toFixed(1)}</div>
+                </div>
+            </div>
+
+            <div className="reviews-stats">
+                <div className="review-communication">Communication</div>
+                <div className="review-rates-container flex space-between ">
+                    <div><meter value={stay.reviewScores.communication} max="5"></meter></div>
+                    <div>{stay.reviewScores.communication.toFixed(1)}</div>
+                </div>
             </div>
 
             <div className="reviews-stats">
                 <div className="review-location">Location</div>
-                <div>{stay.reviewScores.location}</div>
+                <div className="review-rates-container flex space-between ">
+                    <div><meter value={stay.reviewScores.location} max="5"></meter></div>
+                    <div>{stay.reviewScores.location.toFixed(1)}</div>
+                </div>
+            </div>
+
+            <div className="reviews-stats">
+                <div className="review-checkin">Check-in</div>
+                <div className="review-rates-container flex space-between ">
+                    <div><meter value={stay.reviewScores.checkin} max="5"></meter></div>
+                    <div>{stay.reviewScores.checkin.toFixed(1)}</div>
+                </div>
             </div>
 
             <div className="reviews-stats">
                 <div className="review-value">Value</div>
-                <div>{stay.reviewScores.value}</div>
+                <div className="review-rates-container flex space-between ">
+                    <div><meter value={stay.reviewScores.value} max="5"></meter></div>
+                    <div>{stay.reviewScores.value.toFixed(1)}</div>
+                </div>
             </div>
+
 
         </div>
         <ReviewList stay={stay} />

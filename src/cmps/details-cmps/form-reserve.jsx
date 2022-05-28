@@ -20,7 +20,7 @@ export const FormReserve = () => {
             </div>
         </div>
 
-        <div class="btn-container">
+        <div className="btn-container">
             <div className="cell"></div>
             <div className="cell"></div>
             <div className="cell"></div>

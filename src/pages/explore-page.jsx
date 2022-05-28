@@ -21,11 +21,12 @@ export const ExplorePage = ({ history }) => {
     }, [])
 
     return <section className="explore-page">
-        <div className="main-layout filter-btns-container flex align-center space-between">
+        <div className="filter-btns-container flex align-center space-between">
             <CategoriesFilter />
             <button className="filter-btn" onClick={() => showFilterModal(true)} ><div className="img-container flex align-center"><img className="filter-img-btn" src={filterImg} /></div>Filters</button>
+            {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
         </div>
-        {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
+
         <StayList stays={stays} />
 
     </section>
