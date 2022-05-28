@@ -1,6 +1,46 @@
-import React from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+
+// function renderArrowPrev() {
+//     // console.log(props)
+
+//     // const { className, style, onClick } = props
+//     // console.log(className, style, onClick)
+//     return (
+//         <div
+//             className="control-arrow"
+//             style={{ ...style, display: 'block' }}
+//             onClick={onClick}
+//         >
+//             {/* <img src={ARROW_left} alt="arrow_left" /> */}
+//             <button type="button"  >
+//                 -
+//             </button>
+//         </div>
+//     )
+// }
+
+// function renderArrowNext() {
+//     // console.log(props)
+
+//     // const { className, style, onClick } = props
+//     // console.log(className, style, onClick)
+
+//     return (
+//         <div
+//             className="control-arrow"
+//             style={{ ...style, display: 'block' }}
+//             onClick={onClick}
+//         >
+//             {/* <img src={ARROW_left} alt="arrow_left" /> */}
+//             <button type="button"  >
+//                 +
+//             </button>
+//         </div>
+//     )
+// }
+
 
 export function CarouselComponent({ stayImgUrls }) {
 
@@ -8,6 +48,7 @@ export function CarouselComponent({ stayImgUrls }) {
     return (
         <div className="carousel-component">
             <Carousel showArrows={true} showThumbs={false} showStatus={false} useKeyboardArrows={true}
+            // renderArrowNext={renderArrowNext} renderArrowPrev={renderArrowPrev}
 
             // renderArrowPrev={(onClickHandler, hasPrev, label) =>
             //     hasPrev && (
@@ -24,14 +65,16 @@ export function CarouselComponent({ stayImgUrls }) {
             //     )
             // }
             >
-                {stayImgUrls.map((img, idx) =>
-                    <div key={idx}>
-                        <img className="preview-img" src={img} />
-                    </div>
-                )}
+                {
+                    stayImgUrls.map((img, idx) =>
+                        <div key={idx}>
+                            <img className="preview-img" src={img} />
+                        </div>
+                    )
+                }
 
 
-            </Carousel>
-        </div>
+            </Carousel >
+        </div >
     )
 }
