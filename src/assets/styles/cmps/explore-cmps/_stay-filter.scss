@@ -71,6 +71,9 @@
 
 /* Black w/ opacity */
 .filter-modal {
+    animation-name: example;
+
+    animation-duration: 10s;
     z-index: 1000;
     position: fixed;
     width: 50%;
@@ -103,6 +106,17 @@
 
             &:hover {
                 background-color: black;
+            }
+        }
+
+
+        @keyframes example {
+            0% {
+                bottom: -400vh;
+            }
+
+            100% {
+                bottom: -10vh;
             }
         }
     }
