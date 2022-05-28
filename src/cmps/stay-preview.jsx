@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { CarouselComponent } from './carousel.component'
 export const StayPreview = ({ stay }) => {
     return <Link to={`/stay/${stay._id}`}><div className="stay-preview flex direction-column">
-        <img className="preview-img" src={stay.imgUrls[0]} alt="house" />
-        {/* <CarouselComponent stayImgUrls={stay.imgUrls} /> */}
+        {/* <img className="preview-img" src={stay.imgUrls[0]} alt="house" /> */}
+        <CarouselComponent stayImgUrls={stay.imgUrls} />
         <div className="preview-details-container">
             <p className="preview-country-city">{stay.address.city}, {stay.address.country}</p>
             <p className="preview-room-type">{stay.roomType}</p>
