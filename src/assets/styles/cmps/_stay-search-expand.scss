@@ -1,6 +1,7 @@
 .stay-search-expand {
 
     justify-self: center;
+    margin-bottom: 20px;
 
     .stay-search-expand-container {
 
@@ -21,13 +22,16 @@
                 background-color: $backgroundClr;
                 border-radius: 40px;
                 flex-grow: 0.6;
+                box-shadow:rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
+     
 
 
         input {
             border: unset;
             background-color: unset;
+            width: 100%;
 
             &:focus-visible {
                 outline: unset;
@@ -41,8 +45,13 @@
             &:hover {
                 background-color: $hoover;
                 border-radius: 40px;
+                
+            }
 
-
+            &.open {
+                background-color: $backgroundClr;
+                border-radius: 40px;
+                box-shadow:rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
 
