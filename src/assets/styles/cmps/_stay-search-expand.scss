@@ -1,90 +1,125 @@
 .stay-search-expand {
-    border: 1px solid $borderClr;
-    background-color: #f7f7f7;
-    align-self: center;
+
     justify-self: center;
-    width: 850px;
-    height: 66px;
-    border-radius: 40px;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
-    // padding: 8px 15px;
 
-    input{
-        border: unset;
-        background-color: unset;
-
-        &:focus-visible{
-            outline: unset;
-        }
-
-    }
-
-    >*{
-        cursor: pointer;
-        &:hover{
-            background-color: white;
-            border-radius: 40px;
-            
-
-        }
-    }
-    >*:not(:nth-child(2)) {
-        flex-grow: 1;
-    }
-   
-    
-    >:nth-child(2) {
-        flex-grow: 2.5;
-        
-    }
-
-    >:last-child {
-        padding:7px 0;
-        padding-inline-start: 24px;
-        padding-inline-end: 12px;
-
-    }
-    
-    >*:not(:last-child) {
-        border-inline-end: 1px solid $borderClr;
-        padding:14px 24px;
-    }
-
-    .search-guest-expand {
+    .stay-search-expand-container {
 
 
-        // .btn-search-expand-container {
+        border: 1px solid $borderClr;
+        background-color: #f7f7f7;
+        align-self: center;
+        justify-self: center;
+        width: 850px;
+        height: 66px;
+        border-radius: 40px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+        // padding: 8px 15px;
 
+        .search-location-expand {
 
-        .search-btn-small-expand{
-            background-color: $primary;
-            width:48px;
-            border-radius: 50%;
-            padding:13px;
-            aspect-ratio: 1;
-        }
-
-        .src-btn-big-expand  {
-            background-color: $primary;
-            width: 111px;
-            height: 48px;
-            border-radius: 24px;
-            background-color: $primary;
-            color: white;
-            padding:0 10px;
-            gap:10px;
-            font-size: rem(18px);
-            background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%);
-            img{
-                height: 40%;
+            &.open {
+                background-color: $backgroundClr;
+                border-radius: 40px;
+                flex-grow: 0.6;
             }
-  
         }
 
-       
+
+        input {
+            border: unset;
+            background-color: unset;
+
+            &:focus-visible {
+                outline: unset;
+            }
+
+        }
+
+        >* {
+            cursor: pointer;
+
+            &:hover {
+                background-color: $hoover;
+                border-radius: 40px;
+
+
+            }
+        }
+
+        >*:not(:nth-child(2)) {
+            flex-grow: 1;
+        }
+
+
+        >:nth-child(2) {
+            flex-grow: 2.5;
+
+        }
+
+        >:last-child {
+            padding: 7px 0;
+            padding-inline-start: 24px;
+            padding-inline-end: 12px;
+
+        }
+
+        >*:not(:last-child) {
+            border-inline-end: 1px solid $borderClr;
+            padding: 14px 24px;
+        }
+
+        .search-guest-expand {
+
+            .search-btn-container {
+
+                &.src-btn-small-expand {
+                    width: 48px;
+
+                    .content {
+                        padding: 13px;
+                        aspect-ratio: 1;
+                        width: 48px;
+                        border-radius: 50%;
+                    }
+                }
+
+                &.src-btn-big-expand {
+                    width: 111px;
+
+                    .content {
+                        height: 48px;
+                        border-radius: 24px;
+                        color: white;
+                        padding: 0 10px;
+                        gap: 10px;
+                        font-size: rem(18px);
+                    }
+
+                    .action-btn {
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span {
+                            flex-grow: 1;
+
+                            &::before {
+                                content: "Search"
+                            }
+                        }
+
+                        img {
+                            height: 40%;
+                        }
+                    }
+                }
+
+
+
+
+            }
+
+        }
     }
-
-
-
-    // transition: box-shadow 0.2s ease;
 }
