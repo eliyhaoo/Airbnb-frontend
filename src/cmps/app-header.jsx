@@ -10,6 +10,8 @@ export const AppHeader = () => {
     const gIsInHomePage = useRef()
     const [isSearchOpen, setSearchToggle] = useState(true)
     const { isInHomePage } = useSelector(storeState => storeState.systemModule)
+    const [modalOpen,setModalOpen]=useState('location')
+    const [isBig, setIsBig]= useState(false)
 
 
     useEffect(() => {
@@ -34,8 +36,13 @@ export const AppHeader = () => {
      
     }
 
+    const onCloseSearchBig=()=>{
+        setModalOpen(null)
+        setIsBig(false)
+    }
 
-    return <header className={`app-header full main-layout ${isSearchOpen ? '' : 'close'}`}>
+
+    return <header onClick={onCloseSearchBig} className={`app-header full main-layout ${isSearchOpen ? '' : 'close'}`}>
 
         <div className="header-container full main-layout">
 
@@ -52,7 +59,7 @@ export const AppHeader = () => {
 
             </div>
             
-            <StaySearchExpand/>
+            <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen}/>
             {/* {isSearchOpen && <StaySearch className="big-searchbar"/>} */}
             
         </div>
