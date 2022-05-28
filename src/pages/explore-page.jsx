@@ -4,6 +4,7 @@ import filterImg from '../assets/svg/filter.svg'
 
 import { StayList } from "../cmps/stay-list"
 import { StayFilter } from '../cmps/explore-cmps/stay-filter'
+import { CategoriesFilter } from '../cmps/explore-cmps/categories-filter'
 
 import { loadStays } from "../store/actions/stay.action"
 import { setIsInHomePage } from "../store/actions/system.action"
@@ -19,9 +20,9 @@ export const ExplorePage = ({ history }) => {
 
     }, [])
 
-    // const className = isModalOpen ? 'explore-page screen' : 'explore-page'
     return <section className="explore-page">
-        <div className="filter-btns-container flex align-center">
+        <div className="main-layout filter-btns-container flex align-center space-between">
+            <CategoriesFilter />
             <button className="filter-btn" onClick={() => showFilterModal(true)} ><div className="img-container flex align-center"><img className="filter-img-btn" src={filterImg} /></div>Filters</button>
         </div>
         {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}

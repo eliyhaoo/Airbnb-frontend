@@ -6,9 +6,9 @@ import { setIsInHomePage } from "../store/actions/system.action"
 export const HomePage = () => {
 
     const dispatch = useDispatch()
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(setIsInHomePage(true))
-    },[])
+    }, [])
 
     return <section className="home-page full">
 
@@ -17,7 +17,7 @@ export const HomePage = () => {
         </div>
 
         {/* <DatePicker/> */}
-{/*         
+        {/*         
         <div className="grid-test main-">
        
         <div className="test flex space-between align-center">

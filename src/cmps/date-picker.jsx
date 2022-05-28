@@ -16,7 +16,7 @@ const DateRangePickerDay = styled(MuiDateRangePickerDay)(
       color: theme.palette.common.white,
       '&:hover, &:focus': {
         backgroundColor: theme.palette.primary.dark,
-      }, 
+      },
     }),
     ...(isStartOfHighlighting && {
       borderTopLeftRadius: '50%',
@@ -29,7 +29,7 @@ const DateRangePickerDay = styled(MuiDateRangePickerDay)(
   }),
 );
 
-export  const  DatePicker =()=> {
+export const DatePicker = () => {
   const [value, setValue] = React.useState([null, null]);
 
   const renderWeekPickerDay = (date, dateRangePickerDayProps) => {
