@@ -1,9 +1,7 @@
-// import { DatePicker } from "../date-picker"
 
 export const FormReserve = () => {
 
     return <div className="form-reserve">
-        {/* <DatePicker /> */}
         <div className="order-data">
             <div className="date-picker flex space-between">
                 <div className="date-input flex direction-column">

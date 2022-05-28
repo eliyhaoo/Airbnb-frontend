@@ -56,5 +56,6 @@ export const AppHeader = () => {
             {/* {isSearchOpen && <StaySearch className="big-searchbar"/>} */}
             
         </div>
+        
     </header>
 }
