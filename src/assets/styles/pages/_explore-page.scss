@@ -1,15 +1,19 @@
 .explore-page {
+    margin-top: 170px;
 
     .filter-btns-container {
-        flex-direction: row-reverse;
+        top: 146px;
+        position: sticky;
+        background-color: white;
+        z-index: 2000;
+        padding: 8px 0 8px 0;
+
     }
 
     .filter-btn {
         width: 80px;
         cursor: pointer;
         right: 0;
-        margin-top: 150px;
-        margin-bottom: 20px;
         align-self: flex-end;
         padding: 15px;
         border-radius: 8px;

@@ -1,0 +1,28 @@
+.categories-container {
+    align-items: flex-start;
+    z-index: 200;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9%, 1fr));
+    width: 95%;
+    justify-items: center;
+    opacity: 0.6;
+    height: fit-content;
+
+    .category-container {
+        width: 80px;
+        margin: 0;
+    }
+
+    .category-img {
+        height: 24px;
+        width: 24px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin: 0;
+        font-weight: 500;
+    }
+}
