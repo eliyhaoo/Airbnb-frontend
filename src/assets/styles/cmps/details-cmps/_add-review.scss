@@ -1,0 +1,26 @@
+
+.add-review-container{
+    // padding-inline-end: 100px;
+    padding: 10px;
+
+    .review-rating-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+    column-gap: 6rem;
+    // width: 100%;
+    // grid-template-columns: 33.3% 33.3% 33.3%;
+    // padding-inline-start: 10px;
+    // padding-inline-start: 100px;
+    
+    .review-rating{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1.6rem;
+    }
+}
+}
+
+
+
