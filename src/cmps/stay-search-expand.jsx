@@ -22,7 +22,8 @@ export const StaySearchExpand = () => {
             </div>
 
 
-            <button className="src-btn-expand-container flex align-center" ><img src={searchSvg} alt="btn" />Search </button>
+            <button className="src-btn-big-expand flex align-center" ><img src={searchSvg} alt="btn" />Search </button>
+            {/* <button className="search-btn-small-expand flex align-center" ><img src={searchSvg} alt="btn" /></button> */}
             </div >
 
             

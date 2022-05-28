@@ -55,7 +55,16 @@
 
         // .btn-search-expand-container {
 
-        .src-btn-expand-container {
+
+        .search-btn-small-expand{
+            background-color: $primary;
+            width:48px;
+            border-radius: 50%;
+            padding:13px;
+            aspect-ratio: 1;
+        }
+
+        .src-btn-big-expand  {
             background-color: $primary;
             width: 111px;
             height: 48px;
@@ -69,89 +78,10 @@
             img{
                 height: 40%;
             }
-
-            // background-color: $primary;
-            // width:32px;
-            // border-radius: 50%;
-            // padding:9px;
-            // aspect-ratio: 1;
-
-            // &::before{
-            //     content:"Search";
-            //     will-change: opacity;
-            //     color: white;
-            //     background-image: url(../../svg/searchsvg.svg);
-            //     background-repeat: no-repeat;
-            //     background-position: -10px;
-            // }
-
-
-            .src-span {
-                // &::before {
-                //     content: "";
-                //     background-image: url(../../svg/searchsvg.svg);
-                // }
-
-                // position: absolute ;
-                // top: 0px ;
-                // left: 0px ;
-                // right: 0px ;
-                // bottom: 0px ;
-                // width: 100% ;
-                // height: 100%;
-            }
-
-            .src-color-span {
-                // &::before {
-                //     content: "Search";
-              
-                // }
-            }
-
-
-            // border-radius: 24px;
-            // height: 100%;
-            // width: 100%;
-            // background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
-            // --mouse-x: 54.625;
-            // --mouse-y: 85.4167;
-
-            // background-size: 200% 200% ;
-            // opacity: 0 ;
-            // transition: opacity 1.25s ease 0s ;
-            // background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
-
-            // &:hover{
-            //     opacity: 1;
-            // }
-            // }
+  
         }
 
-        // .src-btn-container{
-
-        //     background-color: $primary;
-        //     width: 111px;
-        //     height: 48px;
-        //     border-radius: 24px;
-        //     background-color: $primary;
-        //     .search-btn-expand {
-        //         border-radius: 24px;
-        //         height: 100%;
-        //         width: 100%;
-        //         background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
-        //         --mouse-x: 54.625;
-        //         --mouse-y: 85.4167;
-
-        //         background-size: 200% 200% ;
-        //         opacity: 0 ;
-        //         transition: opacity 1.25s ease 0s ;
-        //         background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
-
-        //         &:hover{
-        //             opacity: 1;
-        //         }
-        //     }
-        // }
+       
     }
 
 

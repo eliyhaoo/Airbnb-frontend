@@ -31,6 +31,19 @@ export function setStayInStore(stay) {
     }
 }
 
+export function saveStay(stay) {
+    const actionType = stay._id ? 'UPDATE_STAY' : 'ADD_STAY'
+    return dispatch => {
+        dispatch({
+            type: actionType,
+            stay
+        })
+    }
+}
+
+
+
+
 // export function removeUser(userId) {
 //     return async dispatch => {
 //         try {
