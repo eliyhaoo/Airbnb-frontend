@@ -10,6 +10,8 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 
 
+
+
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
         color: 'rgb(34 34 34)',
@@ -18,6 +20,17 @@ const StyledRating = styled(Rating)({
         color: 'rgb(113 113 113)',
     },
 });
+
+const styles = {
+    root: {
+        background: "black"
+    },
+    input: {
+        color: "white"
+    }
+};
+
+
 
 
 export function AddReview({ stay }) {
@@ -56,7 +69,7 @@ export function AddReview({ stay }) {
 
     const handleChange = ({ target }) => {
         const name = target.name
-        const value = target.type === "radio" ? +target.value : target.value
+        const value = target.type === "number" ? +target.value : target.value
         setReview({ ...review, [name]: value })
     }
 
@@ -69,7 +82,7 @@ export function AddReview({ stay }) {
     return <div className="add-review-container">
 
 
-        <h3>Add Review :</h3>
+        <h3>Add a review about this stay</h3>
         <form className="review-form" onSubmit={(onAddReview)}>
 
             <div className="review-rating-container">
@@ -119,29 +132,28 @@ export function AddReview({ stay }) {
                 </div>
             </div>
 
-            <label htmlFor="review">Share your experience with us</label>
-            <input type="text" id="txt" name="txt"
-                value={review.txt} onChange={handleChange} />
+
+            <Box
+                sx={{
+                    maxWidth: '100%',
+                }}
+            >
+                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} fullWidth label="Share your exprience with this stay" id="fullWidth" focused />
+            </Box>
+
+
+
             <button>Send Review</button>
+            {/* <label htmlFor="review"></label> */}
+            {/* <input type="text" id="txt" name="txt"
+                value={review.txt} onChange={handleChange} /> */}
         </form>
-
-
-
     </div>
 
 }
 
 
 
-// return (
-//     <Box
-//         sx={{
-//             width: 800,
-//             maxWidth: '100%',
-//         }}
-//     >
-//         <TextField fullWidth label="Share your exprience with this stay" id="fullWidth" />
-//     </Box>
-// )
+
 
 

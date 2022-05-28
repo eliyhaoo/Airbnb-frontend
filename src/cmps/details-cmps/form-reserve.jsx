@@ -3,7 +3,7 @@ import { DatePicker } from "../date-picker"
 export const FormReserve = () => {
 
     return <div className="form-reserve">
-        {/* <DatePicker/> */}
+        {/* <DatePicker /> */}
         <div className="order-data">
             <div className="date-picker flex space-between">
                 <div className="date-input flex direction-column">
@@ -22,7 +22,7 @@ export const FormReserve = () => {
             </div>
         </div>
 
-        <div class="btn-container">
+        <div className="btn-container">
             <div className="cell"></div>
             <div className="cell"></div>
             <div className="cell"></div>

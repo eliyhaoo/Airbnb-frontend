@@ -1,5 +1,9 @@
 
 .stay-review{
+
+
+
+
     .reviews-stats-header{
         display: flex;
         align-items: center;
@@ -13,12 +17,24 @@
         gap: 10px 12px;
         margin-bottom: 30px;
         padding: 5px;
+        
 
 
         .reviews-stats{
             display: flex;
             justify-content: space-between;
             margin-inline-end: 100px;
+            margin-bottom: 16px;
+
+            .review-rates-container{
+                gap: 4px;
+                meter{
+                    height: 0.9rem;
+                    width: 7rem;
+                }
+                meter::-webkit-meter-bar {background:$border;} /*background color of bar*/
+                meter::-webkit-meter-optimum-value {background:$secondary;}
+            }
         }
         
         

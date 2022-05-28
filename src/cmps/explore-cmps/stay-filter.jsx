@@ -101,7 +101,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
             </form>
             <div className="filter-footer flex space-between align-center">
                 <p>Clear all</p>
-                <button class-name="filter-footer-btn">Show Stays</button>
+                <button className="filter-footer-btn">Show Stays</button>
             </div>
 
         </div>
