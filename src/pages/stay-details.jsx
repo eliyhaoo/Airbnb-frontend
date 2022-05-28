@@ -77,6 +77,9 @@ export const StayDetails = ({ history }) => {
         </section>
 
         <StayReview stay={stay} />
+        <div className="stay-map">
+            {<StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} />}
+        </div>
     </section>
 
 
@@ -84,7 +87,6 @@ export const StayDetails = ({ history }) => {
 
 
 
-    {/* WORKS WITH ORIGINAL LATLNG */ }
-    {/* <StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} /> */ }
+    // { WORKS WITH ORIGINAL LATLNG }
 
 }
