@@ -24,7 +24,7 @@ export const AppHeader = () => {
 
     useEffect(() => {
         gVisitedPage.current = visitedPage
-        gVisitedPage.current === 'home-page'? setSearchToggle(true) : setSearchToggle(false)
+        gVisitedPage.current === 'home-page' ? setSearchToggle(true) : setSearchToggle(false)
     }, [visitedPage])
 
 
@@ -32,7 +32,7 @@ export const AppHeader = () => {
 
     const onScroll = () => {
 
-        if (gVisitedPage.current!=='home-page') {
+        if (gVisitedPage.current !== 'home-page') {
             setSearchToggle(false)
             return
         }
@@ -54,15 +54,15 @@ export const AppHeader = () => {
 
 
 
-    console.log('PAGE VISISIT',gVisitedPage.current);
-    const headerClass = `header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`
-    console.log('classNAme',headerClass);
+
+    const headerClass = `header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout' : 'details-layout'}`
+
 
 
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
 
         <div className={headerClass}>
-        {/* <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`}> */}
+            {/* <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`}> */}
 
             <div className="header-content-container flex space-between align-center">
 
