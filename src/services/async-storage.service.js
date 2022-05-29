@@ -5087,7 +5087,285 @@ const stays = [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653815811/amazing%20pools/1/1e333818-2696-49b9-a705-b5abe5f8874e_awssmm.webp",
 
         ]
-    }
+    },
+    {
+        "name": "Villa Sawarin",
+        "category": "design",
+        "summary": "Artfully designed by accomplished architects Jean-Michel Gathy and Phillipe Starck, Villa Sawarin is a perfect symbiosis of a contemporary and Thai style villa set in the exclusive private development of Phuket’s Cape Yamu. The most discerning world travelers will be impressed by its easy opulence and thoughtful attention to detail. Perfect for presidents – of nations and corporations – while still being family-friendly, the cathedral-like proportions of this beachfront mansion can easily host up to 18 guests.",
+        "roomType": "Entire villa",
+        "guests": 16,
+        "bedrooms": 9,
+        "beds": 10,
+        "bath": 10,
+        "amenities": [
+            "Kitchen",
+            "Private pool",
+            "Safe",
+            "Wifi",
+            "Dryer",
+            "Hot water",
+            "Free parking on premises",
+            "Washer",
+            "Hair dryer",
+            "TV",
+            "Bed linens",
+            "Heating",
+            "Hangers",
+            "Shampoo",
+            "Air conditioning",
+        ],
+        "host": {
+            "_id": "622f3403e36c58x6064aaf91",
+            "fullname": "Fran",
+            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "isSuperhost": false,
+
+        },
+        "address": {
+            "country": "Thailand",
+            "location": {
+                "lat": 13.736717,
+                "lng": 100.523186,
+            },
+            "city": "Phuket",
+            "countryCode": "TH",
+
+        },
+        // "bathrooms": 2,
+        "price": 2984,
+        "reviewScores": {
+            "accuracy": 4.8,
+            "cleanliness": 4.9,
+            "checkin": 4.8,
+            "communication": 4.9,
+            "location": 4.9,
+            "value": 4.9,
+            "rating": 4.9,
+        },
+        "reviews": [
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3402x36l57x6164fd713",
+                    "fullname": "Fei",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Everything is perfect."
+            },
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627x3401e36s59e6614fc170",
+                    "fullname": "Adam",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Thank you Fran! It was terrific!"
+            },
+
+            {
+                "at": "2021-10-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407e36c59e6464mc170",
+                    "fullname": "Olayinka",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "If I could give a rating of six stars, I would. This was hands down the best Airbnb experience I have ever had. Fran is an outstanding host and the warmth she emanates through her communications is evident in the interior styling of her home. Set amidst a picturesque landscape that you can view from every room, the house is spacious and enveloped in timber with plush carpeting, luscious bedding, and an incredibly well-stocked kitchen, designed to entertain. The Wensley is synonymous with retreat – a place to unwind, laugh, eat, reflect, and enjoy the natural landscape. We hope to retreat at the Wensley again soon."
+            },
+            {
+                "at": "2022-03-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407d36c59e6164fw720",
+                    "fullname": "Kristy",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Do not hesitate and book The Wensley now!! The home is absolute design porn and situated on a gorgeous property. Location was great as it was about 20 minutes to the ocean and 15 to town. Such an amazing, relaxing stay for our family!! Everyone we know locally was so envious that we were staying on the property."
+            },
+            {
+                "at": "2022-04-12T04:00:00.000Z",
+                "by": {
+                    "_id": "125f2407e36c59e6164fc770",
+                    "fullname": "Kate",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "We went to The Wensley because we wished to live deliberately, to front only the essential facts of life, and see if we could not learn what it had to teach, and not, when we came to die, discover that we had not lived.Majestical!"
+            },
+            {
+                "at": "2021-05-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3207e30c59e6164fc770",
+                    "fullname": "Michelle",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Absolutely exquisite! Such a special space"
+            },
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3207e31c59p6164fp770",
+                    "fullname": "Pat",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "The Wensley was the perfect place for a post lockdown catch up and more than made up for a few missed events. Fran is a great host who keeps things very relaxing. 😎"
+            },
+            {
+                "at": "2021-11-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3207p31c59p6164fp770",
+                    "fullname": "Anna",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Fabulous experience.Surrounded by stunning views, super comfortable furnishings, beautifully styled, attention to detail for all your needs.Thankyou Fran for providing the whole package.Our own slice of paradise for the weekend ✨"
+            },
+
+        ],
+        "_id": "622f337a95c7d36e298aa0i8",
+        "imgUrls": [
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653819309/Design/3/201a00f9-0c23-4e75-9115-4ce1ceed05f6_bkyefc.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653819309/Design/3/da0ac469-edcf-418c-925d-adeb7bf6aec5_zyimnl.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653819309/Design/3/caac7192-a5d4-4ceb-9885-e22484132bd5_kwgcps.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653819309/Design/3/a8e43457-f768-4d5e-a676-c86a058cb190_oafrfa.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653819308/Design/3/bfd60bab-077f-4c32-94d5-f99d57808ef5_hf1wio.webp",
+        ]
+    },
+
+    {
+        "name": "Award Winning Designer home in Paddington",
+        "category": "design",
+        "summary": "The Glass House won this years prestigious House & Garden Magazines Top 50 Rooms in Australia award for best furnishings and sets a new standard for inner city escapes.Built this year and finished in the highest finishes and most luxurious materials as an interior showhome it provides unparalleled luxury with heated marble floors, open fire, internal water feature, indoor & outdoor living areas and designer furniture & lighting throughout.",
+        "roomType": "Entire townhouse",
+        "guests": 6,
+        "bedrooms": 3,
+        "beds": 3,
+        "bath": 3,
+        "amenities": [
+            "Kitchen",
+            "Wifi",
+            "TV",
+            "Dryer",
+            "Safe",
+            "Air conditioning",
+            "Hot water",
+            "Free parking on premises",
+            "Security cameras on property",
+            "Hair dryer",
+            "Bed linens",
+            "Hangers",
+            "Heating",
+
+        ],
+        "host": {
+            "_id": "622f3403e36c58x6064faf99",
+            "fullname": "Nina",
+            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "isSuperhost": false,
+
+        },
+        "address": {
+            "country": "Australia",
+            "location": {
+                "lat": -31.840233,
+                "lng": 145.612793,
+            },
+            "city": "Darlinghurst",
+            "countryCode": "AU",
+
+        },
+        // "bathrooms": 2,
+        "price": 982,
+        "reviewScores": {
+            "accuracy": 4.9,
+            "cleanliness": 4.8,
+            "checkin": 4.8,
+            "communication": 4.7,
+            "location": 4.9,
+            "value": 4.9,
+            "rating": 5.0,
+        },
+        "reviews": [
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3402x3l259x6164fd713",
+                    "fullname": "Loretta",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "It was a beautiful and modern home; great hostess."
+            },
+            {
+                "at": "2021-09-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627x3411e36s59e6614fc170",
+                    "fullname": "Lara",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "A gorgeous home and great to set up as an office for a week. Super clean and well appointed. We will be back"
+            },
+
+            {
+                "at": "2021-09-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3400p36c59e6464mc170",
+                    "fullname": "Paul",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Stylish house in a great location. Highly recommended."
+            },
+            {
+                "at": "2021-12-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407d36c59e6164fw720",
+                    "fullname": "Anuraag",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Amazing host and perfect villa! Nina did everything to make sure we were comfortable throughout the stay."
+            },
+            {
+                "at": "2022-03-12T04:00:00.000Z",
+                "by": {
+                    "_id": "125f2407p36p59e6164fc770",
+                    "fullname": "Charles",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Outstanding. A truly amazing home. Stunningly designed. Superb hosts. A magical stay in Sydney."
+            },
+            {
+                "at": "2021-05-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621k2037e30c59e6164fc770",
+                    "fullname": "James",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "We absolutely loved our stay at Nina’s property, it was just stunning, the most incredible house we have stayed in! The rooms are far more luxurious than any of the 5 star hotels in Sydney that we have stayed in before, and the design is incredible. The owners have furnished it with only the best of everything, from the beds to kitchen ware and linens. It was a very special treat for my wife and i to stay for the week and we were very sad to leave. The property is also very centrally located and we loved being able to walk to local shops and restaurants and being so close to the city, parks and beaches. We hope to come back! Thank you!"
+            },
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3227e31c59p6164fp770",
+                    "fullname": "Claire",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "A beautifully appointed apartment in a great central-east location. Staying in Nina's apartment was a much nicer experience than staying at any of the local luxury hotels. We're very much looking forward to staying here regularly."
+            },
+            {
+                "at": "2021-11-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3317p31c59p6164fp770",
+                    "fullname": "Jess",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "This place is absolutely superb the pictures don’t do it justice at all!It is like a private 5 star hotel right in the heart of Paddington, with great cafes just up the road.The house is beautifully appointed with heated stone floors and internal water feature, voice controlled lighting and a stunning fireplace and outdoor courtyard.Nina was the perfect host and I would love to stay again."
+            },
+
+        ],
+        "_id": "622f337a95c7d31l298aa0i8",
+        "imgUrls": [
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653820806/Design/4/e361efa5-eeda-430d-a591-f69b1915eb89_kdpkrx.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653820806/Design/4/76478995-a450-441b-bdb7-2a5cafb50f4f_obczvk.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653820806/Design/4/40217c0d-7c1b-4668-865d-9b539d8dc26e_zhjzmv.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653820806/Design/4/79500c7f-4ffc-4474-8885-48126190360a_ssuh2k.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653820806/Design/4/17c07b42-b0df-46a8-b397-f0824f7add20_ebnbmh.webp",
+        ]
+    },
 ]
 
 
