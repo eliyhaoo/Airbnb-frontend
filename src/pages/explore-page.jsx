@@ -7,7 +7,7 @@ import { StayFilter } from '../cmps/explore-cmps/stay-filter'
 import { CategoriesFilter } from '../cmps/explore-cmps/categories-filter'
 
 import { loadStays } from "../store/actions/stay.action"
-import { setIsInHomePage } from "../store/actions/system.action"
+import { setVisitPage } from "../store/actions/system.action"
 
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
@@ -16,7 +16,7 @@ export const ExplorePage = ({ history }) => {
 
     useEffect(() => {
         dispatch(loadStays())
-        dispatch(setIsInHomePage(false))
+        dispatch(setVisitPage('explore-page'))
 
     }, [])
 

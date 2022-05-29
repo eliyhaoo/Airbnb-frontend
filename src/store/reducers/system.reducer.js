@@ -1,13 +1,13 @@
 const initialState = {
   // isLoading: false
-  isInHomePage:true
+  visitedPage:'home-page'
 };
 
 export function systemReducer (state = initialState, action = {}) {
   switch (action.type) {
 
-    case 'SET_VISIT_HOME_PAGE':
-      return { ...state, isInHomePage:action.isInHomePage }
+    case 'SET_VISIT_PAGE':
+      return { ...state, visitedPage:action.visitedPage }
     // case 'LOADING_START':
     //   return { ...state, isLoading: true }
     // case 'LOADING_DONE':

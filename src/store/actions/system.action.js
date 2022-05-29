@@ -2,12 +2,12 @@
 // import { showErrorMsg } from '../services/event-bus.service.js'
 
 
-export function setIsInHomePage(isInHomePage) {
-    console.log('is IN HOME PAEG',isInHomePage);
+export function setVisitPage(visitedPage) {
+    console.log('is IN HOME PAEG',visitedPage);
     return dispatch => {
             dispatch({
-                type:'SET_VISIT_HOME_PAGE',
-                isInHomePage
+                type:'SET_VISIT_PAGE',
+                visitedPage
             })
         } 
      
