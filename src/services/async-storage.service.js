@@ -3601,7 +3601,7 @@ const stays = [
         "host": {
             "_id": "622f3403e66c58e6164faf93",
             "fullname": "Jane",
-            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "thumbnailUrl": "https://res.cloudinary.com/dys1y33zj/image/upload/v1653814933/9_a5udyr.jpg",
             "isSuperhost": true,
         },
         "address": {
@@ -3639,7 +3639,7 @@ const stays = [
                 "by": {
                     "_id": "v22f3403e31c59e6164fb204",
                     "fullname": "Mark",
-                    "imgUrl": "https://robohash.org/70072865?set=set1",
+                    "imgUrl": "https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/7_tf0fye.jpg",
                     "id": "70072865"
                 },
                 "txt": "This is possibly the most inspiring place we have ever stayed. They property and villa were incredible. The staff was very hospitable and the food and beverages from on site restaurants were phenomenal. We would highly recommend a stay here."
@@ -3649,7 +3649,7 @@ const stays = [
                 "by": {
                     "_id": "822f3501e36159e6164fb703",
                     "fullname": "Fadliyati",
-                    "imgUrl": "https://robohash.org/71179725?set=set1",
+                    "imgUrl": "https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/50_krqm1l.jpg",
                     "id": "71179725"
                 },
                 "txt": "The view from this villa is really amazing!And also the design from this villa beyond expectations especially about the lightings system is quite fun! I love this villa so much.Just be careful from bugs in the afternoon you should close the windows and all the door's room",
@@ -3659,7 +3659,7 @@ const stays = [
                 "by": {
                     "_id": "622f345ee36c5ve616xfb37f",
                     "fullname": "Steve",
-                    "imgUrl": "https://robohash.org/65593239?set=set1",
+                    "imgUrl": "https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg",
                     "id": "65593239"
                 },
                 "txt": "One of the most incredible places I’ve ever stayed in. Magical setting, the most beautiful views and the villa is exquisite. The hospitality was amazing. Generally a perfect stay, will recommend to everybody and will be back."
@@ -3669,7 +3669,7 @@ const stays = [
                 "by": {
                     "_id": "622f3402e06c58e6165fb4.55",
                     "fullname": "Valentin",
-                    "imgUrl": "https://robohash.org/26215688?set=set1",
+                    "imgUrl": "https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/6_olv8j2.jpg",
                     "id": "26215688"
                 },
                 "txt": "A great place with a unique design and a great view. The service is at a good level. A little spoils the impression of Parking right under the window. I hope the management will take this into account."
