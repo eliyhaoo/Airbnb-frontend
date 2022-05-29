@@ -4,4 +4,24 @@
     width: 100%;
     position: fixed;
     box-shadow: inset 0 0.5px 0 0 $border;
+    z-index: 50;
+
+    .footer-content {
+        padding: 13px 0 14px;
+    }
+
+    .language-icon {
+        height: 14px;
+    }
+
+    .footer-right-side,
+    .footer-left-side {
+        width: 300px;
+        line-height: 18px;
+    }
+
+    .footer-left-side {
+        font-weight: 500;
+    }
+
 }

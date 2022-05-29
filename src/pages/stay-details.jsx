@@ -10,6 +10,8 @@ import { StayReview } from "../cmps/details-cmps/stay-review"
 import { setVisitPage } from '../store/actions/system.action'
 import { useDispatch } from 'react-redux'
 
+import starSvg from '../assets/svg/star.svg'
+
 
 export const StayDetails = ({ history }) => {
     const dispatch = useDispatch()
@@ -40,18 +42,32 @@ export const StayDetails = ({ history }) => {
     return <section className="stay-details-page details-layout">
         <h1 className="stay-name-details">{stay.name}</h1>
 
-        <div className="stay-details-container">
-            <div className="stay-review-details">
-                <span className="num-of-reviews">{stay.reviews.length} reviews </span>
-                {stay.host.isSuperhost && <span className="superhost">Superhost </span>}
-                <span className="city-address">{stay.address.city}</span>,
-                <span className="country-address">{stay.address.country}</span>
+        <div className="stay-details-container flex space-between">
+
+            <div className="stay-review-details flex">
+
+                <div className="num-of-reviews flex space-between gap-5">
+                    <img src={starSvg} alt="star" />
+                    <div>
+                        {stay.reviewScores.rating.toFixed(1)}
+                    </div>
+                    <span>·</span>
+                    <div className="flex gap-5">
+                        <span>{stay.reviews.length}</span>
+                        <span>reviews</span>
+                    </div>
+                </div>
+
+                <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
+                {/* <div className="city-address">{stay.address.city},</div>
+                <div className="country-address">{stay.address.country}</div> */}
             </div>
 
             <div className="activity-details">
                 <span>Share </span>
                 <span>Save</span>
             </div>
+
         </div>
 
         <div className="details-img-container">

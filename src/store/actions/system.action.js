@@ -3,12 +3,11 @@
 
 
 export function setVisitPage(visitedPage) {
-    console.log('is IN HOME PAEG',visitedPage);
     return dispatch => {
-            dispatch({
-                type:'SET_VISIT_PAGE',
-                visitedPage
-            })
-        } 
-     
+        dispatch({
+            type: 'SET_VISIT_PAGE',
+            visitedPage
+        })
+    }
+
 }
