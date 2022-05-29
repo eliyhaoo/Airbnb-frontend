@@ -91,7 +91,42 @@
     .stay-amenities {
         width: 500px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 250px))
+        grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+        .amenite-img{
+            height: 38px;
+                margin-right: 5px;
+                aspect-ratio: 0.5;
+            &.Wifi::before{
+                content:url('../../svg/Wifi.svg');
+            }
+            &.Kitchen::before{
+                content:url('../../svg/Kitchen.svg');
+            }
+            &.Shampoo::before{
+                content:url('../../svg/Shampoo.svg');
+            }
+            &.Essentials::before{
+                content:url('../../svg/Essentials.svg');
+            }
+            &.Private::before{
+                content:url('../../svg/Private entrance.svg');
+            }
+            &.Hair::before{
+                content:url('../../svg/Hair dryer.svg');
+            }
+            &.Hot::before{
+                content:url('../../svg/Hot water.svg');
+            }
+            &.Air::before{
+                content:url('../../svg/Air conditioning.svg');
+            }
+            &.Fire::before{
+                content:url('../../svg/Fire and kit.svg');
+            }
+            &.Free::before{
+                content:url('../../svg/Free parking on premises.svg');
+            }
+        }
     }
 
 
