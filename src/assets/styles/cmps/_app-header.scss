@@ -5,13 +5,13 @@
     width: 100%;
     background-color: unset;
     z-index: 10000;
-    border-bottom: 1px solid $borderClr;
 
-    transition:  1s;
-    
-    
+    transition: 1s;
+
+
     .header-container {
         height: 85px;
+
         .header-content-container {
 
             height: 80px;
@@ -21,8 +21,56 @@
                 margin: 0;
             }
 
-            a {
-                color: $backgroundClr;
+
+            .user-nav-container {
+                width: 300px;
+
+                .user-details-container {
+                    width: 77px;
+                    height: 42px;
+                    border: 1px solid $borderClr;
+                    background-color: $backgroundClr;
+                    padding-inline-start: 10px;
+                    border-radius: 32px;
+                    cursor: pointer;
+                    transition: box-shadow 0.6s;
+
+                    &:hover {
+                        box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+                    }
+
+                    .user-avatar {
+                        height: 30px;
+                        flex-grow: 1;
+                    }
+
+                    .user-menu {
+                        height: 16px;
+
+                    }
+
+
+                }
+
+                .main-nav {
+                    height: 42px;
+                    gap: 5px;
+
+                    a {
+                        color: $backgroundClr;
+                        padding: 12px 11px 5px 12px;
+                        height: 100%;
+
+                        &:hover {
+
+                            color: $secondary;
+                            border-radius: 32px;
+                            border: 1px solid $borderClr;
+                            background-color: $hoover;
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -33,24 +81,31 @@
 
         .header-content-container {
 
-            a {
-                color: inherit;
+            .user-nav-container {
+                .main-nav {
 
+                    a {
+                        color: inherit;
+
+                    }
+                }
             }
         }
     }
 
     &.pages {
-        
+        border-bottom: 1px solid $borderClr;
+
         background-color: $backgroundClr;
+
         .header-content-container {
-           
+
             a {
                 color: $secondary;
 
             }
         }
-        
+
         &.close {
             height: unset;
 
