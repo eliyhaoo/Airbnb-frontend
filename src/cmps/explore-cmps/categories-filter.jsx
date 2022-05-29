@@ -8,7 +8,6 @@ export const CategoriesFilter = () => {
     const onChooseCategory = (categoryTitle) => {
         setActiveCategory(categoryTitle)
     }
-    console.log(activeCategory)
     return (
         <div className="categories-container flex space-between">
             {categories.map((category, idx) =>

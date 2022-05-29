@@ -36,8 +36,6 @@ export const StayDetails = ({ history }) => {
         return stay.amenities.splice(0, 10)
     }
 
-
-
     if (!stay) return <div className="loader">Loading...</div>
     return <section className="stay-details-page details-layout">
         <h1 className="stay-name-details">{stay.name}</h1>
@@ -71,7 +69,19 @@ export const StayDetails = ({ history }) => {
                 </div>
                 <p>{stay.summary}</p>
 
-                <div className="stay-amenities">{getAmenities().map((amenitie, idx) => <div key={idx}>{amenitie}</div>)}</div>
+                <div className="stay-amenities ">{getAmenities().map((amenitie, idx) =>
+                    <div key={idx}>
+
+                        <div className='flex'>
+                            {/* <div className="amenite-img wifi"> </div> */}
+                            <div className={`amenite-img ${amenitie}`}> </div>
+                            <div>{amenitie}</div>
+                        </div>
+                    </div>
+                )}
+
+
+                </div>
             </div>
             <StayReserve stay={stay} />
         </section>
@@ -80,7 +90,7 @@ export const StayDetails = ({ history }) => {
         <div className="stay-map">
             {<StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} />}
         </div>
-    </section>
+    </section >
 
 
 

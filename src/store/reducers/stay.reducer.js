@@ -24,7 +24,7 @@ export function stayReducer(state = initialState, action) {
     }
     // For debug:
     // window.userState = newState;
-    console.log('State:', newState);
+    // console.log('State:', newState);
     return newState;
 
 }
