@@ -126,6 +126,36 @@
             &.Free::before{
                 content:url('../../svg/Free parking on premises.svg');
             }
+            &.Smoke::before{
+                content:url('../../svg/Smoke alarm.svg');
+            }
+            &.Safe::before{
+                content:url('../../svg/Safe.svg');
+            }
+            &.Dryer::before{
+                content:url('../../svg/Dryer.svg');
+            }
+            &.Heating::before{
+                content:url('../../svg/Heating.svg');
+            }
+            &.Self::before{
+                content:url('../../svg/Self check-in.svg');
+            }
+            &.Hangers::before{
+                content:url('../../svg/Hangers.svg');
+            }
+            &.Shower::before{
+                content:url('../../svg/Shower gel.svg');
+            }
+            &.TV::before{
+                content:url('../../svg/TV.svg');
+            }
+            &.Pool::before{
+                content:url('../../svg/Pool.svg');
+            }
+            // &.Outdoor::before{
+            //     content:url('../../svg/Outdoor shower.svg');
+            // }
         }
     }
 
