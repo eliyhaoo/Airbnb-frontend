@@ -59,10 +59,10 @@ export const AppHeader = () => {
 
     console.log('G VISISTEDDD', gVisitedPage.current);
 
-    return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
+    return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
 
         {/* <div className={headerClass}> */}
-        <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout' : 'details-layout'}`}>
+        <div className={`header-container full ${gVisitedPage.current === 'details-page' ?   'details-layout':gVisitedPage.current === 'explore-page'? 'main-layout':'home-page-layout'}`}>
 
             <div className="header-content-container flex space-between align-center">
 
