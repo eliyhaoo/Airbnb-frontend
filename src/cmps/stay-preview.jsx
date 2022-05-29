@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { CarouselComponent } from "./explore-cmps/carousel.component";
 export const StayPreview = ({ stay }) => {
 
-
-
     const getPriceWithCommas = (price) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
