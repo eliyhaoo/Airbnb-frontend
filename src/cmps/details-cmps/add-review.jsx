@@ -87,13 +87,6 @@ export function AddReview({ stay }) {
 
             <div className="review-rating-container">
 
-                {/* <div className='review-rating'>
-                    <p>Cleanliness:</p>
-                    <StyledRating >
-                        <Rating name="cleanliness" value={5} precision={0.5} onChange={handleRaiting} />
-                    </StyledRating>
-                </div> */}
-
                 <div className='review-rating'>
                     <p>Cleanliness:</p>
                     <Stack spacing={1.5}>

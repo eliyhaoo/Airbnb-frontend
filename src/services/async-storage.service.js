@@ -3599,7 +3599,7 @@ const stays = [
             "Hangers"
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3403e66c58e6164faf93",
             "fullname": "Jane",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": true,
@@ -3628,7 +3628,7 @@ const stays = [
             {
                 "at": "2021-06-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc004",
+                    "_id": "627f3437e36c59e4164fc004",
                     "fullname": "Yenny",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -3637,7 +3637,7 @@ const stays = [
             {
                 "at": "2021-07-28T04:00:00.000Z",
                 "by": {
-                    "_id": "v22f3403e36c59e6164fb204",
+                    "_id": "v22f3403e31c59e6164fb204",
                     "fullname": "Mark",
                     "imgUrl": "https://robohash.org/70072865?set=set1",
                     "id": "70072865"
@@ -3647,7 +3647,7 @@ const stays = [
             {
                 "at": "2020-09-11T04:00:00.000Z",
                 "by": {
-                    "_id": "822f3505e36259e6164fb703",
+                    "_id": "822f3501e36159e6164fb703",
                     "fullname": "Fadliyati",
                     "imgUrl": "https://robohash.org/71179725?set=set1",
                     "id": "71179725"
@@ -3657,7 +3657,7 @@ const stays = [
             {
                 "at": "2020-01-07T05:00:00.000Z",
                 "by": {
-                    "_id": "622f3454e36c5ve616xfb37f",
+                    "_id": "622f345ee36c5ve616xfb37f",
                     "fullname": "Steve",
                     "imgUrl": "https://robohash.org/65593239?set=set1",
                     "id": "65593239"
@@ -3667,7 +3667,7 @@ const stays = [
             {
                 "at": "2020-04-07T04:00:00.000Z",
                 "by": {
-                    "_id": "622f3403e06c58e6165fb4.55",
+                    "_id": "622f3402e06c58e6165fb4.55",
                     "fullname": "Valentin",
                     "imgUrl": "https://robohash.org/26215688?set=set1",
                     "id": "26215688"
@@ -3675,7 +3675,7 @@ const stays = [
                 "txt": "A great place with a unique design and a great view. The service is at a good level. A little spoils the impression of Parking right under the window. I hope the management will take this into account."
             },
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e298zx8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653587279/Design/d12de01d-61ad-48eb-8def-e3208a669dcb_cnpzqu.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653587276/Design/187bf8a7-465c-436d-b751-47da4c20217b_gdz8ul.webp",
@@ -3711,7 +3711,7 @@ const stays = [
 
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3403e36c58e6164faf23",
             "fullname": "Kaisser",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -3742,7 +3742,7 @@ const stays = [
             {
                 "at": "2022-03-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc004",
+                    "_id": "627f3407e36c59e6164fc0x4",
                     "fullname": "Siobhan",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -3751,7 +3751,7 @@ const stays = [
             {
                 "at": "2022-02-28T04:00:00.000Z",
                 "by": {
-                    "_id": "v22f3403e36c59e6164fb212",
+                    "_id": "v22f3403e36c59e6164xb212",
                     "fullname": "Ben",
                     "imgUrl": "https://robohash.org/70072865?set=set1",
                     "id": "70072695"
@@ -3761,7 +3761,7 @@ const stays = [
             {
                 "at": "2022-03-28T04:00:00.000Z",
                 "by": {
-                    "_id": "v22f3403e36c59e6164fb122",
+                    "_id": "v22f3403e36c59e6164yb122",
                     "fullname": "Alexis",
                     "imgUrl": "https://robohash.org/70072865?set=set1",
                     "id": "70072813"
@@ -3781,7 +3781,7 @@ const stays = [
             {
                 "at": "2022-02-28T04:00:00.000Z",
                 "by": {
-                    "_id": "v22f3403e36c59e6164fb112",
+                    "_id": "v22f3403e36c59e6164fb702",
                     "fullname": "Deborah",
                     "imgUrl": "https://robohash.org/70072865?set=set1",
                     "id": "70072393"
@@ -3791,7 +3791,7 @@ const stays = [
             {
                 "at": "2022-02-28T04:00:00.000Z",
                 "by": {
-                    "_id": "v22f3403e36c59e6164fb111",
+                    "_id": "v22f3403e36c59e6164fb151",
                     "fullname": "Jade",
                     "imgUrl": "https://robohash.org/70072865?set=set1",
                     "id": "70072993"
@@ -3801,7 +3801,7 @@ const stays = [
             {
                 "at": "2022-02-28T04:00:00.000Z",
                 "by": {
-                    "_id": "v22f3403e36c59e6164fb011",
+                    "_id": "v22f3403e36c59e6164fb111",
                     "fullname": "Benedict",
                     "imgUrl": "https://robohash.org/70072865?set=set1",
                     "id": "70072093"
@@ -3830,7 +3830,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "652f327a95c7d36e298aa8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653590616/arctic/00472c59-af5d-4656-aa0c-6a428179f394_l0mvfd.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653590616/arctic/1c2b5339-c51a-4c25-b644-732e6cfcec0d_u2egwh.webp",
@@ -3867,7 +3867,7 @@ const stays = [
             "Free parking on premises",
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3403e36c58e6164naf93",
             "fullname": "Best Holiday Homes Limited",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -3898,7 +3898,7 @@ const stays = [
             {
                 "at": "2021-06-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc004",
+                    "_id": "627f3407e36c59x6164fc004",
                     "fullname": "Thomas",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -3906,7 +3906,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e298qa8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653592010/amazing%20pools/1efcdba3-a770-4b0f-8f6e-aa31c20b01c4_lsbtge.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653592010/amazing%20pools/f23f8ce2-a632-4c41-8da6-564ae2a261e1_yapuem.webp",
@@ -3929,14 +3929,12 @@ const stays = [
             "Hair dryer",
             "Shampoo",
             "Essentials",
-            "Outdoor shower",
             "Hangers",
             "Hot water",
             "Shower gel",
             "TV",
             "Dryer",
             "Pool",
-            "Washer",
             "Air conditioning",
             "Safe",
             "Smoke alarm",
@@ -3944,13 +3942,12 @@ const stays = [
             "Freezer",
             "Private entrance",
             "Cooking basics",
-            "Dishwasher",
             "Wine glasses",
             "Dining table",
             "Free parking on premises",
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f340we36c58e6164faf93",
             "fullname": "Dorothy",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -3981,7 +3978,7 @@ const stays = [
             {
                 "at": "2022-05-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc013",
+                    "_id": "627f3497e36c59e6164fc013",
                     "fullname": "Cami",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -3990,7 +3987,7 @@ const stays = [
             {
                 "at": "2022-02-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc040",
+                    "_id": "627f3401e36c59e6164fc040",
                     "fullname": "Anne",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -3999,7 +3996,7 @@ const stays = [
             {
                 "at": "2021-12-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc010",
+                    "_id": "627f3407b36c59e6164fc010",
                     "fullname": "Justin",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4008,7 +4005,7 @@ const stays = [
             {
                 "at": "2021-11-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc040",
+                    "_id": "627f3407z36c59e6164fc040",
                     "fullname": "Marti",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4017,7 +4014,7 @@ const stays = [
             {
                 "at": "2021-10-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc440",
+                    "_id": "627f3407e56c59e6164fc440",
                     "fullname": "Barbara",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4027,7 +4024,7 @@ const stays = [
             {
                 "at": "2021-12-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc010",
+                    "_id": "627f3407e16c59e6164fc010",
                     "fullname": "Alistair",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4035,7 +4032,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e928aa8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653588627/islands/fa2ed873-e726-4e6d-ab1a-28bc7c69d805_ratn5t.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653588625/islands/972f11c0-c77d-4b5f-9329-675da599a34a_biyy6n.webp",
@@ -4072,7 +4069,7 @@ const stays = [
             "Smoke alarm",
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3401e36c58e6164faf93",
             "fullname": "Oxygen Lodge",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -4103,7 +4100,7 @@ const stays = [
             {
                 "at": "2021-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc713",
+                    "_id": "627f4407e36c59e6164fc713",
                     "fullname": "Charlene",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4112,7 +4109,7 @@ const stays = [
             {
                 "at": "2021-10-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc170",
+                    "_id": "627z3407e36c59e6164fc170",
                     "fullname": "Alicia",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4122,7 +4119,7 @@ const stays = [
             {
                 "at": "2021-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627e3407e36c59e6164fc770",
                     "fullname": "Issam",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4131,7 +4128,7 @@ const stays = [
             {
                 "at": "2021-08-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627o3407e36c59e6164fc770",
                     "fullname": "Melanie",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4179,7 +4176,7 @@ const stays = [
             "Free street parking"
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3403e3hc58e6164faf93",
             "fullname": "Nikki Maku",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": true,
@@ -4210,7 +4207,7 @@ const stays = [
             {
                 "at": "2021-08-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc713",
+                    "_id": "627f3427e36c59e6164fc713",
                     "fullname": "Isabella",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4219,7 +4216,7 @@ const stays = [
             {
                 "at": "2021-10-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc170",
+                    "_id": "627f3497e36c59e6164fc170",
                     "fullname": "Chichu",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4227,7 +4224,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e29xaa8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653594454/lux/6934f1e4-e383-4bb7-97ef-709f47615fa0_zuexy3.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653594454/lux/6934f1e4-e383-4bb7-97ef-709f47615fa0_zuexy3.webp",
@@ -4262,7 +4259,7 @@ const stays = [
             "Free parking on premises",
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3403e36c52d6164faf93",
             "fullname": "Sabina Angela",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -4293,7 +4290,7 @@ const stays = [
             {
                 "at": "2022-05-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc713",
+                    "_id": "627f3405d36c59e6164fc713",
                     "fullname": "Yasmina",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4302,7 +4299,7 @@ const stays = [
             {
                 "at": "2021-12-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6614fc170",
+                    "_id": "627f340z436c59e6614fc170",
                     "fullname": "Ahmed",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4312,7 +4309,7 @@ const stays = [
             {
                 "at": "2021-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc170",
+                    "_id": "627f3407e36w99e6164fc170",
                     "fullname": "Kyle",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4321,7 +4318,7 @@ const stays = [
             {
                 "at": "2021-04-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36o29e6164fc770",
                     "fullname": "Thomas",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4330,7 +4327,7 @@ const stays = [
             {
                 "at": "2021-08-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36b59e6164fc770",
                     "fullname": "Mariya",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4338,11 +4335,11 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36p298aa8f8",
         "imgUrls": [
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653723585/lux/1/e0b2123a_original_leqvw4.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653723583/lux/1/46d207f2_original_iqtfis.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653723585/lux/1/309bee53-311d-4f07-a2e7-14daadbbfb77_m3joor.webp",
-            "https://res.cloudinary.com/projectairbnb/image/upload/v1653723585/lux/1/e0b2123a_original_leqvw4.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653723585/lux/1/9815f41f_original_ytslyp.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653723584/lux/1/7186bb11_original_wf6yto.webp",
         ]
@@ -4372,7 +4369,7 @@ const stays = [
 
         ],
         "host": {
-            "_id": "622f3403e36c58e6164faf93",
+            "_id": "622f3403e36c58e6264faf93",
             "fullname": "Constantinos",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -4403,7 +4400,7 @@ const stays = [
             {
                 "at": "2022-05-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fd713",
+                    "_id": "627f3407e36c59e9164fd713",
                     "fullname": "Chandler",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4412,7 +4409,7 @@ const stays = [
             {
                 "at": "2021-05-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6614fc170",
+                    "_id": "627f3407e36c59m6614fc170",
                     "fullname": "Melissa",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4422,7 +4419,7 @@ const stays = [
             {
                 "at": "2021-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc170",
+                    "_id": "627f3407e36c59k6164fc170",
                     "fullname": "Lucas",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4431,7 +4428,7 @@ const stays = [
             {
                 "at": "2021-07-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c29e6164fc770",
                     "fullname": "Tristan",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4440,7 +4437,7 @@ const stays = [
             {
                 "at": "2020-10-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36y29e6164fc770",
                     "fullname": "Becky",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4449,7 +4446,7 @@ const stays = [
             {
                 "at": "2020-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c59i3164fc770",
                     "fullname": "Rae",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4458,7 +4455,7 @@ const stays = [
             {
                 "at": "2020-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c53i6164fc770",
                     "fullname": "Victoria",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4466,7 +4463,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e298ma8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653751571/national%20parks/a8f0f5c8-54eb-4fc2-bbb8-e465e74564ee_cquymo.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653751572/national%20parks/23cf8cb5-1937-4e5f-8000-7bf75ffa8f3a_dfpmwt.webp",
@@ -4478,7 +4475,7 @@ const stays = [
 
     {
         "name": "Luxury My Villa Corfu by GHH",
-        "category": "national parks",
+        "category": "luxe",
         // "propertyType": "Entire villa",
         "summary": "Villa Marion has the rare combination of being in a rural, secluded and private location.Sleeps 16 guests.8 double or twin bedrooms (four have doors or big windows onto pool area)2 Sitting rooms with open plan kitchens (2) and breakfast area 2 living rooms with doors onto terrace Playroom with doors onto terrace 6 bathrooms 2 Swimming pools 4 x 8m each, 2 pool showers Wooden decking Outside dining, BBQ Air Conditioning.",
         "roomType": "Entire villa",
@@ -4502,7 +4499,7 @@ const stays = [
 
         ],
         "host": {
-            "_id": "622f3403e36c58e6164aaf93",
+            "_id": "622f3403e36x58e6264aaf93",
             "fullname": "Golden Home Holidays",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -4533,7 +4530,7 @@ const stays = [
             {
                 "at": "2022-04-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fd713",
+                    "_id": "627f3407y36c29e6164fd713",
                     "fullname": "Penni",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4542,7 +4539,7 @@ const stays = [
             {
                 "at": "2021-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6614fc170",
+                    "_id": "627f3407y36c59e5614fc170",
                     "fullname": "Tito",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4552,7 +4549,7 @@ const stays = [
             {
                 "at": "2021-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc170",
+                    "_id": "627f3407e36t59e6162fc170",
                     "fullname": "Harry",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4561,7 +4558,7 @@ const stays = [
             {
                 "at": "2021-08-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c59e6164fx770",
                     "fullname": "Charlotte",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4570,7 +4567,7 @@ const stays = [
             {
                 "at": "2020-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c59e6164bc770",
                     "fullname": "Thi Minh Thuy",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4579,7 +4576,7 @@ const stays = [
             {
                 "at": "2020-07-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c59e6164uc770",
                     "fullname": "Ofer",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4587,13 +4584,13 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e298ai8f8",
         "imgUrls": [
-            "https://res.cloudinary.com/projectairbnb/image/upload/v1653752182/national%20parks/1/cf1e587e-dee6-4d56-9564-add54fdf4e4a_k2y0sg.webp",
-            "https://res.cloudinary.com/projectairbnb/image/upload/v1653752184/national%20parks/1/9f65aa94-5e1e-4fd2-a42e-37a5198d0f4c_lcqtt8.webp",
-            "https://res.cloudinary.com/projectairbnb/image/upload/v1653752183/national%20parks/1/8eafa096-aa8b-4ef4-921c-16f61f27b1c0_tagl9q.webp",
-            "https://res.cloudinary.com/projectairbnb/image/upload/v1653752182/national%20parks/1/fd71c787-6641-4026-8d71-19e197fec9d4_rkgaci.webp",
-            "https://res.cloudinary.com/projectairbnb/image/upload/v1653752181/national%20parks/1/fb8bcf3c-0e61-4478-a985-c8793adec149_esp40r.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653816572/lux/2/a5cd56cb-1ddd-437b-bfbe-30422605f909_gxrq3a.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653816572/lux/2/29549a65-b06e-4a41-b58e-3bd54efc5295_df2orx.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653816572/lux/2/01f96423-76df-4bdd-a427-263e27250109_cmne74.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653816572/lux/2/177fbdf2-cd72-40bf-9444-e56869b384cd_tse805.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653816572/lux/2/df8ac158-7a43-4b5f-b226-8c5851eb6c93_bqicng.webp",
         ]
     },
 
@@ -4623,7 +4620,7 @@ const stays = [
             "Air conditioning",
         ],
         "host": {
-            "_id": "622f3403e36c58e6164aaf91",
+            "_id": "622f3403e36c58e6164kaf91",
             "fullname": "Posarelli Villas",
             "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
             "isSuperhost": false,
@@ -4654,7 +4651,7 @@ const stays = [
             {
                 "at": "2022-05-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fd713",
+                    "_id": "627f3407e36c59w6164fd713",
                     "fullname": "Amie",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4663,7 +4660,7 @@ const stays = [
             {
                 "at": "2021-04-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3402e36c59e6614fc170",
+                    "_id": "627f3402v36c59e6614fc170",
                     "fullname": "Kim",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4673,7 +4670,7 @@ const stays = [
             {
                 "at": "2021-10-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc170",
+                    "_id": "627f3407e36v59e6164fc170",
                     "fullname": "Harry",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4682,7 +4679,7 @@ const stays = [
             {
                 "at": "2021-08-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407d36c59e6164fc770",
+                    "_id": "627f3407d36c59v6164fc770",
                     "fullname": "Miriam",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4691,7 +4688,7 @@ const stays = [
             {
                 "at": "2020-09-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c59w2164fc770",
                     "fullname": "Calliope",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4700,7 +4697,7 @@ const stays = [
             {
                 "at": "2020-04-12T04:00:00.000Z",
                 "by": {
-                    "_id": "627f3407e36c59e6164fc770",
+                    "_id": "627f3407e36c59e1154fc770",
                     "fullname": "Krn",
                     "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
                 },
@@ -4708,7 +4705,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa8f8",
+        "_id": "622f337a95c7d36e298ah8f8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653752657/national%20parks/2/cf1e587e-dee6-4d56-9564-add54fdf4e4a_bcd6po.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653752659/national%20parks/2/9f65aa94-5e1e-4fd2-a42e-37a5198d0f4c_qlr170.webp",
@@ -4717,7 +4714,380 @@ const stays = [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653752657/national%20parks/2/8eafa096-aa8b-4ef4-921c-16f61f27b1c0_jnosdh.webp",
         ]
     },
+    {
+        "name": "Still Bend/Frank Lloyd Wright's Schwartz House",
+        "category": "design",
+        // "propertyType": "Entire villa",
+        "summary": "Featured on Netflix's THE WORLDS MOST AMAZING VACATION RENTALS Season 2, ep. 1. Still Bend/Bernard Schwartz House is Frank Lloyd Wright's built version of his Life Magazine Dream House design from 1938. The house is located on the East Twin River about a mile from Lake Michigan.",
+        "roomType": "Entire home",
+        "guests": 6,
+        "bedrooms": 4,
+        "beds": 4,
+        "bath": 3,
+        "amenities": [
+            "Wifi",
+            "Kitchen",
+            "Pool",
+            "Dryer",
+            "Hot water",
+            "Free parking on premises",
+            "Washer",
+            "Hair dryer",
+            "TV",
+            "Bed linens",
+            "Heating",
+            "Hangers",
+            "Shampoo",
+            "Air conditioning",
+        ],
+        "host": {
+            "_id": "622f3403e36c58x6064aaf91",
+            "fullname": "Michael",
+            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "isSuperhost": false,
 
+        },
+        "address": {
+            "country": "United States",
+            "location": {
+                "lat": 44.15388,
+                "lng": -87.56925,
+            },
+            "city": "Two Rivers",
+            "countryCode": "US",
+
+        },
+        // "bathrooms": 2,
+        "price": 527,
+        "reviewScores": {
+            "accuracy": 4.5,
+            "cleanliness": 4.7,
+            "checkin": 4.5,
+            "communication": 4.5,
+            "location": 4.7,
+            "value": 4.3,
+            "rating": 4.8,
+        },
+        "reviews": [
+            {
+                "at": "2022-05-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407e36c57x6164fd713",
+                    "fullname": "Tonya",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "If there were more stars to give I’d give them. Unbelievably wonderful experience!!"
+            },
+            {
+                "at": "2021-05-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627x3400e36c59e6614fc170",
+                    "fullname": "Gilbert",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Unique experience staying at a Frank Lloyd Wright home! Still Bend is a must-visit and must stay for all the art, design, and architecture junkies like us. The place looks good in photos, and wait till you see the actual house. It has everything you need, and Michael was such a fantastic host. There is so much places to visit which is 60-90 minutes away Two Rivers i.e. Door County, Kohler and Milwaukee! We will definitely try and visit again!"
+            },
+
+            {
+                "at": "2021-10-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407e36c59e6164fc170",
+                    "fullname": "Carrie",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "If you have an opportunity to book this home - do it! It is truly a rare gem that we feel so lucky to have gotten to stay in. Thank you! Staying here is like a warm hug for your soul. You cannot help but to slow down, breath, and marvel over the details and craftsmanship. It is clear from the moment you walk in that this home is lovingly cared for and that the owners take immense pride in making the space a wonderful experience for everyone who enters. Really just an incredible place to stay!"
+            },
+            {
+                "at": "2021-04-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407d36c59e6164fw720",
+                    "fullname": "Carolynn",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "The opportunity to stay in such a beautiful piece of history is rare. Thank you so much for sharing such an amazing property with myself and my family. The house was extremely clean and well equipped with what we needed. It was so fun to go around and look at the all the period pieces. Highly recommend you take the opportunity while you can."
+            },
+            {
+                "at": "2020-04-12T04:00:00.000Z",
+                "by": {
+                    "_id": "625f2407e36c59e6164fc770",
+                    "fullname": "Alice",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "We had a wonderful and relaxing stay at Still Bend. The house is incredible! We feel so fortunate to have stayed in a Frank Lloyd Wright masterpiece. The owners have done a fantastic job making their guests feel welcome. We didn't want to leave and hope to stay again in the near future."
+            },
+            {
+                "at": "2020-05-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3207e36c59e6164fc770",
+                    "fullname": "Michelle",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "We absolutely loved the entire experience we had at this beautiful home! Perfect for girls getaway!"
+            },
+
+        ],
+        "_id": "622f337a95c7d36e298aa0i8",
+        "imgUrls": [
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653811319/Design/1/f1e4ab81-1dc2-402d-949f-0a8b9dfce968_q455di.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653811319/Design/1/fc12b9de-be10-4166-9666-159e78888c31_dgxq9y.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653811319/Design/1/eba677ba-646a-4708-87a8-0f04fa2beeae_fsov6c.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653811318/Design/1/c41a876f-83bf-419d-833f-83b973ee48b2_tjsf8y.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653811318/Design/1/987e689c-ab00-40be-90e4-7ced014cac2d_zsm1cp.webp",
+        ]
+    },
+
+    {
+        "name": "Villa Orion Magnificent SeaView",
+        "category": "design",
+        // "propertyType": "Entire villa",
+        "summary": "Villa 'Orion' is in Cavo Delos-Kanalia, just 10 minutes from the airport of Mykonos.The villa is situated on a 1000 m2 property with breath - taking view, it's coprised of a 100m2. house along with a 70 m2 fully equiped guest house. Also there is a new guest house of 50m2 fully equiped.",
+        "roomType": "Entire villa",
+        "guests": 12,
+        "bedrooms": 5,
+        "beds": 8,
+        "bath": 5,
+        "amenities": [
+            "Wifi",
+            "Kitchen",
+            "Private Pool",
+            "Dryer",
+            "Hot water",
+            "Free parking on premises",
+            "Washer",
+            "Hair dryer",
+            "TV",
+            "Bed linens",
+            "Heating",
+            "Pets allowed",
+            "Security cameras on property",
+            "Air conditioning",
+        ],
+        "host": {
+            "_id": "622f3403e36c58x6064saf81",
+            "fullname": "Nikolas",
+            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "isSuperhost": false,
+
+        },
+        "address": {
+            "country": "Greece",
+            "location": {
+                "lat": 37.4467,
+                "lng": 25.3289,
+            },
+            "city": "Mykonos",
+            "countryCode": "GR",
+
+        },
+        // "bathrooms": 2,
+        "price": 527,
+        "reviewScores": {
+            "accuracy": 4.7,
+            "cleanliness": 4.7,
+            "checkin": 4.7,
+            "communication": 4.5,
+            "location": 4.7,
+            "value": 4.6,
+            "rating": 4.8,
+        },
+        "reviews": [
+            {
+                "at": "2022-05-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3277x36c57x6164fd713",
+                    "fullname": "Matthew",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Bless the Villa Orion! Amazing beautiful property, helpful and resourceful owners, all part of a perfect week in Mykonos. We would definitely stay here again and can’t imagine a better place."
+            },
+            {
+                "at": "2021-04-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627x3400e3x259e6614fc170",
+                    "fullname": "Mike And Amber",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "This house was everything we wanted and more. The views, the outdoor space and the location were perfect. We were two families with 8 people in total and just the right amount of space. We hired Irine one day to cook lunch and dinner for us. Her and her husband provided amazing meals! The communication between the house manager was quick every time and got us everything and anything we could have wanted. We highly recommend this house."
+            },
+
+            {
+                "at": "2021-10-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f340x036c59e6164fc170",
+                    "fullname": "Kunal",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "The home was clean and the host was very responsive. The house is a bit out of the main towns so be sure to arrange car transfers to and form the villa. The view is amazing form the house and the pool deck area. The listing shows 2 guest houses but there was only 1 when we arrived."
+            },
+            {
+                "at": "2021-09-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627f3407d36m59e6164fw720",
+                    "fullname": "Iain",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "A beautiful place!! Highly recommended"
+            },
+            {
+                "at": "2020-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "625f2407e36c59e6162lc770",
+                    "fullname": "Shelby",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "This house has fantastic outside space for a group. They were so easy to Communicate with and helped us plan all transport, groceries etc.great stay."
+            },
+            {
+                "at": "2020-10-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3207e36c59e6114xc770",
+                    "fullname": "Nandita",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "I can’t say enough good things about this villa. Beautiful set up, views, and very clean. The hosts were execrations and quick to answer and help us with all that we needed. Definitely get a car or ATV to get around but they can also help hook you up with a driver. Everything was perfect."
+            },
+            {
+                "at": "2020-09-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3702e36c59e6114xc770",
+                    "fullname": "Michael",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "What an amazing experiance.. so greatful to have stayed at Anna and Nikolas’s beautiful villa.. amazing location so picturesque and had everything we needed. The owners and staff were very attentive and helped out with arranging wverything we needed fromredtaurant recommendations to transportation and beautiful chef dinner for a sunset bday. I will definitely love to visit again!!!"
+            },
+            {
+                "at": "2020-09-12T04:00:00.000Z",
+                "by": {
+                    "_id": "621f3702e36c59e6104xc770",
+                    "fullname": "Pamela",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "We had the best time at Villa Orion! The views were spectacular! The host goes beyond expectations to make you feel comfortable and help you with anything you need!"
+            },
+
+        ],
+        "_id": "622f337a95c7d36i298ka8f8",
+        "imgUrls": [
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653814479/Design/2/bfd756d8-4bb6-40eb-b22c-5ca20056ad00_gd1j6d.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653814479/Design/2/4bd6b4fc-012d-4481-bd5c-42eaf4292d86_clg2h9.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653814479/Design/2/a6edb65a-6cfc-453a-a1f4-3e5b16a87e46_hq0wah.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653814479/Design/2/883fcbc1-89d8-4864-8d65-d1fbf00215ed_f3zgb8.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653814478/Design/2/825ff49c-adb6-41c9-9083-ecb6d074f102_ue5puk.webp",
+        ]
+    },
+    {
+        "name": "9 Islands Suites-Vasilika Suite with Jacuzzi",
+        "category": "amazing pool",
+        // "propertyType": "Entire villa",
+        "summary": "9 Islands Suites offers Suites of high aesthetic quality. Each Suite offers absolute privacy, a private terrace with sea and sunset view, air conditioning, coffee facilities, a satellite tv, a flat screen TV and a safe box.9 Islands also provides a stunning swimming pool, towels, free wi- fi and a free private parking area.The suites are located only 3 km away from Mykonos’ main town, 6 km away from the airport, 4 km away from the old port and are in the vicinity of many popular beaches.",
+        "roomType": "Room in boutique hotel",
+        "guests": 4,
+        "bedrooms": 2,
+        "beds": 2,
+        "bath": 2,
+        "amenities": [
+            "Sea View",
+            "Free parking on premises",
+            "Wifi",
+            "Private Pool",
+            "Pets allowed",
+            "Air conditioning",
+            "Hot tub",
+            "Washer",
+            "Hair dryer",
+            "Hangers",
+            "Bed linens",
+            "Shower gel",
+            "Private entrance",
+            "Security cameras on property",
+        ],
+        "host": {
+            "_id": "622f3403e36c58x6014saf18",
+            "fullname": "Panos",
+            "thumbnailUrl": "https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_small",
+            "isSuperhost": false,
+
+        },
+        "address": {
+            "country": "Greece",
+            "location": {
+                "lat": 37.4467,
+                "lng": 25.3289,
+            },
+            "city": "Mykonos",
+            "countryCode": "GR",
+
+        },
+        // "bathrooms": 2,
+        "price": 424,
+        "reviewScores": {
+            "accuracy": 4.7,
+            "cleanliness": 4.9,
+            "checkin": 4.8,
+            "communication": 4.5,
+            "location": 4.7,
+            "value": 4.5,
+            "rating": 4.8,
+        },
+        "reviews": [
+            {
+                "at": "2022-07-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627x3117x36c57x6164fd713",
+                    "fullname": "Isabella",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Our stay was wonderful! 9 islands is a beautiful boutique hotel and Panos was very attentive to us throughout our stay! We will definitely come back! We rented a car and all the main points of mykonos are a 10 minute drive from the hotel. The rooms are great and the view is wonderful."
+            },
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "627x3400x3x259e6614fc170",
+                    "fullname": "Luca",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Good"
+            },
+
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "527f340x036c59e6164fc170",
+                    "fullname": "Kristian",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "5 stars overall. Lovely place, and a great location. Panos was an excellent host very attentive to all of our questions and concerns. Quick replies and the cleaning lady was amazing! The hot tub was not completely private, it was more personal as we could see the other hot tub and room clearly across from us. Would highly recommend getting a 4WHEELER or any vehicle because taxis are expensive and it is about 10-15 minutes away from most attractions on the island."
+            },
+            {
+                "at": "2021-09-12T04:00:00.000Z",
+                "by": {
+                    "_id": "671f3407d26m59e6164fw720",
+                    "fullname": "Jorge",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Spiros and his staff are amazing. You will not regret anything about this place only if you don’t stay long enough, a definitive recommendation and must come back."
+            },
+            {
+                "at": "2021-08-12T04:00:00.000Z",
+                "by": {
+                    "_id": "625f2407e36c59e6162lc770",
+                    "fullname": "Shani",
+                    "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
+                },
+                "txt": "Perfect place. the view, the service, the design, the hospitality, the hosts are all amazing!!Definitely worth a stay!"
+            },
+
+        ],
+        "_id": "622f337a95c7d36i298ke8x9",
+        "imgUrls": [
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653815812/amazing%20pools/1/fc2276da-c56e-460b-861b-d3e0d9e0e95d_e0l4bs.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653815812/amazing%20pools/1/01239335-24ec-4858-9d61-881f6e21632f_lj92xc.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653815812/amazing%20pools/1/aa3161ee-a1aa-4e8b-977b-119da52ebb0f_gfg0ht.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653815811/amazing%20pools/1/6eb185e9-64c8-4cf5-891b-d95d2ffc56b9_ewc7re.webp",
+            "https://res.cloudinary.com/projectairbnb/image/upload/v1653815811/amazing%20pools/1/1e333818-2696-49b9-a705-b5abe5f8874e_awssmm.webp",
+
+        ]
+    }
 ]
 
 
