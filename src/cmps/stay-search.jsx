@@ -21,7 +21,7 @@ export const StaySearch=({setModalOpen,setSearchToggle,setIsBig})=>{
     </button>
 
     <div onClick={(ev)=>onSetModalOpen(ev,'guest')} className="search-guest">
-        <div className="flex space-between align-center">
+        <div className="search-guest-container flex space-between align-center">
             <div className="search-guest-btn">
         Add guests 
             </div>
