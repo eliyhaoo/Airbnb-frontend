@@ -4193,7 +4193,7 @@ const stays = [
 
         },
         // "bathrooms": 2,
-        "price": 5412,
+        "price": 2412,
         "reviewScores": {
             "accuracy": 5.0,
             "cleanliness": 5.0,
@@ -4826,7 +4826,7 @@ const stays = [
             },
 
         ],
-        "_id": "622f337a95c7d36e298aa0i8",
+        "_id": "622f337a95c7d36e298ax0l8",
         "imgUrls": [
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653811319/Design/1/f1e4ab81-1dc2-402d-949f-0a8b9dfce968_q455di.webp",
             "https://res.cloudinary.com/projectairbnb/image/upload/v1653811319/Design/1/fc12b9de-be10-4166-9666-159e78888c31_dgxq9y.webp",
