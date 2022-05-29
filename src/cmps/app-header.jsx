@@ -54,13 +54,24 @@ export const AppHeader = () => {
 
 
 
+<<<<<<< HEAD
+
+    const headerClass = `header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout' : 'details-layout'}`
+
+=======
+>>>>>>> 80e6a70a6b727cf7bdcf76704d3392c25e6e3606
 
     console.log('G VISISTEDDD',gVisitedPage.current);
 
     if (gVisitedPage.current !== 'details-page') return (gVisitedPage.current !== 'details-page') && <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
 
+<<<<<<< HEAD
+        <div className={headerClass}>
+            {/* <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`}> */}
+=======
         {/* <div className={headerClass}> */}
         <div className={`header-container full main-layout`}>
+>>>>>>> 80e6a70a6b727cf7bdcf76704d3392c25e6e3606
 
             <div className="header-content-container flex space-between align-center">
 

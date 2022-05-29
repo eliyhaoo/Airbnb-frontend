@@ -32,6 +32,12 @@
 .flex {
 
     display: flex;
+    .gap-5{
+        gap: 5px;
+    }
+    .gap-8{
+        gap:8px ;
+    }
 
     >*.full {
         flex: 1;
@@ -57,6 +63,7 @@
         justify-content: center;
     }
 }
+
 
 // Media helpers
 
