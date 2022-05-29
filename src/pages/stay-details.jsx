@@ -48,9 +48,6 @@ export const StayDetails = ({ history }) => {
 
                 <div className="num-of-reviews flex space-between gap-5">
                     <img src={starSvg} alt="star" />
-                    {/* <div className="star-svg">
-                        <img src={starSvg} alt="star" />
-                    </div> */}
                     <div>
                         {stay.reviewScores.rating.toFixed(1)}
                     </div>
@@ -68,10 +65,10 @@ export const StayDetails = ({ history }) => {
 
             </div>
 
-            <div className="activity-details">
+            {/* <div className="activity-details">
                 <span>Share </span>
                 <span>Save</span>
-            </div>
+            </div> */}
 
         </div>
 
@@ -96,21 +93,29 @@ export const StayDetails = ({ history }) => {
                     </div>
                     <img src={stay.host.thumbnailUrl} alt="profile" />
                 </div>
-                <p>{stay.summary}</p>
 
-                {/* <div className="amenities">
+                <div className="air-cover">
+                    <img src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg" alt="aircover" />
+                    <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
+                </div>
+
+                <div className="stay-description">
+                    <p>{stay.summary}</p>
+                </div>
+
+                <div className="amenities">
                     <h2>What this place offers</h2>
-                </div> */}
+                </div>
+                <div className="stay-amenities ">
+                    {getAmenities().map((amenitie, idx) =>
+                        <div key={idx}>
 
-                <div className="stay-amenities ">{getAmenities().map((amenitie, idx) =>
-                    <div key={idx}>
-
-                        <div className='flex'>
-                            <div className={`amenite-img ${amenitie}`}> </div>
-                            <div>{amenitie}</div>
+                            <div className='amenite-img-container flex'>
+                                <div className={`amenite-img ${amenitie}`}> </div>
+                                <div className="amenite">{amenitie}</div>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
 
 
                 </div>

@@ -1,14 +1,21 @@
 
 .stay-review{
 
-
-
-
     .reviews-stats-header{
         display: flex;
         align-items: center;
-        border-top: 1px solid $border;
-        padding: 30px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 26px;
+        text-size-adjust: 100%;
+        margin-top: rem(48px);
+        margin-bottom: rem(36px);
+        span:first-child:last-child {
+            padding-right: 8px;
+        }
+        span{
+            padding-right: 4px;
+        }
     }
     .reviews-stats-container{
         width: 100%;
@@ -17,10 +24,7 @@
         gap: 10px 12px;
         margin-bottom: 30px;
         padding: 5px;
-        
-
  
-        
         .reviews-stats{
             display: flex;
             justify-content: space-between;

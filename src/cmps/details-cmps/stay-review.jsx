@@ -1,15 +1,20 @@
-
-
 import { ReviewList } from "../details-cmps/review-list"
 import { AddReview } from './add-review'
+
+import starSvg from '../../assets/svg/star.svg'
 
 export const StayReview = ({ stay }) => {
 
 
-
     return <section className="stay-review">
         <div className="reviews-stats-header">
-            ★{stay.reviewScores.rating}·{stay.reviews.length}
+            {/* <div> */}
+            <span>★</span>
+            <span>{stay.reviewScores.rating}</span>
+            <span>·</span>
+            <span>{stay.reviews.length} </span>
+            {/* </div> */}
+            <span> reviews</span>
         </div>
 
         <div className="reviews-stats-container">
