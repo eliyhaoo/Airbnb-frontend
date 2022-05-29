@@ -3622,7 +3622,7 @@ const stays = [
             "communication": 4.9,
             "location": 4.6,
             "value": 4.9,
-            "rating": 5.0,
+            "rating": 4.8,
         },
         "reviews": [
             {
@@ -3892,7 +3892,7 @@ const stays = [
             "communication": 4.9,
             "location": 4.6,
             "value": 4.9,
-            "rating": 5.0,
+            "rating": 4.8,
         },
         "reviews": [
             {
@@ -3972,7 +3972,7 @@ const stays = [
             "communication": 4.9,
             "location": 4.6,
             "value": 4.9,
-            "rating": 5.0,
+            "rating": 4.8,
         },
         "reviews": [
             {
@@ -4094,7 +4094,7 @@ const stays = [
             "communication": 5.0,
             "location": 5.0,
             "value": 4.8,
-            "rating": 5.0,
+            "rating": 4.9,
         },
         "reviews": [
             {
@@ -4201,7 +4201,7 @@ const stays = [
             "communication": 5.0,
             "location": 5.0,
             "value": 4.8,
-            "rating": 5.0,
+            "rating": 4.9,
         },
         "reviews": [
             {
@@ -4524,7 +4524,7 @@ const stays = [
             "communication": 4.5,
             "location": 4.7,
             "value": 4.3,
-            "rating": 4.8,
+            "rating": 4.6,
         },
         "reviews": [
             {
@@ -4645,7 +4645,7 @@ const stays = [
             "communication": 4.5,
             "location": 4.7,
             "value": 4.3,
-            "rating": 4.8,
+            "rating": 4.7,
         },
         "reviews": [
             {
@@ -4760,12 +4760,12 @@ const stays = [
         // "bathrooms": 2,
         "price": 527,
         "reviewScores": {
-            "accuracy": 4.5,
+            "accuracy": 4.9,
             "cleanliness": 4.7,
             "checkin": 4.5,
-            "communication": 4.5,
+            "communication": 4.9,
             "location": 4.7,
-            "value": 4.3,
+            "value": 4.4,
             "rating": 4.8,
         },
         "reviews": [
@@ -4888,7 +4888,7 @@ const stays = [
             "communication": 4.5,
             "location": 4.7,
             "value": 4.6,
-            "rating": 4.8,
+            "rating": 4.7,
         },
         "reviews": [
             {
@@ -5279,7 +5279,7 @@ const stays = [
             "communication": 4.7,
             "location": 4.9,
             "value": 4.9,
-            "rating": 5.0,
+            "rating": 4.8,
         },
         "reviews": [
             {
