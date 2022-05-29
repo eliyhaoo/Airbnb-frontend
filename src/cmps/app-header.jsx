@@ -24,7 +24,7 @@ export const AppHeader = () => {
 
     useEffect(() => {
         gVisitedPage.current = visitedPage
-        gVisitedPage.current === 'home-page'? setSearchToggle(true) : setSearchToggle(false)
+        gVisitedPage.current === 'home-page' ? setSearchToggle(true) : setSearchToggle(false)
     }, [visitedPage])
 
 
@@ -32,7 +32,7 @@ export const AppHeader = () => {
 
     const onScroll = () => {
 
-        if (gVisitedPage.current!=='home-page') {
+        if (gVisitedPage.current !== 'home-page') {
             setSearchToggle(false)
             return
         }
@@ -54,15 +54,39 @@ export const AppHeader = () => {
 
 
 
-    console.log('PAGE VISISIT',gVisitedPage.current);
-    const headerClass = `header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`
-    console.log('classNAme',headerClass);
+
+    console.log('G VISISTEDDD',gVisitedPage.current);
+
+    if (gVisitedPage.current !== 'details-page') return (gVisitedPage.current !== 'details-page') && <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
+
+        {/* <div className={headerClass}> */}
+        <div className={`header-container full main-layout`}>
+
+            <div className="header-content-container flex space-between align-center">
+
+                <NavLink to='/'><h2>LOGO</h2></NavLink>
+
+                {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
+                {/* {!isSearchOpen && <StaySearch  setModalOpen={onSmallSearchClick} />} */}
+
+                <nav className="main-nav">
+                    <NavLink to='/explore'>Explore</NavLink>
+                    <a href="/">Become a host</a>
+                </nav>
+
+            </div>
+
+            {isSearchOpen && <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
+
+        </div>
+
+    </header>
 
 
-    return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
+    if (gVisitedPage.current === 'details-page') return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
 
-        <div className={headerClass}>
-        {/* <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`}> */}
+        {/* <div className={headerClass}> */}
+        <div className={`header-container full details-layout`}>
 
             <div className="header-content-container flex space-between align-center">
 
@@ -84,3 +108,31 @@ export const AppHeader = () => {
 
     </header>
 }
+
+
+
+
+// return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
+
+// {/* <div className={headerClass}> */}
+// <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`}>
+
+//     <div className="header-content-container flex space-between align-center">
+
+//         <NavLink to='/'><h2>LOGO</h2></NavLink>
+
+//         {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
+//         {/* {!isSearchOpen && <StaySearch  setModalOpen={onSmallSearchClick} />} */}
+
+//         <nav className="main-nav">
+//             <NavLink to='/explore'>Explore</NavLink>
+//             <a href="/">Become a host</a>
+//         </nav>
+
+//     </div>
+
+//     {isSearchOpen && <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
+
+// </div>
+
+// </header>

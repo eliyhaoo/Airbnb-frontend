@@ -1,35 +1,40 @@
 .explore-page {
     margin-top: 95px;
 
-    .filter-btns-container {
+    .filter-container {
+        box-shadow: 0px 10px 13px -6px  $borderClr;
         top: 71px;
         position: sticky;
         background-color: white;
         z-index: 400;
-        padding: 8px 0 0 0;
-
-    }
-
-    .filter-btn {
-        width: 80px;
-        cursor: pointer;
-        right: 0;
-        padding: 15px;
-        border-radius: 8px;
-        background-color: transparent;
-        box-shadow: 0px 0px 0px 1px $border;
-        font-size: 0.8rem;
-        font-weight: 700;
-        border: none;
-    }
 
 
-    .filter-img-btn {
-        width: 15px;
-        aspect-ratio: 1;
-    }
+        .filter-btns-container {
+            padding: 8px 0 0 0;
 
-    .img-container {
-        display: inline;
+        }
+
+        .filter-btn {
+            width: 80px;
+            cursor: pointer;
+            right: 0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: transparent;
+            box-shadow: 0px 0px 0px 1px $border;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: none;
+        }
+
+
+        .filter-img-btn {
+            width: 15px;
+            aspect-ratio: 1;
+        }
+
+        .img-container {
+            display: inline;
+        }
     }
 }
