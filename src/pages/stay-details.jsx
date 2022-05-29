@@ -56,17 +56,19 @@ export const StayDetails = ({ history }) => {
                         <span>{stay.reviews.length}</span>
                         <span>reviews</span>
                     </div>
+
+                    <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
+                    <div className="city-address">{stay.address.city},</div>
+                    <div className="country-address">{stay.address.country}</div>
+
                 </div>
 
-                <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
-                {/* <div className="city-address">{stay.address.city},</div>
-                <div className="country-address">{stay.address.country}</div> */}
             </div>
 
-            <div className="activity-details">
+            {/* <div className="activity-details">
                 <span>Share </span>
                 <span>Save</span>
-            </div>
+            </div> */}
 
         </div>
 
@@ -78,23 +80,42 @@ export const StayDetails = ({ history }) => {
             <div className="stay-summary-container">
                 <div className="stay-info">
                     <div>
-                        <h2>{stay.title} hosted by {stay.host.fullname}</h2>
-                        <h4>{stay.guests} guests<span className="dot">·</span>{stay.bedrooms} bedrooms<span className="dot">·</span> {stay.beds} beds<span className="dot">·</span> {stay.bathrooms} baths</h4>
+                        <h2>{stay.roomType} hosted by {stay.host.fullname}</h2>
+                        <span>
+                            {stay.guests} guests
+                            <span className="dot">·</span>
+                            {stay.bedrooms} bedrooms
+                            <span className="dot">·</span>
+                            {stay.beds} beds
+                            <span className="dot">·</span>
+                            {stay.bath} baths
+                        </span>
                     </div>
                     <img src={stay.host.thumbnailUrl} alt="profile" />
                 </div>
-                <p>{stay.summary}</p>
 
-                <div className="stay-amenities ">{getAmenities().map((amenitie, idx) =>
-                    <div key={idx}>
+                <div className="air-cover">
+                    <img src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg" alt="aircover" />
+                    <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
+                </div>
 
-                        <div className='flex'>
-                            {/* <div className="amenite-img wifi"> </div> */}
-                            <div className={`amenite-img ${amenitie}`}> </div>
-                            <div>{amenitie}</div>
+                <div className="stay-description">
+                    <p>{stay.summary}</p>
+                </div>
+
+                <div className="amenities">
+                    <h2>What this place offers</h2>
+                </div>
+                <div className="stay-amenities ">
+                    {getAmenities().map((amenitie, idx) =>
+                        <div key={idx}>
+
+                            <div className='amenite-img-container flex'>
+                                <div className={`amenite-img ${amenitie}`}> </div>
+                                <div className="amenite">{amenitie}</div>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
 
 
                 </div>

@@ -1,14 +1,21 @@
 
 .stay-review{
 
-
-
-
     .reviews-stats-header{
         display: flex;
         align-items: center;
-        border-top: 1px solid $footer;
-        padding: 30px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 26px;
+        text-size-adjust: 100%;
+        margin-top: rem(48px);
+        margin-bottom: rem(36px);
+        span:first-child:last-child {
+            padding-right: 8px;
+        }
+        span{
+            padding-right: 4px;
+        }
     }
     .reviews-stats-container{
         width: 100%;
@@ -17,14 +24,19 @@
         gap: 10px 12px;
         margin-bottom: 30px;
         padding: 5px;
-        
-
-
+ 
         .reviews-stats{
             display: flex;
             justify-content: space-between;
-            margin-inline-end: 100px;
             margin-bottom: 16px;
+
+            &:nth-child(odd){
+                margin-inline-end: 70px;
+            }
+
+            &:nth-child(even){
+                margin-inline-start: 70px;
+            }
 
             .review-rates-container{
                 gap: 4px;

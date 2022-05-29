@@ -8,7 +8,6 @@ export const ReviewList = ({ stay }) => {
     }, [stay.reviews])
 
     return <div className="review-list">
-
         {stay.reviews.map(review => <ReviewPreview review={review} stay={stay} key={review.by._id} />)}
 
     </div>

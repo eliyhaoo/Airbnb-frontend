@@ -1,12 +1,21 @@
 
 .review-list{
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     .review-list>*{
         flex: 1 1;
     }
 }
+// .review-list{
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+//     .review-list>*{
+//         flex: 1 1;
+//     }
+// }
 
 
 
