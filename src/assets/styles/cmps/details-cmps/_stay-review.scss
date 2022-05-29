@@ -19,12 +19,20 @@
         padding: 5px;
         
 
-
+ 
+        
         .reviews-stats{
             display: flex;
             justify-content: space-between;
-            margin-inline-end: 100px;
             margin-bottom: 16px;
+
+            &:nth-child(odd){
+                margin-inline-end: 70px;
+            }
+
+            &:nth-child(even){
+                margin-inline-start: 70px;
+            }
 
             .review-rates-container{
                 gap: 4px;
