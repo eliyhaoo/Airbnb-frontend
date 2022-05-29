@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { setIsInHomePage } from "../store/actions/system.action"
+import { setVisitPage } from "../store/actions/system.action"
 
 export const HomePage = () => {
 
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(setIsInHomePage(true))
+        dispatch(setVisitPage('home-page'))
     }, [])
 
     return <section className="home-page full">

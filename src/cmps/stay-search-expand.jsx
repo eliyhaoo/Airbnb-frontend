@@ -3,11 +3,10 @@ import searchSvg from '../assets/svg/searchsvg.svg'
 import { SearchCountry } from './search-country'
 
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) => {
-
+    
     const [selectedRegion,setSelectedRegion] =useState('Im flexible')
 
     const onSetModal = (ev, modal) => {
-    
         ev.stopPropagation()
         setModalOpen(modal)
         setIsBig(true)

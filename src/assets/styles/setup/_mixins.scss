@@ -18,11 +18,18 @@
 //     }
 // }
 
-// @mixin for-wide-layout {
-//     @media (min-width: $normal-breakpoint + 40) {
-//         @content;
-//     }
-// }
+@mixin for-wide-layout-details {
+    @media (min-width: $break-wide-details )  {
+        @content;
+    }
+}
+
+@mixin layoutGTC($max) {
+  grid-template-columns:
+    minmax($layoutPadding, 1fr)
+    minmax(auto, $max)
+    minmax($layoutPadding, 1fr);
+}
 
 /* Media  Mixins */
 @mixin aspect-ratio($width, $height) {
