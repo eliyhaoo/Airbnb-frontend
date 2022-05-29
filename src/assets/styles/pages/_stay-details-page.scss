@@ -1,7 +1,8 @@
 .stay-details-page {
     margin-bottom: 400px;
-    
-    
+    margin-top: 80px;
+
+
     h1 {
         line-height: 1.428em;
     }
@@ -11,7 +12,7 @@
         display: grid;
         gap: 9px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 20vw);
+        grid-template-rows: repeat(2, 180px);
         grid-template-areas:
             "img1 img1 img2 img3"
             "img1 img1 img4 img5";
@@ -22,6 +23,7 @@
             width: 100%;
             height: 100%;
         }
+
 
         .img1 {
             grid-area: img1;
@@ -92,67 +94,88 @@
         width: 500px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
-        .amenite-img{
+
+        .amenite-img {
             height: 38px;
-                margin-right: 5px;
-                aspect-ratio: 0.5;
-            &.Wifi::before{
-                content:url('../../svg/Wifi.svg');
+            margin-right: 5px;
+            aspect-ratio: 0.5;
+
+            &.Wifi::before {
+                content: url('../../svg/Wifi.svg');
             }
-            &.Kitchen::before{
-                content:url('../../svg/Kitchen.svg');
+
+            &.Kitchen::before {
+                content: url('../../svg/Kitchen.svg');
             }
-            &.Shampoo::before{
-                content:url('../../svg/Shampoo.svg');
+
+            &.Shampoo::before {
+                content: url('../../svg/Shampoo.svg');
             }
-            &.Essentials::before{
-                content:url('../../svg/Essentials.svg');
+
+            &.Essentials::before {
+                content: url('../../svg/Essentials.svg');
             }
-            &.Private::before{
-                content:url('../../svg/Private entrance.svg');
+
+            &.Private::before {
+                content: url('../../svg/Private entrance.svg');
             }
-            &.Hair::before{
-                content:url('../../svg/Hair dryer.svg');
+
+            &.Hair::before {
+                content: url('../../svg/Hair dryer.svg');
             }
-            &.Hot::before{
-                content:url('../../svg/Hot water.svg');
+
+            &.Hot::before {
+                content: url('../../svg/Hot water.svg');
             }
-            &.Air::before{
-                content:url('../../svg/Air conditioning.svg');
+
+            &.Air::before {
+                content: url('../../svg/Air conditioning.svg');
             }
-            &.Fire::before{
-                content:url('../../svg/Fire and kit.svg');
+
+            &.Fire::before {
+                content: url('../../svg/Fire and kit.svg');
             }
-            &.Free::before{
-                content:url('../../svg/Free parking on premises.svg');
+
+            &.Free::before {
+                content: url('../../svg/Free parking on premises.svg');
             }
-            &.Smoke::before{
-                content:url('../../svg/Smoke alarm.svg');
+
+            &.Smoke::before {
+                content: url('../../svg/Smoke alarm.svg');
             }
-            &.Safe::before{
-                content:url('../../svg/Safe.svg');
+
+            &.Safe::before {
+                content: url('../../svg/Safe.svg');
             }
-            &.Dryer::before{
-                content:url('../../svg/Dryer.svg');
+
+            &.Dryer::before {
+                content: url('../../svg/Dryer.svg');
             }
-            &.Heating::before{
-                content:url('../../svg/Heating.svg');
+
+            &.Heating::before {
+                content: url('../../svg/Heating.svg');
             }
-            &.Self::before{
-                content:url('../../svg/Self check-in.svg');
+
+            &.Self::before {
+                content: url('../../svg/Self check-in.svg');
             }
-            &.Hangers::before{
-                content:url('../../svg/Hangers.svg');
+
+            &.Hangers::before {
+                content: url('../../svg/Hangers.svg');
             }
-            &.Shower::before{
-                content:url('../../svg/Shower gel.svg');
+
+            &.Shower::before {
+                content: url('../../svg/Shower gel.svg');
             }
-            &.TV::before{
-                content:url('../../svg/TV.svg');
+
+            &.TV::before {
+                content: url('../../svg/TV.svg');
             }
-            &.Pool::before{
-                content:url('../../svg/Pool.svg');
+
+            &.Pool::before {
+                content: url('../../svg/Pool.svg');
             }
+
             // &.Outdoor::before{
             //     content:url('../../svg/Outdoor shower.svg');
             // }

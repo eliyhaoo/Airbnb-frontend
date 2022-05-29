@@ -7,7 +7,7 @@ import { stayService } from '../services/stay.service'
 import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { StayReview } from "../cmps/details-cmps/stay-review"
-import { setIsInHomePage } from '../store/actions/system.action'
+import { setVisitPage } from '../store/actions/system.action'
 import { useDispatch } from 'react-redux'
 
 
@@ -19,7 +19,7 @@ export const StayDetails = ({ history }) => {
 
     useEffect(() => {
         (async () => {
-            dispatch(setIsInHomePage(false))
+            dispatch(setVisitPage('details-page'))
             try {
                 const stay = await stayService.getById(stayId)
                 setStay(stay)
@@ -37,7 +37,7 @@ export const StayDetails = ({ history }) => {
     }
 
     if (!stay) return <div className="loader">Loading...</div>
-    return <section className="stay-details-page">
+    return <section className="stay-details-page details-layout">
         <h1 className="stay-name-details">{stay.name}</h1>
 
         <div className="stay-details-container">

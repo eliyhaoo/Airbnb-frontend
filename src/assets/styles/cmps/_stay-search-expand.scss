@@ -1,7 +1,6 @@
 .stay-search-expand {
 
     justify-self: center;
-    margin-bottom: 20px;
 
     .stay-search-expand-container {
 
@@ -98,7 +97,7 @@
                     .content {
                         height: 48px;
                         border-radius: 24px;
-                        color: white;
+                        color: $backgroundClr;
                         padding: 0 10px;
                         gap: 10px;
                         font-size: rem(18px);

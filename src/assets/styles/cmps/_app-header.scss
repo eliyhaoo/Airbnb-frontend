@@ -1,17 +1,16 @@
 .app-header {
 
     position: fixed;
-    height: 20vh;
+    height: 193px;
     width: 100%;
     background-color: unset;
-    transition: background-color 0.6s;
     z-index: 10000;
+    transition:  1s;
     
     
     .header-container {
-        z-index: 10000;
+        height: 85px;
         .header-content-container {
-            z-index: 10000;
 
             height: 80px;
 
@@ -21,21 +20,44 @@
             }
 
             a {
-                color: white;
+                color: $backgroundClr;
             }
         }
     }
 
     &.close {
         height: unset;
-        background-color: white;
+        background-color: $backgroundClr;
 
         .header-content-container {
-            z-index: 10000;
 
             a {
                 color: inherit;
 
+            }
+        }
+    }
+
+    &.pages {
+        
+        background-color: $backgroundClr;
+        .header-content-container {
+           
+            a {
+                color: $secondary;
+
+            }
+        }
+        
+        &.close {
+            height: unset;
+
+            .header-content-container {
+
+                a {
+                    color: inherit;
+
+                }
             }
         }
     }

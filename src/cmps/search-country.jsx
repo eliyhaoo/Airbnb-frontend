@@ -21,8 +21,8 @@ export const SearchCountry = ({selectedRegion,setSelectedRegion}) => {
             <div className="regions-grid">
 
                 {regions.map((region, idx) =>
-                    <div onClick={()=>setSelectedRegion(region)} className={`region-container ${region === selectedRegion? 'selected':''} flex direction-column`}>
-                        <img key={idx} className="country-img" src={require(`../assets/img/countries/${region}.webp`)} alt="house" />
+                    <div key={idx} onClick={()=>setSelectedRegion(region)} className={`region-container ${region === selectedRegion? 'selected':''} flex direction-column`}>
+                        <img  className="country-img" src={require(`../assets/img/countries/${region}.webp`)} alt="house" />
                         <span>{region}</span>
                     </div>
                 )}

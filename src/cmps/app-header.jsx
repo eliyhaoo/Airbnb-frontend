@@ -7,15 +7,15 @@ import { StaySearchExpand } from './stay-search-expand'
 
 export const AppHeader = () => {
 
-    const gIsInHomePage = useRef()
+    const gVisitedPage = useRef()
+    const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [isSearchOpen, setSearchToggle] = useState(true)
-    const { isInHomePage } = useSelector(storeState => storeState.systemModule)
-    const [modalOpen,setModalOpen]=useState('location')
-    const [isBig, setIsBig]= useState(false)
+    const [modalOpen, setModalOpen] = useState(null)
+    const [isBig, setIsBig] = useState(false)
 
 
     useEffect(() => {
-        gIsInHomePage.current = isInHomePage
+        gVisitedPage.current = visitedPage
         window.addEventListener('scroll', onScroll)
         return () => {
             window.removeEventListener('scroll', onScroll)
@@ -23,42 +23,53 @@ export const AppHeader = () => {
     }, [])
 
     useEffect(() => {
-        gIsInHomePage.current = isInHomePage
-        gIsInHomePage.current ? setSearchToggle(true) : setSearchToggle(false) 
-    },[isInHomePage])
+        gVisitedPage.current = visitedPage
+        gVisitedPage.current === 'home-page'? setSearchToggle(true) : setSearchToggle(false)
+    }, [visitedPage])
+
+
 
 
     const onScroll = () => {
- 
-        if (!gIsInHomePage.current) {
+
+        if (gVisitedPage.current!=='home-page') {
             setSearchToggle(false)
             return
         }
         const position = window.pageYOffset
-        position > 80 ?setSearchToggle(false) :setSearchToggle(true)
-     
+        if (position > 80) {
+            setSearchToggle(false)
+            setModalOpen(null)
+            setIsBig(false)
+        } else {
+            setSearchToggle(true)
+        }
+
     }
 
-    const onCloseSearchBig=()=>{
+    const onCloseSearchBig = () => {
         setModalOpen(null)
         setIsBig(false)
     }
 
-    const onSmallSearchClick =(field)=>{
-        setSearchToggle(true)
-        setModalOpen(field)
-    }
 
 
-    return <header onClick={onCloseSearchBig} className={`app-header full main-layout ${isSearchOpen ? '' : 'close'}`}>
+    console.log('PAGE VISISIT',gVisitedPage.current);
+    const headerClass = `header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`
+    console.log('classNAme',headerClass);
 
-        <div className="header-container full main-layout">
+
+    return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
+
+        <div className={headerClass}>
+        {/* <div className={`header-container full ${gVisitedPage.current !== 'details-page' ? 'main-layout':'details-layout'}`}> */}
 
             <div className="header-content-container flex space-between align-center">
 
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
 
-                {!isSearchOpen && <StaySearch setModalOpen={onSmallSearchClick} />}
+                {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
+                {/* {!isSearchOpen && <StaySearch  setModalOpen={onSmallSearchClick} />} */}
 
                 <nav className="main-nav">
                     <NavLink to='/explore'>Explore</NavLink>
@@ -66,10 +77,10 @@ export const AppHeader = () => {
                 </nav>
 
             </div>
-            
-            {isSearchOpen &&  <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen}/>}
-            
+
+            {isSearchOpen && <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
+
         </div>
-        
+
     </header>
 }

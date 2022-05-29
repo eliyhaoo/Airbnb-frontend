@@ -2,16 +2,15 @@
     margin-top: 95px;
 
     .filter-btns-container {
-        top: 79px;
+        top: 9vh;
         position: sticky;
         background-color: white;
-        z-index: 2000;
+        z-index: 400;
         padding: 8px 0 0 0;
 
     }
 
     .filter-btn {
-        align-self: baseline;
         width: 80px;
         cursor: pointer;
         right: 0;
