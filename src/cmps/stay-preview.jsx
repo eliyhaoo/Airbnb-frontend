@@ -7,9 +7,9 @@ export const StayPreview = ({ stay }) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    return <div className="stay-preview flex direction-column">
+    return <Link to={`/stay/${stay._id}`}><div className="stay-preview flex direction-column">
         <CarouselComponent stayImgUrls={stay.imgUrls} />
-        <Link to={`/stay/${stay._id}`}><div className="preview-details-container">
+        <div className="preview-details-container">
             <p className="preview-country-city">{stay.address.city}, {stay.address.country}</p>
             <p className="preview-room-type">{stay.roomType}</p>
             <p className="preview-beds">{stay.beds} beds</p>
@@ -17,6 +17,6 @@ export const StayPreview = ({ stay }) => {
                 <p className="preview-rating">{stay.reviewScores.rating.toFixed(1)}</p><img className="star-svg" src={starSvg} />
             </div>
             <p className="preview-price"><span className="price-span">${getPriceWithCommas(stay.price)}</span> night</p>
-        </div></Link>
-    </div >
+        </div>
+    </div ></Link>
 }

@@ -14,7 +14,8 @@
     -ms-transition: all 0.25s ease-in;
     -o-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
-    opacity: 0.4;
+    //// opacity:
+    opacity: 0;
     filter: alpha(opacity=40);
     position: absolute;
     z-index: 2;
@@ -35,8 +36,8 @@
 .carousel.carousel-slider .control-arrow:before {
     margin: 0 5px;
     display: inline-block;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
+    // border-top: 8px solid transparent;
+    // border-bottom: 8px solid transparent;
     content: '';
 }
 
@@ -49,6 +50,17 @@
 
 .carousel .control-prev.control-arrow {
     left: 0;
+    aspect-ratio: 0.5;
+    margin-top: 50%;
+    margin-left: 5%;
+    transform: translateY(-50%);
+    // padding: 5px;
+    height: 28px;
+    width: 28px;
+    background-image: url(../../svg/arrow-prev.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
 
 }
 
@@ -61,11 +73,25 @@
 
 .carousel .control-next.control-arrow {
     right: 0;
+    aspect-ratio: 0.5;
+    margin-top: 50%;
+    margin-right: 5%;
+    transform: translateY(-50%);
+    // padding: 5px;
+    height: 28px;
+    width: 28px;
+    background-image: url(../../svg/arrow-next.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
 
 }
 
-.carousel .control-next.control-arrow:before {
+.carousel .control-next.control-arrow::before {
     border-left: 8px solid #fff;
+    content: '';
+    color: #000;
+
 }
 
 .carousel-root {
@@ -161,14 +187,14 @@
 .carousel.carousel-slider .control-arrow {
     top: 0;
     color: #fff;
-    font-size: 26px;
     bottom: 0;
-    margin-top: 0;
-    padding: 5px;
 }
 
 .carousel.carousel-slider .control-arrow:hover {
-    background: rgba(0, 0, 0, 0.2);
+    // background: rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 20px;
+    opacity: 0.8;
 }
 
 .carousel .slider-wrapper {
