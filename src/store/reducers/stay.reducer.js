@@ -11,10 +11,17 @@ const initialState = {
             guestsNum: null,
         },
         category: 'All Homes',
-        price: null,
-        bedsNum: null,
-        typeOfPlace: '',
-        amenities: []
+        properties:{
+
+            price: null,
+            bedsNum: null,
+            roomType: {
+                'Entire Place':{isChecked:false,title:'A place all to yourself'} ,
+                'Private Room':{isChecked:false,title:'Your own room in a home or a hotel, plus some shared common spaces'},
+                'Shared Room':{isChecked:false,title:'A sleeping space and common areas that may be shared with others'}
+            },
+            amenities: []
+        }
 
     },
 }

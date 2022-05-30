@@ -5,6 +5,7 @@ import { stayService } from '../../services/stay.service.js'
 export function loadStays() {
     return async (dispatch, getState) => {
         const { filterBy } = getState().stayModule
+        console.log('FILTERBY',filterBy);
         try {
             const stays = await stayService.query(filterBy)
             dispatch({
@@ -39,38 +40,23 @@ export function saveStay(stay) {
         })
     }
 }
-export function setSearchBy(searchBy) {
 
+
+
+export function setFilterBy(field,value) {
+    console.log('Field',field);
+    // console.log('FIlterBYFields',filterByFields);
     return dispatch => {
         dispatch({
             type: 'SET_FILTERBY',
-            filterField: { field: 'searchBy', value: searchBy }
+            filterField: { field, value }
         })
     }
 }
 
 
-export function setCategory(category) {
-    return async dispatch => {
-        try {
-            // const staysByCategory = stayService.filterByCategory(category)
-            dispatch({
-                type: 'SET_FILTERBY',
-                filterField: { field: 'category', value: category }
-            })
-            // dispatch({
-            //     type: 'SET_STAYS',
-            //     stays: staysByCategory
-            // })
 
-        } catch (err) {
-            console.log('UserActions: err in loadUsers', err)
-            // } finally {
-            //     dispatch({ type: 'LOADING_DONE' })
-        }
-    }
 
-}
 // export function onSetFilter(field, value) {
 //     return dispatch => {
 //         dispatch({

@@ -24,144 +24,178 @@
         }
     }
 
-}
 
-.modal-title {
-    margin: 0 auto;
-    // align-self: center;
-    text-align: center;
-    font-size: 1.2em;
-}
 
-.filter-form {
-    border-top: 1px solid rgb(235, 235, 235);
-    padding: 10px;
-    overflow-y: scroll;
-    max-height: 60vh;
-    // input[type=checkbox]:active {
-    //     background-color: $secondary;
-    // }
-
-    .form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 15px;
+    .modal-title {
+        margin: 0 auto;
+        // align-self: center;
+        text-align: center;
+        font-size: 1.2em;
     }
 
-    .span {
-        margin-left: 21px;
-        color: $subtext;
-    }
-
-    & .filter-type:not(:first-child) {
+    .filter-form {
         border-top: 1px solid rgb(235, 235, 235);
-        margin-bottom: 2em;
-        margin-top: 2em;
-    }
+        padding: 10px;
+        overflow-y: scroll;
+        max-height: 60vh;
+        // input[type=checkbox]:active {
+        //     background-color: $secondary;
+        // }
 
-    h2 {
-        margin-bottom: 1em;
-        margin-top: 1em;
-    }
-
-    p {
-        margin: 0
-    }
-}
-
-/* Black w/ opacity */
-.filter-modal {
-    animation-name: example;
-
-    animation-duration: 10s;
-    z-index: 1000;
-    position: fixed;
-    width: 50%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    background: #fefefe;
-    border-radius: 10px;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-
-    .filter-footer {
-        border-top: 1px solid rgb(235, 235, 235);
-        padding: 5px;
-
-        p {
-            text-decoration: underline;
-            font-weight: 500;
-            cursor: pointer;
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15px;
         }
 
-        button {
-            // border: 1px solid $border;
-            background-color: $secondary;
-            color: $backgroundClr;
+        .span {
+            margin-left: 21px;
+            color: $subtext;
+        }
+
+        .filter-type{
+
+            .css-k008qs{
+                width:100%;
+                
+                .css-1vgzwi7-MuiFormControl-root {
+                    width:100%;
+
+                    .css-dmmspl-MuiFormGroup-root {
+
+                        
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        width: 100%;
+                        .css-ahj2mt-MuiTypography-root{
+
+                            font-family:manrope-light;
+                        }
+                    }
+                    
+                }
+            }
+           
+                // .multi-select-container{
+                //     grid-template-columns: repeat(2, 1fr);
+                //     width:100%;
+                // }
+            
+        }
+
+        & .filter-type:not(:first-child) {
+            border-top: 1px solid rgb(235, 235, 235);
+            margin-bottom: 2em;
+            margin-top: 2em;
+        }
+
+        h2 {
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+
+        p {
+            margin: 0
+        }
+    }
+
+    /* Black w/ opacity */
+    .filter-modal {
+        animation-name: example;
+
+        animation-duration: 10s;
+        z-index: 1000;
+        position: fixed;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        background: #fefefe;
+        border-radius: 10px;
+        animation-duration: 400ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+
+        .filter-footer {
+            border-top: 1px solid rgb(235, 235, 235);
+            padding: 5px;
+
+            p {
+                text-decoration: underline;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            button {
+                // border: 1px solid $border;
+                background-color: $secondary;
+                color: $backgroundClr;
+                margin-top: 5px;
+                margin-inline-end: 10px;
+                padding: 16px 28px;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: $secondary;
+                }
+            }
+
+
+            @keyframes example {
+                0% {
+                    bottom: -400vh;
+                }
+
+                100% {
+                    bottom: -10vh;
+                }
+            }
+        }
+
+        .filter-form-btn {
+            border: 1px solid $border;
             margin-top: 5px;
             margin-inline-end: 10px;
             padding: 16px 28px;
-            border-radius: 10px;
+            border-radius: 25px;
 
             &:hover {
-                background-color: black;
-            }
-        }
-
-
-        @keyframes example {
-            0% {
-                bottom: -400vh;
+                border: 1px solid $secondary;
             }
 
-            100% {
-                bottom: -10vh;
+            &:active {
+                background-color: $secondary;
+                color: $backgroundClr;
+                border: unset;
             }
         }
     }
 
-    .filter-form-btn {
-        border: 1px solid $border;
-        margin-top: 5px;
-        margin-inline-end: 10px;
-        padding: 16px 28px;
-        border-radius: 25px;
+    .screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        overflow-y: hidden;
+        z-index: 500;
+        // padding-top: 100px;
+        // background-color: rgb(0, 0, 0);
+        // overflow: auto; 
 
-        &:hover {
-            border: 1px solid $secondary;
+        &.header-open {
+            top: 165px;
         }
 
-        &:active {
-            background-color: $secondary;
-            color: $backgroundClr;
-            border: unset;
+        &.guest-open {
+            background-color: unset;
         }
-    }
-}
 
-.screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow-y: hidden;
-    z-index: 500;
-    // padding-top: 100px;
-    // background-color: rgb(0, 0, 0);
-    // overflow: auto; 
+        // html {
+        //     height: 100vh;
+        //     overflow-y: hidden;
+        // }
 
-    &.header-open{
-        top: 165px;
     }
-    &.guest-open{
-        background-color: unset;
-    }
-    // html {
-    //     height: 100vh;
-    //     overflow-y: hidden;
-    // }
 
 }

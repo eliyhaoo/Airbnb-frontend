@@ -44,7 +44,7 @@ async function query(filterBy) {
     let stays = await storageService.query(STORAGE_KEY)
     if (searchBy.country) {
         const regex = new RegExp(searchBy.country, 'i')
-        stays = stays.filter(stay => regex.test(stay.country))
+        stays = stays.filter(stay => regex.test(stay.address.country))
     }
     if (category === 'All Homes') return stays
     return _filterByCategory(stays, category)

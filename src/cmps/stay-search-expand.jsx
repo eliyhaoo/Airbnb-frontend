@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import searchSvg from '../assets/svg/searchsvg.svg'
 import { useForm } from '../hooks/useForm'
-import { setSearchBy } from '../store/actions/stay.action'
+import { setFilterBy, setSearchBy } from '../store/actions/stay.action'
 import { SearchCountry } from './search-country'
 
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) => {
@@ -17,7 +17,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) =
 
     useEffect(() => {
 
-        dispatch(setSearchBy(searchByFields))
+        dispatch(setFilterBy('searchBy',searchByFields))
     }, [selectedRegion])
 
 
@@ -25,7 +25,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) =
         ev.stopPropagation()
         console.log('HEY FORM', searchByFields);
         ev.preventDefault()
-        dispatch(setSearchBy(searchByFields))
+        dispatch(setFilterBy('searchBy',searchByFields))
     }
 
 

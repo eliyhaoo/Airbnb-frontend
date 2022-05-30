@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { stayService } from '../../services/stay.service'
-import { setCategory } from '../../store/actions/stay.action'
+import {  setFilterBy } from '../../store/actions/stay.action'
 export const CategoriesFilter = () => {
     const categories = stayService.getCategories()
 
@@ -12,7 +12,7 @@ export const CategoriesFilter = () => {
 
     const onChooseCategory = (categoryTitle) => {
         setActiveCategory(categoryTitle)
-        dispatch(setCategory(categoryTitle))
+        dispatch(setFilterBy('category',categoryTitle))
     }
 
     return (

@@ -2,37 +2,35 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import closeModalImg from "../../assets/svg/close-modal.svg"
 import { useForm } from '../../hooks/useForm'
+import { setFilterBy } from "../../store/actions/stay.action"
+import { MultiselectCheckbox } from "./multiselect-checkbox"
 
 export const StayFilter = ({ showFilterModal, history }) => {
 
-    const [checkeypeOfPlacedState, setheckeypeOfPlacedState] = useState({ entirePlace: false, tinyRoom: false, privateRoom: false })
+    // const [checkeypeOfPlacedState, setheckeypeOfPlacedState] = useState({ entirePlace: false, tinyRoom: false, privateRoom: false })
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)
 
-    const dispatch = useDispatch()
-    // const [filterByFields, handleChange, setFilterByFields] = useForm(filterBy.typeOfPlace)
-    // const [filterByFields, handleChange, setFilterByFields] = useState('typeOfPlace')
+        const [filterByProperties,handleChange,setFilterProperties] =useForm(filterBy.properties)
 
-    // category: 'All Homes',
-    // price: null,
-    // bedsNum: null,
-    // typeOfPlace: '',
-    // amenities: []
-    // handleChange = ({ target }) => {
-    //     console.log(target)
-    // }
+    const dispatch = useDispatch()
 
     const onSetFilterBy = (ev) => {
-        console.log('ev', ev)
+        console.log('EVENT',ev);
+        console.log('FILTER BY PROP',filterByProperties);
+        if (!ev.target) return 
         ev.preventDefault()
-        console.log('filterBy', filterBy)
-        // dispatch((filterByFields))
-
-
+        dispatch(setFilterBy('properties',filterByProperties))
     }
+
+
     const onCloseModal = () => {
         showFilterModal(false)
         history.push('/explore')
+    }
+
+    const onSetRoomType = (roomType)=>{
+        setFilterProperties((prevState)=>({...prevState,roomType}))
     }
 
     return <div className="stay-filter">
@@ -42,6 +40,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
                 <button className="close-modal-btn" onClick={() => onCloseModal()}><img className="close-modal-img" src={closeModalImg} /></button>
                 <h3 className="modal-title">Filters</h3>
             </div>
+
             <form className="filter-form" onSubmit={onSetFilterBy}>
                 <div className="filter-type price-range">
                     <h2>Price range</h2>
@@ -50,7 +49,8 @@ export const StayFilter = ({ showFilterModal, history }) => {
 
                 <div className="filter-type type-of-place">
                     <h2>Type of place</h2>
-                    <div className="form-grid">
+
+                    {/* <div className="form-grid">
                         <div className="form-input">
                             <input type="checkbox" id="entire-place" name="typeOfPlace" value="Entire Place" />
                             <label htmlFor="entire-place">Entire Place<br></br>
@@ -66,10 +66,15 @@ export const StayFilter = ({ showFilterModal, history }) => {
                             <label htmlFor="private-room">Privet room<br></br>
                                 <div className="span"><span>Your own room in a home or a hotel, plus some shared common spaces</span></div></label>
                         </div>
+                    </div> */}
+
+                    <div className="multi-select-container flex">
+
+                        <MultiselectCheckbox onHandleChange={onSetRoomType} fields={filterByProperties.roomType}/>
                     </div>
                 </div>
 
-                <div className="filter-type-beds">
+                {/* <div className="filter-type-beds">
                     <h2>Beds</h2>
                     <button className="filter-form-btn">Any</button>
                     <button className="filter-form-btn">1</button>
@@ -126,7 +131,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
                             <label htmlFor="free-parking">Free parking on premises</label>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="filter-footer flex space-between align-center">
                     <p>Clear all</p>
