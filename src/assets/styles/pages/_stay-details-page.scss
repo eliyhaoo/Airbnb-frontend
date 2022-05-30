@@ -7,9 +7,10 @@
     h1 {
         letter-spacing: 0.5px;
         line-height: 1.875rem;
-        font-weight: 450;
+        // font-weight: 450;
         font-size: 1.625em;
         padding-top: em(22px);
+        font-family: manrope-bold;
     }
 
     .stay-details-container{
@@ -22,12 +23,17 @@
     .stay-review-details{
         align-items: center;
         gap: 5px;
-        .num-of-reviews{
-            // width: 54vh;
+
+        img{
             height: 38px;
             aspect-ratio: 0.4;
             align-items: center;
         }
+        // .num-of-reviews{
+        //     height: 38px;
+        //     aspect-ratio: 0.4;
+        //     align-items: center;
+        // }
     }
 
 
@@ -37,7 +43,7 @@
         display: grid;
         gap: 9px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 180px);
+        grid-template-rows: repeat(2, 280px);
         grid-template-areas:
             "img1 img1 img2 img3"
             "img1 img1 img4 img5";
@@ -78,8 +84,8 @@
     .stay-display-info {
         display: grid;
         grid-template-columns: 1.4fr 1fr;
-        padding-top: 48px;
-        padding-bottom: 24px;
+        padding-top: em(48px);
+        padding-bottom: em(32px);
         border-bottom: 1px solid rgb(221, 221, 221);
 
         grid-template-areas:
