@@ -1,13 +1,15 @@
 
 .review-list{
-    display: flex;
-    // flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    .review-list>*{
-        flex: 1 1;
+    columns: 100px 2;
+    column-gap: 94px;
+    padding-bottom: em(32px);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    .review{
+        -webkit-column-break-inside: avoid;
     }
 }
+
+
 // .review-list{
 //     display: flex;
 //     flex-wrap: wrap;
