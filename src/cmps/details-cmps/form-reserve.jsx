@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { AddGuest } from '../add-guest'
-// import starSvg from '../../assets/svg/star.svg'
 
 
 export const FormReserve = ({ stay }) => {
+
+
+    const [isModalOpen, setModal] = useState(false)
 
 
     return <div className="form-reserve">
@@ -11,18 +14,24 @@ export const FormReserve = ({ stay }) => {
                 <div className="date-input flex direction-column">
                     <label>CHECK-IN</label>
                     <input placeholder="9/24/2022"></input>
-                    {/* <input placeholder="Tue Sep 07 2022"></input> */}
+
                 </div>
                 <div className="date-input flex direction-column">
                     <label>CHECKOUT</label>
                     <input placeholder="9/28/2022"></input>
-                    {/* <input placeholder="Tue Sep 07 2022"></input> */}
+
                 </div>
             </div>
-            <label>guests</label>
-            <input placeholder="2"></input>
-            <AddGuest />
 
+            <div className="guest-input" onClick={() => setModal(true)}>
+                <label>guests</label>
+                <input placeholder="2"></input>
+            </div>
+        </div>
+
+        <div className={`add-guest-reserve ${isModalOpen && 'open'} `}>
+            {isModalOpen && <div className="screen-add-guest" onClick={() => setModal(false)}></div>}
+            <AddGuest setModal={setModal} />
         </div>
 
         <div className="btn-container">
