@@ -4,9 +4,10 @@ import { stayService } from '../../services/stay.service.js'
 
 
 export function loadStays() {
-    return async dispatch => {
+    return async (dispatch,getState) => {
+        const searchBy = getState().stayModule.searchBy
         try {
-            const stays = await stayService.query()
+            const stays = await stayService.query(searchBy)
             dispatch({
                 type: 'SET_STAYS',
                 stays
@@ -40,6 +41,16 @@ export function saveStay(stay) {
         })
     }
 }
+export function setSearchBy(searchBy) {
+  
+    return dispatch => {
+        dispatch({
+            type: 'SET_SEARCHBY',
+            searchBy
+        })
+    }
+}
+
 
 
 

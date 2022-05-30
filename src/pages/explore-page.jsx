@@ -11,11 +11,13 @@ import { setVisitPage } from "../store/actions/system.action"
 
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
-    const { stays } = useSelector(storeState => storeState.stayModule)
+    const { stays,searchBy } = useSelector(storeState => storeState.stayModule)
     const [isModalOpen, showFilterModal] = useState(false)
     const [isPageScroll, setisPageScroll] = useState(false)
 
     useEffect(() => {
+
+        console.log('LOADING STAYS');
         dispatch(loadStays())
         dispatch(setVisitPage('explore-page'))
         
@@ -23,7 +25,7 @@ export const ExplorePage = ({ history }) => {
         return () => {
             window.removeEventListener('scroll', onScroll)
         }
-    }, [])
+    }, [searchBy])
 
     const onScroll = ()=>{
         const position = window.pageYOffset

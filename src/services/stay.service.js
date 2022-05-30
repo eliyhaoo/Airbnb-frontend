@@ -39,8 +39,14 @@ function getCategories() {
     return categories
 }
 
-function query() {
-    return storageService.query(STORAGE_KEY)
+function query(searchBy) {
+    let stays = storageService.query(STORAGE_KEY)
+
+    if (!searchBy.country) return stays
+    const regex = new RegExp(searchBy.country, 'i')
+    stays = stays.filter(stay=>regex.test(stay.country))
+
+    return 
 }
 function getById(stayId) {
     return storageService.get(STORAGE_KEY, stayId)

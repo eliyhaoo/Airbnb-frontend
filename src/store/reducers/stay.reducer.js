@@ -3,7 +3,10 @@
 
 const initialState = {
     stays: [],
-    stay: null
+    stay: null,
+    searchBy:{
+        country:''
+    }
 }
 export function stayReducer(state = initialState, action) {
     var stays
@@ -19,6 +22,8 @@ export function stayReducer(state = initialState, action) {
         case 'ADD_STAY':
             stays = [...stays, action.stay]
             return newState = { ...state, stays }
+        case 'SET_SEARCHBY':
+            return newState = { ...state, searchBy:action.searchBy }
 
         default:
     }
