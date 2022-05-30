@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import filterImg from '../assets/svg/filter.svg'
 
 import { StayList } from "../cmps/stay-list"
 import { StayFilter } from '../cmps/explore-cmps/stay-filter'
@@ -8,6 +7,8 @@ import { CategoriesFilter } from '../cmps/explore-cmps/categories-filter'
 
 import { loadStays } from "../store/actions/stay.action"
 import { setVisitPage } from "../store/actions/system.action"
+
+import filterImg from '../assets/svg/filter.svg'
 
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
