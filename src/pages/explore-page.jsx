@@ -11,21 +11,23 @@ import { setVisitPage } from "../store/actions/system.action"
 
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
-    const { stays } = useSelector(storeState => storeState.stayModule)
+    const { stays,searchBy } = useSelector(storeState => storeState.stayModule)
     const [isModalOpen, showFilterModal] = useState(false)
     const [isPageScroll, setisPageScroll] = useState(false)
 
     useEffect(() => {
+
+        console.log('LOADING STAYS');
         dispatch(loadStays())
         dispatch(setVisitPage('explore-page'))
-        
+
         window.addEventListener('scroll', onScroll)
         return () => {
             window.removeEventListener('scroll', onScroll)
         }
-    }, [])
+    }, [searchBy])
 
-    const onScroll = ()=>{
+    const onScroll = () => {
         const position = window.pageYOffset
         if (position > 1) {
             setisPageScroll(true)
@@ -38,7 +40,7 @@ export const ExplorePage = ({ history }) => {
 
     return <section className="explore-page full main-layout">
 
-        <div className={`filter-container ${isPageScroll?'scroll':''} full main-layout`}>
+        <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full main-layout`}>
 
             <div className="filter-btns-container flex align-center space-between">
                 <CategoriesFilter />
@@ -50,7 +52,7 @@ export const ExplorePage = ({ history }) => {
 
         </div>
 
-        <StayList stays={stays} />
+        <StayList stays={stays} history={history} />
 
     </section >
 }

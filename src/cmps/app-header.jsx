@@ -50,6 +50,7 @@ export const AppHeader = () => {
     }
 
     const onCloseSearchBig = () => {
+        console.log('CLOSING');
         setModalOpen(null)
         setIsBig(false)
     }
@@ -57,7 +58,6 @@ export const AppHeader = () => {
 
 
 
-    console.log('G VISISTEDDD', gVisitedPage.current);
 
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
 
@@ -65,19 +65,20 @@ export const AppHeader = () => {
         <div className={`header-container full ${gVisitedPage.current === 'details-page' ?   'details-layout':gVisitedPage.current === 'explore-page'? 'main-layout':'home-page-layout'}`}>
 
             <div className="header-content-container flex space-between align-center">
+            {/* <div className="header-content-container flex align-center"> */}
 
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
 
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
                 {/* {!isSearchOpen && <StaySearch  setModalOpen={onSmallSearchClick} />} */}
 
-                <div className="user-nav-container flex space-between align-center">
+                <div className="box user-nav-container flex space-between align-center">
 
-                    <nav className="main-nav flex space-between align-items">
+                    <nav className="box main-nav flex space-between align-items">
                         <NavLink to='/explore'>Explore</NavLink>
                         <NavLink to='/'>Become a Host</NavLink>
                     </nav>
-                    <div className="user-details-container flex space between align-center">
+                    <div className="box user-details-container flex space between align-center">
                         <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
                         <img className="user-avatar" src={userAvatarSvg} alt="user" />
                     </div>

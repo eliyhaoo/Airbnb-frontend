@@ -5,6 +5,8 @@ export const StayFilter = ({ showFilterModal, history }) => {
         showFilterModal(false)
         history.push('/explore')
     }
+
+
     return <div className="stay-filter">
         <div className="screen" onClick={() => onCloseModal()} ></div>
         <div className="filter-modal">
@@ -101,7 +103,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
             </form>
             <div className="filter-footer flex space-between align-center">
                 <p>Clear all</p>
-                <button className="filter-footer-btn">Show Stays</button>
+                <button type="submit" className="filter-footer-btn">Show Stays</button>
             </div>
 
         </div>

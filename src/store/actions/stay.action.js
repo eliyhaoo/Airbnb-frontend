@@ -4,9 +4,10 @@ import { stayService } from '../../services/stay.service.js'
 
 
 export function loadStays() {
-    return async dispatch => {
+    return async (dispatch,getState) => {
+        const searchBy = getState().stayModule.searchBy
         try {
-            const stays = await stayService.query()
+            const stays = await stayService.query(searchBy)
             dispatch({
                 type: 'SET_STAYS',
                 stays
@@ -40,8 +41,46 @@ export function saveStay(stay) {
         })
     }
 }
+export function setSearchBy(searchBy) {
+  
+    return dispatch => {
+        dispatch({
+            type: 'SET_SEARCHBY',
+            searchBy
+        })
+    }
+}
 
 
+export function setCategory(category) {
+    return async dispatch => {
+        try {
+            const staysByCategory = stayService.filterByCategory(category)
+            dispatch({
+                type: 'SET_CATEGORY',
+                category
+            })
+            dispatch({
+                type: 'SET_STAYS',
+                stays: staysByCategory
+            })
+
+        } catch (err) {
+            console.log('UserActions: err in loadUsers', err)
+            // } finally {
+            //     dispatch({ type: 'LOADING_DONE' })
+        }
+    }
+
+}
+// export function onSetFilter(field, value) {
+//     return dispatch => {
+//         dispatch({
+//             type: 'SET_FILTER',
+//             filterField: { field, value }
+//         })
+//     }
+// }
 
 
 // export function removeUser(userId) {

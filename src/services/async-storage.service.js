@@ -3577,7 +3577,7 @@ function _loadStays() {
 const stays = [
     {
         "name": "Villa Luna at the Sumberkima Hill Retreat",
-        "category": "desing",
+        "category": "Design",
         // "propertyType": "Entire villa",
         "summary": "Sumberkima is a seaside village next to Pemuteran close to Menjangan Island, diving and snorkeling paradise. It has diverse scenery and authentic culture steeped in tradition. Here you can truly relax away from the bustle of the south. The resort has panoramic views of the hills, the bay of Sumberkima and the volcanoes of Java. We have two restaurants at the retreat, serving local and international cuisines. Our reception team can organise all your excursions, yoga sessions and spa treatments",
         "roomType": "Entire villa",
@@ -3688,7 +3688,7 @@ const stays = [
 
     {
         "name": "A Nice SeaCabin in a lovely Island with Nice View",
-        "category": "arctic",
+        "category": "Arctic",
         // "propertyType": "Entire villa",
         "summary": "We have now 7 seacabins/sjøhytter at Manshausen, and each one has a unique position and connection with nature.Everest is high up on top of a small hill and therefore has great views towards the Lofoten islands chain.Breakfast, served at Hovedhuset, the main house, is included on the reservation price.PLEASE TEXT ME BEFORE YOUR RESERVATION.THX",
         "roomType": "Entire cabin",
@@ -3841,7 +3841,7 @@ const stays = [
     },
     {
         "name": "Olympia Seaview Villa",
-        "category": "amazing pool",
+        "category": "Amazing Pool",
         // "propertyType": "Entire villa",
         "summary": "Luxury Seaview Villa - 3 Levels with Elevator, A/C, Private Pool, Gym & Roof Top Terrace with Jacuzzi!",
         "roomType": "Entire villa",
@@ -3917,7 +3917,7 @@ const stays = [
     },
     {
         "name": "Lily Beach Resort & Spa, Maldives, With Pool, AI",
-        "category": "islands",
+        "category": "Islands",
         // "propertyType": "Entire villa",
         "summary": "ALL INCLUSIVE RESORT AWARD WINNER Lily Beach is proud to have once again won the prestigious All Inclusive Resort Award this year.",
         "roomType": "Dome",
@@ -4043,7 +4043,7 @@ const stays = [
     },
     {
         "name": "Tente Lodge 1 - Desert Luxury Experience",
-        "category": "desert",
+        "category": "Desert",
         // "propertyType": "Entire villa",
         "summary": "Oxygen Lodge Agafay vous accueille dans l’atmosphère unique de ses tentes Lodge ainsi qu’autour de sa « Table perdue dans le Désert ».Nos tentes Lodge, aménagées en suites luxueuses, confortables et chauffées, disposent d’un lit double où twin, d’un espace salon avec canapé convertible en vrai lit, d’une salle de bain avec douche, de toilettes et dressing, d’une terrasse.",
         "roomType": "Tent",
@@ -4147,7 +4147,7 @@ const stays = [
     },
     {
         "name": "Samujana Twenty-Four",
-        "category": "luxe",
+        "category": "Luxe",
         // "propertyType": "Entire villa",
         "summary": "The ideal spot for entertaining large groups, twenty-four is the biggest and most amenity filled villa in the Samujana development. Indoor and outdoor areas are spacious enough for a large amount of guests, merging seamlessly in an open concept design. Perfect for the sunrise and sunset, views from the terrace look out to the south and west over the Gulf of Thailand and all eight of the bedrooms have an amazing ocean view.",
         "roomType": "Modernism and vintage Thai art",
@@ -4347,7 +4347,7 @@ const stays = [
 
     {
         "name": "Villa Blue Sea",
-        "category": "national parks",
+        "category": "National Parks",
         // "propertyType": "Entire villa",
         "summary": "Perched above the glorious southern coastline just outside of Skala village, the fabulous sea views from Blue Sea are appreciated from every level of this modern, charming house.This wonderful location is right on the seafront however, and the swimming pool and terrace at the front of the villa create a sublime skyline of pool and sea.The smart, informal décor of the interiors is welcoming and relaxed, just as a beachfront house should be, with browns and lilacs offering a pretty backdrop to the dramatic sea panoramas around the pool.The open plan living dining and kitchen area have patio doors that open out onto the terrace with a pergola offering shade over the outdoor dining area, perfect for leisurely lunches outdoors.The twin bedroom also opens onto the terrace and upstairs the lovely master bedroom has another seating area and a splendid glass panelled balcony that does justice to the vistas.",
         "roomType": "Entire villa",
@@ -4475,7 +4475,7 @@ const stays = [
 
     {
         "name": "Luxury My Villa Corfu by GHH",
-        "category": "luxe",
+        "category": "Luxe",
         // "propertyType": "Entire villa",
         "summary": "Villa Marion has the rare combination of being in a rural, secluded and private location.Sleeps 16 guests.8 double or twin bedrooms (four have doors or big windows onto pool area)2 Sitting rooms with open plan kitchens (2) and breakfast area 2 living rooms with doors onto terrace Playroom with doors onto terrace 6 bathrooms 2 Swimming pools 4 x 8m each, 2 pool showers Wooden decking Outside dining, BBQ Air Conditioning.",
         "roomType": "Entire villa",
@@ -4596,7 +4596,7 @@ const stays = [
 
     {
         "name": "Villa Arete - Luxury Villa by the Sea with swimming pool on Corfu Island",
-        "category": "national parks",
+        "category": "National Parks",
         // "propertyType": "Entire villa",
         "summary": "Villa Arete is a brand new property for the 2020 season, occupying a privileged location in the area of Perithia, on the sought after North-East coast of Corfu. Part of the exclusive “Perithia View” estate, this villa has been finished to the highest standard to offer a superior holiday experience to the most demanding guests. With 4 bedrooms, 4 bathrooms, extensive lounges and patios as well as private pool, tis villa ticks all the boxes. The elevated position (yet very close to amazing beaches) with 180 degrees panoramic views, offers the most amazing gift of the nature: the chance to admire, from the same property, both sunrise and sunset. In Villa Arete, every moment will be an experience to live and remember!",
         "roomType": "Entire villa",
@@ -4716,7 +4716,7 @@ const stays = [
     },
     {
         "name": "Still Bend/Frank Lloyd Wright's Schwartz House",
-        "category": "design",
+        "category": "Design",
         // "propertyType": "Entire villa",
         "summary": "Featured on Netflix's THE WORLDS MOST AMAZING VACATION RENTALS Season 2, ep. 1. Still Bend/Bernard Schwartz House is Frank Lloyd Wright's built version of his Life Magazine Dream House design from 1938. The house is located on the East Twin River about a mile from Lake Michigan.",
         "roomType": "Entire home",
@@ -4838,7 +4838,7 @@ const stays = [
 
     {
         "name": "Villa Orion Magnificent SeaView",
-        "category": "design",
+        "category": "Design",
         // "propertyType": "Entire villa",
         "summary": "Villa 'Orion' is in Cavo Delos-Kanalia, just 10 minutes from the airport of Mykonos.The villa is situated on a 1000 m2 property with breath - taking view, it's coprised of a 100m2. house along with a 70 m2 fully equiped guest house. Also there is a new guest house of 50m2 fully equiped.",
         "roomType": "Entire villa",
@@ -4977,7 +4977,7 @@ const stays = [
     },
     {
         "name": "9 Islands Suites-Vasilika Suite with Jacuzzi",
-        "category": "amazing pool",
+        "category": "Amazing Pool",
         // "propertyType": "Entire villa",
         "summary": "9 Islands Suites offers Suites of high aesthetic quality. Each Suite offers absolute privacy, a private terrace with sea and sunset view, air conditioning, coffee facilities, a satellite tv, a flat screen TV and a safe box.9 Islands also provides a stunning swimming pool, towels, free wi- fi and a free private parking area.The suites are located only 3 km away from Mykonos’ main town, 6 km away from the airport, 4 km away from the old port and are in the vicinity of many popular beaches.",
         "roomType": "Room in boutique hotel",
@@ -5090,7 +5090,7 @@ const stays = [
     },
     {
         "name": "Villa Sawarin",
-        "category": "design",
+        "category": "Design",
         "summary": "Artfully designed by accomplished architects Jean-Michel Gathy and Phillipe Starck, Villa Sawarin is a perfect symbiosis of a contemporary and Thai style villa set in the exclusive private development of Phuket’s Cape Yamu. The most discerning world travelers will be impressed by its easy opulence and thoughtful attention to detail. Perfect for presidents – of nations and corporations – while still being family-friendly, the cathedral-like proportions of this beachfront mansion can easily host up to 18 guests.",
         "roomType": "Entire villa",
         "guests": 16,
@@ -5230,7 +5230,7 @@ const stays = [
 
     {
         "name": "Award Winning Designer home in Paddington",
-        "category": "design",
+        "category": "Design",
         "summary": "The Glass House won this years prestigious House & Garden Magazines Top 50 Rooms in Australia award for best furnishings and sets a new standard for inner city escapes.Built this year and finished in the highest finishes and most luxurious materials as an interior showhome it provides unparalleled luxury with heated marble floors, open fire, internal water feature, indoor & outdoor living areas and designer furniture & lighting throughout.",
         "roomType": "Entire townhouse",
         "guests": 6,
