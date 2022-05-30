@@ -2,11 +2,15 @@
     margin-top: 95px;
 
     .filter-container {
-        box-shadow: -1px 6px 7px -6px $borderClr;
-        top: 71px;
+        top: 78px;
         position: sticky;
         background-color: white;
         z-index: 400;
+        
+        &.scroll{
+            box-shadow: -1px 6px 7px -6px $borderClr;
+
+        }
 
 
         .filter-btns-container {
