@@ -1,19 +1,40 @@
-import { useSelector } from "react-redux"
+import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import closeModalImg from "../../assets/svg/close-modal.svg"
+import { useForm } from '../../hooks/useForm'
 
 export const StayFilter = ({ showFilterModal, history }) => {
+
+    const [checkeypeOfPlacedState, setheckeypeOfPlacedState] = useState({ entirePlace: false, tinyRoom: false, privateRoom: false })
+
     const { filterBy } = useSelector(storeState => storeState.stayModule)
 
+    const dispatch = useDispatch()
+    // const [filterByFields, handleChange, setFilterByFields] = useForm(filterBy.typeOfPlace)
+    // const [filterByFields, handleChange, setFilterByFields] = useState('typeOfPlace')
+
+    // category: 'All Homes',
+    // price: null,
+    // bedsNum: null,
+    // typeOfPlace: '',
+    // amenities: []
+    // handleChange = ({ target }) => {
+    //     console.log(target)
+    // }
 
     const onSetFilterBy = (ev) => {
+        console.log('ev', ev)
         ev.preventDefault()
         console.log('filterBy', filterBy)
+        // dispatch((filterByFields))
+
 
     }
     const onCloseModal = () => {
         showFilterModal(false)
         history.push('/explore')
     }
+
     return <div className="stay-filter">
         <div className="screen" onClick={() => onCloseModal()} ></div>
         <div className="filter-modal">
@@ -31,18 +52,18 @@ export const StayFilter = ({ showFilterModal, history }) => {
                     <h2>Type of place</h2>
                     <div className="form-grid">
                         <div className="form-input">
-                            <input type="checkbox" id="entire-place" name="entire-place" />
+                            <input type="checkbox" id="entire-place" name="typeOfPlace" value="Entire Place" />
                             <label htmlFor="entire-place">Entire Place<br></br>
                                 <div className="span"><span>A place all to yourself</span></div></label>
                         </div>
                         <div className="form-input">
-                            <input type="checkbox" id="shared-room" name="shared-room" />
+                            <input type="checkbox" id="shared-room" name="typeOfPlace" value="Shared Room" />
                             <label htmlFor="shared-room">Shared room<br></br>
                                 <div className="span"><span>A sleeping space and common areas that may be shared with others</span></div></label>
                         </div>
                         <div className="form-input">
-                            <input type="checkbox" id="privet-room" name="privet-room" />
-                            <label htmlFor="privet-room">Privet room<br></br>
+                            <input type="checkbox" id="private-room" name="typeOfPlace" value="Privet Room" />
+                            <label htmlFor="private-room">Privet room<br></br>
                                 <div className="span"><span>Your own room in a home or a hotel, plus some shared common spaces</span></div></label>
                         </div>
                     </div>

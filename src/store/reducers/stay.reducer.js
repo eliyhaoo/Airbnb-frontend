@@ -5,12 +5,17 @@ const initialState = {
     stays: [],
     stay: null,
     filterBy: {
-        category: 'All Homes',
         searchBy: {
             country: '',
             dates: '',
             guestsNum: null,
-        }
+        },
+        category: 'All Homes',
+        price: null,
+        bedsNum: null,
+        typeOfPlace: '',
+        amenities: []
+
     },
 }
 export function stayReducer(state = initialState, action) {

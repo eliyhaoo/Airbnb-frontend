@@ -2,7 +2,6 @@
 // import { showErrorMsg } from '../services/event-bus.service.js'
 import { stayService } from '../../services/stay.service.js'
 
-
 export function loadStays() {
     return async (dispatch, getState) => {
         const { filterBy } = getState().stayModule
