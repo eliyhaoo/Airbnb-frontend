@@ -15,11 +15,14 @@
     >*:not(:last-child)  {
         border-inline-end: 1px solid $borderClr;
     }
+    
+    // margin-inline-start: 15px;
 
     .search-guest{
 
         .search-guest-btn{
             flex-grow: 1;
+            padding-inline-start: 15px
         }
         .search-btn{
             background-color: $primary;

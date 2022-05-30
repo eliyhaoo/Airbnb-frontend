@@ -20,7 +20,8 @@ export const stayService = {
 
 }
 
-const gCategories = [{ title: 'Design', img: 'design' },
+const gCategories = [{ title: 'All Homes', img: 'allhomes' },
+{ title: 'Design', img: 'design' },
 { title: 'Desert', img: 'desert' },
 { title: 'Vineyards', img: 'vineyards' },
 { title: 'National Parks', img: 'nationalparks' },

@@ -3,18 +3,19 @@ import { Carousel } from 'react-responsive-carousel';
 
 export function CarouselComponent({ stayImgUrls }) {
 
+    const onClickThumb = (event) => {
+
+    }
+
     if (!stayImgUrls) return <div>Loading...</div>
     return (
         <div className="carousel-component">
-            <Carousel showThumbs={false} showStatus={false}
-            >
-                {
-                    stayImgUrls.map((img, idx) =>
-                        <div key={idx}>
-                            <img className="preview-img" src={img} />
-                        </div>
-                    )
-                }
+            <Carousel showThumbs={false} showStatus={false} onClickThumb={onClickThumb}>
+                {stayImgUrls.map((img, idx) =>
+                    <div key={idx}>
+                        <img className="preview-img" src={img} />
+                    </div>
+                )}
 
 
             </Carousel >
