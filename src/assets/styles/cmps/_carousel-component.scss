@@ -64,11 +64,9 @@
 
 }
 
+
 .carousel .control-prev.control-arrow:before {
     border-right: 8px solid #fff;
-    // background-image: url('../../svg/arrow-prev.svg');
-    // height: 15px;
-
 }
 
 .carousel .control-next.control-arrow {
@@ -148,6 +146,7 @@
     position: relative;
     list-style: none;
     white-space: nowrap;
+
 }
 
 .carousel .thumb {

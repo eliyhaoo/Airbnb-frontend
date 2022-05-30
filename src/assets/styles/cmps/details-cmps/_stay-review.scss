@@ -2,6 +2,7 @@
 .stay-review{
 
     .reviews-stats-header{
+        font-family: manrope-semi-bold;
         display: flex;
         align-items: center;
         font-size: 22px;
@@ -20,13 +21,6 @@
             height: 20px;
         }
     }
-    // .reviews-stats-container{
-    //     width: 100%;
-    //     display: grid;
-    //     grid-template-columns: 44% 45%;
-    //     gap: 10px 10.5%;
-    //     margin-bottom: 30px;
-    //     padding: 5px;
 
     .reviews-stats-container{
         width: 100%;
