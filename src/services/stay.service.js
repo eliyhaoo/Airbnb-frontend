@@ -42,14 +42,19 @@ function getCategories() {
     return categories
 }
 
-function query(searchBy) {
-    let stays = storageService.query(STORAGE_KEY)
+function filterByCategory(stays, category) {
+    return stays.filter(stay => stay.category === category)
+}
 
-    if (!searchBy.country) return stays
-    const regex = new RegExp(searchBy.country, 'i')
-    stays = stays.filter(stay=>regex.test(stay.country))
-
-    return 
+async function query(filterBy) {
+    const { category, searchBy } = filterBy
+    let stays = await storageService.query(STORAGE_KEY)
+    if (searchBy.country) {
+        const regex = new RegExp(searchBy.country, 'i')
+        stays = stays.filter(stay => regex.test(stay.country))
+    }
+    if (category === 'All Homes') return stays
+    return filterByCategory(stays, category)
 }
 
 function getById(stayId) {
@@ -79,11 +84,7 @@ async function save(stay) {
     return savedStay
 }
 
-function filterByCategory(category) {
-    // console.log(stays, category)
-    const stays = storageService.query(STORAGE_KEY)
-    return stays.filter(stay => stay.category === category)
-}
+
 
 // function getEmptyStay() {
 //     return {

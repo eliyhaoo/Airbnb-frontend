@@ -4,10 +4,10 @@ import { stayService } from '../../services/stay.service.js'
 
 
 export function loadStays() {
-    return async (dispatch,getState) => {
-        const searchBy = getState().stayModule.searchBy
+    return async (dispatch, getState) => {
+        const { filterBy } = getState().stayModule
         try {
-            const stays = await stayService.query(searchBy)
+            const stays = await stayService.query(filterBy)
             dispatch({
                 type: 'SET_STAYS',
                 stays
@@ -15,8 +15,7 @@ export function loadStays() {
 
         } catch (err) {
             console.log('UserActions: err in loadUsers', err)
-            // } finally {
-            //     dispatch({ type: 'LOADING_DONE' })
+
         }
     }
 }
@@ -42,11 +41,11 @@ export function saveStay(stay) {
     }
 }
 export function setSearchBy(searchBy) {
-  
+
     return dispatch => {
         dispatch({
-            type: 'SET_SEARCHBY',
-            searchBy
+            type: 'SET_FILTERBY',
+            filterField: { field: 'searchBy', value: searchBy }
         })
     }
 }
@@ -55,15 +54,15 @@ export function setSearchBy(searchBy) {
 export function setCategory(category) {
     return async dispatch => {
         try {
-            const staysByCategory = stayService.filterByCategory(category)
+            // const staysByCategory = stayService.filterByCategory(category)
             dispatch({
-                type: 'SET_CATEGORY',
-                category
+                type: 'SET_FILTERBY',
+                filterField: { field: 'category', value: category }
             })
-            dispatch({
-                type: 'SET_STAYS',
-                stays: staysByCategory
-            })
+            // dispatch({
+            //     type: 'SET_STAYS',
+            //     stays: staysByCategory
+            // })
 
         } catch (err) {
             console.log('UserActions: err in loadUsers', err)

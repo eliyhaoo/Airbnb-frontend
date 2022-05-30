@@ -8,11 +8,11 @@ import { SearchCountry } from './search-country'
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) => {
 
     const dispatch = useDispatch()
-    const { searchBy } = useSelector(storeState => storeState.stayModule)
+    const { filterBy } = useSelector(storeState => storeState.stayModule)
 
     const [selectedRegion, setSelectedRegion] = useState('')
 
-    const [searchByFields, handleChange, setSearchByFields] = useForm(searchBy)
+    const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
 
 
     useEffect(() => {

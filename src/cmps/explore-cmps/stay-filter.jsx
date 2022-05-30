@@ -1,12 +1,19 @@
+import { useSelector } from "react-redux"
 import closeModalImg from "../../assets/svg/close-modal.svg"
 
 export const StayFilter = ({ showFilterModal, history }) => {
+    const { filterBy } = useSelector(storeState => storeState.stayModule)
+
+
+    const onSetFilterBy = (ev) => {
+        ev.preventDefault()
+        console.log('filterBy', filterBy)
+
+    }
     const onCloseModal = () => {
         showFilterModal(false)
         history.push('/explore')
     }
-
-
     return <div className="stay-filter">
         <div className="screen" onClick={() => onCloseModal()} ></div>
         <div className="filter-modal">
@@ -14,7 +21,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
                 <button className="close-modal-btn" onClick={() => onCloseModal()}><img className="close-modal-img" src={closeModalImg} /></button>
                 <h3 className="modal-title">Filters</h3>
             </div>
-            <form className="filter-form">
+            <form className="filter-form" onSubmit={onSetFilterBy}>
                 <div className="filter-type price-range">
                     <h2>Price range</h2>
                     <span className="span"><p>The average nightly price is XXXX</p></span>
@@ -100,11 +107,11 @@ export const StayFilter = ({ showFilterModal, history }) => {
                     </div>
                 </div>
 
+                <div className="filter-footer flex space-between align-center">
+                    <p>Clear all</p>
+                    <button type="submit" className="filter-footer-btn">Show Stays</button>
+                </div>
             </form>
-            <div className="filter-footer flex space-between align-center">
-                <p>Clear all</p>
-                <button type="submit" className="filter-footer-btn">Show Stays</button>
-            </div>
 
         </div>
     </div >
