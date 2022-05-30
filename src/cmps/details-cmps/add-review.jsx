@@ -14,24 +14,13 @@ import { styled } from '@mui/material/styles';
 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
-        color: 'rgb(34 34 34)',
+        color: 'rgb(113 113 113)',
+        // color: 'rgb(34 34 34)',
     },
     '& .MuiRating-iconHover': {
-        color: 'rgb(113 113 113)',
+        color: 'rgb(34 34 34)',
     },
 });
-
-const styles = {
-    root: {
-        background: "black"
-    },
-    input: {
-        color: "white"
-    }
-};
-
-
-
 
 export function AddReview({ stay }) {
 
@@ -89,7 +78,7 @@ export function AddReview({ stay }) {
 
                 <div className='review-rating'>
                     <p>Cleanliness:</p>
-                    <Stack spacing={1.5}>
+                    <Stack spacing={1.5} >
                         <Rating name="cleanliness" value={reviewScore.cleanliness} precision={0.5} onChange={handleRaiting} />
                     </Stack>
                 </div>
@@ -131,15 +120,12 @@ export function AddReview({ stay }) {
                     maxWidth: '100%',
                 }}
             >
-                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} fullWidth label="Share your exprience with this stay" id="fullWidth" focused />
+                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} fullWidth label="Share your exprience with this stay" id="fullWidth" />
             </Box>
 
 
 
             <button>Send Review</button>
-            {/* <label htmlFor="review"></label> */}
-            {/* <input type="text" id="txt" name="txt"
-                value={review.txt} onChange={handleChange} /> */}
         </form>
     </div>
 

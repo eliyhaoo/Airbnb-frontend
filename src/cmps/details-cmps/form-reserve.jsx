@@ -1,23 +1,28 @@
+import { AddGuest } from '../add-guest'
+// import starSvg from '../../assets/svg/star.svg'
 
-export const FormReserve = () => {
+
+export const FormReserve = ({ stay }) => {
+
 
     return <div className="form-reserve">
         <div className="order-data">
             <div className="date-picker flex space-between">
                 <div className="date-input flex direction-column">
-                    <label>check in</label>
-                    <input placeholder="Tue Sep 07 2022"></input>
+                    <label>CHECK-IN</label>
+                    <input placeholder="9/24/2022"></input>
+                    {/* <input placeholder="Tue Sep 07 2022"></input> */}
                 </div>
                 <div className="date-input flex direction-column">
-                    <label>check out</label>
-                    <input placeholder="Tue Sep 07 2022"></input>
+                    <label>CHECKOUT</label>
+                    <input placeholder="9/28/2022"></input>
+                    {/* <input placeholder="Tue Sep 07 2022"></input> */}
                 </div>
             </div>
+            <label>guests</label>
+            <input placeholder="2"></input>
+            <AddGuest />
 
-            <div className="guest-input flex direction-column">
-                <label>guests</label>
-                <input placeholder="2"></input>
-            </div>
         </div>
 
         <div className="btn-container">
@@ -129,5 +134,5 @@ export const FormReserve = () => {
         </div>
 
 
-    </div>
+    </div >
 }
