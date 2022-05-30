@@ -8,13 +8,10 @@ export const StayReview = ({ stay }) => {
 
     return <section className="stay-review">
         <div className="reviews-stats-header">
-            {/* <div> */}
-            {/* <span>★</span> */}
             <span><img src={starSvg} alt="star" /></span>
             <span>{stay.reviewScores.rating}</span>
             <span>·</span>
             <span>{stay.reviews.length} </span>
-            {/* </div> */}
             <span> reviews</span>
         </div>
 

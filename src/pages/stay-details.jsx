@@ -42,29 +42,6 @@ export const StayDetails = ({ history }) => {
     return <section className="stay-details-page details-layout">
         <h1 className="stay-name-details">{stay.name}</h1>
 
-        {/* <div className="stay-details-container flex space-between">
-
-            <div className="stay-review-details flex">
-
-                <div className="num-of-reviews flex space-between gap-5">
-                    <img src={starSvg} alt="star" />
-                    <div>
-                        {stay.reviewScores.rating.toFixed(1)}
-                    </div>
-                    <span>·</span>
-                    <div className="flex gap-5">
-                        <span>{stay.reviews.length}</span>
-                        <span>reviews</span>
-                    </div>
-
-                    <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
-                    <div className="city-address">{stay.address.city},</div>
-                    <div className="country-address">{stay.address.country}</div>
-
-                </div>
-
-            </div> */}
-
         <div className="stay-details-container flex space-between">
 
             <div className="stay-review-details flex">
@@ -73,27 +50,16 @@ export const StayDetails = ({ history }) => {
                     {stay.reviewScores.rating.toFixed(1)}
                 </div>
                 <span>·</span>
-                <div className="flex gap-5">
-                    <span>{stay.reviews.length}</span>
-                    <span>reviews</span>
-                    <span>·</span>
+                <div className="reviews flex">
+                    <span>{stay.reviews.length} reviews</span>
                 </div>
 
+                <span className="dot">·</span>
 
-                <div className="num-of-reviews flex space-between gap-5">
-                    {/* <div>
-                        {stay.reviewScores.rating.toFixed(1)}
-                    </div> */}
-                    {/* <span>·</span>
-                    <div className="flex gap-5">
-                        <span>{stay.reviews.length}</span>
-                        <span>reviews</span>
-                    </div> */}
-
-                    {/* <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div> */}
+                <div className="num-of-reviews flex gap-5">
+                    <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
                     <div className="city-address">{stay.address.city},</div>
                     <div className="country-address">{stay.address.country}</div>
-
                 </div>
 
             </div>
