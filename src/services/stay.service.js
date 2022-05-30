@@ -13,7 +13,8 @@ export const stayService = {
     getById,
     save,
     remove,
-    getCategories
+    getCategories,
+    filterByCategory
     // getEmptyStay,
     // subscribe,
     // unsubscribe
@@ -27,6 +28,8 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 { title: 'National Parks', img: 'nationalparks' },
 { title: 'Islands', img: 'islands' },
 { title: 'Artric', img: 'artric' },
+{ title: 'Tiny Homes', img: 'tinyhomes' },
+{ title: 'Camping', img: 'camping' },
 { title: 'Beachfront', img: 'beachfront' },
 { title: 'Iconic Cities', img: 'iconiccities' },
 { title: 'Amazing Pools', img: 'amazingpools' },
@@ -42,6 +45,7 @@ function getCategories() {
 function query() {
     return storageService.query(STORAGE_KEY)
 }
+
 function getById(stayId) {
     return storageService.get(STORAGE_KEY, stayId)
     // return axios.get(`/api/stay/${stayId}`)
@@ -67,6 +71,12 @@ async function save(stay) {
         // stayChannel.postMessage(getActionAddStay(savedStay))
     }
     return savedStay
+}
+
+function filterByCategory(category) {
+    // console.log(stays, category)
+    const stays = storageService.query(STORAGE_KEY)
+    return stays.filter(stay => stay.category === category)
 }
 
 // function getEmptyStay() {

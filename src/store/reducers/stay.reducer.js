@@ -3,7 +3,8 @@
 
 const initialState = {
     stays: [],
-    stay: null
+    stay: null,
+    category: 'All Homes'
 }
 export function stayReducer(state = initialState, action) {
     var stays
@@ -19,7 +20,13 @@ export function stayReducer(state = initialState, action) {
         case 'ADD_STAY':
             stays = [...stays, action.stay]
             return newState = { ...state, stays }
-
+        case 'SET_CATEGORY':
+            return newState = { ...state, category: action.category }
+        // case 'SET_FILTER':
+        //     const { field, value } = action.filterField
+        //     const newState = { ...state, filterBy: { ...state.filterBy, [field]: value } }
+        //     // console.log('newState', newState)
+        //     return newState
         default:
     }
     // For debug:
