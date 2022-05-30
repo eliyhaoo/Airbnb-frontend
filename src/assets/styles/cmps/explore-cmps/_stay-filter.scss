@@ -142,19 +142,22 @@
 
 .screen {
     position: fixed;
-    // padding-top: 100px;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    // overflow: auto; 
-    // background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
     overflow-y: hidden;
     z-index: 500;
+    // padding-top: 100px;
+    // background-color: rgb(0, 0, 0);
+    // overflow: auto; 
 
     &.header-open{
         top: 165px;
+    }
+    &.guest-open{
+        background-color: unset;
     }
     // html {
     //     height: 100vh;

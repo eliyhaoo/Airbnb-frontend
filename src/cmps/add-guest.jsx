@@ -2,7 +2,7 @@
 import plusSvg from '../assets/svg/plus.svg'
 import minusSvg from '../assets/svg/minus.svg'
 
-export const AddGuest = () => {
+export const AddGuest = ({ setModal }) => {
     return <section className="add-guest">
 
         <div className="guest-inputs flex direction-column">
@@ -32,7 +32,7 @@ export const AddGuest = () => {
                     <button>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
-                    <div>1</div>
+                    <div>0</div>
                     <button>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
@@ -48,7 +48,7 @@ export const AddGuest = () => {
                     <button>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
-                    <div>1</div>
+                    <div>0</div>
                     <button>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
@@ -59,8 +59,8 @@ export const AddGuest = () => {
                 <p>This place has a maximum of 10 guests, not including infants. Pets aren't allowed.</p>
             </div>
 
-            <div>
-                <button>Close</button>
+            <div className="btn-close">
+                <button onClick={() => setModal(false)}>Close</button>
             </div>
 
         </div>

@@ -81,6 +81,4 @@ export const StayDetails = ({ history }) => {
             {<StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} />}
         </div>
     </section >
-
-
 }
