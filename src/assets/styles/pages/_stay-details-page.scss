@@ -10,7 +10,8 @@
         // font-weight: 450;
         font-size: 1.625em;
         padding-top: em(22px);
-        font-family: manrope-bold;
+        // font-family: manrope-bold;
+        font-family: manrope-semi-bold;
     }
 
     .stay-details-container{
@@ -23,17 +24,27 @@
     .stay-review-details{
         align-items: center;
         gap: 5px;
+        font-family: manrope-semi-bold;
 
+        
         img{
             height: 38px;
             aspect-ratio: 0.4;
             align-items: center;
         }
-        // .num-of-reviews{
-        //     height: 38px;
-        //     aspect-ratio: 0.4;
-        //     align-items: center;
-        // }
+
+
+        .num-of-reviews{
+            text-decoration: underline;
+        }
+
+        .dot{
+            padding-right: em(4px);
+            padding-left: em(4px);
+        }
+        .reviews{
+            text-decoration: underline;
+        }
     }
 
 
@@ -145,6 +156,7 @@
             h2 {
                 letter-spacing: 0.5px;
                 margin-bottom: 8px;
+                font-family: manrope-semi-bold;
             }
         }
     }
@@ -152,6 +164,7 @@
     .amenities{
         padding-top: em(32px);
         padding-bottom: em(22px);
+        font-family: manrope-semi-bold;
     }
 
     .stay-amenities {
