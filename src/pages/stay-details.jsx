@@ -42,7 +42,7 @@ export const StayDetails = ({ history }) => {
     return <section className="stay-details-page details-layout">
         <h1 className="stay-name-details">{stay.name}</h1>
 
-        <div className="stay-details-container flex space-between">
+        {/* <div className="stay-details-container flex space-between">
 
             <div className="stay-review-details flex">
 
@@ -58,6 +58,39 @@ export const StayDetails = ({ history }) => {
                     </div>
 
                     <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
+                    <div className="city-address">{stay.address.city},</div>
+                    <div className="country-address">{stay.address.country}</div>
+
+                </div>
+
+            </div> */}
+
+        <div className="stay-details-container flex space-between">
+
+            <div className="stay-review-details flex">
+                <img src={starSvg} alt="star" />
+                <div>
+                    {stay.reviewScores.rating.toFixed(1)}
+                </div>
+                <span>·</span>
+                <div className="flex gap-5">
+                    <span>{stay.reviews.length}</span>
+                    <span>reviews</span>
+                    <span>·</span>
+                </div>
+
+
+                <div className="num-of-reviews flex space-between gap-5">
+                    {/* <div>
+                        {stay.reviewScores.rating.toFixed(1)}
+                    </div> */}
+                    {/* <span>·</span>
+                    <div className="flex gap-5">
+                        <span>{stay.reviews.length}</span>
+                        <span>reviews</span>
+                    </div> */}
+
+                    {/* <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div> */}
                     <div className="city-address">{stay.address.city},</div>
                     <div className="country-address">{stay.address.country}</div>
 
