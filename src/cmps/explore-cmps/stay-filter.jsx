@@ -11,16 +11,16 @@ export const StayFilter = ({ showFilterModal, history }) => {
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)
 
-        const [filterByProperties,handleChange,setFilterProperties] =useForm(filterBy.properties)
+    const [filterByProperties, handleChange, setFilterProperties] = useForm(filterBy.properties)
 
     const dispatch = useDispatch()
 
     const onSetFilterBy = (ev) => {
-        console.log('EVENT',ev);
-        console.log('FILTER BY PROP',filterByProperties);
-        if (!ev.target) return 
+        console.log('EVENT', ev);
+        console.log('FILTER BY PROP', filterByProperties);
+        if (!ev.target) return
         ev.preventDefault()
-        dispatch(setFilterBy('properties',filterByProperties))
+        dispatch(setFilterBy('properties', filterByProperties))
     }
 
 
@@ -29,8 +29,8 @@ export const StayFilter = ({ showFilterModal, history }) => {
         history.push('/explore')
     }
 
-    const onSetRoomType = (roomType)=>{
-        setFilterProperties((prevState)=>({...prevState,roomType}))
+    const onSetRoomType = (roomType) => {
+        setFilterProperties((prevState) => ({ ...prevState, roomType }))
     }
 
     return <div className="stay-filter">
@@ -70,7 +70,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
 
                     <div className="multi-select-container flex">
 
-                        <MultiselectCheckbox onHandleChange={onSetRoomType} fields={filterByProperties.roomType}/>
+                        <MultiselectCheckbox onHandleChange={onSetRoomType} fields={filterByProperties.roomType} />
                     </div>
                 </div>
 
