@@ -2,14 +2,14 @@
 
 
 const initialState = {
-    stays: [], 
+    stays: [],
     stay: null,
-    filterBy:{
+    filterBy: {
         category: 'All Homes',
-        searchBy:{
-            country:'',
-            dates:'',
-            guestsNum:null,
+        searchBy: {
+            country: '',
+            dates: '',
+            guestsNum: null,
         }
     },
 }
@@ -27,9 +27,9 @@ export function stayReducer(state = initialState, action) {
         case 'ADD_STAY':
             stays = [...stays, action.stay]
             return newState = { ...state, stays }
-        case 'SET_FILTER':
+        case 'SET_FILTERBY':
             const { field, value } = action.filterField
-            const newState = { ...state, filterBy: { ...state.filterBy, [field]: value } }
+            newState = { ...state, filterBy: { ...state.filterBy, [field]: value } }
             // console.log('newState', newState)
             return newState
         default:

@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { stayService } from '../../services/stay.service'
 import { setCategory } from '../../store/actions/stay.action'
 export const CategoriesFilter = () => {
@@ -7,17 +7,14 @@ export const CategoriesFilter = () => {
 
     const [activeCategory, setActiveCategory] = useState('All Homes')
     // const { stays } = useSelector(storeState => storeState.stayModule)
-
-
-
+    // console.log(stays)
     const dispatch = useDispatch()
 
     const onChooseCategory = (categoryTitle) => {
         setActiveCategory(categoryTitle)
-        // dispatch(setCategory(stays, categoryTitle))
         dispatch(setCategory(categoryTitle))
-
     }
+
     return (
         <div className="categories-container flex space-between">
             {categories.map((category, idx) =>
