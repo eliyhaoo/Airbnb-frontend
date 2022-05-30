@@ -1,10 +1,10 @@
 .add-guest{
+    position: relative;
     border-radius: 4px;
     background: $backgroundClr;
     box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px !important;
     margin-bottom: 16px;
     width: 100%;
-    position: relative;
     z-index: 999;
 
     .guest-inputs{

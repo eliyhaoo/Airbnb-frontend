@@ -13,8 +13,8 @@ export const stayService = {
     getById,
     save,
     remove,
-    getCategories,
-    filterByCategory
+    getCategories: getCategories,
+    filterByCategory: _filterByCategory
     // getEmptyStay,
     // subscribe,
     // unsubscribe
@@ -37,14 +37,7 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 { title: 'Luxe', img: 'luxe' }
 ]
 
-function getCategories() {
-    const categories = gCategories
-    return categories
-}
 
-function filterByCategory(stays, category) {
-    return stays.filter(stay => stay.category === category)
-}
 
 async function query(filterBy) {
     const { category, searchBy } = filterBy
@@ -54,7 +47,7 @@ async function query(filterBy) {
         stays = stays.filter(stay => regex.test(stay.country))
     }
     if (category === 'All Homes') return stays
-    return filterByCategory(stays, category)
+    return _filterByCategory(stays, category)
 }
 
 function getById(stayId) {
@@ -82,6 +75,16 @@ async function save(stay) {
         // stayChannel.postMessage(getActionAddStay(savedStay))
     }
     return savedStay
+}
+
+function getCategories() {
+    const categories = gCategories
+    return categories
+}
+
+
+function _filterByCategory(stays, category) {
+    return stays.filter(stay => stay.category === category)
 }
 
 
