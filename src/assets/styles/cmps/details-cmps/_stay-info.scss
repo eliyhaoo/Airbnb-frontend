@@ -1,0 +1,24 @@
+.stay-info-container{
+
+.stay-info {
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border;
+    padding-bottom: 24px;
+
+    img {
+        border-radius: 50%;
+        height: 56px;
+        object-fit: cover;
+        width: 56px;
+        transform: scale(1.2);
+    }
+
+    h2 {
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+        font-family: manrope-semi-bold;
+    }
+}
+}

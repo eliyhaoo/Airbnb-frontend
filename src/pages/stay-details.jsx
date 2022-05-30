@@ -1,23 +1,24 @@
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { utilService } from '../services/util.service'
 
 import { showSuccessMsg } from '../services/event-bus.service'
 import { stayService } from '../services/stay.service'
 import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { StayReview } from "../cmps/details-cmps/stay-review"
+import { StayAmenities } from '../cmps/details-cmps/stay-amenities'
 import { setVisitPage } from '../store/actions/system.action'
-import { useDispatch } from 'react-redux'
 
 import starSvg from '../assets/svg/star.svg'
-
+import { StayInfo } from '../cmps/details-cmps/stay-info'
 
 export const StayDetails = ({ history }) => {
     const dispatch = useDispatch()
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
-
 
     useEffect(() => {
         (async () => {
@@ -34,16 +35,11 @@ export const StayDetails = ({ history }) => {
         })();
     }, [])
 
-    const getAmenities = () => {
-        return stay.amenities.splice(0, 10)
-    }
-
     if (!stay) return <div className="loader">Loading...</div>
     return <section className="stay-details-page details-layout">
         <h1 className="stay-name-details">{stay.name}</h1>
 
         <div className="stay-details-container flex space-between">
-
             <div className="stay-review-details flex">
                 <img src={starSvg} alt="star" />
                 <div>
@@ -51,24 +47,20 @@ export const StayDetails = ({ history }) => {
                 </div>
                 <span>·</span>
                 <div className="reviews flex">
-                    <span>{stay.reviews.length} reviews</span>
+                    <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
                 </div>
 
                 <span className="dot">·</span>
 
                 <div className="num-of-reviews flex gap-5">
-                    <div>{stay.host.isSuperhost && <span className="superhost">Superhost </span>}</div>
+                    {stay.host.isSuperhost && <div>
+                        <span className="superhost">Superhost</span>
+                    </div>
+                    }
                     <div className="city-address">{stay.address.city},</div>
                     <div className="country-address">{stay.address.country}</div>
                 </div>
-
             </div>
-
-            {/* <div className="activity-details">
-                <span>Share </span>
-                <span>Save</span>
-            </div> */}
-
         </div>
 
         <div className="details-img-container">
@@ -77,48 +69,10 @@ export const StayDetails = ({ history }) => {
 
         <section className="stay-display-info">
             <div className="stay-summary-container">
-                <div className="stay-info">
-                    <div>
-                        <h2>{stay.roomType} hosted by {stay.host.fullname}</h2>
-                        <span>
-                            {stay.guests} guests
-                            <span className="dot">·</span>
-                            {stay.bedrooms} bedrooms
-                            <span className="dot">·</span>
-                            {stay.beds} beds
-                            <span className="dot">·</span>
-                            {stay.bath} baths
-                        </span>
-                    </div>
-                    <img src={stay.host.thumbnailUrl} alt="profile" />
-                </div>
-
-                <div className="air-cover">
-                    <img src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg" alt="aircover" />
-                    <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
-                </div>
-
-                <div className="stay-description">
-                    <p>{stay.summary}</p>
-                </div>
-
-                <div className="amenities">
-                    <h2>What this place offers</h2>
-                </div>
-                <div className="stay-amenities ">
-                    {getAmenities().map((amenitie, idx) =>
-                        <div key={idx}>
-
-                            <div className='amenite-img-container flex'>
-                                <div className={`amenite-img ${amenitie}`}> </div>
-                                <div className="amenite">{amenitie}</div>
-                            </div>
-                        </div>
-                    )}
-
-
-                </div>
+                <StayInfo stay={stay} />
+                <StayAmenities stay={stay} />
             </div>
+
             <StayReserve stay={stay} />
         </section>
 
@@ -128,11 +82,5 @@ export const StayDetails = ({ history }) => {
         </div>
     </section >
 
-
-
-
-
-
-    // { WORKS WITH ORIGINAL LATLNG }
 
 }

@@ -16,6 +16,24 @@
         column-gap: 1.6rem;
     }
 }
+.css-iljtu2-MuiRating-root {
+    color: $secondary;
+}
+
+// .css-iljtu2-MuiRating-root:active {
+//     // color: $secondary;
+//     color: $subtext;
+// }
+
+
+
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color:$primary
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: $primary;
+}
 }
 
 

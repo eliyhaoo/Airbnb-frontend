@@ -2,7 +2,8 @@ export const utilService = {
     makeId,
     makeLorem,
     getRandomIntInclusive,
-    delay
+    delay,
+    checkForPlurals
 }
 
 function makeId(length = 6) {
@@ -36,5 +37,10 @@ function delay(ms = 1500) {
     return new Promise(resolve => {
         setTimeout(resolve, ms)
     })
+}
+
+function checkForPlurals(word, length) {
+    if (length === 1) return length + ' ' + word
+    else if (length > 1) return length + ' ' + word + 's'
 }
 

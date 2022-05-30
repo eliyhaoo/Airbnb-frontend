@@ -1,0 +1,76 @@
+.add-guest{
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px !important;
+    margin-bottom: 16px;
+    min-width: 280px;
+    // padding: 16px;
+    // position: absolute;
+    // text-align: left;
+    // z-index: 999;
+
+    .guest-inputs{
+        gap: 15px;
+        padding: 15px 20px;
+
+        .guest-input-container{
+            // margin-bottom: 24px;
+            margin-top: 8px;
+
+            .count-input-title{
+                font-family: manrope-semi-bold;
+                line-height: 20px;
+                padding-bottom: 4px;
+            }
+
+            // .count-input-subtitle{
+            //     line-height: 20px;
+            //     padding-bottom: 4px;
+            // }
+            
+            .count-container{
+                width: 104px;
+                align-items: center;
+
+                button{
+                    height: 32px;
+                    width: 32px;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    border:1px solid $btnBorderClr;
+                    background-color: $backgroundClr;
+                    cursor: pointer;
+
+                    &:hover{
+                        border-color: $secondary;
+                        color: $secondary;
+                        img{
+                            stroke:#222222;
+                        }
+                    }
+
+                    &:disabled{
+                        cursor: not-allowed;
+                        color: rgb(235, 235, 235);
+                        border-color: rgb(235, 235, 235);
+                        background: rgb(255, 255, 255);
+                    }
+
+                    img{
+                        height: 12px;
+                        width: 12px;
+                        fill: none;
+                        overflow: visible;
+                        stroke-width: 5.3333;
+                    }
+
+                    .count-btn-container{
+                        display: grid;
+                        place-content: center;   
+                    }
+                }
+                
+            }
+        }
+    }
+}
