@@ -118,14 +118,14 @@ export function AddReview({ stay }) {
             <Box
                 sx={{
                     maxWidth: '100%',
+
                 }}
             >
                 <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} fullWidth label="Share your exprience with this stay" id="fullWidth" />
             </Box>
 
 
-
-            <button>Send Review</button>
+            <button>Add Review</button>
         </form>
     </div>
 

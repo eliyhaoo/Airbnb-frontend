@@ -52,9 +52,7 @@ export const StayDetails = ({ history }) => {
                 <div className="reviews flex">
                     <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
                 </div>
-
                 <span className="dot">·</span>
-
                 <div className="num-of-reviews flex gap-5">
                     {stay.host.isSuperhost && <div>
                         <span className="superhost">Superhost</span>
