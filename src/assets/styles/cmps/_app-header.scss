@@ -1,11 +1,9 @@
 .app-header {
-
     position: fixed;
     height: 193px;
     width: 100%;
     background-color: unset;
     z-index: 10000;
-
     transition: 1s;
 
 
@@ -14,9 +12,10 @@
 
         .header-content-container {
 
-            >:first-child{
-                width:300px;
+            >:first-child {
+                width: 300px;
             }
+
             height: 80px;
 
             h2 {
@@ -29,9 +28,9 @@
             //     display: flex;
             //     justify-content: center;
             //   }
-              
+
             //   .box:first-child > { margin-right: auto; }
-              
+
             //   .box:last-child  >  { margin-left: auto;  }
 
             .user-nav-container {
