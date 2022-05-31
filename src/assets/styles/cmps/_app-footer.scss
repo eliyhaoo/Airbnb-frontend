@@ -12,14 +12,25 @@
 
     .footer-content {
         padding: 13px 0 14px;
+        border-top: 1px solid $borderClr;
     }
 
     .details-page-footer-content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: flex-start;
+        font-size: rem(14px);
+        padding: rem(48px) 0;
 
+        span {
+            font-family: manrope-bold;
+        }
+
+        li {
+            line-height: 2.5;
+        }
     }
+
 
     .language-icon {
         height: 14px;

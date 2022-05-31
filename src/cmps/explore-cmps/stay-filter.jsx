@@ -38,14 +38,14 @@ export const StayFilter = ({ showFilterModal, history }) => {
     }
 
     const onSetBeds = (beds) => {
-        console.log('beds',beds);
+        console.log('beds', beds);
         setFilterProperties((prevState) => ({ ...prevState, beds }))
     }
 
- 
-    console.log('beds in filter',filterBy.properties.beds);
+
+    console.log('beds in filter', filterBy.properties.beds);
     return <div className="stay-filter">
-        <div className="screen" onClick={() => onCloseModal()} ></div>
+        <div className="header-container screen" onClick={() => onCloseModal()} ></div>
         <div className="filter-modal">
             <div className="modal-head-container flex align-center">
                 <button className="close-modal-btn" onClick={() => onCloseModal()}><img className="close-modal-img" src={closeModalImg} /></button>
@@ -71,12 +71,12 @@ export const StayFilter = ({ showFilterModal, history }) => {
                 <div className="filter-type-beds">
                     <h2>Beds</h2>
 
-                        <button type="button" onClick={()=>{onSetBeds('')}} className={`filter-form-btn ${filterByProperties.beds === ''? 'active': ''}`}>Any</button>
-                        {_.times(7, (i) => {
-                            return  <button type="button" onClick={()=>{onSetBeds(i+1)}} key={i+'5a'} className={`filter-form-btn ${filterByProperties.beds === i+1 ? 'active': ''}`}>{i+1}</button>
-                        }) }
-                        <button type="button" onClick={()=>{onSetBeds(8)}} className={`filter-form-btn ${filterByProperties.beds === 8 ? 'active': ''}`}>8+</button>
-            
+                    <button type="button" onClick={() => { onSetBeds('') }} className={`filter-form-btn ${filterByProperties.beds === '' ? 'active' : ''}`}>Any</button>
+                    {_.times(7, (i) => {
+                        return <button type="button" onClick={() => { onSetBeds(i + 1) }} key={i + '5a'} className={`filter-form-btn ${filterByProperties.beds === i + 1 ? 'active' : ''}`}>{i + 1}</button>
+                    })}
+                    <button type="button" onClick={() => { onSetBeds(8) }} className={`filter-form-btn ${filterByProperties.beds === 8 ? 'active' : ''}`}>8+</button>
+
                 </div>
 
                 <div className="filter-type amenities">

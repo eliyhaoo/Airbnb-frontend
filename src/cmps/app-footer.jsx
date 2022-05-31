@@ -8,6 +8,7 @@ export const AppFooter = () => {
         <div className={visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}>
             {visitedPage === 'details-page' && <div class="details-page-footer-content">
                 <ul className="details-footer-support clean-list">
+                    <span><li>Support</li></span>
                     <li>Help Center</li>
                     <li>Supporting people with disabilities</li>
                     <li>Report a neighborhood concern</li>
@@ -17,12 +18,13 @@ export const AppFooter = () => {
                     <li>Our COVID-19 Response</li>
                 </ul>
                 <ul className="details-footer-community clean-list">
-                    <li>Help Center</li>
+                    <span><li>Community</li></span>
                     <li>Airbnb.org: disaster relief housing</li>
                     <li>Support Afghan refugees</li>
                     <li>Combating discrimination</li>
                 </ul>
                 <ul className="details-footer-hosting clean-list">
+                    <span><li>Hosting</li></span>
                     <li>Try hosting</li>
                     <li>Visit our community forum</li>
                     <li>AirCover for Hosts</li>
@@ -31,6 +33,7 @@ export const AppFooter = () => {
                     <li>Help Center</li>
                 </ul>
                 <ul className="details-footer-about clean-list">
+                    <span><li>About</li></span>
                     <li>Newsroom</li>
                     <li>Careersr</li>
                     <li>Learn about new features</li>
