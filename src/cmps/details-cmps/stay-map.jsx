@@ -8,9 +8,6 @@ export class StayMap extends Component {
         zoom: 11,
     }
 
-
-
-
     render() {
         return (
 
@@ -27,9 +24,10 @@ export class StayMap extends Component {
                 >
 
                     <AnyReactComponent
+                        style={{ fontSize: 'x-large' }}
                         lat={this.props.latlng.lat}
                         lng={this.props.latlng.lng}
-                        text="📍"
+                        text="🏠"
                     />
 
                 </GoogleMapReact>

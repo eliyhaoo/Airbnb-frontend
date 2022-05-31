@@ -3,7 +3,7 @@ export const utilService = {
     makeLorem,
     getRandomIntInclusive,
     delay,
-    checkForPlurals
+    checkForPlurals,
 }
 
 function makeId(length = 6) {
@@ -43,4 +43,5 @@ function checkForPlurals(word, length) {
     if (length === 1) return length + ' ' + word
     else if (length > 1) return length + ' ' + word + 's'
 }
+
 

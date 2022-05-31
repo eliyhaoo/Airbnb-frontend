@@ -17,35 +17,57 @@
         width: 100%;
         align-items: center;
         padding-top: em(10px);
-    }
+        justify-content: space-between;
     
-    
-    .stay-review-details{
-        align-items: center;
-        gap: 5px;
-        // font-family: manrope-semi-bold;
-
-        
-        img{
-            height: 38px;
-            aspect-ratio: 0.4;
+        .stay-review-details{
             align-items: center;
-        }
+            gap: 5px;
+            // font-family: manrope-semi-bold;
+                img{
+                    height: 38px;
+                    aspect-ratio: 0.4;
+                    align-items: center;
+                }
 
+                .num-of-reviews{
+                    text-decoration: underline;
+                }
 
-        .num-of-reviews{
-            text-decoration: underline;
+                .dot{
+                    padding-right: em(4px);
+                    padding-left: em(4px);
+                }
+                .reviews{
+                    text-decoration: underline;
+                }
         }
-
-        .dot{
-            padding-right: em(4px);
-            padding-left: em(4px);
-        }
-        .reviews{
-            text-decoration: underline;
-        }
+            .actions-container{
+                span{
+                    text-decoration: underline;
+                }
+                .action-container{
+                    align-items: center;
+                    margin-right: 14px;
+                    padding: 8px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                        img {
+                            padding-right: 5px;
+                        }
+                        .share-img{
+                            height: 20px;
+                            width: 22px;
+                        }
+                        .save-img{
+                            height: 17px;
+                            width: 22px;
+                        }
+                    &:hover{
+                        background-color: $footer;
+                    }
+                }
+            }
     }
-
 
     .details-img-container {
         width: 100%;
@@ -96,7 +118,7 @@
         grid-template-columns: 1.4fr 1fr;
         padding-top: em(48px);
         padding-bottom: em(32px);
-        border-bottom: 1px solid rgb(221, 221, 221);
+        border-bottom: 1px solid $borderClr;
 
         grid-template-areas:
             "info reserve";
@@ -104,7 +126,7 @@
         .stay-description{
             padding-top: em(32px);
             padding-bottom: em(32px);
-            border-bottom: 1px solid rgb(221, 221, 221);
+            border-bottom: 1px solid $borderClr;
             p{
                 margin: 0;
             }

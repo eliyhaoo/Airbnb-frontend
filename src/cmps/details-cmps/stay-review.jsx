@@ -7,6 +7,18 @@ import starSvg from '../../assets/svg/star.svg'
 export const StayReview = ({ stay }) => {
 
     if (!stay) return <div className="loader">Loading...</div>
+
+    const reviewScoreKeys = Object.keys(stay.reviewScores)
+
+    // const reviewToCalc = reviewScoreKeys.filter(reviewScoreKey => reviewScoreKey !== 'rating')
+    // let reviewRating = 0
+    // for (const reviewField in stay.reviewScores) {
+    //     if (reviewField === 'rating') continue
+    //     reviewRating += stay.reviewScores[reviewField]
+    // }
+    // reviewRating = reviewRating / reviewToCalc.length
+
+
     return <section className="stay-review">
         <div className="reviews-stats-header">
             <span><img src={starSvg} alt="star" /></span>
@@ -15,55 +27,19 @@ export const StayReview = ({ stay }) => {
             <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
         </div>
 
+
         <div className="reviews-stats-container">
-            <div className="reviews-stats">
-                <div className="review-cleanliness">Cleanliness</div>
-                <div className="review-rates-container flex space-between ">
-                    <div><meter value={stay.reviewScores.cleanliness} max="5"></meter></div>
-                    <div>{stay.reviewScores.cleanliness.toFixed(1)}</div>
+            {reviewScoreKeys.map(reviewField => {
+                if (reviewField === 'rating') return
+                return <div className="reviews-stats">
+                    <div className={`review-${reviewField}`}>{`${reviewField}`}</div>
+                    <div className="review-rates-container flex space-between ">
+                        <div><meter value={stay.reviewScores[reviewField]} max="5"></meter></div>
+                        <div>{stay.reviewScores[reviewField].toFixed(1)}</div>
+                    </div>
                 </div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-accurcay">Accuracy</div>
-                <div className="review-rates-container flex space-between ">
-                    <div><meter value={stay.reviewScores.accuracy} max="5"></meter></div>
-                    <div>{stay.reviewScores.accuracy.toFixed(1)}</div>
-                </div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-communication">Communication</div>
-                <div className="review-rates-container flex space-between ">
-                    <div><meter value={stay.reviewScores.communication} max="5"></meter></div>
-                    <div>{stay.reviewScores.communication.toFixed(1)}</div>
-                </div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-location">Location</div>
-                <div className="review-rates-container flex space-between ">
-                    <div><meter value={stay.reviewScores.location} max="5"></meter></div>
-                    <div>{stay.reviewScores.location.toFixed(1)}</div>
-                </div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-checkin">Check-in</div>
-                <div className="review-rates-container flex space-between ">
-                    <div><meter value={stay.reviewScores.checkin} max="5"></meter></div>
-                    <div>{stay.reviewScores.checkin.toFixed(1)}</div>
-                </div>
-            </div>
-
-            <div className="reviews-stats">
-                <div className="review-value">Value</div>
-                <div className="review-rates-container flex space-between ">
-                    <div><meter value={stay.reviewScores.value} max="5"></meter></div>
-                    <div>{stay.reviewScores.value.toFixed(1)}</div>
-                </div>
-            </div>
-
+            }
+            )}
 
         </div>
         <ReviewList stay={stay} />

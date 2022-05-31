@@ -44,28 +44,28 @@ async function query(filterBy) {
 
     let stays = await storageService.query(STORAGE_KEY)
 
-    stays = _filterBySearch(stays,searchBy)
- 
+    stays = _filterBySearch(stays, searchBy)
+
     stays = _filterByProperties(stays, properties)
-    
+
     if (category !== 'All Homes') stays = _filterByCategory(stays, category)
 
-    
+
     return stays
 }
 
 
 
-function _filterByProperties(stays, properties){
-    const {price,beds,roomType,amenities} = properties
-  
-     stays = _filterByRoomType(stays, roomType)
-     stays = _filterByAmenities(stays, amenities)
-     if (beds) stays = _filterByBeds(stays,beds)
-    
+function _filterByProperties(stays, properties) {
+    const { price, beds, roomType, amenities } = properties
+
+    stays = _filterByRoomType(stays, roomType)
+    stays = _filterByAmenities(stays, amenities)
+    if (beds) stays = _filterByBeds(stays, beds)
+
     return stays
 }
-function _filterBySearch(stays,searchBy){
+function _filterBySearch(stays, searchBy) {
     if (searchBy.country) {
         const regex = new RegExp(searchBy.country, 'i')
         stays = stays.filter(stay => regex.test(stay.address.country))
@@ -110,19 +110,19 @@ function _filterByCategory(stays, category) {
     return stays.filter(stay => stay.category === category)
 }
 
-function _filterByAmenities(stays, amenities){
-   let amenitiesKeys = Object.keys(amenities)
+function _filterByAmenities(stays, amenities) {
+    let amenitiesKeys = Object.keys(amenities)
 
-    let filterdAmenities =[]
+    let filterdAmenities = []
     amenitiesKeys.forEach(amenitie => {
         if (amenities[amenitie]) {
             filterdAmenities.push(amenitie)
         }
     })
 
-   
+
     if (filterdAmenities.length) {
-        stays = stays.filter(stay=> filterdAmenities.every(amenitie=> stay.amenities.includes(amenitie)))
+        stays = stays.filter(stay => filterdAmenities.every(amenitie => stay.amenities.includes(amenitie)))
     }
     return stays
 }
@@ -130,34 +130,33 @@ function _filterByAmenities(stays, amenities){
 
 function _filterByRoomType(stays, roomTypes) {
     let roomTypesKeys = Object.keys(roomTypes)
-    
-    let filterdRoomTypes =[]
+
+    let filterdRoomTypes = []
     roomTypesKeys.forEach(type => {
         if (roomTypes[type]) {
             filterdRoomTypes.push(type)
         }
     })
-    
+
     if (filterdRoomTypes.length) {
-        stays = stays.filter(stay=> filterdRoomTypes.some(roomType=> roomType === stay.roomType))
+        stays = stays.filter(stay => filterdRoomTypes.some(roomType => roomType === stay.roomType))
     }
 
     return stays
 }
 
 function _filterByBeds(stays, beds) {
-    
-    if (beds === 8){
-        
-        stays = stays.filter(stay=> stay.beds >= 8)
-    }else{
 
-        stays = stays.filter(stay=> stay.beds === beds)
+    if (beds === 8) {
+
+        stays = stays.filter(stay => stay.beds >= 8)
+    } else {
+
+        stays = stays.filter(stay => stay.beds === beds)
     }
 
     return stays
 }
-
 
 
 
