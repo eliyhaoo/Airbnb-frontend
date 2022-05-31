@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setVisitPage } from "../store/actions/system.action"
+
 export const HomePage = () => {
 
     const dispatch = useDispatch()
@@ -17,10 +18,21 @@ export const HomePage = () => {
         <div className="popular-destinations main-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
             <div className="popular-destinations-imgs-container">
-                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/new-york.jpg")} /><span>New York</span></div>
-                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/paris.jpg")} /><span>Paris</span></div>
-                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/santorini.jpg")} /><span>Santorini</span></div>
-                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/dubai.jpg")} /><span>Dubai</span></div>
+                <div className="city-container flex direction-column"><img className="city-img"
+                    src={require("../assets/img/cities/new-york.jpg")} /><span>New York</span></div>
+                <div className="city-container flex direction-column"><img className="city-img"
+                    src={require("../assets/img/cities/paris.jpg")} /><span>Paris</span></div>
+                <div className="city-container flex direction-column"><img className="city-img"
+                    src={require("../assets/img/cities/santorini.jpg")} /><span>Santorini</span></div>
+                <div className="city-container flex direction-column"><img className="city-img"
+                    src={require("../assets/img/cities/dubai.jpg")} /><span>Dubai</span></div>
+            </div>
+        </div>
+
+        <div className="become-a-host-container main-layout">
+            <div className="become-a-host-elements-container">
+                <img className="become-a-host-img" src={require('../assets/img/become-a-host.jpg')} />
+                <button className="become-a-host-btn">Become a Host</button>
             </div>
         </div>
     </section>

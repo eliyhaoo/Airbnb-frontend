@@ -12,9 +12,7 @@ export const StayReview = ({ stay }) => {
             <span><img src={starSvg} alt="star" /></span>
             <span>{stay.reviewScores.rating}</span>
             <span>·</span>
-            {/* <span>{stay.reviews.length} reviews</span> */}
             <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
-            {/* <span> reviews</span> */}
         </div>
 
         <div className="reviews-stats-container">
@@ -69,8 +67,6 @@ export const StayReview = ({ stay }) => {
 
         </div>
         <ReviewList stay={stay} />
-
-
         <AddReview stay={stay} />
 
     </section>
