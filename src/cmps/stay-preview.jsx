@@ -7,7 +7,7 @@ export const StayPreview = ({ stay, history }) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    return <div className="stay-preview flex direction-column control-prev.control-arrow">
+    return <div className="stay-preview flex direction-column">
         <CarouselComponent stayImgUrls={stay.imgUrls} stayId={stay._id} history={history} />
         <Link to={`/stay/${stay._id}`}><div className="preview-details-container">
             <p className="preview-country-city">{stay.address.city}, {stay.address.country}</p>

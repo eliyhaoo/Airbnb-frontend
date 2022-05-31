@@ -17,3 +17,4 @@ export const AppFooter = () => {
         </div>
     </section >
 }
+
