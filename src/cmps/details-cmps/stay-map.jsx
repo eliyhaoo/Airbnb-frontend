@@ -15,7 +15,9 @@ export class StayMap extends Component {
         return (
 
             <div style={{ height: '50vh', width: '100%' }}>
-                <h4>Where you’ll be</h4>
+                <div className="map-header">
+                    <h2>Where you’ll be</h2>
+                </div>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyBx9qnfAgsFEcpswENvLRS8b_x7YxYp--g' }}
                     // center={this.state.center}
