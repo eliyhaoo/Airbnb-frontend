@@ -30,7 +30,7 @@
 
     .popular-destinations-imgs-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(4, minmax(280px, 1fr));
         grid-column-gap: 24px;
         grid-row-gap: 40px;
         margin-top: 21px;
