@@ -100,24 +100,6 @@ function getCategories() {
     return categories
 }
 
-function _filterByProperties(stays, properties) {
-    const { price, beds, roomType, amenities } = properties
-
-    stays = _filterByRoomType(stays, roomType)
-    stays = _filterByAmenities(stays, amenities)
-    if (beds) stays = _filterByBeds(stays, beds)
-
-    return stays
-}
-
-function _filterBySearch(stays, searchBy) {
-    if (searchBy.country) {
-        const regex = new RegExp(searchBy.country, 'i')
-        stays = stays.filter(stay => regex.test(stay.address.country))
-    }
-    return stays
-}
-
 function _filterByCategory(stays, category) {
     return stays.filter(stay => stay.category === category)
 }

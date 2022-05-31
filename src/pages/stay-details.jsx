@@ -50,7 +50,7 @@ export const StayDetails = ({ history }) => {
             <div className="stay-review-details flex">
                 <img src={starSvg} alt="star" />
                 <div>
-                    {stay.reviewScores.rating}
+                    {stay.reviewScores.Rating}
                 </div>
                 <span>·</span>
                 <div className="reviews flex">

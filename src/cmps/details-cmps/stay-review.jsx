@@ -22,7 +22,7 @@ export const StayReview = ({ stay }) => {
     return <section className="stay-review">
         <div className="reviews-stats-header">
             <span><img src={starSvg} alt="star" /></span>
-            <span>{stay.reviewScores.rating}</span>
+            <span>{stay.reviewScores.Rating}</span>
             <span>·</span>
             <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
         </div>
@@ -30,7 +30,7 @@ export const StayReview = ({ stay }) => {
 
         <div className="reviews-stats-container">
             {reviewScoreKeys.map(reviewField => {
-                if (reviewField === 'rating') return
+                if (reviewField === 'Rating') return
                 return <div className="reviews-stats">
                     <div className={`review-${reviewField}`}>{`${reviewField}`}</div>
                     <div className="review-rates-container flex space-between ">
