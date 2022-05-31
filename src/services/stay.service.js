@@ -4,7 +4,6 @@ import { storageService } from './async-storage.service.js'
 // import { utilService } from './util.service.js'
 // import { userService } from './user.service.js'
 // import { getActionRemoveStay, getActionAddStay, getActionUpdateStay } from '../store/stay.actions.js'
-
 const STORAGE_KEY = 'stay'
 // const stayChannel = new BroadcastChannel('stayChannel')
 // const listeners = []

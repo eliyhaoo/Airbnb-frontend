@@ -1,36 +1,50 @@
-.home-page{
+.home-page {
     height: 150vh;
-    .hero{
+
+    .hero {
         background-image: url(https://kumba-app1.herokuapp.com/img/wp2.bacf91a9.jpg);
+        background-position-y: -150px;
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size: cover;
         background-position: center;
         height: 70vh;
-        width:100%;
+        width: 100%;
 
-        img{
-            width:100%;
+        img {
+            width: 100%;
             height: 100%;
-        
             grid-column: 1/-1;
-
         }
-
     }
 
-    // .grid-test{
-        // display:grid;
-        // grid-template-columns: $layoutPadding 1fr $layoutPadding;
-
-        // .test {
-        //     background-color: yellow;
-        //     position: fixed;
-        //     z-index: 200;
-        //     top:400px;
-        //     height: 50px;
-        //     width: 400px;
-        //     left:500px;
-        //     grid-column: 2;
-        // }
+    // .popular-destinations {
+    //     transform: translateY(10%);
     // }
+
+    & .popular-destinations-title {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+
+    .popular-destinations-imgs-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-column-gap: 24px;
+        grid-row-gap: 40px;
+        margin-top: 21px;
+    }
+
+    .city-img-container {
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+
+        .city-img {
+            border-radius: 12px;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+    }
 }
