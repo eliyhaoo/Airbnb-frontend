@@ -20,10 +20,10 @@ export const StayInfo = ({ stay }) => {
             <img src={stay.host.thumbnailUrl} alt="profile" />
         </div>
 
-        <div className="air-cover">
+        {/* <div className="air-cover">
             <img src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg" alt="aircover" />
             <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
-        </div>
+        </div> */}
 
         <div className="stay-description">
             <p>{stay.summary}</p>
