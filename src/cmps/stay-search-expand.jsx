@@ -4,28 +4,28 @@ import { useForm } from '../hooks/useForm'
 import { setFilterBy } from '../store/actions/stay.action'
 import { SearchCountry } from './search-country'
 import searchSvg from '../assets/svg/searchsvg.svg'
+import { AddGuest } from './add-guest'
 
-export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig ,history ,setSearchToggle}) => {
+export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle }) => {
 
     const dispatch = useDispatch()
     const { filterBy } = useSelector(storeState => storeState.stayModule)
-   
+
     const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
 
-  
+
 
     const onSearchBy = (ev) => {
         ev.stopPropagation()
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        // history.push(`/explore`)
         history.push(`/explore/?location=${searchByFields.country}`)
     }
 
     const onSelectedRegion = (region) => {
         setSearchByFields((prevState) => ({ ...prevState, country: region }))
-       
+
     }
 
     const onSetModal = (ev, modal) => {
@@ -166,6 +166,11 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig ,his
                         </div>
 
                     </div>
+                    
+                    {/* <div className="add-guest-search-container">
+                        {modalOpen === 'guest' && <AddGuest />}
+                    </div> */}
+
                 </div>
 
             </div>

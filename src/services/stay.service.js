@@ -1,9 +1,6 @@
 
-// import { alignProperty } from '@mui/material/styles/cssUtils'
 import { storageService } from './async-storage.service.js'
-// import { utilService } from './util.service.js'
-// import { userService } from './user.service.js'
-// import { getActionRemoveStay, getActionAddStay, getActionUpdateStay } from '../store/stay.actions.js'
+
 const STORAGE_KEY = 'stay'
 // const stayChannel = new BroadcastChannel('stayChannel')
 // const listeners = []
@@ -36,8 +33,6 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 { title: 'Boats', img: 'boats' },
 { title: 'Luxe', img: 'luxe' }
 ]
-
-
 
 async function query(filterBy) {
     const { category, searchBy, properties } = filterBy
@@ -105,6 +100,23 @@ function getCategories() {
     return categories
 }
 
+function _filterByProperties(stays, properties) {
+    const { price, beds, roomType, amenities } = properties
+
+    stays = _filterByRoomType(stays, roomType)
+    stays = _filterByAmenities(stays, amenities)
+    if (beds) stays = _filterByBeds(stays, beds)
+
+    return stays
+}
+
+function _filterBySearch(stays, searchBy) {
+    if (searchBy.country) {
+        const regex = new RegExp(searchBy.country, 'i')
+        stays = stays.filter(stay => regex.test(stay.address.country))
+    }
+    return stays
+}
 
 function _filterByCategory(stays, category) {
     return stays.filter(stay => stay.category === category)
@@ -179,6 +191,19 @@ function _filterByBeds(stays, beds) {
 // function unsubscribe(listener) {
 //     stayChannel.removeEventListener('message', listener)
 // }
+
+
+
+
+
+
+
+
+
+// import { alignProperty } from '@mui/material/styles/cssUtils'
+// import { utilService } from './util.service.js'
+// import { userService } from './user.service.js'
+// import { getActionRemoveStay, getActionAddStay, getActionUpdateStay } from '../store/stay.actions.js'
 
 
 

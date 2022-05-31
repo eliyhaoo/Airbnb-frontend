@@ -4,6 +4,11 @@ export const utilService = {
     getRandomIntInclusive,
     delay,
     checkForPlurals,
+    getPriceWithCommas
+}
+
+function getPriceWithCommas(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function makeId(length = 6) {

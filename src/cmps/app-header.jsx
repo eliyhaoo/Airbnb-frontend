@@ -10,9 +10,6 @@ import logoSvg from '../assets/svg/logo.svg'
 
 
 const _AppHeader = ({history}) => {
-
-    
-
     const gVisitedPage = useRef()
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [isSearchOpen, setSearchToggle] = useState(true)
@@ -55,7 +52,7 @@ const _AppHeader = ({history}) => {
     }
 
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
-        <div className={`header-container full ${gVisitedPage.current === 'details-page' ? 'details-layout' : gVisitedPage.current === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
+        <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
             <div className="header-content-container flex space-between align-center">
 
                 {/* <NavLink to='/'><h2>LOGO</h2></NavLink>
@@ -64,7 +61,7 @@ const _AppHeader = ({history}) => {
 
                 <NavLink to='/'><h2><img src={logoSvg} /></h2></NavLink>
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
-               
+
                 <div className="box user-nav-container flex space-between align-center">
                     <nav className="box main-nav flex space-between align-items">
                         <NavLink to='/explore'>Explore</NavLink>
