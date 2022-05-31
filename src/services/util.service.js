@@ -49,3 +49,4 @@ function checkForPlurals(word, length) {
     else if (length > 1) return length + ' ' + word + 's'
 }
 
+

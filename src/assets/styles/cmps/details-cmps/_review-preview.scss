@@ -7,17 +7,9 @@
     p{
         line-height: 24px;
         width: 500px;
-        // color: $secondary;
         font-size: rem(16px);
     }
 
-    span{
-        // color: $secondary;
-        cursor: pointer;
-        font-weight: 600;
-        text-decoration: underline;
-
-    }
     .review-user-info{
         display: flex;
         gap: 10px;
@@ -29,7 +21,6 @@
         }
     }
   
-    
 }
 
 

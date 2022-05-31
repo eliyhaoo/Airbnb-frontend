@@ -9,10 +9,7 @@ import { withRouter } from 'react-router-dom'
 import logoSvg from '../assets/svg/logo.svg'
 
 
-const _AppHeader = ({ history }) => {
-
-
-
+const _AppHeader = ({history}) => {
     const gVisitedPage = useRef()
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [isSearchOpen, setSearchToggle] = useState(true)

@@ -14,9 +14,13 @@ import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { StayReview } from "../cmps/details-cmps/stay-review"
 import { StayAmenities } from '../cmps/details-cmps/stay-amenities'
 import { StayGeneralInfo } from '../cmps/details-cmps/stay-general-info'
+import { StayInfo } from '../cmps/details-cmps/stay-info'
 
 import starSvg from '../assets/svg/star.svg'
-import { StayInfo } from '../cmps/details-cmps/stay-info'
+import shareSvg from '../assets/svg/Share.svg'
+import saveSvg from '../assets/svg/Save.svg'
+
+
 
 export const StayDetails = ({ history }) => {
     const dispatch = useDispatch()
@@ -46,7 +50,7 @@ export const StayDetails = ({ history }) => {
             <div className="stay-review-details flex">
                 <img src={starSvg} alt="star" />
                 <div>
-                    {stay.reviewScores.rating.toFixed(1)}
+                    {stay.reviewScores.rating}
                 </div>
                 <span>·</span>
                 <div className="reviews flex">
@@ -62,6 +66,19 @@ export const StayDetails = ({ history }) => {
                     <div className="country-address">{stay.address.country}</div>
                 </div>
             </div>
+
+            <div className="actions-container flex">
+                <div className="action-container flex">
+                    <img className="share-img" src={shareSvg} alt="share" />
+                    <span>Share</span>
+                </div>
+
+                <div className="action-container flex">
+                    <img className="save-img" src={saveSvg} alt="save" />
+                    <span>Save</span>
+                </div>
+            </div>
+
         </div>
 
         <div className="details-img-container">

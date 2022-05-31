@@ -9,6 +9,7 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 
+import { utilService } from '../../services/util.service';
 
 
 
@@ -23,6 +24,7 @@ const StyledRating = styled(Rating)({
 });
 
 export function AddReview({ stay }) {
+
 
     const [review, setReview] = useState({
         at: "2020-06-12T04:00:00.000Z",
@@ -49,9 +51,9 @@ export function AddReview({ stay }) {
     const onAddReview = (ev) => {
         ev.preventDefault()
         stay.reviews.unshift(review)
-        console.log('review', review)
+        // utilService.calcAvgRating(stay.reviews)
         // console.log('stay', stay)
-        // console.log('reviewScores', reviewScore)
+        console.log('reviewScores', reviewScore)
         // stay.reviews.unshift(reviewScore)
         // dispatch(saveStay(stay))
     }
@@ -121,7 +123,7 @@ export function AddReview({ stay }) {
 
                 }}
             >
-                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} fullWidth label="Share your exprience with this stay" id="fullWidth" />
+                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} autoComplete="off" fullWidth label="Share your exprience with this stay" id="fullWidth" />
             </Box>
 
 
