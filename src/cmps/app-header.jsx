@@ -5,9 +5,12 @@ import { useSelector } from 'react-redux'
 import { StaySearchExpand } from './stay-search-expand'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
+import { withRouter } from 'react-router-dom'
 
-export const AppHeader = () => {
 
+const _AppHeader = ({history}) => {
+
+    
     const gVisitedPage = useRef()
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [isSearchOpen, setSearchToggle] = useState(true)
@@ -56,16 +59,13 @@ export const AppHeader = () => {
 
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
 
-        {/* <div className={headerClass}> */}
         <div className={`header-container full ${gVisitedPage.current === 'details-page' ? 'details-layout' : gVisitedPage.current === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
 
             <div className="header-content-container flex space-between align-center">
-                {/* <div className="header-content-container flex align-center"> */}
 
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
 
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
-                {/* {!isSearchOpen && <StaySearch  setModalOpen={onSmallSearchClick} />} */}
 
                 <div className="box user-nav-container flex space-between align-center">
 
@@ -81,11 +81,28 @@ export const AppHeader = () => {
                 </div>
             </div>
 
-            {isSearchOpen && <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
+            {isSearchOpen && <StaySearchExpand setSearchToggle={setSearchToggle} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
 
         </div>
 
     </header>
+
+
+}
+
+
+
+
+export const AppHeader = (withRouter(_AppHeader))
+
+
+
+
+
+
+
+
+
 
     // if (gVisitedPage.current !== 'details-page') return (gVisitedPage.current !== 'details-page') && <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
 
@@ -143,7 +160,7 @@ export const AppHeader = () => {
     //     </div>
 
     // </header>
-}
+
 
 
 
