@@ -6,7 +6,6 @@ import { StaySearchExpand } from './stay-search-expand'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
 
-
 export const AppHeader = () => {
 
     const gVisitedPage = useRef()
@@ -14,7 +13,6 @@ export const AppHeader = () => {
     const [isSearchOpen, setSearchToggle] = useState(true)
     const [modalOpen, setModalOpen] = useState(null)
     const [isBig, setIsBig] = useState(false)
-
 
     useEffect(() => {
         gVisitedPage.current = visitedPage
@@ -28,9 +26,6 @@ export const AppHeader = () => {
         gVisitedPage.current = visitedPage
         gVisitedPage.current === 'home-page' ? setSearchToggle(true) : setSearchToggle(false)
     }, [visitedPage])
-
-
-
 
     const onScroll = () => {
 
@@ -62,10 +57,10 @@ export const AppHeader = () => {
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
 
         {/* <div className={headerClass}> */}
-        <div className={`header-container full ${gVisitedPage.current === 'details-page' ?   'details-layout':gVisitedPage.current === 'explore-page'? 'main-layout':'home-page-layout'}`}>
+        <div className={`header-container full ${gVisitedPage.current === 'details-page' ? 'details-layout' : gVisitedPage.current === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
 
             <div className="header-content-container flex space-between align-center">
-            {/* <div className="header-content-container flex align-center"> */}
+                {/* <div className="header-content-container flex align-center"> */}
 
                 <NavLink to='/'><h2>LOGO</h2></NavLink>
 

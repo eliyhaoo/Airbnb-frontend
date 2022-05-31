@@ -2,17 +2,13 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import closeModalImg from "../../assets/svg/close-modal.svg"
 import { useForm } from '../../hooks/useForm'
-import { setFilterBy } from "../../store/actions/stay.action"
+import { loadStays, setFilterBy } from "../../store/actions/stay.action"
 import { MultiselectCheckbox } from "./multiselect-checkbox"
 
 export const StayFilter = ({ showFilterModal, history }) => {
 
-    // const [checkeypeOfPlacedState, setheckeypeOfPlacedState] = useState({ entirePlace: false, tinyRoom: false, privateRoom: false })
-
     const { filterBy } = useSelector(storeState => storeState.stayModule)
-
     const [filterByProperties, handleChange, setFilterProperties] = useForm(filterBy.properties)
-
     const dispatch = useDispatch()
 
     const onSetFilterBy = (ev) => {
@@ -21,6 +17,8 @@ export const StayFilter = ({ showFilterModal, history }) => {
         if (!ev.target) return
         ev.preventDefault()
         dispatch(setFilterBy('properties', filterByProperties))
+        dispatch(loadStays())
+        onCloseModal()
     }
 
 

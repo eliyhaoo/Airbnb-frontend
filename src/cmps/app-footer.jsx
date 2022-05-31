@@ -10,7 +10,6 @@ export const AppFooter = () => {
                 <div className="footer-left-side flex align-center space-between">
                     <img className="language-icon" src={(languageIcon)} alt="language-icon" />
                     <span>English (US)</span>
-                    {/* Choose a currency */}
                     <span>$ US</span>
                     <span>Support & resources</span>
                 </div>

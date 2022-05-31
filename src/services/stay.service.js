@@ -1,4 +1,5 @@
 
+import { alignProperty } from '@mui/material/styles/cssUtils'
 import { storageService } from './async-storage.service.js'
 // import { utilService } from './util.service.js'
 // import { userService } from './user.service.js'
@@ -40,14 +41,15 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 
 
 async function query(filterBy) {
-    const { category, searchBy } = filterBy
+    const { category, searchBy, properties } = filterBy
     let stays = await storageService.query(STORAGE_KEY)
     if (searchBy.country) {
         const regex = new RegExp(searchBy.country, 'i')
         stays = stays.filter(stay => regex.test(stay.address.country))
     }
-    if (category === 'All Homes') return stays
-    return _filterByCategory(stays, category)
+    if (category !== 'All Homes') stays = _filterByCategory(stays, category)
+
+    return stays
 }
 
 function getById(stayId) {
