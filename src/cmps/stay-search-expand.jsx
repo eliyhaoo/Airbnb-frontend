@@ -1,36 +1,34 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useForm } from '../hooks/useForm'
-import { setFilterBy, setSearchBy } from '../store/actions/stay.action'
+import { setFilterBy } from '../store/actions/stay.action'
 import { SearchCountry } from './search-country'
 import searchSvg from '../assets/svg/searchsvg.svg'
 
-export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) => {
+export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig ,history ,setSearchToggle}) => {
 
     const dispatch = useDispatch()
     const { filterBy } = useSelector(storeState => storeState.stayModule)
-    const [selectedRegion, setSelectedRegion] = useState('')
+   
     const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
 
-    useEffect(() => {
-
-        dispatch(setFilterBy('searchBy', searchByFields))
-    }, [selectedRegion])
+  
 
     const onSearchBy = (ev) => {
         ev.stopPropagation()
-        console.log('HEY FORM', searchByFields);
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
+        setSearchToggle(false)
+        // history.push(`/explore`)
+        history.push(`/explore/?location=${searchByFields.country}`)
     }
 
     const onSelectedRegion = (region) => {
         setSearchByFields((prevState) => ({ ...prevState, country: region }))
-        setSelectedRegion(region)
+       
     }
 
     const onSetModal = (ev, modal) => {
-        console.log('Setting Modal');
         ev.stopPropagation()
         setModalOpen(modal)
         setIsBig(true)
@@ -162,7 +160,6 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig }) =
                             <div className="cell"></div>
                             <div className="content">
                                 <button className="action-btn ">
-                                    {/* <button className="action-btn "> */}
                                     <img src={searchSvg} alt="search-btn" /><span></span>
                                 </button>
                             </div>
