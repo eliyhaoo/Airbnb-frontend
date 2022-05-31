@@ -1,0 +1,51 @@
+
+.stay-general-info{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+
+    .general-info-container{
+        margin-bottom: 24px;
+        img{
+            height: 24px;
+            width: 24px;
+        }
+
+    .general-info{
+        margin-left: 16px;
+
+        .title{
+            font-weight: 600;
+            line-height: em(20px);
+            margin-bottom: 4px;
+        }
+
+        .subtitle{
+            color: $subtext;
+            font-weight: 400;
+            font-size: em(14px);
+            line-height: em(20px);
+        }
+
+    }
+}
+    
+    .air-cover{
+        padding-top: em(32px);
+        padding-bottom: em(32px);
+        border-bottom: 1px solid rgb(221, 221, 221);
+        border-top: 1px solid rgb(221, 221, 221);
+
+        img{
+            height: rem(32px);
+        }
+
+        p{
+            padding-top: em(14px);
+            margin: 0;
+            
+        }
+    }
+
+
+}

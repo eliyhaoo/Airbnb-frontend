@@ -2,15 +2,18 @@ import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { utilService } from '../services/util.service'
 
+import { utilService } from '../services/util.service'
 import { showSuccessMsg } from '../services/event-bus.service'
 import { stayService } from '../services/stay.service'
+
+import { setVisitPage } from '../store/actions/system.action'
+
 import { StayMap } from "../cmps/details-cmps/stay-map"
 import { StayReserve } from "../cmps/details-cmps/stay-reserve"
 import { StayReview } from "../cmps/details-cmps/stay-review"
 import { StayAmenities } from '../cmps/details-cmps/stay-amenities'
-import { setVisitPage } from '../store/actions/system.action'
+import { StayGeneralInfo } from '../cmps/details-cmps/stay-general-info'
 
 import starSvg from '../assets/svg/star.svg'
 import { StayInfo } from '../cmps/details-cmps/stay-info'
@@ -70,6 +73,7 @@ export const StayDetails = ({ history }) => {
         <section className="stay-display-info">
             <div className="stay-summary-container">
                 <StayInfo stay={stay} />
+                <StayGeneralInfo />
                 <StayAmenities stay={stay} />
             </div>
 

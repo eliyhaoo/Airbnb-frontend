@@ -30,7 +30,7 @@
                 margin: 0;
             }
             .count-input-title{
-                font-family: manrope-semi-bold;
+                // font-family: manrope-semi-bold;
                 line-height: 20px;
                 padding-bottom: 4px;
             }
@@ -57,10 +57,9 @@
                     &:hover{
                         border-color: $secondary;
                         color: $secondary;
-                        img{
-                            stroke:#222222;
-                        }
+                  
                     }
+
 
                     &:disabled{
                         cursor: not-allowed;
@@ -69,17 +68,22 @@
                         background: rgb(255, 255, 255);
                     }
 
-                    img{
-                        height: 12px;
-                        width: 12px;
-                        fill: none;
-                        overflow: visible;
-                        stroke-width: 5.3333;
-                    }
+                   
 
                     .count-btn-container{
                         display: grid;
                         place-content: center;   
+                        img{
+                            height: 12px;
+                            width: 12px;
+                            fill: none;
+                            overflow: visible;
+                            stroke-width: 5.3333;
+                            &:hover{
+                                    stroke:#222222;
+                                    fill: green;
+                            }
+                        }
                     }
                  
                 }

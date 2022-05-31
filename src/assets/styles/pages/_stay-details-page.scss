@@ -9,7 +9,8 @@
         line-height: 1.875rem;
         font-size: 1.625em;
         padding-top: em(22px);
-        font-family: manrope-semi-bold;
+        // font-family: manrope-semi-bold;
+        font-family: circular-book;
     }
 
     .stay-details-container{
@@ -22,7 +23,7 @@
     .stay-review-details{
         align-items: center;
         gap: 5px;
-        font-family: manrope-semi-bold;
+        // font-family: manrope-semi-bold;
 
         
         img{
@@ -99,23 +100,6 @@
 
         grid-template-areas:
             "info reserve";
-
-
-        .air-cover{
-            padding-top: em(32px);
-            padding-bottom: em(32px);
-            border-bottom: 1px solid rgb(221, 221, 221);
-
-            img{
-                height: rem(32px);
-            }
-
-            p{
-                padding-top: em(14px);
-                margin: 0;
-                // line-height: 20px;
-            }
-        }
 
         .stay-description{
             padding-top: em(32px);
