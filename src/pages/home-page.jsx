@@ -17,10 +17,10 @@ export const HomePage = () => {
         <div className="popular-destinations main-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
             <div className="popular-destinations-imgs-container">
-                <div className="city-img-container"><img className="city-img" src={require("../assets/img/cities/new-york.jpg")} /></div>
-                <div className="city-img-container"><img className="city-img" src={require("../assets/img/cities/paris.jpg")} /></div>
-                <div className="city-img-container"><img className="city-img" src={require("../assets/img/cities/santorini.jpg")} /></div>
-                <div className="city-img-container"><img className="city-img" src={require("../assets/img/cities/dubai.jpg")} /></div>
+                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/new-york.jpg")} /><span>New York</span></div>
+                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/paris.jpg")} /><span>Paris</span></div>
+                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/santorini.jpg")} /><span>Santorini</span></div>
+                <div className="city-container flex direction-column"><img className="city-img" src={require("../assets/img/cities/dubai.jpg")} /><span>Dubai</span></div>
             </div>
         </div>
     </section>

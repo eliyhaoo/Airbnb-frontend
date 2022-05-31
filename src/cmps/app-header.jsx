@@ -5,9 +5,8 @@ import { useSelector } from 'react-redux'
 import { StaySearchExpand } from './stay-search-expand'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
-
+import logoSvg from '../assets/svg/logo.svg'
 export const AppHeader = () => {
-
     const gVisitedPage = useRef()
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [isSearchOpen, setSearchToggle] = useState(true)
@@ -41,7 +40,6 @@ export const AppHeader = () => {
         } else {
             setSearchToggle(true)
         }
-
     }
 
     const onCloseSearchBig = () => {
@@ -50,25 +48,15 @@ export const AppHeader = () => {
         setIsBig(false)
     }
 
-
-
-
-
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
-
         {/* <div className={headerClass}> */}
         <div className={`header-container full ${gVisitedPage.current === 'details-page' ? 'details-layout' : gVisitedPage.current === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
-
             <div className="header-content-container flex space-between align-center">
                 {/* <div className="header-content-container flex align-center"> */}
-
-                <NavLink to='/'><h2>LOGO</h2></NavLink>
-
+                <NavLink to='/'><h2><img src={logoSvg} /></h2></NavLink>
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
                 {/* {!isSearchOpen && <StaySearch  setModalOpen={onSmallSearchClick} />} */}
-
                 <div className="box user-nav-container flex space-between align-center">
-
                     <nav className="box main-nav flex space-between align-items">
                         <NavLink to='/explore'>Explore</NavLink>
                         <NavLink to='/'>Become a Host</NavLink>
@@ -77,14 +65,10 @@ export const AppHeader = () => {
                         <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
                         <img className="user-avatar" src={userAvatarSvg} alt="user" />
                     </div>
-
                 </div>
             </div>
-
             {isSearchOpen && <StaySearchExpand isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
-
         </div>
-
     </header>
 
     // if (gVisitedPage.current !== 'details-page') return (gVisitedPage.current !== 'details-page') && <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full main-layout   ${isSearchOpen ? '' : 'close'}`}>
