@@ -6,6 +6,7 @@ export const useForm=(initialFields,cb)=>{
     const [fields, setFields ]=useState(initialFields)
 
     const handleChange=({target})=>{
+        console.log('targetttatata',target);
         const field = target.name
         const value = target.type === 'number'?  (+target.value || '') :target.value
         setFields((prevState)=>({...prevState,[field]:value}))

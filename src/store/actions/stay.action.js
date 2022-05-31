@@ -2,10 +2,10 @@
 // import { showErrorMsg } from '../services/event-bus.service.js'
 import { stayService } from '../../services/stay.service.js'
 
-
 export function loadStays() {
     return async (dispatch, getState) => {
         const { filterBy } = getState().stayModule
+        console.log('FILTERBY', filterBy);
         try {
             const stays = await stayService.query(filterBy)
             dispatch({
@@ -14,7 +14,7 @@ export function loadStays() {
             })
 
         } catch (err) {
-            console.log('UserActions: err in loadUsers', err)
+            console.log('StayActions: err in loadStays', err)
 
         }
     }
@@ -40,38 +40,25 @@ export function saveStay(stay) {
         })
     }
 }
-export function setSearchBy(searchBy) {
 
-    return dispatch => {
-        dispatch({
-            type: 'SET_FILTERBY',
-            filterField: { field: 'searchBy', value: searchBy }
-        })
-    }
-}
-
-
-export function setCategory(category) {
+export function setFilterBy(field, value) {
     return async dispatch => {
         try {
-            // const staysByCategory = stayService.filterByCategory(category)
             dispatch({
                 type: 'SET_FILTERBY',
-                filterField: { field: 'category', value: category }
+                filterField: { field, value }
             })
-            // dispatch({
-            //     type: 'SET_STAYS',
-            //     stays: staysByCategory
-            // })
 
         } catch (err) {
-            console.log('UserActions: err in loadUsers', err)
-            // } finally {
-            //     dispatch({ type: 'LOADING_DONE' })
+            console.log('StayActions: err in setFilterBy', err)
+
         }
     }
-
 }
+
+
+
+
 // export function onSetFilter(field, value) {
 //     return dispatch => {
 //         dispatch({

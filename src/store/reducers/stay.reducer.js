@@ -1,16 +1,26 @@
 // import { userService } from '../services/user.service.js'
 
-
 const initialState = {
     stays: [],
     stay: null,
     filterBy: {
-        category: 'All Homes',
         searchBy: {
             country: '',
             dates: '',
             guestsNum: null,
+        },
+        category: 'All Homes',
+        properties: {
+            price: null,
+            bedsNum: null,
+            roomType: {
+                'Entire place': { isChecked: false, title: 'A place all to yourself' },
+                'Private room': { isChecked: false, title: 'Your own room in a home or a hotel, plus some shared common spaces' },
+                'Shared room': { isChecked: false, title: 'A sleeping space and common areas that may be shared with others' }
+            },
+            amenities: []
         }
+
     },
 }
 export function stayReducer(state = initialState, action) {
@@ -38,5 +48,4 @@ export function stayReducer(state = initialState, action) {
     // window.userState = newState;
     // console.log('State:', newState);
     return newState;
-
 }

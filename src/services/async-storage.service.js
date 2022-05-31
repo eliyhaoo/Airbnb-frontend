@@ -3913,7 +3913,7 @@ const stays = [
         "name": "Lily Beach Resort & Spa, Maldives, With Pool, AI",
         "category": "Islands",
         "summary": "ALL INCLUSIVE RESORT AWARD WINNER Lily Beach is proud to have once again won the prestigious All Inclusive Resort Award this year.",
-        "roomType": "Shared room",
+        "roomType": "Private room",
         "guests": 6,
         "bedrooms": 3,
         "beds": 3,

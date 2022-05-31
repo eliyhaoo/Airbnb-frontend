@@ -30,7 +30,7 @@ export const FormReserve = ({ stay }) => {
         </div>
 
         <div className={`add-guest-reserve ${isModalOpen && 'open'} `}>
-            {isModalOpen && <div className="screen-add-guest" onClick={() => setModal(false)}></div>}
+            {isModalOpen && <div className="screen guest-open" onClick={() => setModal(false)}></div>}
             <AddGuest setModal={setModal} />
         </div>
 
