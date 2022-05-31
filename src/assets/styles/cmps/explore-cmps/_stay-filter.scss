@@ -162,7 +162,7 @@
                 border: 1px solid $secondary;
             }
 
-            &:active {
+            &.active {
                 background-color: $secondary;
                 color: $backgroundClr;
                 border: unset;

@@ -6,14 +6,14 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 
-export const MultiselectCheckbox = ({ fields, onHandleChange }) => {
+export const MultiselectCheckbox = ({ fields, onHandleChange,titles }) => {
 
   const [state, setState] = useState(fields)
 
   const handleChange = (event) => {
     const newState = {
       ...state,
-      [event.target.name]: { ...state[event.target.name], isChecked: event.target.checked }
+      [event.target.name]: event.target.checked
     }
     setState(newState);
     onHandleChange(newState)
@@ -31,7 +31,7 @@ export const MultiselectCheckbox = ({ fields, onHandleChange }) => {
 
               <FormControlLabel
                 control={
-                  <Checkbox checked={state[stateField].isChecked} onChange={handleChange} name={`${stateField}`}
+                  <Checkbox checked={state[stateField]} onChange={handleChange} name={`${stateField}`}
                     sx={{
                       color: '#222222',
 
@@ -43,7 +43,7 @@ export const MultiselectCheckbox = ({ fields, onHandleChange }) => {
                 }
                 label={stateField}
               />
-              {state[stateField].title && <FormHelperText>{state[stateField].title}</FormHelperText>}
+              {titles && <FormHelperText>{titles[idx]}</FormHelperText>}
             </div>
           )}
 

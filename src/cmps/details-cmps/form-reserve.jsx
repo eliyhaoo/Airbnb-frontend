@@ -24,8 +24,8 @@ export const FormReserve = ({ stay }) => {
             </div>
 
             <div className="guest-input" onClick={() => setModal(true)}>
-                <label>guests</label>
-                <input placeholder="2"></input>
+                <label>GUESTS</label>
+                <input placeholder="2 guests"></input>
             </div>
         </div>
 
@@ -142,6 +142,7 @@ export const FormReserve = ({ stay }) => {
 
         </div>
 
+        <p>You won't be charged yet</p>
 
     </div >
 }
