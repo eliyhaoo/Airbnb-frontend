@@ -48,7 +48,9 @@ async function query(filterBy) {
         stays = stays.filter(stay => regex.test(stay.address.country))
     }
     if (category !== 'All Homes') stays = _filterByCategory(stays, category)
-
+    if (properties) {
+        stays = _filterByRoomType(stays, properties)
+    }
     return stays
 }
 
@@ -89,7 +91,20 @@ function _filterByCategory(stays, category) {
     return stays.filter(stay => stay.category === category)
 }
 
+function _filterByRoomType(stays, properties) {
+    let roomTypes = Object.keys(properties.roomType)
+    const isNotRoomeType = roomTypes.every(type => properties.roomType[type].isChecked === false)
+    if (isNotRoomeType) return stays
+    // let sdtays = stays.filter(stay => {
+    //     properties.
 
+    //     stay.roomTypeproperties[stay.roomType].isChecked === true 
+    //     console.log(properties[stay.roomType])
+
+
+    // })
+    return stays
+}
 
 // function getEmptyStay() {
 //     return {

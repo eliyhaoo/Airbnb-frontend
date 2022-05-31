@@ -60,7 +60,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
                                 <div className="span"><span>A sleeping space and common areas that may be shared with others</span></div></label>
                         </div>
                         <div className="form-input">
-                            <input type="checkbox" id="private-room" name="typeOfPlace" value="Privet Room" />
+                            <input type="checkbox" id="private-room" name="typeOfPlace" value="Private Room" />
                             <label htmlFor="private-room">Privet room<br></br>
                                 <div className="span"><span>Your own room in a home or a hotel, plus some shared common spaces</span></div></label>
                         </div>
