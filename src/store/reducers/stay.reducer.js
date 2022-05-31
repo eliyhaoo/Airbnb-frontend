@@ -12,13 +12,22 @@ const initialState = {
         category: 'All Homes',
         properties: {
             price: null,
-            bedsNum: null,
+            beds: '',
             roomType: {
-                'Entire place': { isChecked: false, title: 'A place all to yourself' },
-                'Private room': { isChecked: false, title: 'Your own room in a home or a hotel, plus some shared common spaces' },
-                'Shared room': { isChecked: false, title: 'A sleeping space and common areas that may be shared with others' }
+                'Entire place':  false,
+                'Private room': false, 
+                'Shared room': false
             },
-            amenities: []
+            amenities: {
+                'Wifi':  false,
+                'Kitchen': false, 
+                'Heating': false,
+                'Breakfast': false,
+                'Pool': false,
+                'TV': false,
+                'Air conditioning': false,
+                'Private entrance': false,
+            }
         }
 
     },

@@ -1,5 +1,5 @@
 
-import { alignProperty } from '@mui/material/styles/cssUtils'
+// import { alignProperty } from '@mui/material/styles/cssUtils'
 import { storageService } from './async-storage.service.js'
 // import { utilService } from './util.service.js'
 // import { userService } from './user.service.js'
@@ -42,14 +42,34 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 
 async function query(filterBy) {
     const { category, searchBy, properties } = filterBy
+
     let stays = await storageService.query(STORAGE_KEY)
+
+    stays = _filterBySearch(stays,searchBy)
+ 
+    stays = _filterByProperties(stays, properties)
+    
+    if (category !== 'All Homes') stays = _filterByCategory(stays, category)
+
+    
+    return stays
+}
+
+
+
+function _filterByProperties(stays, properties){
+    const {price,beds,roomType,amenities} = properties
+  
+     stays = _filterByRoomType(stays, roomType)
+     stays = _filterByAmenities(stays, amenities)
+     if (beds) stays = _filterByBeds(stays,beds)
+    
+    return stays
+}
+function _filterBySearch(stays,searchBy){
     if (searchBy.country) {
         const regex = new RegExp(searchBy.country, 'i')
         stays = stays.filter(stay => regex.test(stay.address.country))
-    }
-    if (category !== 'All Homes') stays = _filterByCategory(stays, category)
-    if (properties) {
-        stays = _filterByRoomType(stays, properties)
     }
     return stays
 }
@@ -91,20 +111,62 @@ function _filterByCategory(stays, category) {
     return stays.filter(stay => stay.category === category)
 }
 
-function _filterByRoomType(stays, properties) {
-    let roomTypes = Object.keys(properties.roomType)
-    const isNotRoomeType = roomTypes.every(type => properties.roomType[type].isChecked === false)
-    if (isNotRoomeType) return stays
-    // let sdtays = stays.filter(stay => {
-    //     properties.
+function _filterByAmenities(stays, amenities){
+   let amenitiesKeys = Object.keys(amenities)
 
-    //     stay.roomTypeproperties[stay.roomType].isChecked === true 
-    //     console.log(properties[stay.roomType])
+    let filterdAmenities =[]
+    amenitiesKeys.forEach(amenitie => {
+        if (amenities[amenitie]) {
+            filterdAmenities.push(amenitie)
+        }
+    })
 
-
-    // })
+   
+    if (filterdAmenities.length) {
+        stays = stays.filter(stay=> filterdAmenities.every(amenitie=> stay.amenities.includes(amenitie)))
+    }
     return stays
 }
+
+
+function _filterByRoomType(stays, roomTypes) {
+    let roomTypesKeys = Object.keys(roomTypes)
+    
+    let filterdRoomTypes =[]
+    roomTypesKeys.forEach(type => {
+        if (roomTypes[type]) {
+            filterdRoomTypes.push(type)
+        }
+    })
+    
+    if (filterdRoomTypes.length) {
+        stays = stays.filter(stay=> filterdRoomTypes.some(roomType=> roomType === stay.roomType))
+    }
+
+    return stays
+}
+
+function _filterByBeds(stays, beds) {
+    
+    if (beds === 8){
+        
+        stays = stays.filter(stay=> stay.beds >= 8)
+    }else{
+
+        stays = stays.filter(stay=> stay.beds === beds)
+    }
+
+    return stays
+}
+
+
+
+
+
+
+
+
+
 
 // function getEmptyStay() {
 //     return {
