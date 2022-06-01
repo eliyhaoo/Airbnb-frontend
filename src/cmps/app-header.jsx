@@ -1,20 +1,23 @@
 import { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { StaySearch } from './stay-search'
+import { NavLink, withRouter } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { StaySearch } from './stay-search'
+
 import { StaySearchExpand } from './stay-search-expand'
+import { UserOptions } from './user-options'
+
+import logoSvg from '../assets/svg/logo.svg'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
-import { withRouter } from 'react-router-dom'
-import logoSvg from '../assets/svg/logo.svg'
 
 
-const _AppHeader = ({history}) => {
+const _AppHeader = ({ history }) => {
     const gVisitedPage = useRef()
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [isSearchOpen, setSearchToggle] = useState(true)
     const [modalOpen, setModalOpen] = useState(null)
     const [isBig, setIsBig] = useState(false)
+    const [modalUserOptions, setModalUserOptions] = useState(false)
 
     useEffect(() => {
         gVisitedPage.current = visitedPage
@@ -67,9 +70,15 @@ const _AppHeader = ({history}) => {
                         <NavLink to='/explore'>Explore</NavLink>
                         <NavLink to='/'>Become a Host</NavLink>
                     </nav>
-                    <div className="box user-details-container flex space between align-center">
+
+                    <div className="box user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
                         <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
                         <img className="user-avatar" src={userAvatarSvg} alt="user" />
+
+                        <div className={`form-reserve-container ${modalUserOptions && 'open'}`}>
+                            {modalUserOptions && <UserOptions />}
+                        </div>
+
                     </div>
                 </div>
             </div>

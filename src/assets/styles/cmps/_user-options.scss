@@ -1,0 +1,54 @@
+
+.user-options{
+    background-color: $backgroundClr;
+    border-radius: 12px;
+    color: $secondary;
+    margin-top: rem(34px);
+    padding: 8px 0px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    // right: 78px;
+    height: 30vh;
+    min-width: 250px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 16px;
+    // z-index: ;
+    // overflow-y: ;
+
+    .user-options-container{
+        margin-top: 8px 0px;
+        border-bottom: 1px solid $borderClr;
+    }
+    
+    .user-options-container:first-child{
+        margin-bottom: 4px;
+    }
+
+    .user-options-container>*{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        padding: 16px 14px;
+        &:hover{
+            background-color: $footer;
+        }
+    }
+
+    .host-options-container{
+        margin-top: 8px 0px;
+    }
+
+    .host-options-container:last-child{
+        margin-top: 4px;
+    }
+
+    .host-options-container>*{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        padding: 16px 14px;
+        &:hover{
+            background-color: $footer;
+        }
+    }
+}
