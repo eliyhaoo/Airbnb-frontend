@@ -57,6 +57,16 @@
 
                     }
 
+                    .user-options-container{
+                        position: relative;
+                        opacity: 0;
+                        transition: 0.4s;
+
+                        &.open{
+                            opacity: 1;
+                            height: calc(50vh - 180px);
+                        }
+                    }
 
                 }
 

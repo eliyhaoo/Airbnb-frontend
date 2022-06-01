@@ -58,8 +58,6 @@ const _AppHeader = ({ history }) => {
         <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
             <div className="header-content-container flex space-between align-center">
 
-           
-
                 <NavLink to='/'><h2><img src={logoSvg} /></h2></NavLink>
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
 
@@ -73,8 +71,8 @@ const _AppHeader = ({ history }) => {
                         <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
                         <img className="user-avatar" src={userAvatarSvg} alt="user" />
 
-                        <div className={`form-reserve-container ${modalUserOptions && 'open'}`}>
-                            {modalUserOptions && <UserOptions />}
+                        <div className={`user-options-container ${modalUserOptions && 'open'}`}>
+                            <UserOptions />
                         </div>
 
                     </div>
