@@ -1,19 +1,30 @@
 .stay-search-expand {
 
-    justify-self: center;
-    align-self: center;
+    position: absolute;
+    left: calc(50% + $layoutPadding);
+    transform: translate((calc(-50% - (1.5*$layoutPadding)),11vh));
+    opacity: 1;
+    transition: transform  0.2s, opacity 0.5s;
+
+    &.close {
+        transform: translate((calc(-50% - (1.5*$layoutPadding))), 8px) scale(0.4, 0.8);
+        opacity: 0;
+        
+    }
+
 
     .stay-search-expand-container {
 
 
         border: 1px solid $borderClr;
-        background-color: #f7f7f7;
+        background-color: $footer;
         align-self: center;
         justify-self: center;
         width: 850px;
         height: 66px;
         border-radius: 40px;
         box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+        
         // padding: 8px 15px;
 
         .search-modal {
@@ -64,32 +75,23 @@
             }
         }
 
-        // .search-guest-expand {
-        //     position:relative;
-        //     .add-guest-search-container{
+        .search-date-expand{
 
-        //         position: absolute;
-        //         left: -23px;
-        //         top: 12px;
-        //         opacity: 1;
-        //         z-index: 510;
-        //         margin-top: 20px;
-        //         // height: 245px;
-        //         max-height: calc(100vh - 150px);
-        //         width: 486px;
-        //         border-radius: 32px;
-
-        //         // &.open{
-        //         //     height: 700px;
-        //         //     opacity: 1;
-        //         // }
-
-        //     }
-
-        // }
+            &.open {
+                padding: 0;
+                height: 100%;
+                // background-color: $backgroundClr;
+                // border-radius: 40px;
+                // flex-grow: 0.6;
+                // box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
+            }
+        }
 
 
-
+        .search-label{
+            font-family: manrope-semi-bold;
+        }
+        
         input {
             border: unset;
             background-color: unset;

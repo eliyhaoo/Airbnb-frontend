@@ -1,28 +1,30 @@
-.review{
+.review {
     padding: 10px;
     flex-basis: 50%;
-    padding-inline-end: 100px;
+    padding-inline-end: rem(100px);
     color: $secondary;
-    
-    p{
-        line-height: 24px;
-        width: 500px;
+
+    p {
+        line-height: rem(24px);
+        width: rem(500px);
         font-size: rem(16px);
     }
 
-    .review-user-info{
+    .review-user-info {
         display: flex;
         gap: 10px;
-        img{
+
+        img {
             border-radius: 50%;
-            height: 55px;
+            height: rem(55px);
             object-fit: cover;
-            width: 55px;
+            width: rem(55px);
+
         }
     }
-  
+
+    & .review-date {
+        font-size: rem(14px);
+        color: $subtext;
+    }
 }
-
-
-
-
