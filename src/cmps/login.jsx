@@ -13,11 +13,12 @@ import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import { connect } from "react-redux"
-import { onLogin } from '../store/actions/user.action'
+import { onLogin } from '../store/actions/user.actions'
 
 const theme = createTheme()
 
 export function _Login(props) {
+
     const handleSubmit = async (event) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
@@ -27,10 +28,10 @@ export function _Login(props) {
         }
         try {
             await props.onLogin(credentials)
-            props.history.push('/toy')
+            props.history.push('/explore')
         } catch (err) { console.log(err) }
 
-    };
+    }
 
     return (
         <ThemeProvider theme={theme}>

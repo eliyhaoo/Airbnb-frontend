@@ -12,7 +12,9 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { connect } from "react-redux"
-import { signup } from '../store/actions/user.action';
+
+import { onSignup } from '../store/actions/user.actions'
+
 
 const theme = createTheme();
 
@@ -27,8 +29,8 @@ export function _Signup(props) {
             password: data.get('password'),
             fullname: (fName + ' ' + lName)
         }
-        props.signup(user)
-        props.history.push('/toy')
+        props.onSignup(user)
+        props.history.push('/explore')
     };
 
     return (
@@ -125,7 +127,7 @@ function mapStateToProps(storeState) {
     }
 }
 const mapDispatchToProps = {
-    signup,
+    onSignup,
 }
 
 export const Signup = connect(mapStateToProps, mapDispatchToProps)(_Signup)

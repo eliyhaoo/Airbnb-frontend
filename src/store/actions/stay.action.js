@@ -20,6 +20,18 @@ export function loadStays() {
     }
 }
 
+//FRONT CODE
+// export function setStayInStore(stay) {
+//     return dispatch => {
+//         dispatch({
+//             type: 'SET_STAY',
+//             stay
+//         })
+
+//     }
+// }
+
+//BACK CODE
 export function saveStay(stay) {
     const actionType = stay._id ? 'UPDATE_STAY' : 'ADD_STAY'
     return async dispatch => {
@@ -38,16 +50,41 @@ export function saveStay(stay) {
 }
 
 export function setStayInStore(stay) {
-    return dispatch => {
-
-        dispatch({
-            type: 'SET_STAY',
-            stay
-        })
-
+    return async (dispatch) => {
+        try {
+            dispatch({
+                type: 'SET_STAY',
+                stay
+            })
+        } catch (err) {
+            console.log('StayActions : err in setStayInStore', err)
+        }
     }
 }
 
+// export function saveStay(stay) {
+//     const actionType = stay._id ? 'UPDATE_STAY' : 'ADD_STAY'
+//     return dispatch => {
+//         dispatch({
+//             type: actionType,
+//             stay
+//         })
+//     }
+// }
+
+// export function saveStay(stay) {
+//     const actionType = stay._id ? 'UPDATE_STAY' : 'ADD_STAY'
+//     return async (dispatch) => {
+//         try {
+//             dispatch({
+//                 type: actionType,
+//                 stay
+//             })
+//         } catch (err) {
+//             console.log('StayActions : err in saveStay', err)
+//         }
+//     }
+// }
 
 
 export function setFilterBy(field, value) {
@@ -64,9 +101,6 @@ export function setFilterBy(field, value) {
         }
     }
 }
-
-
-
 
 // export function onSetFilter(field, value) {
 //     return dispatch => {

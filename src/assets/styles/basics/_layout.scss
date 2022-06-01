@@ -10,6 +10,11 @@
         grid-column: 1 / -1;
     }
 
+    &.App{
+        min-height: 100vh
+    }
+
+
     @include for-wide-layout {
         @include layoutGTC($break-wide);
     }

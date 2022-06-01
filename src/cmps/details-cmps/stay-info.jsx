@@ -22,7 +22,6 @@ export const StayInfo = ({ stay }) => {
         </div>
 
         <div className="stay-description">
-            <p>{stay.summary}</p>
             <LongTxt txt={stay.summary} maxLength={200} />
         </div>
 
