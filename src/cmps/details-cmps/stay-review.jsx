@@ -29,9 +29,9 @@ export const StayReview = ({ stay }) => {
 
 
         <div className="reviews-stats-container">
-            {reviewScoreKeys.map(reviewField => {
+            {reviewScoreKeys.map((reviewField, idx) => {
                 if (reviewField === 'Rating') return
-                return <div className="reviews-stats">
+                return <div key={idx} className="reviews-stats">
                     <div className={`review-${reviewField}`}>{`${reviewField}`}</div>
                     <div className="review-rates-container flex space-between ">
                         <div><meter value={stay.reviewScores[reviewField]} max="5"></meter></div>

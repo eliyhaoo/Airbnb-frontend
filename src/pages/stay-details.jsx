@@ -20,8 +20,6 @@ import starSvg from '../assets/svg/star.svg'
 import shareSvg from '../assets/svg/Share.svg'
 import saveSvg from '../assets/svg/Save.svg'
 
-
-
 export const StayDetails = ({ history }) => {
     const dispatch = useDispatch()
     const { stayId } = useParams()
@@ -60,8 +58,7 @@ export const StayDetails = ({ history }) => {
                 <div className="num-of-reviews flex gap-5">
                     {stay.host.isSuperhost && <div>
                         <span className="superhost">Superhost</span>
-                    </div>
-                    }
+                    </div>}
                     <div className="city-address">{stay.address.city},</div>
                     <div className="country-address">{stay.address.country}</div>
                 </div>

@@ -27,7 +27,7 @@ export function AddReview({ stay }) {
 
 
     const [review, setReview] = useState({
-        at: "2020-06-12T04:00:00.000Z",
+        at: Date.now(),
         by: {
             "_id": Math.random() * 1000 % 4,
             "fullname": "Guest",
@@ -35,6 +35,7 @@ export function AddReview({ stay }) {
         },
         txt: ''
     })
+
     const [reviewScore, setReviewScore] = useState({
         accuracy: 0,
         cleanliness: 0,

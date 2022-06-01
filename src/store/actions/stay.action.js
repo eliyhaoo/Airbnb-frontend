@@ -20,6 +20,23 @@ export function loadStays() {
     }
 }
 
+export function saveStay(stay) {
+    const actionType = stay._id ? 'UPDATE_STAY' : 'ADD_STAY'
+    return async dispatch => {
+        try {
+            await stayService.save(stay)
+            dispatch({
+                type: actionType,
+                stay
+
+            })
+        } catch (err) {
+            console.log('StayActions: err in saveStay', err)
+
+        }
+    }
+}
+
 export function setStayInStore(stay) {
     return dispatch => {
 
@@ -31,15 +48,7 @@ export function setStayInStore(stay) {
     }
 }
 
-export function saveStay(stay) {
-    const actionType = stay._id ? 'UPDATE_STAY' : 'ADD_STAY'
-    return dispatch => {
-        dispatch({
-            type: actionType,
-            stay
-        })
-    }
-}
+
 
 export function setFilterBy(field, value) {
     return async dispatch => {

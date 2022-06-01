@@ -1,9 +1,8 @@
 import { Carousel } from 'react-responsive-carousel';
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export function CarouselComponent({ stayImgUrls, stayId, history }) {
 
-    function onClickItem() {
+    const onClickItem = () => {
         console.log(history)
         history.push(`/stay/${stayId}`)
     }
@@ -11,7 +10,7 @@ export function CarouselComponent({ stayImgUrls, stayId, history }) {
     if (!stayImgUrls) return <div>Loading...</div>
     return (
         <div className="carousel-component">
-            <Carousel showThumbs={false} showStatus={false} onClickItem={onClickItem} >
+            <Carousel className="preview-carousel" showThumbs={false} showStatus={false} onClickItem={onClickItem} >
                 {stayImgUrls.map((img, idx) =>
                     <div key={idx}>
                         <img className="preview-img" src={img} />
