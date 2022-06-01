@@ -3,7 +3,7 @@
     z-index: 100;
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(9%, 1fr));
-    width: 90%;
+    width: 92%;
     justify-items: center;
     height: fit-content;
     // margin-top: 5px;
@@ -11,10 +11,13 @@
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
     .category-container {
-        height:78px;
+        height: 78px;
         opacity: 0.6;
         margin: 0;
         cursor: pointer;
+
+        // & .category-elements {
+        //     width: fit-content;
 
         &:hover {
             opacity: 1;
@@ -25,9 +28,10 @@
             box-shadow: inset 0px -2.3px 0 rgba(0, 0, 0, 0.932);
             opacity: 1;
         }
-
-
     }
+
+    // }
+
 
     .category-img {
         height: 24px;
@@ -37,7 +41,7 @@
     }
 
     p {
-        font-size: 0.75rem;
+        font-size: 0.69rem;
         margin: 0;
         font-weight: 700;
     }

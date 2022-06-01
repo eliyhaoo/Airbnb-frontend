@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import languageIcon from '../assets/svg/language-icon.svg'
+
 export const AppFooter = () => {
 
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
@@ -41,7 +42,6 @@ export const AppFooter = () => {
                     <li>Letter from our founders</li>
                 </ul>
             </div>}
-            {/* <section className=> */}
             <div className="footer-content flex align-center space-between">
                 <div className="footer-right-side flex align-center space-between">
                     <span>© 2022 Topbnb,</span> <span>Inc.</span><span> ·</span><span>Privacy</span><span> · </span><span>Terms</span><span>·</span> <span>Sitemap</span>
@@ -55,7 +55,6 @@ export const AppFooter = () => {
             </div>
         </div>
     </section >
-    // </section>
 }
 
 

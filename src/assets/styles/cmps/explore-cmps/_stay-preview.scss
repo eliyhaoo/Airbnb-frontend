@@ -4,11 +4,37 @@
     position: relative;
     font-size: rem(15px);
 
-    .preview-img {
-        border-radius: 12px;
-        // aspect-ratio: 1;
-        height: rem(305.7px);
-        object-fit: cover;
+    .preview-imgs-container {
+        display: grid;
+        grid-template-columns: 85% 1fr;
+        grid-template-rows: 14% 1fr;
+
+        .carousel-component {
+            border-radius: 12px;
+            // aspect-ratio: 1;
+            height: rem(305.7px);
+            object-fit: cover;
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+        }
+
+
+
+        .heart-svg {
+            height: 24px;
+            grid-column: -1/2;
+            grid-row: 1;
+            z-index: 20;
+            color: $subtext;
+            align-self: flex-end;
+            filter: opacity(0.5);
+
+            &.active {
+                filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%) opacity(1);
+                // fill: #f8385c;
+            }
+        }
+
     }
 
     .preview-details-container {
