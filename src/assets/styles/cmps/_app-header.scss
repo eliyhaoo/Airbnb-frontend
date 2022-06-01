@@ -8,20 +8,17 @@
 
 
     .header-container {
-        height: 85px;
+        // height: 85px;
 
         .header-content-container {
 
+       
             >:first-child {
                 width: 300px;
             }
 
             height: 80px;
 
-            h2 {
-                color: $primary;
-                margin: 0;
-            }
 
             // .box {
             //     flex: 1;

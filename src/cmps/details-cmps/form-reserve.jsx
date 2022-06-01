@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AddGuest } from '../add-guest'
 
 
@@ -6,6 +6,10 @@ export const FormReserve = ({ stay }) => {
 
 
     const [isModalOpen, setModal] = useState(false)
+
+    useEffect(() => {
+
+    }, [isModalOpen])
 
 
     return <div className="form-reserve">
@@ -23,16 +27,16 @@ export const FormReserve = ({ stay }) => {
                 </div>
             </div>
 
-            <div className="guest-input" onClick={() => setModal(true)}>
+            <div className="guest-input flex direction-column" onClick={() => setModal(true)}>
                 <label>GUESTS</label>
-                <input placeholder="2 guests"></input>
+                <input placeholder=" 1 guests"></input>
+                <div className={`add-guest-reserve ${isModalOpen && 'open'} `}>
+                    {isModalOpen && <div className="screen guest-open" onClick={() => setModal(false)}></div>}
+                    <AddGuest setModal={(bool) => { console.log('modal cloding'); setModal(bool) }} />
+                </div>
             </div>
         </div>
 
-        <div className={`add-guest-reserve ${isModalOpen && 'open'} `}>
-            {isModalOpen && <div className="screen guest-open" onClick={() => setModal(false)}></div>}
-            <AddGuest setModal={setModal} />
-        </div>
 
         <div className="btn-container">
             <div className="cell"></div>

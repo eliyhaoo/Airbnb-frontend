@@ -1,34 +1,11 @@
 .search-country {
     position: relative;
 
-
-    .search-country-container {
-        position: absolute;
-        left: -23px;
-        top: 12px;
-        opacity: 1;
-        z-index: 510;
-        margin-top: 20px;
-        // height: 245px;
-        max-height: calc(100vh - 150px);
-        width: 486px;
-        border-radius: 32px;
-        background-color: $backgroundClr;
-        margin-top: 12px;
-        padding: 16px 32px;
-        box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
-
-        >:first-child{
-            margin-bottom: 28px; 
-            margin-inline-start: 16px;
-        }
-
         .regions-grid {
 
             width:100%;
             display: grid;
             grid-template-columns: repeat(auto-fill, 124px);
-            // grid-template-columns: repeat(6, minmax(124px, 1fr));
             gap: 24px 10px;
             margin-inline-start: 15px;
             margin-top: 10px ;
@@ -61,6 +38,6 @@
             }
         }
 
-    }
+    
 
 }

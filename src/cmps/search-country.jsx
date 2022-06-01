@@ -9,7 +9,7 @@ export const SearchCountry = ({ selectedRegion, setSelectedRegion }) => {
 
     return <section className="search-country">
         <div className="screen header-open" onClick={() => onCloseModal()} ></div>
-        <div className="search-country-container">
+        <div className="search-modal country-container">
             <h4>Search by region</h4>
             <div className="regions-grid">
 
