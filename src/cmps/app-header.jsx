@@ -58,9 +58,7 @@ const _AppHeader = ({ history }) => {
         <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
             <div className="header-content-container flex space-between align-center">
 
-                {/* <NavLink to='/'><h2>LOGO</h2></NavLink>
-
-                {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />} */}
+           
 
                 <NavLink to='/'><h2><img src={logoSvg} /></h2></NavLink>
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
