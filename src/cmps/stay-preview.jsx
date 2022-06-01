@@ -16,7 +16,7 @@ export const StayPreview = ({ stay, history }) => {
             <div className="preview-rating-container flex align-center space-between">
                 <p className="preview-rating">{stay.reviewScores.Rating}</p><img className="star-svg" src={starSvg} />
             </div>
-            <p className="preview-price"><span className="price-span">{utilService.getPriceWithCommas(stay.price)}</span> night</p>
+            <p className="preview-price"><span className="price-span">${utilService.getPriceWithCommas(stay.price)}</span> night</p>
         </div></Link>
     </div >
 }
