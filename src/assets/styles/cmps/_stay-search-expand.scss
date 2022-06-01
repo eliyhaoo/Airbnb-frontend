@@ -1,6 +1,7 @@
 .stay-search-expand {
 
     justify-self: center;
+    align-self: center;
 
     .stay-search-expand-container {
 
@@ -15,23 +16,78 @@
         box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
         // padding: 8px 15px;
 
+        .search-modal {
+            position: absolute;
+            left: -23px;
+            top: 12px;
+            // top:100%;
+            opacity: 1;
+            z-index: 510;
+            margin-top: 20px;
+            // height: 245px;
+
+            max-height: calc(100vh - 150px);
+            min-height: calc(50vh - 150px);
+            width: 486px;
+            border-radius: 32px;
+            background-color: $backgroundClr;
+            margin-top: 12px;
+            padding: 16px 32px;
+            box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
+
+            &.country-container {
+                >:first-child {
+                    font-family: circular-book;
+                    margin-bottom: 28px;
+                    margin-inline-start: 16px;
+                }
+            }
+
+            &.guest-container {
+                top: 65px;
+                left: -119px;
+                width: 406px;
+                padding: 34px 32px;
+                font-size: 1rem;
+
+            }
+
+        }
+
         .search-location-expand {
 
             &.open {
                 background-color: $backgroundClr;
                 border-radius: 40px;
                 flex-grow: 0.6;
-                box-shadow:rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
-        // .search-location-expand {
 
+        // .search-guest-expand {
+        //     position:relative;
         //     .add-guest-search-container{
 
+        //         position: absolute;
+        //         left: -23px;
+        //         top: 12px;
+        //         opacity: 1;
+        //         z-index: 510;
+        //         margin-top: 20px;
+        //         // height: 245px;
+        //         max-height: calc(100vh - 150px);
+        //         width: 486px;
+        //         border-radius: 32px;
+
+        //         // &.open{
+        //         //     height: 700px;
+        //         //     opacity: 1;
+        //         // }
+
         //     }
-         
+
         // }
-     
+
 
 
         input {
@@ -51,13 +107,13 @@
             &:hover {
                 background-color: $hoover;
                 border-radius: 40px;
-                
+
             }
 
             &.open {
                 background-color: $backgroundClr;
                 border-radius: 40px;
-                box-shadow:rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
 
@@ -84,6 +140,7 @@
         }
 
         .search-guest-expand {
+            position: relative;
 
             .search-btn-container {
 

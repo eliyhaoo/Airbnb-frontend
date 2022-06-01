@@ -167,9 +167,10 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
 
                     </div>
                     
-                    {/* <div className="add-guest-search-container">
-                        {modalOpen === 'guest' && <AddGuest />}
-                    </div> */}
+                    {/* <div className="add-guest-search-container open"> */}
+                    {modalOpen === 'guest' &&<div className="search-modal guest-container">
+                         <AddGuest />
+                    </div>}
 
                 </div>
 
