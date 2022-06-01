@@ -11,10 +11,10 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
 
     return <section className="stay-search flex space-between align-center">
         <button onClick={(ev) => onSetModalOpen(ev, 'location')} className="search-location">
-            AnyWhere
+            Anywhere
         </button>
         <button onClick={(ev) => onSetModalOpen(ev, 'dates')} className="search-date">
-            Any Week
+            Anyweek
         </button>
         <div onClick={(ev) => onSetModalOpen(ev, 'guest')} className="search-guest">
             <div className="search-guest-container flex space-between align-center">

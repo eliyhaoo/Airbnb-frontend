@@ -29,6 +29,10 @@ const _AppHeader = ({history}) => {
         gVisitedPage.current === 'home-page' ? setSearchToggle(true) : setSearchToggle(false)
     }, [visitedPage])
 
+    useEffect(() => {
+        console.log('Search open ',isSearchOpen);
+    }, [isSearchOpen])
+
     const onScroll = () => {
 
         if (gVisitedPage.current !== 'home-page') {
@@ -46,10 +50,10 @@ const _AppHeader = ({history}) => {
     }
 
     const onCloseSearchBig = () => {
-        console.log('CLOSING');
         setModalOpen(null)
         setIsBig(false)
     }
+
 
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
         <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
@@ -72,7 +76,7 @@ const _AppHeader = ({history}) => {
                 </div>
             </div>
 
-            {isSearchOpen && <StaySearchExpand setSearchToggle={setSearchToggle} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />}
+             <StaySearchExpand setSearchToggle={setSearchToggle} isSearchOpen={isSearchOpen} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
         </div>
     </header>

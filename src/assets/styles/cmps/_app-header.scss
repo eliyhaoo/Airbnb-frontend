@@ -12,7 +12,7 @@
 
         .header-content-container {
 
-       
+            display:relative;
             >:first-child {
                 width: 300px;
             }
@@ -106,6 +106,8 @@
     }
 
     &.pages {
+
+        height:19vh;
         border-bottom: 1px solid $borderClr;
 
         background-color: $backgroundClr;

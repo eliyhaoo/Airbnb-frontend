@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AddGuest } from '../add-guest'
+import { CheckoutDatePicker } from '../checkout-date-picker'
 
 
 export const FormReserve = ({ stay }) => {
@@ -14,8 +15,9 @@ export const FormReserve = ({ stay }) => {
 
     return <div className="form-reserve">
         <div className="order-data">
-            <div className="date-picker flex space-between">
-                <div className="date-input flex direction-column">
+            <div className="date-picker flex space-between align-center">
+            {/* <div className="date-picker "> */}
+                {/* <div className="date-input flex direction-column">
                     <label>CHECK-IN</label>
                     <input placeholder="9/24/2022"></input>
 
@@ -24,7 +26,8 @@ export const FormReserve = ({ stay }) => {
                     <label>CHECKOUT</label>
                     <input placeholder="9/28/2022"></input>
 
-                </div>
+                </div> */}
+                <CheckoutDatePicker/>
             </div>
 
             <div className="guest-input flex direction-column" onClick={() => setModal(true)}>
