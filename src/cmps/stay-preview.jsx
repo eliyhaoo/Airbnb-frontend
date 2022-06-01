@@ -25,7 +25,8 @@ export const StayPreview = ({ stay, history }) => {
             <p className="preview-room-type">{stay.roomType}</p>
             <p className="preview-beds">{utilService.checkForPlurals('bed', stay.beds)}</p>
             <div className="preview-rating-container flex align-center space-between">
-                <p className="preview-rating">{stay.reviewScores.Rating}</p><img className="star-svg" src={starSvg} />
+                <p className="preview-rating">{stay.reviewScores.Rating.toFixed(1)}</p>
+                <img className="star-svg" src={starSvg} />
             </div>
             <p className="preview-price"><span className="price-span">${utilService.getPriceWithCommas(stay.price)}</span> night</p>
         </div>

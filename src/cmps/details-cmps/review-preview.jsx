@@ -11,6 +11,7 @@ export const ReviewPreview = ({ review }) => {
         <div className="review-user-info">
             <img src={review.by.imgUrl} alt="profile picture" />
             <h2>{review.by.fullname}</h2>
+            <span>date</span>
         </div>
 
         <LongTxt txt={review.txt} maxLength={100} />

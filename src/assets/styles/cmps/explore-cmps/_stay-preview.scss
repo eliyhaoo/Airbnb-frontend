@@ -18,8 +18,6 @@
             grid-row: 1/-1;
         }
 
-
-
         .heart-svg {
             height: 24px;
             grid-column: -1/2;
@@ -30,8 +28,8 @@
             filter: opacity(0.5);
 
             &.active {
-                filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%) opacity(1);
                 // fill: #f8385c;
+                filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%) opacity(1);
             }
         }
 
@@ -52,10 +50,11 @@
         }
 
         .preview-rating-container {
-            width: rem(40px);
+            // width: rem(40px);
             grid-column: 2;
             grid-row: 1;
             justify-self: flex-end;
+            width: 40%;
         }
 
         .preview-country-city {
