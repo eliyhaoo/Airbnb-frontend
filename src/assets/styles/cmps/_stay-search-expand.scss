@@ -77,6 +77,25 @@
 
         .search-date-expand{
 
+            // .css-1ozefeb{
+
+            //     .MuiPaper-root{
+
+            //         &.MuiPaper-elevation{
+
+            //             &.MuiPaper-rounded{
+
+            //                 &.MuiPaper-elevation8{
+
+            //                     &.css-1smlk3z-MuiPaper-root{
+            //                         border-radius: 32px !important;
+            //                     }
+            //                 } 
+            //             } 
+            //         } 
+            //     } 
+            // }
+
             &.open {
                 padding: 0;
                 height: 100%;
@@ -196,4 +215,25 @@
 
         }
     }
+}
+
+.css-1ozefeb{
+
+    .MuiPaper-root{
+
+        &.MuiPaper-elevation{
+
+            &.MuiPaper-rounded{
+
+                &.MuiPaper-elevation8{
+
+                    &.css-1smlk3z-MuiPaper-root{
+                        border-radius: 32px ;
+                        margin-top:14px;
+                    }
+                } 
+            } 
+        } 
+    }  
+
 }

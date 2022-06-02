@@ -33,7 +33,6 @@ const _AppHeader = ({ history }) => {
     }, [visitedPage])
 
     useEffect(() => {
-        console.log('Search open ',isSearchOpen);
     }, [isSearchOpen])
 
     const onScroll = () => {

@@ -2,10 +2,9 @@ import { userService } from "../../services/user.service"
 
 
 let initialState = {
-    users: [],
-    user: '',
-    watchedUser: null,
+
     // user: userService.getLoggedinUser()
+    user: 'guest'
 }
 export function userReducer(state = initialState, action) {
     var newState = state;

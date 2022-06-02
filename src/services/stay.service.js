@@ -39,7 +39,6 @@ async function query(filterBy) {
 // }
 
 async function getById(stayId) {
-    console.log('stayId', stayId)
     return httpService.get(`stay/${stayId}`)
 }
 

@@ -5,6 +5,7 @@ import { utilService } from '../../services/util.service'
 
 
 export const ReviewPreview = ({ review }) => {
+    console.log('reView at',review.at);
     const date = new Date(review.at)
     return <div className="review">
 
