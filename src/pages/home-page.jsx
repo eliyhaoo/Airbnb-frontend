@@ -2,18 +2,13 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setVisitPage } from "../store/actions/system.action"
 import { userService } from "../services/user.service"
-import { loadUser } from "../store/actions/user.actions"
 
 export const HomePage = () => {
 
     const dispatch = useDispatch()
 
-
-
     useEffect(() => {
         dispatch(setVisitPage('home-page'))
-        dispatch(loadUser())
-
     }, [])
 
 
