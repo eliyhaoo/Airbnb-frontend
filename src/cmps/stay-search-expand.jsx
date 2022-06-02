@@ -74,7 +74,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'guest')} className={`search-guest-expand ${modalOpen === 'guest' ? 'open' : ''} flex space-between align-center`}>
                     <div>
                         <div className='search-label'>Who</div>
-                        <span>{guests.total ? utilService.checkForPlurals('guest',guests.total):'Add guest'}</span>
+                        <span>{guests.total >1 ? utilService.checkForPlurals('guest',guests.total):'Add guest'}</span>
 
                     </div>
                     <div onClick={onSearchBy} className={`search-btn-container src-btn-${isBig ? 'big' : 'small'}-expand`}>

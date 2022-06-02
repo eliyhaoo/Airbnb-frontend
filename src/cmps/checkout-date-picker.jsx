@@ -50,21 +50,34 @@ export function CheckoutDatePicker({ dates }) {
 
 						dispatch(updateReserve('dates',{checkIn:newValue[0],checkOut:newValue[1]}))
 					}}
+
 					startText='Check-in'
 					endText='Check-out'
 					renderInput={(startProps, endProps) => (
-						<React.Fragment>
-							<TextField className={"start-date"} {...startProps} />
-							<TextField className={"end-date"} {...endProps} />
-							{/* <span>{removeUrl}</span> */}
-						</React.Fragment>
 
-						// <React.Fragment>
-						// 	<TextField className={"start-date"} {...startProps} />
-						// 	<TextField className={"end-date"} {...endProps} />
-						// 	{/* <span>{removeUrl}</span> */}
-						// </React.Fragment>
+						<div className="date-picker-inputs flex space-between full-width">
+
+							<div className={`start-date `}>
+								<div className="search-label">Check in</div>
+								<input autoComplete="off" ref={startProps.inputRef} {...startProps.inputProps} />
+							</div>
+
+							<div  className={`end-date `}>
+								<div className="search-label">Check out</div>
+								<input autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
+							</div>
+
+						</div>
+
+						
 					)}
+					// renderInput={(startProps, endProps) => (
+					// 	<React.Fragment>
+					// 		<TextField className={"start-date"} {...startProps} />
+					// 		<TextField className={"end-date"} {...endProps} />
+					// 		{/* <span>{removeUrl}</span> */}
+					// 	</React.Fragment>
+					// )}
 				/>
 			</LocalizationProvider>
 		</ThemeProvider>

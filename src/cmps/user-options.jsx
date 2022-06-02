@@ -1,8 +1,9 @@
 import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
+import {logOut} from '../store/actions/user.actions'
 
-import { onLogOut, loadUser } from '../store/actions/user.actions'
+
 
 
 
@@ -11,14 +12,15 @@ export const UserOptions = () => {
     const dispatch = useDispatch()
     const { user } = useSelector(storeState => storeState.userModule)
     console.log('user', user)
+    
 
     // useEffect(() => {
 
     // }, [user])
 
     const onLogOut = (ev) => {
-        // dispatch(onLogOut())
         console.log('login out', user)
+        dispatch(logOut())
     }
 
     const onLogin = (ev) => {
@@ -40,7 +42,7 @@ export const UserOptions = () => {
                 </Link>
             </div>
 
-            {user ?
+            {!user ?
                 <div onClick={onLogin} >
                     <Link to="/login" >
                         <div>  Log in</div>

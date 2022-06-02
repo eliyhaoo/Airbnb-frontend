@@ -20,14 +20,15 @@ export function onLogin(credentials) {
     }
 }
 
-export function onLogout() {
+export function logOut() {
     return async (dispatch) => {
         try {
             await userService.logout()
             dispatch({
                 type: 'SET_USER',
-                user: {}
+                user: null
             })
+
         } catch (err) {
             showErrorMsg('Cannot logout')
             console.log('Cannot logout', err)

@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import addWeeks from "date-fns/addWeeks";
@@ -22,7 +22,7 @@ const theme = createTheme({
 	},
 });
 
-export function SearchbarDatePicker({ dates,activeDatesTab,setActiveTab ,setModalOpen,setSearchByFields}) {
+export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setModalOpen, setSearchByFields }) {
 	const dispatch = useDispatch();
 	// const removeUrl = (
 	// 	<img onClick={() => dispatch(setOrder({ ...order, checkIn: null, checkOut: null, guestsCount: 1, adults: 1, children: 0, infants: 0 }))} className='clear-dates' src={remove} />
@@ -32,7 +32,7 @@ export function SearchbarDatePicker({ dates,activeDatesTab,setActiveTab ,setModa
 	// 	return date ? addWeeks(date, amount) : undefined;
 	// }
 
-	
+
 	const [value, setValue] = useState([null, null]);
 
 
@@ -43,37 +43,35 @@ export function SearchbarDatePicker({ dates,activeDatesTab,setActiveTab ,setModa
 					disablePast
 					calendars={mode}
 					// value={[order.checkIn, order.checkOut]}
-					value={[dates.checkIn,dates.checkOut]}
+					value={[dates.checkIn, dates.checkOut]}
 					// maxDate={getWeeksAfter(order.checkIn, 8)}
 					onChange={(newValue) => {
 						setValue(newValue)
-						activeDatesTab === 'check-in' ? setActiveTab('check-out'):setModalOpen('guest')
-						dispatch(updateReserve('dates',newValue))
-						setSearchByFields((prevState) => ({ ...prevState, dates: {checkIn:newValue[0],checkOut:[1]} }))
-						
-				
-					
+						activeDatesTab === 'check-in' ? setActiveTab('check-out') : setModalOpen('guest')
+						dispatch(updateReserve('dates', newValue))
+						setSearchByFields((prevState) => ({ ...prevState, dates: { checkIn: newValue[0], checkOut: [1] } }))
+
+
+
 					}}
 					// startText='Check-in'
 					// endText='Check-out'
 					renderInput={(startProps, endProps) => (
 						<div className="date-picker-inputs flex space-between full-width">
-							{console.log('Props',startProps.inputProps)}
-							<div onClick={()=>{setActiveTab('check-in')}} className={`start-date ${activeDatesTab === 'check-in'? 'open':''}`}>
+
+							<div onClick={() => { setActiveTab('check-in') }} className={`start-date ${activeDatesTab === 'check-in' ? 'open' : ''}`}>
 								<div className="search-label">Check in</div>
-							<input  autoComplete="off" ref={startProps.inputRef} {...startProps.inputProps} />
+								<input autoComplete="off" ref={startProps.inputRef} {...startProps.inputProps} />
 							</div>
-							<div  onClick={()=>{setActiveTab('check-out')}} className={`end-date ${activeDatesTab === 'check-out'? 'open':''}`}>
+
+							<div onClick={() => { setActiveTab('check-out') }} className={`end-date ${activeDatesTab === 'check-out' ? 'open' : ''}`}>
 								<div className="search-label">Check in</div>
-							<input   autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
+								<input autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
 							</div>
+
 						</div>
 
-						// <React.Fragment>
-						// 	<TextField className={"start-date"} {...startProps} />
-						// 	<TextField className={"end-date"} {...endProps} />
-						// 	{/* <span>{removeUrl}</span> */}
-						// </React.Fragment>
+						
 					)}
 				/>
 			</LocalizationProvider>
