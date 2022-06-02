@@ -11,10 +11,15 @@
     // height: 30vh;
     min-width: 250px;
     box-shadow: rgb(0 0 0 / 12%) 0px 2px 16px;
+    font-family: cereal-book;
 
     .login-options-container{
         margin-top: 8px 0px;
         border-bottom: 1px solid $borderClr;
+
+        .sign-up{
+            font-family: cereal-bold;
+        }
     }
     
     .login-options-container:first-child{
