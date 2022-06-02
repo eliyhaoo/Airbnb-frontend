@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { AddGuest } from '../add-guest'
 import { CheckoutDatePicker } from '../checkout-date-picker'
+import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.js'
 import { utilService } from '../../services/util.service'
 import _ from 'lodash'
 
@@ -17,13 +18,13 @@ export const FormReserve = ({ stay }) => {
 
 
     const { dates, guests } = reserve
-    console.log('reserve',reserve);
-    console.log('reserve',dates);
+    console.log('reserve', reserve);
+    console.log('reserve', dates);
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log('Dates changed');
         calcTotalNights()
-    },[dates.checkOut,guests])
+    }, [dates.checkOut, guests])
 
 
     const onCloseModal = (ev) => {
@@ -31,13 +32,17 @@ export const FormReserve = ({ stay }) => {
         setModal(false)
     }
 
-    const onReserve = () => {
+    const onReserve = async () => {
         if (user !== 'guest') {
-
-            console.log('Resercing...');
-            updateReserveFields()
+            try {
+                console.log('Resercing...')
+                updateReserveFields()
+                showSuccessMsg('Your trip was booked')
+            } catch (err) {
+                console.log('Cannot reserve')
+                showErrorMsg('Cannot reserve')
+            }
         }
-
     }
 
     const updateReserveFields = () => {
@@ -47,13 +52,13 @@ export const FormReserve = ({ stay }) => {
         // reserve.totalPrice = calcTotalPrice()
 
         const Totalprice = calcTotalPrice()
-     
+
 
     }
 
     const calcTotalPrice = () => {
-        console.log('Stay price',stay.price);
-        console.log('Nights',calcTotalNights());
+        console.log('Stay price', stay.price);
+        console.log('Nights', calcTotalNights());
 
         return calcTotalNights() * (stay.price * reserve.guests.total)
 
@@ -74,9 +79,9 @@ export const FormReserve = ({ stay }) => {
 
     const totalNights = calcTotalNights()
     const totalPrice = calcTotalPrice()
-    console.log('TOTAL PRICE',totalPrice);
+    console.log('TOTAL PRICE', totalPrice);
 
-    
+
     return <div className="form-reserve">
         <div className="order-data">
             <div className="date-picker flex space-between align-center">
@@ -140,7 +145,7 @@ export const FormReserve = ({ stay }) => {
 
             <div className="total-price flex space-between">
                 <div>Total Price</div>
-                <div >${utilService.getPriceWithCommas(totalPrice+149)}</div>
+                <div >${utilService.getPriceWithCommas(totalPrice + 149)}</div>
             </div>
         </React.Fragment>
 

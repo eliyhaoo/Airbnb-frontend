@@ -1,4 +1,5 @@
 import { reviewService } from '../../services/review.service'
+import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service.js'
 
 export function getActionAddReview(review) {
     return { type: 'ADD_REVIEW', review }
@@ -10,9 +11,12 @@ export function addReview(review) {
         try {
             const addedReview = await reviewService.addReview(review)
             dispatch(getActionAddReview(addedReview))
-        } catch (err) {
             console.log('Review Added')
+            showSuccessMsg('Review Added')
+
+        } catch (err) {
             throw err
+
         }
     }
 }

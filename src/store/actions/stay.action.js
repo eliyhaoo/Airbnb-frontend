@@ -1,5 +1,5 @@
 // import { userService } from "../services/user.service.js";
-// import { showErrorMsg } from '../services/event-bus.service.js'
+import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service.js'
 import { stayService } from '../../services/stay.service.js'
 
 export function loadStays() {
@@ -8,14 +8,16 @@ export function loadStays() {
         console.log('FILTERBY', filterBy);
         try {
             const stays = await stayService.query(filterBy)
-            console.log('STAYS',stays);
+            console.log('STAYS', stays);
             dispatch({
                 type: 'SET_STAYS',
                 stays
             })
 
+
         } catch (err) {
             console.log('StayActions: err in loadStays', err)
+            showErrorMsg('Cannot load stays')
 
         }
     }
@@ -43,8 +45,11 @@ export function saveStay(stay) {
                 stay
 
             })
+            showSuccessMsg('Stay saved')
+
         } catch (err) {
             console.log('StayActions: err in saveStay', err)
+            showErrorMsg('Cannot save stay')
 
         }
     }
