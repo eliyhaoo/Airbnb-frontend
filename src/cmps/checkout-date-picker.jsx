@@ -22,7 +22,7 @@ const theme = createTheme({
 	},
 });
 
-export function CheckoutDatePicker({ order, setOrder, activeDatesTab, setActiveTab, setModalOpen }) {
+export function CheckoutDatePicker({ dates }) {
 	const dispatch = useDispatch()
 	// const removeUrl = (
 	// 	<img onClick={() => dispatch(setOrder({ ...order, checkIn: null, checkOut: null, guestsCount: 1, adults: 1, children: 0, infants: 0 }))} className='clear-dates' src={remove} />
