@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { StaySearch } from './stay-search'
 
 import { StaySearchExpand } from './stay-search-expand'
@@ -9,6 +9,7 @@ import { UserOptions } from './user-options'
 import logoSvg from '../assets/svg/logo.svg'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
+
 
 
 const _AppHeader = ({ history }) => {
@@ -33,7 +34,7 @@ const _AppHeader = ({ history }) => {
     }, [visitedPage])
 
     useEffect(() => {
-        console.log('Search open ',isSearchOpen);
+        console.log('Search open ', isSearchOpen);
     }, [isSearchOpen])
 
     const onScroll = () => {
@@ -83,7 +84,7 @@ const _AppHeader = ({ history }) => {
                 </div>
             </div>
 
-             <StaySearchExpand setSearchToggle={setSearchToggle} isSearchOpen={isSearchOpen} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <StaySearchExpand setSearchToggle={setSearchToggle} isSearchOpen={isSearchOpen} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
         </div>
     </header>

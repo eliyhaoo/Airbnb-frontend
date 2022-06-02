@@ -18,6 +18,7 @@
             font-weight: 600;
             line-height: em(20px);
             margin-bottom: 4px;
+            font-family: cereal-medium;
         }
 
         .subtitle{
@@ -35,6 +36,10 @@
         padding-bottom: em(32px);
         border-bottom: 1px solid rgb(221, 221, 221);
         border-top: 1px solid rgb(221, 221, 221);
+        margin: 0;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    line-height: 24px;
 
         img{
             height: rem(32px);

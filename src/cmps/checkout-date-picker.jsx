@@ -1,4 +1,4 @@
-import  React,{ useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import addWeeks from "date-fns/addWeeks";
@@ -21,8 +21,8 @@ const theme = createTheme({
 	},
 });
 
-export function CheckoutDatePicker({ order, setOrder,activeDatesTab,setActiveTab ,setModalOpen}) {
-	const dispatch = useDispatch();
+export function CheckoutDatePicker({ order, setOrder, activeDatesTab, setActiveTab, setModalOpen }) {
+	const dispatch = useDispatch()
 	// const removeUrl = (
 	// 	<img onClick={() => dispatch(setOrder({ ...order, checkIn: null, checkOut: null, guestsCount: 1, adults: 1, children: 0, infants: 0 }))} className='clear-dates' src={remove} />
 	// );
@@ -31,7 +31,7 @@ export function CheckoutDatePicker({ order, setOrder,activeDatesTab,setActiveTab
 	// 	return date ? addWeeks(date, amount) : undefined;
 	// }
 
-	
+
 	const [value, setValue] = useState([null, null]);
 
 
@@ -46,16 +46,16 @@ export function CheckoutDatePicker({ order, setOrder,activeDatesTab,setActiveTab
 					// maxDate={getWeeksAfter(order.checkIn, 8)}
 					onChange={(newValue) => {
 						setValue(newValue)
-					
+
 					}}
 					startText='Check-in'
 					endText='Check-out'
 					renderInput={(startProps, endProps) => (
 						<React.Fragment>
-						<TextField className={"start-date"} {...startProps} />
-						<TextField className={"end-date"} {...endProps} />
-						{/* <span>{removeUrl}</span> */}
-					</React.Fragment>
+							<TextField className={"start-date"} {...startProps} />
+							<TextField className={"end-date"} {...endProps} />
+							{/* <span>{removeUrl}</span> */}
+						</React.Fragment>
 
 						// <React.Fragment>
 						// 	<TextField className={"start-date"} {...startProps} />

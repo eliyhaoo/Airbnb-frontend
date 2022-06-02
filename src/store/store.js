@@ -6,14 +6,14 @@ import thunk from 'redux-thunk'
 
 import { userReducer } from './reducers/user.reducer'
 import { stayReducer } from './reducers/stay.reducer'
-import { systemReducer } from './reducers/system.reducer' 
+import { systemReducer } from './reducers/system.reducer'
 
 
 const rootReducer = combineReducers({
     userModule: userReducer,
     stayModule: stayReducer,
     systemModule: systemReducer
-   
+
 })
 
 
