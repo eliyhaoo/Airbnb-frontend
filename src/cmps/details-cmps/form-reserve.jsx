@@ -17,11 +17,10 @@ export const FormReserve = ({ stay }) => {
 
 
     const { dates, guests } = reserve
-    console.log('reserve',reserve);
-    console.log('reserve',dates);
+
 
     useEffect(()=>{
-        console.log('Dates changed');
+     
         calcTotalNights()
     },[dates.checkOut,guests])
 
@@ -33,8 +32,6 @@ export const FormReserve = ({ stay }) => {
 
     const onReserve = () => {
         if (user !== 'guest') {
-
-            console.log('Resercing...');
             updateReserveFields()
         }
 
@@ -80,27 +77,17 @@ export const FormReserve = ({ stay }) => {
     return <div className="form-reserve">
         <div className="order-data">
             <div className="date-picker flex space-between align-center">
-                {/* <div className="date-picker "> */}
-                {/* <div className="date-input flex direction-column">
-                    <label>CHECK-IN</label>
-                    <input placeholder="9/24/2022"></input>
-
-                </div>
-                <div className="date-input flex direction-column">
-                    <label>CHECKOUT</label>
-                    <input placeholder="9/28/2022"></input>
-
-                </div> */}
+       
                 <CheckoutDatePicker dates={dates} />
             </div>
 
             <div className="guest-input flex direction-column" onClick={() => setModal(true)}>
                 <label>GUESTS</label>
-                {/* <input placeholder={getGuestsForDisplay()}></input> */}
+
                 <input placeholder={getGuestsForDisplay()}></input>
 
                 <div className={`add-guest-reserve ${isModalOpen ? 'open' : ''} `}>
-                    {/* {isModalOpen && <div className="screen guest-open" onClick={() => setModal(false)}></div>} */}
+
                     <AddGuest onCloseModal={onCloseModal} guests={reserve.guests} />
                 </div>
             </div>
@@ -111,7 +98,7 @@ export const FormReserve = ({ stay }) => {
             {_.times(99, (i) => <div key={i} className="cell"></div>)}
             <div className="content">
                 <button className="action-btn">
-                    <span>Check availability</span>
+                    <span>Reserve</span>
                 </button>
             </div>
 
@@ -128,18 +115,18 @@ export const FormReserve = ({ stay }) => {
                     <div className="summary-total">${utilService.getPriceWithCommas(totalPrice)}</div>
                 </div>
                 <div className="summary-details flex space-between">
-                    <div className="summary-label">cleaning fee</div>
+                    <div className="summary-label">Cleaning fee</div>
                     <div className="summary-total">$149</div>
                 </div>
                 <div className="summary-details flex space-between">
-                    <div className="summary-label">service fee</div>
+                    <div className="summary-label">Service fee</div>
                     <div className="summary-total">$0</div>
                 </div>
 
             </div>
 
             <div className="total-price flex space-between">
-                <div>Total Price</div>
+                <div>Total</div>
                 <div >${utilService.getPriceWithCommas(totalPrice+149)}</div>
             </div>
         </React.Fragment>

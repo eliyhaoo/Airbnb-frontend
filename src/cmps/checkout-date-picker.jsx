@@ -55,15 +55,15 @@ export function CheckoutDatePicker({ dates }) {
 					endText='Check-out'
 					renderInput={(startProps, endProps) => (
 
-						<div className="date-picker-inputs flex space-between full-width">
+						<div className="flex">
 
-							<div className={`start-date `}>
-								<div className="search-label">Check in</div>
+							<div className="date-input flex direction-column">
+								<label className="">CHECK-IN</label>
 								<input autoComplete="off" ref={startProps.inputRef} {...startProps.inputProps} />
 							</div>
 
-							<div  className={`end-date `}>
-								<div className="search-label">Check out</div>
+							<div  className="date-input flex direction-column">
+								<label className="">CHECKOUT</label>
 								<input autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
 							</div>
 
