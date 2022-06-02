@@ -11,7 +11,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
 
     const dispatch = useDispatch()
     const { filterBy } = useSelector(storeState => storeState.stayModule)
-    const [activeDatesTab,setActiveTab] = useState('check-in')
+    const [activeDatesTab, setActiveTab] = useState('check-in')
 
     const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
 
@@ -32,11 +32,11 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
 
     const onSetModal = (ev, modal) => {
         ev.stopPropagation()
-        if (modal === modalOpen) return 
+        if (modal === modalOpen) return
         setModalOpen(modal)
         setIsBig(true)
     }
-  
+
 
 
 
@@ -48,23 +48,23 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'location')} className={`search-location-expand ${modalOpen === 'location' ? 'open' : ''}`}>
 
                     <div className='search-label'>Where</div>
-                    <input type="text" placeholder="Search-destinations" name='country' value={searchByFields.country} onChange={handleChange} />
+                    <input type="text" placeholder="Search destinations" name='country' value={searchByFields.country} onChange={handleChange} />
                     {modalOpen === 'location' && <SearchCountry selectedRegion={searchByFields.country} setSelectedRegion={onSelectedRegion} />}
 
                 </div>
 
                 <div onClick={(ev) => onSetModal(ev, 'dates')} className={`search-date-expand ${modalOpen === 'dates' ? 'open' : ''}`}>
                     {modalOpen === 'dates' ?
-                        
-                            <SearchbarDatePicker setModalOpen={setModalOpen} activeDatesTab={activeDatesTab} setActiveTab={setActiveTab}/>
+
+                        <SearchbarDatePicker setModalOpen={setModalOpen} activeDatesTab={activeDatesTab} setActiveTab={setActiveTab} />
                         :
                         <React.Fragment>
-                        <div className='search-label'>When</div>
-                        <span>Any week</span>
+                            <div className='search-label'>When</div>
+                            <span>Any week</span>
                         </React.Fragment>
-                        }
+                    }
 
-              
+
                 </div>
 
                 <div onClick={(ev) => onSetModal(ev, 'guest')} className={`search-guest-expand ${modalOpen === 'guest' ? 'open' : ''} flex space-between align-center`}>

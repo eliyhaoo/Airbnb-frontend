@@ -6,7 +6,6 @@
     z-index: 10000;
     transition: 1s;
 
-
     .header-container {
         // height: 85px;
 
@@ -60,11 +59,16 @@
                     .user-options-container{
                         position: relative;
                         opacity: 0;
-                        transition: 0.4s;
+                        transform: translateX(500px);
+                        transition: transform 1s,opacity 0.5s;
+                        
+                        
 
                         &.open{
                             opacity: 1;
                             height: calc(50vh - 180px);
+                            transform: translateX(3px);
+                        
                         }
                     }
 
