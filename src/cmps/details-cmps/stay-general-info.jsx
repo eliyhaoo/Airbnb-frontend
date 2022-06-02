@@ -25,7 +25,7 @@ export const StayGeneralInfo = () => {
         <div className="general-info-container flex">
             <img src={Cancellation} alt="cancellation" />
             <div className="general-info flex ">
-                <div className="title">Free cancellation before Sep 23.</div>
+                <div className="title">Free cancellation for 48 hours.</div>
             </div>
         </div>
 
