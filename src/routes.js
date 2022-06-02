@@ -3,9 +3,13 @@ import { ExplorePage } from "./pages/explore-page"
 import { StayDetails } from "./pages/stay-details"
 import { Login } from "./cmps/login"
 import { Signup } from "./cmps/signup"
+import { DashboardPage } from "./pages/dashboard-page"
 
 const routes = [
-
+    {
+        path: '/dashboard/:userId',
+        component: DashboardPage
+    },
     {
         path: '/signup',
         component: Signup

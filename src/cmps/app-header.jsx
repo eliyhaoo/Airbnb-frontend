@@ -19,6 +19,7 @@ const _AppHeader = ({ history }) => {
     const [isBig, setIsBig] = useState(false)
     const [modalUserOptions, setModalUserOptions] = useState(false)
 
+    const user = { _id: '622f3401e36c59e6164fab4d' }
     useEffect(() => {
         gVisitedPage.current = visitedPage
         window.addEventListener('scroll', onScroll)
@@ -33,7 +34,7 @@ const _AppHeader = ({ history }) => {
     }, [visitedPage])
 
     useEffect(() => {
-        console.log('Search open ',isSearchOpen);
+        console.log('Search open ', isSearchOpen);
     }, [isSearchOpen])
 
     const onScroll = () => {
@@ -67,8 +68,11 @@ const _AppHeader = ({ history }) => {
 
                 <div className="box user-nav-container flex space-between align-center">
                     <nav className="box main-nav flex space-between align-items">
-                        <NavLink to='/explore'>Explore</NavLink>
+                        {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}
+                        {/* {visitedPage !== 'home-page' && <NavLink to='/'>Home</NavLink>} */}
+
                         <NavLink to='/'>Become a Host</NavLink>
+                        {user._id && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>}
                     </nav>
 
                     <div className="box user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
@@ -83,7 +87,7 @@ const _AppHeader = ({ history }) => {
                 </div>
             </div>
 
-             <StaySearchExpand setSearchToggle={setSearchToggle} isSearchOpen={isSearchOpen} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />
+            <StaySearchExpand setSearchToggle={setSearchToggle} isSearchOpen={isSearchOpen} history={history} isBig={isBig} setIsBig={setIsBig} modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
         </div>
     </header>
