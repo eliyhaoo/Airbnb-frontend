@@ -12,7 +12,7 @@ export const ReviewPreview = ({ review }) => {
         <div className="review-user-info">
             <img src={review.by.imgUrl} alt="profile picture" />
             <div className="flex direction-column">
-                <h2>{review.by.fullname}</h2>
+                <h4>{review.by.fullname}</h4>
                 <span className="review-date">{utilService.getMonthName(date)} {date.getFullYear()}</span>
             </div>
         </div>

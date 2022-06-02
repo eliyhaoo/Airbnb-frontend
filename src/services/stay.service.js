@@ -152,17 +152,17 @@ function _filterBySearch(stays, searchBy) {
 
 const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 { title: 'Design', img: 'design' },
-{ title: 'Desert', img: 'desert' },
+{ title: 'Amazing Pools', img: 'amazingpools' },
 { title: 'Vineyards', img: 'vineyards' },
-{ title: 'National Parks', img: 'nationalparks' },
 { title: 'Islands', img: 'islands' },
+{ title: 'Boats', img: 'boats' },
+{ title: 'Desert', img: 'desert' },
+{ title: 'National Parks', img: 'nationalparks' },
 { title: 'Artric', img: 'artric' },
 { title: 'Tiny Homes', img: 'tinyhomes' },
 { title: 'Camping', img: 'camping' },
 { title: 'Beachfront', img: 'beachfront' },
 { title: 'Iconic Cities', img: 'iconiccities' },
-{ title: 'Amazing Pools', img: 'amazingpools' },
-{ title: 'Boats', img: 'boats' },
 { title: 'Luxe', img: 'luxe' }
 ]
 

@@ -7,6 +7,7 @@
     }
 
     .stay-amenities {
+        font-size: 17px;
         width: 500px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
@@ -17,7 +18,7 @@
             .amenite-img {
                 height: 38px;
                 margin-right: 5px;
-                aspect-ratio: 0.5;
+                aspect-ratio: 0.7;
 
                 &.Wifi::before {
                     content: url('../../../svg/Wifi.svg');

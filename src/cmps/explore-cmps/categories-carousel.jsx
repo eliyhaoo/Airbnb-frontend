@@ -16,7 +16,7 @@ export const CategoriesCarousel = ({ categories }) => {
     <Carousel cols={14} rows={1} gap={10} responsiveLayout={[
       {
         breakpoint: 1500,
-        cols: 2,
+        cols: 10,
         rows: 1,
         gap: 10,
         // loop: true,

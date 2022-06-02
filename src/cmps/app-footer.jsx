@@ -7,7 +7,7 @@ export const AppFooter = () => {
 
     return <section className={("app-footer full " + visitedPage)}>
         <div className={visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}>
-            {visitedPage === 'details-page' && <div className="details-page-footer-content">
+            {(visitedPage === 'details-page' || visitedPage === 'dashboard-page') && <div className="details-page-footer-content">
                 <ul className="details-footer-support clean-list">
                     <span><li>Support</li></span>
                     <li>Help Center</li>
@@ -36,7 +36,7 @@ export const AppFooter = () => {
                 <ul className="details-footer-about clean-list">
                     <span><li>About</li></span>
                     <li>Newsroom</li>
-                    <li>Careersr</li>
+                    <li>Careers</li>
                     <li>Learn about new features</li>
                     <li>Investors</li>
                     <li>Letter from our founders</li>

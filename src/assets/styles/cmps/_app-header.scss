@@ -11,7 +11,8 @@
 
         .header-content-container {
 
-            display:relative;
+            display: relative;
+
             >:first-child {
                 width: 300px;
             }
@@ -56,19 +57,19 @@
 
                     }
 
-                    .user-options-container{
+                    .user-options-container {
                         position: relative;
                         opacity: 0;
                         transform: translateX(500px);
-                        transition: transform 1s,opacity 0.5s;
-                        
-                        
+                        transition: transform 1s, opacity 0.5s;
 
-                        &.open{
+
+
+                        &.open {
                             opacity: 1;
                             height: calc(50vh - 180px);
                             transform: translateX(3px);
-                        
+
                         }
                     }
 
@@ -77,6 +78,7 @@
                 .main-nav {
                     height: 42px;
                     gap: 5px;
+                    min-width: fit-content;
 
                     a {
                         color: $backgroundClr;
@@ -117,7 +119,7 @@
 
     &.pages {
 
-        height:19vh;
+        height: 19vh;
         border-bottom: 1px solid $borderClr;
 
         background-color: $backgroundClr;

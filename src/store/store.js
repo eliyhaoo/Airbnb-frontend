@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
     stayModule: stayReducer,
     reserveModule: reserveReducer,
     systemModule: systemReducer
-   
+
 })
 
 
