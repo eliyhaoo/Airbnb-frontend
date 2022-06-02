@@ -68,7 +68,7 @@
         display: grid;
         gap: 9px;
         grid-template-columns: repeat(4, 1fr);
-        // grid-template-rows: repeat(2, 182px);
+        grid-template-rows: repeat(2, 240px);
 
         grid-template-areas:
             "img1 img1 img2 img3"

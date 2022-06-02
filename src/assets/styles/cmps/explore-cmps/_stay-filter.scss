@@ -150,6 +150,7 @@
         }
     }
 
+}
     .screen {
         position: fixed;
         top: 0;
@@ -161,11 +162,11 @@
         z-index: 500;
 
         &.header-open {
-            top: re(165px);
+            // top: rem(165px);
+            top: 165px;
         }
 
         &.guest-open {
             background-color: unset;
         }
     }
-}

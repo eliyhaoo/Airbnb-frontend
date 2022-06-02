@@ -6,10 +6,13 @@ import { SearchCountry } from './search-country'
 import searchSvg from '../assets/svg/searchsvg.svg'
 import { AddGuest } from './add-guest'
 import { SearchbarDatePicker } from './searchbar-date-picker'
+import { utilService } from '../services/util.service'
 
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle, isSearchOpen }) => {
 
     const dispatch = useDispatch()
+    
+    const {reserve}=useSelector(storeState=>storeState.reserveModule)
     const { filterBy } = useSelector(storeState => storeState.stayModule)
     const [activeDatesTab, setActiveTab] = useState('check-in')
 
@@ -22,7 +25,8 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        history.push(`/explore/?location=${searchByFields.country}`)
+        console.log('SearchByFields',searchByFields);
+        history.push(`/explore/?location=${searchByFields.country}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
     }
 
     const onSelectedRegion = (region) => {
@@ -38,7 +42,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
     }
 
 
-
+    const {dates,guests} = reserve
 
     return <section className={`stay-search-expand ${isSearchOpen ? '' : 'close'}`}>
         <form onSubmit={onSearchBy}>
@@ -56,7 +60,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'dates')} className={`search-date-expand ${modalOpen === 'dates' ? 'open' : ''}`}>
                     {modalOpen === 'dates' ?
 
-                        <SearchbarDatePicker setModalOpen={setModalOpen} activeDatesTab={activeDatesTab} setActiveTab={setActiveTab} />
+                        <SearchbarDatePicker dates={dates} setModalOpen={setModalOpen} activeDatesTab={activeDatesTab} setActiveTab={setActiveTab} setSearchByFields={setSearchByFields} />
                         :
                         <React.Fragment>
                             <div className='search-label'>When</div>
@@ -70,7 +74,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'guest')} className={`search-guest-expand ${modalOpen === 'guest' ? 'open' : ''} flex space-between align-center`}>
                     <div>
                         <div className='search-label'>Who</div>
-                        <span>Add guest</span>
+                        <span>{guests.total ? utilService.checkForPlurals('guest',guests.total):'Add guest'}</span>
 
                     </div>
                     <div onClick={onSearchBy} className={`search-btn-container src-btn-${isBig ? 'big' : 'small'}-expand`}>
@@ -185,7 +189,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                     </div>
 
                     {modalOpen === 'guest' && <div className="search-modal guest-container">
-                        <AddGuest />
+                        <AddGuest setSearchByFields={setSearchByFields} guests={guests}/>
                     </div>}
 
                 </div>
