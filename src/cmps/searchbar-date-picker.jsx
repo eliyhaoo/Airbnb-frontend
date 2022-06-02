@@ -7,6 +7,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DateRangePicker from "@mui/lab/DateRangePicker";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { updateReserve } from "../store/actions/reserve.action";
 
 // import remove from "../../styles/svg/delete-date.svg";
 const mode = window.innerWidth < 780 ? 1 : 2;
@@ -21,7 +22,7 @@ const theme = createTheme({
 	},
 });
 
-export function SearchbarDatePicker({ order, setOrder,activeDatesTab,setActiveTab ,setModalOpen}) {
+export function SearchbarDatePicker({ dates,activeDatesTab,setActiveTab ,setModalOpen,setSearchByFields}) {
 	const dispatch = useDispatch();
 	// const removeUrl = (
 	// 	<img onClick={() => dispatch(setOrder({ ...order, checkIn: null, checkOut: null, guestsCount: 1, adults: 1, children: 0, infants: 0 }))} className='clear-dates' src={remove} />
@@ -42,12 +43,15 @@ export function SearchbarDatePicker({ order, setOrder,activeDatesTab,setActiveTa
 					disablePast
 					calendars={mode}
 					// value={[order.checkIn, order.checkOut]}
-					value={value}
+					value={[dates.checkIn,dates.checkOut]}
 					// maxDate={getWeeksAfter(order.checkIn, 8)}
 					onChange={(newValue) => {
 						setValue(newValue)
 						activeDatesTab === 'check-in' ? setActiveTab('check-out'):setModalOpen('guest')
-						// setModalOpen('guest')
+						dispatch(updateReserve('dates',newValue))
+						setSearchByFields((prevState) => ({ ...prevState, dates: {checkIn:newValue[0],checkOut:[1]} }))
+						
+				
 					
 					}}
 					// startText='Check-in'
@@ -61,7 +65,7 @@ export function SearchbarDatePicker({ order, setOrder,activeDatesTab,setActiveTa
 							</div>
 							<div  onClick={()=>{setActiveTab('check-out')}} className={`end-date ${activeDatesTab === 'check-out'? 'open':''}`}>
 								<div className="search-label">Check in</div>
-							<input  autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
+							<input   autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
 							</div>
 						</div>
 

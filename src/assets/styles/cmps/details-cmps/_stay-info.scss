@@ -3,6 +3,7 @@
 .stay-info {
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $border;
     padding-bottom: 24px;
@@ -13,12 +14,21 @@
         object-fit: cover;
         width: 56px;
         transform: scale(1.2);
+        margin-top: rem(25px);
     }
 
     h2 {
         letter-spacing: 0.5px;
         margin-bottom: 8px;
-        // font-family: manrope-semi-bold;
+        font-size: 25px;
+        padding: 0;
+        // font-family: 'cereal-medium';
     }
+
+    span{
+        font-size: 17px;
+    }
+
+
 }
 }

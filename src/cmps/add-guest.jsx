@@ -1,27 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import plusSvg from '../assets/svg/plus.svg'
 import minusSvg from '../assets/svg/minus.svg'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateReserve } from '../store/actions/reserve.action'
 
 
-export const AddGuest = ({ setModal }) => {
+export const AddGuest = ({ setSearchByFields ,onCloseModal ,guests }) => {
+    
+    const dispatch =useDispatch()
+    const {reserve}=useSelector(storeState=>storeState.reserveModule)
+    
 
-    const [guest, setGuest] = useState(1)
-    const [children, setChildren] = useState(0)
-    const [infats, setInfats] = useState(0)
+    const [guestsFields,setGuests] = useState(guests)
 
 
-    const onChooseGuest = (diff) => {
-        setGuest(guest + diff)
+
+    const onUpdateGuests =(field,diff) =>{
+        const newGuests = {...guestsFields,[field]:guestsFields[field]+diff,total:guestsFields.total+diff}
+        setGuests(newGuests)
+        dispatch(updateReserve('guests',newGuests))
+        if (setSearchByFields) setSearchByFields((prevState) => ({ ...prevState, guestsNum: newGuests.total })) 
+        
     }
-
-    const onChooseChildren = (diff) => {
-        setChildren(children + diff)
-    }
-
-    const onChooseInfats = (diff) => {
-        setInfats(infats + diff)
-    }
+    
+    
+    const {adults,childrens,infants}= guestsFields
 
     return <section className="add-guest">
 
@@ -34,12 +38,12 @@ export const AddGuest = ({ setModal }) => {
                 </div>
 
                 <div className="count-container flex space-between">
-                    <button onClick={() => onChooseGuest(-1)}>
+                    <button type='button' onClick={() => onUpdateGuests('adults',-1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
-                    <div>{guest}</div>
-                    <button onClick={() => onChooseGuest(+1)}>
-                        <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
+                    <div>{adults}</div>
+                    <button type='button' onClick={() => onUpdateGuests('adults',+1)}>
+                        <div  className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
             </div>
@@ -51,11 +55,11 @@ export const AddGuest = ({ setModal }) => {
                 </div>
 
                 <div className="count-container flex space-between">
-                    <button onClick={() => onChooseChildren(-1)}>
+                    <button type='button' onClick={() => onUpdateGuests('childrens',-1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
-                    <div>{children}</div>
-                    <button onClick={() => onChooseChildren(+1)}>
+                    <div>{childrens}</div>
+                    <button type='button' onClick={() => onUpdateGuests('childrens',+1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
@@ -67,11 +71,11 @@ export const AddGuest = ({ setModal }) => {
                     <div className="count-input-subtitle">Under 2</div>
                 </div>
                 <div className="count-container flex space-between">
-                    <button onClick={() => onChooseInfats(-1)}>
+                    <button type='button' onClick={() =>onUpdateGuests('infants',-1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
-                    <div>{infats}</div>
-                    <button onClick={() => onChooseInfats(+1)}>
+                    <div>{infants}</div>
+                    <button type='button' onClick={() => onUpdateGuests('infants',+1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
@@ -82,7 +86,7 @@ export const AddGuest = ({ setModal }) => {
             </div>
 
             <div className="btn-close">
-                <button onClick={() => setModal(false)}>Close</button>
+                <button onClick={onCloseModal}>Close</button>
             </div>
 
         </div>

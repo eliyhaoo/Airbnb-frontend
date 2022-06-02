@@ -4,25 +4,18 @@
     font-size: 1rem;
     color:$secondary;
 
-    h1 {
-        letter-spacing: 0.5px;
-        line-height: 1.875rem;
-        font-size: 1.625em;
-        padding-top: rem(22px);
-        // font-family: manrope-semi-bold;
-        font-family: circular-book;
-    }
-
     .stay-details-container{
         width: 100%;
         align-items: center;
         padding-top: em(10px);
         justify-content: space-between;
+        font-family: 'cereal-medium';
+        font-size: 15px;
     
         .stay-review-details{
             align-items: center;
             gap: 5px;
-            // font-family: manrope-semi-bold;
+            
                 img{
                     height: 38px;
                     aspect-ratio: 0.4;
@@ -75,7 +68,7 @@
         display: grid;
         gap: 9px;
         grid-template-columns: repeat(4, 1fr);
-        // grid-template-rows: repeat(2, 182px);
+        grid-template-rows: repeat(2, 240px);
 
         grid-template-areas:
             "img1 img1 img2 img3"
@@ -117,7 +110,7 @@
     .stay-display-info {
         display: grid;
         grid-template-columns: 1.4fr 1fr;
-        padding-top: em(48px);
+        padding-top: 2.5em;
         padding-bottom: em(32px);
         border-bottom: 1px solid $borderClr;
 
@@ -130,6 +123,14 @@
             border-bottom: 1px solid $borderClr;
             p{
                 margin: 0;
+                font-size: 17px;
+                letter-spacing: 0.3px;
+                line-height: 24px;
+            }
+
+            .stay-info-txt p{
+
+                    margin-bottom: 10px;     
             }
         }
 

@@ -5,7 +5,7 @@ export const SearchCountry = ({ selectedRegion, setSelectedRegion }) => {
         // history.push('/explore')
     }
 
-    const regions = ['im flexible', 'Middle East', 'Italy', 'United States', 'France', 'South America']
+    const regions = ['Im flexible', 'Middle East', 'Italy', 'United States', 'France', 'South America']
 
     return <section className="search-country">
         <div className="screen header-open" onClick={() => onCloseModal()} ></div>

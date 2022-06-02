@@ -7,7 +7,7 @@ export const LongTxt = ({ txt, maxLength }) => {
     const toogleShowTxt = () => {
         setLongTxt(!isLongTxtShown)
     }
-    return <section className="checkTxtLength">
+    return <section className="stay-info-txt">
         <p>{(isLongTxtShown) ? txt : txt.slice(0, maxLength).trim() + ((txt.length > 100) ? '...' : '')}</p>
         {
             (txt.length > 100)

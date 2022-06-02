@@ -25,7 +25,7 @@ export const StayPreview = ({ stay, history }) => {
             <CarouselComponent stayImgUrls={stay.imgUrls} stayId={stay._id} history={history} />
         </div>
         <div className="preview-details-container">
-            <p className="preview-country-city">{stay.address.city}, {stay.address.country}</p>
+            <h4 className="preview-country-city">{stay.address.city}, {stay.address.country}</h4>
             <p className="preview-room-type">{stay.roomType}</p>
             <p className="preview-beds">{utilService.checkForPlurals('bed', stay.beds)}</p>
             <div className="preview-rating-container flex align-center space-between">

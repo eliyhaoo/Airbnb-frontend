@@ -41,9 +41,9 @@ export const StayDetails = ({ history }) => {
     }, [])
 
     if (!stay) return <div className="loader">Loading...</div>
-    console.log('stay', stay)
     return <section className="stay-details-page details-layout">
-        <h1 className="stay-name-details">{stay.name}</h1>
+        {/* <h1 className="stay-name-details">{stay.name}</h1> */}
+        <h2 className="stay-name-details">{stay.name}</h2>
 
         <div className="stay-details-container flex space-between">
             <div className="stay-review-details flex">

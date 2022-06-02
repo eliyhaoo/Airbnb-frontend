@@ -1,8 +1,27 @@
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
+import { onLogOut, loadUser } from '../store/actions/user.actions'
+
+import { useEffect } from "react"
+
+
 
 
 export const UserOptions = () => {
+
+    useEffect(() => {
+        dispatch(loadUser())
+    }, [])
+
+    const { user } = useSelector(storeState => storeState.userModule)
+    console.log('user from user options', user)
+
+    const dispatch = useDispatch()
+
+    const onLogOut = (ev) => {
+        console.log('haha ELIYAHOOOOO')
+        // dispatch(onLogOut)
+    }
 
     const onLogin = (ev) => {
         ev.stopPropagation()
@@ -11,9 +30,6 @@ export const UserOptions = () => {
     const onSignup = (ev) => {
         ev.stopPropagation()
     }
-
-    // const { user } = useSelector(storeState => storeState.userModule)
-    // console.log('user', user)
 
     return <section className="user-options flex direction-column">
 
@@ -27,12 +43,13 @@ export const UserOptions = () => {
                 </Link>
             </div>
 
-            <div onClick={onLogin}>
-                <Link to="/login" >
+            <div onClick={onLogin} >
+                {!user && <Link to="/login" >
                     <div >
                         Log in
                     </div>
-                </Link>
+                </Link>}
+                {user && <div onClick={onLogOut}> Log out</div>}
             </div>
 
         </div>
