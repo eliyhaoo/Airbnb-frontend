@@ -36,7 +36,7 @@ export const AppFooter = () => {
                 <ul className="details-footer-about clean-list">
                     <span><li>About</li></span>
                     <li>Newsroom</li>
-                    <li>Careersr</li>
+                    <li>Careers</li>
                     <li>Learn about new features</li>
                     <li>Investors</li>
                     <li>Letter from our founders</li>
