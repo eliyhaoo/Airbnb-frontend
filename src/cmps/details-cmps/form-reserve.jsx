@@ -15,14 +15,10 @@ export const FormReserve = ({ stay }) => {
     const [isModalOpen, setModal] = useState(false)
     const [btnMode, setIsDeley] = useState({ loader: false, reserve: false, btnTxt: "Check availability" })
 
-
-
     const { dates, guests } = reserve
-    console.log('reserve', reserve);
-    console.log('reserve', dates);
 
     useEffect(() => {
-        console.log('Dates changed');
+
         calcTotalNights()
     }, [dates.checkOut, guests])
 
@@ -50,10 +46,7 @@ export const FormReserve = ({ stay }) => {
         // reserve.userId = user._id
         // reserve.hostId = stay.host._id
         // reserve.totalPrice = calcTotalPrice()
-
         const Totalprice = calcTotalPrice()
-
-
     }
 
     const calcTotalPrice = () => {
@@ -67,8 +60,6 @@ export const FormReserve = ({ stay }) => {
         return (new Date(dates.checkOut) - new Date(dates.checkIn)) / (1000 * 60 * 60 * 24)
 
     }
-
-
 
     const getGuestsForDisplay = () => {
         const guestsNum = (guests.total - guests.infants)
@@ -85,27 +76,17 @@ export const FormReserve = ({ stay }) => {
     return <div className="form-reserve">
         <div className="order-data">
             <div className="date-picker flex space-between align-center">
-                {/* <div className="date-picker "> */}
-                {/* <div className="date-input flex direction-column">
-                    <label>CHECK-IN</label>
-                    <input placeholder="9/24/2022"></input>
 
-                </div>
-                <div className="date-input flex direction-column">
-                    <label>CHECKOUT</label>
-                    <input placeholder="9/28/2022"></input>
-
-                </div> */}
                 <CheckoutDatePicker dates={dates} />
             </div>
 
             <div className="guest-input flex direction-column" onClick={() => setModal(true)}>
                 <label>GUESTS</label>
-                {/* <input placeholder={getGuestsForDisplay()}></input> */}
+
                 <input placeholder={getGuestsForDisplay()}></input>
 
                 <div className={`add-guest-reserve ${isModalOpen ? 'open' : ''} `}>
-                    {/* {isModalOpen && <div className="screen guest-open" onClick={() => setModal(false)}></div>} */}
+
                     <AddGuest onCloseModal={onCloseModal} guests={reserve.guests} />
                 </div>
             </div>
@@ -116,7 +97,7 @@ export const FormReserve = ({ stay }) => {
             {_.times(99, (i) => <div key={i} className="cell"></div>)}
             <div className="content">
                 <button className="action-btn">
-                    <span>Check availability</span>
+                    <span>Reserve</span>
                 </button>
             </div>
 
@@ -133,21 +114,21 @@ export const FormReserve = ({ stay }) => {
                     <div className="summary-total">${utilService.getPriceWithCommas(totalPrice)}</div>
                 </div>
                 <div className="summary-details flex space-between">
-                    <div className="summary-label">cleaning fee</div>
+                    <div className="summary-label">Cleaning fee</div>
                     <div className="summary-total">$149</div>
                 </div>
                 <div className="summary-details flex space-between">
-                    <div className="summary-label">service fee</div>
+                    <div className="summary-label">Service fee</div>
                     <div className="summary-total">$0</div>
                 </div>
 
             </div>
 
             <div className="total-price flex space-between">
-                <div>Total Price</div>
+                <div>Total</div>
                 <div >${utilService.getPriceWithCommas(totalPrice + 149)}</div>
-            </div>
-        </React.Fragment>
+            </div >
+        </React.Fragment >
 
         }
     </div >
