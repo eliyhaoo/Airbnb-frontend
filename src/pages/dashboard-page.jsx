@@ -1,8 +1,9 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setVisitPage } from "../store/actions/system.action"
-import { NavLink } from 'react-router-dom'
-import logoSvg from '../assets/svg/logo.svg'
+import { DashboardHeader } from "../cmps/dashboard-cmps/dashboard-header"
+
+
 
 export const DashboardPage = () => {
 
@@ -11,33 +12,20 @@ export const DashboardPage = () => {
     }
 
     const dispatch = useDispatch()
-    console.log('HELLO')
+ 
+
     useEffect(() => {
         dispatch(setVisitPage('dashboard-page'))
     }, [])
-    return <section className="dashboard-page home-page-layout">
-        <div className="dashboard-header-container">
-            <div className="header-content-container flex space-between align-center">
-                <div className="logo-app">
-                    <NavLink to='/'><h2><img src={logoSvg} /></h2></NavLink>
-                </div>
-                <nav className="dashboard-page-nav-container">
-                    <ul className="dashboard-page-nav flex space-between align-center clean-list">
-                        <li>Reservations</li>
-                        <li>Stays</li>
-                        <li>My Trips</li>
-                        <li>Wish List</li>
-                    </ul>
-                </nav>
 
-                <div className="dashboard-host-options">
-                    <img className="host-img" src={user.imgUrl} />
-                </div>
-            </div>
-        </div>
-        <div className="main-dashboard">
+
+    return <section className="dashboard-page full main-layout">
+        
+        <DashboardHeader user={user}/>
+
+        <main className="main-dashboard">
             main dashboard
-        </div>
+        </main>
 
     </section>
 }

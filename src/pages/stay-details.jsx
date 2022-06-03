@@ -15,6 +15,7 @@ import { StayReview } from "../cmps/details-cmps/stay-review"
 import { StayAmenities } from '../cmps/details-cmps/stay-amenities'
 import { StayGeneralInfo } from '../cmps/details-cmps/stay-general-info'
 import { StayInfo } from '../cmps/details-cmps/stay-info'
+import { Loader } from '../cmps/loader'
 
 import starSvg from '../assets/svg/star.svg'
 import shareSvg from '../assets/svg/Share.svg'
@@ -40,7 +41,8 @@ export const StayDetails = ({ history }) => {
         })();
     }, [])
 
-    if (!stay) return <div className="loader">Loading...</div>
+    // if (!stay) return <div className="loader">Loading...</div>
+    if (!stay) return <Loader />
     return <section className="stay-details-page details-layout">
         {/* <h1 className="stay-name-details">{stay.name}</h1> */}
         <h2 className="stay-name-details">{stay.name}</h2>

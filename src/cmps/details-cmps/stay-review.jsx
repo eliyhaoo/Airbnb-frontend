@@ -1,23 +1,17 @@
+import { utilService } from "../../services/util.service"
+
 import { ReviewList } from "../details-cmps/review-list"
 import { AddReview } from './add-review'
-import { utilService } from "../../services/util.service"
+
+import { Loader } from "../loader"
 
 import starSvg from '../../assets/svg/star.svg'
 
 export const StayReview = ({ stay }) => {
 
-    if (!stay) return <div className="loader">Loading...</div>
+    if (!stay) return <Loader />
 
     const reviewScoreKeys = Object.keys(stay.reviewScores)
-
-    // const reviewToCalc = reviewScoreKeys.filter(reviewScoreKey => reviewScoreKey !== 'rating')
-    // let reviewRating = 0
-    // for (const reviewField in stay.reviewScores) {
-    //     if (reviewField === 'rating') continue
-    //     reviewRating += stay.reviewScores[reviewField]
-    // }
-    // reviewRating = reviewRating / reviewToCalc.length
-
 
     return <section className="stay-review">
         <div className="reviews-stats-header">
@@ -26,7 +20,6 @@ export const StayReview = ({ stay }) => {
             <span>·</span>
             <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
         </div>
-
 
         <div className="reviews-stats-container">
             {reviewScoreKeys.map((reviewField, idx) => {
