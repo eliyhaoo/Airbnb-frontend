@@ -14,7 +14,8 @@ export const DashboardHeader = ({ user }) => {
 
             <nav className="dashboard-page-nav-container">
                 <ul className="dashboard-page-nav flex space-between align-center clean-list">
-                    <li><NavLink to="/dashboard">
+
+                    <li><NavLink to="dashboard/">
                         <div className="after-container">
 
                         <div> Reservations </div>
@@ -24,7 +25,15 @@ export const DashboardHeader = ({ user }) => {
 
 
                     <li className='active'>Stays</li>
-                    <li>My Trips</li>
+
+                    <li><NavLink to="dashboard/trip">
+                        <div className="after-container">
+
+                        <div> My Trips </div>
+                        </div>
+
+                    </NavLink ></li>
+                 
                     <li>Wish List</li>
                 </ul>
             </nav>

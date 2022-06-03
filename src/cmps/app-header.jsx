@@ -76,7 +76,7 @@ const _AppHeader = ({ history }) => {
 
                         <NavLink to='/'>Become a Host</NavLink>
                         {/* {user._id && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>} */}
-                        {user && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>}
+                        {user && <NavLink to={`/dashboard`}>Dashboard</NavLink>}
                     </nav>
 
                     <div className="box user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
