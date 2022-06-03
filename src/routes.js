@@ -7,7 +7,7 @@ import { DashboardPage } from "./pages/dashboard-page"
 
 const routes = [
     {
-        path: '/dashboard/:userId',
+        path: '/dashboard',
         component: DashboardPage
     },
     {
