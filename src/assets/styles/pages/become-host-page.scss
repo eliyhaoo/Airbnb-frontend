@@ -1,0 +1,94 @@
+.become-host-page {
+    min-height: 100vh;
+
+    .header-host-page-container {
+        background-color: #000;
+        height: calc(100vh - 240px);
+        // height: 400px;
+        overflow: hidden;
+
+        .header-host-page-elements {
+            flex-basis: 50%;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 10% 25% 40% 25%;
+
+            a {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                justify-self: center;
+                align-self: flex-end;
+
+                // &:hover {
+                //     background-color: white;
+                //     border-radius: 50%;
+                //     width: 60px;
+                //     height: 60px;
+                //     opacity: 0.1;
+                // }
+            }
+
+            span {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                color: $hoover;
+                align-self: flex-start;
+                font-size: rem(64px);
+                line-height: rem(70px);
+                text-align: center;
+                font-weight: 600;
+            }
+
+            .become-host-btn {
+                grid-row: 2/3;
+                grid-column: 2/3;
+                background-color: rgb(224, 140, 158);
+                height: 50px;
+                width: 10vw;
+                border-radius: 12px;
+                justify-self: center;
+                align-self: flex-end;
+                font-weight: 600;
+                color: $hoover;
+                font-size: rem(16px);
+            }
+
+        }
+
+        .become-host-video-container {
+            flex-basis: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            will-change: transform;
+
+            .become-host-video {
+                height: calc(100% + 50px);
+                width: 100%;
+                margin-top: -50px;
+                object-fit: cover;
+                object-position: center top;
+            }
+
+            .play-btn {
+                display: block;
+                height: 16px;
+                width: 16px;
+                // color: white;
+                // position: absolute;
+            }
+        }
+    }
+
+    .text {
+        background-color: #ffffff;
+        padding-top: 50px;
+        height: rem(80px);
+        display: block;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 64px;
+        text-align: center;
+    }
+}

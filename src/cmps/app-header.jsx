@@ -74,7 +74,7 @@ const _AppHeader = ({ history }) => {
                         {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}
                         {/* {visitedPage !== 'home-page' && <NavLink to='/'>Home</NavLink>} */}
 
-                        <NavLink to='/'>Become a Host</NavLink>
+                        <NavLink to={'/becomehost'}>Become a Host</NavLink>
                         {/* {user._id && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>} */}
                         {user && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>}
                     </nav>
