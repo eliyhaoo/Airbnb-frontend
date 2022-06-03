@@ -21,6 +21,7 @@ const _AppHeader = ({ history }) => {
     const [modalUserOptions, setModalUserOptions] = useState(false)
 
     const { user } = useSelector(storeState => storeState.userModule)
+    console.log('user from header', user)
 
 
     // const user = { _id: '622f3401e36c59e6164fab4d' }
@@ -76,7 +77,7 @@ const _AppHeader = ({ history }) => {
 
                         <NavLink to={'/becomehost'}>Become a Host</NavLink>
                         {/* {user._id && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>} */}
-                        {user && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>}
+                        {user && <NavLink to={`/dashboard`}>Dashboard</NavLink>}
                     </nav>
 
                     <div className="box user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>

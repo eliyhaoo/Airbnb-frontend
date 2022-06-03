@@ -12,7 +12,8 @@ const routes = [
         component: BecomeHostPage
     },
     {
-        path: '/dashboard/:userId',
+        // path: '/dashboard/:userId',
+        path: '/dashboard',
         component: DashboardPage
     },
     {

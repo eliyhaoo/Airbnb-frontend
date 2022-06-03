@@ -22,7 +22,6 @@ export const StayFilter = ({ showFilterModal, history }) => {
         onCloseModal()
     }
 
-
     const onCloseModal = () => {
         showFilterModal(false)
         history.push('/explore')
@@ -40,7 +39,6 @@ export const StayFilter = ({ showFilterModal, history }) => {
         console.log('beds', beds);
         setFilterProperties((prevState) => ({ ...prevState, beds }))
     }
-
 
     console.log('beds in filter', filterBy.properties.beds);
     return <div className="stay-filter">

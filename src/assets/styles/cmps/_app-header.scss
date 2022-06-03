@@ -74,6 +74,7 @@
                         position: relative;
                         opacity: 0;
                         transform: translateX(500px);
+                        z-index: 1000;
                         // transition: transform 1s, opacity 0.5s;
 
                         &.open {

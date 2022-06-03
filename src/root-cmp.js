@@ -18,7 +18,7 @@ function App() {
 
 
   useEffect(() => {
-    console.log('LOADING FIRST USER EVER!');
+    console.log('LOADING USER FROM ROOTCMP!');
     dispatch(loadUser())
   }, [])
 

@@ -14,15 +14,28 @@
     display: inline-block;
     margin-inline-start: 5px;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 15px;
+    height: 15px;
     animation-name: pulse;
     animation-duration: 0.7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in;
-    background-color: $primary;
+    background-color: $btnBorderClr
   }
+  // .circle {
+  //   display: inline-block;
+  //   margin-inline-start: 5px;
+  //   border-radius: 50%;
+  //   width: 35px;
+  //   height: 35px;
+  //   animation-name: pulse;
+  //   animation-duration: 0.7s;
+  //   animation-iteration-count: infinite;
+  //   animation-direction: alternate;
+  //   animation-timing-function: ease-in;
+  //   background-color: $primary;
+  // }
   .one {
     animation-delay: 0.2s;
   }

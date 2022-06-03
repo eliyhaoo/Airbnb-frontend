@@ -1,10 +1,12 @@
 import { NavLink, Link } from 'react-router-dom'
 import logoSvg from '../../assets/svg/logo.svg'
 
+import { Loader } from '../loader'
+
 export const DashboardHeader = ({ user }) => {
 
 
-
+    if (!user) return <Loader />
     return <div className="dashboard-header">
         <header className="header-content-container flex space-between align-center">
 
@@ -14,23 +16,32 @@ export const DashboardHeader = ({ user }) => {
 
             <nav className="dashboard-page-nav-container">
                 <ul className="dashboard-page-nav flex space-between align-center clean-list">
-                    <li><NavLink to="/dashboard">
+
+                    <li><NavLink to="dashboard/">
                         <div className="after-container">
 
-                        <div> Reservations </div>
+                            <div> Reservations </div>
                         </div>
 
                     </NavLink ></li>
 
 
                     <li className='active'>Stays</li>
-                    <li>My Trips</li>
+
+                    <li><NavLink to="dashboard/trip">
+                        <div className="after-container">
+
+                        <div> My Trips </div>
+                        </div>
+
+                    </NavLink ></li>
+                 
                     <li>Wish List</li>
                 </ul>
             </nav>
 
             <div className="dashboard-host-options">
-                <img className="host-img" src={user.imgUrl} />
+                {/* <img className="host-img" src={user.imgUrl} /> */}
             </div>
         </header>
     </div>
