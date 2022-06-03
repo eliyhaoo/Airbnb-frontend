@@ -17,11 +17,10 @@ function App() {
   const dispatch = useDispatch()
 
 
-  // useEffect(() => {
-  //   console.log('LOADING FIRST USER EVER!');
-  //   dispatch(loadUser())
-
-  // }, [])
+  useEffect(() => {
+    console.log('LOADING FIRST USER EVER!');
+    dispatch(loadUser())
+  }, [])
 
   return (
     <div className="App main-layout">
