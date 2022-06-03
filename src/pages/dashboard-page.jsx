@@ -1,14 +1,21 @@
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { setVisitPage } from "../store/actions/system.action"
 import { NavLink } from 'react-router-dom'
 import logoSvg from '../assets/svg/logo.svg'
 
 export const DashboardPage = () => {
 
-    const user = {
-        _id: '622f3401e36c59e6164fab4d', imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
-    }
+    // const user = {
+    //     _id: '622f3401e36c59e6164fab4d', imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
+    // }
+
+    const { user } = useSelector(storeState => storeState.userModule)
+
+    useEffect(() => {
+
+    }, [user])
+
 
     const dispatch = useDispatch()
     console.log('HELLO')
@@ -31,7 +38,7 @@ export const DashboardPage = () => {
                 </nav>
 
                 <div className="dashboard-host-options">
-                    <img className="host-img" src={user.imgUrl} />
+                    {user && <img className="host-img" src={user.imgUrl} />}
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@ import { onSignup } from '../store/actions/user.actions'
 const theme = createTheme();
 
 export function _Signup(props) {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const fName = data.get('firstName')
@@ -29,9 +29,13 @@ export function _Signup(props) {
             password: data.get('password'),
             fullname: (fName + ' ' + lName)
         }
-        props.onSignup(user)
-        props.history.push('/explore')
-    };
+        try {
+            await props.onSignup(user)
+            props.history.push('/explore')
+        } catch (err) { console.log(err) }
+        // props.onSignup(user)
+        // props.history.push('/explore')
+    }
 
     return (
         <section className="signup">

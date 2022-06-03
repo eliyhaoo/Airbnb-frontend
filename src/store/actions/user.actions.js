@@ -3,7 +3,6 @@ import { showErrorMsg } from "../../services/event-bus.service.js"
 
 
 export function onLogin(credentials) {
-    console.log('credentials', credentials)
     return async (dispatch) => {
         try {
             const user = await userService.login(credentials)

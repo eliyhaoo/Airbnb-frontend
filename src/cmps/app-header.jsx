@@ -20,7 +20,10 @@ const _AppHeader = ({ history }) => {
     const [isBig, setIsBig] = useState(false)
     const [modalUserOptions, setModalUserOptions] = useState(false)
 
-    const user = { _id: '622f3401e36c59e6164fab4d' }
+    const { user } = useSelector(storeState => storeState.userModule)
+
+
+    // const user = { _id: '622f3401e36c59e6164fab4d' }
     useEffect(() => {
         gVisitedPage.current = visitedPage
         window.addEventListener('scroll', onScroll)
@@ -72,12 +75,14 @@ const _AppHeader = ({ history }) => {
                         {/* {visitedPage !== 'home-page' && <NavLink to='/'>Home</NavLink>} */}
 
                         <NavLink to='/'>Become a Host</NavLink>
-                        {user._id && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>}
+                        {/* {user._id && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>} */}
+                        {user && <NavLink to={`/dashboard/:userId=${user._id}`}>Dashboard</NavLink>}
                     </nav>
 
                     <div className="box user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
                         <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
-                        <img className="user-avatar" src={userAvatarSvg} alt="user" />
+                        {/* <img className="user-avatar" src={userAvatarSvg} alt="user" /> */}
+                        {user ? <img className="user-img" src={user.imgUrl} alt="user" /> : <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
                         <div className={`user-options-container ${modalUserOptions && 'open'}`}>
                             <UserOptions />
