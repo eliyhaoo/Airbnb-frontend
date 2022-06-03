@@ -21,11 +21,6 @@ export const DashboardPage = () => {
     const dispatch = useDispatch()
 
 
-    useEffect(() => {
-        dispatch(setVisitPage('dashboard-page'))
-    }, [])
-
-
     return <section className="dashboard-page full main-layout">
 
         <DashboardHeader user={user} />

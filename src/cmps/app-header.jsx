@@ -21,6 +21,7 @@ const _AppHeader = ({ history }) => {
     const [modalUserOptions, setModalUserOptions] = useState(false)
 
     const { user } = useSelector(storeState => storeState.userModule)
+    console.log('user from header', user)
 
 
     // const user = { _id: '622f3401e36c59e6164fab4d' }
