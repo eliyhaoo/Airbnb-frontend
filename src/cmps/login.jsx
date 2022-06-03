@@ -15,6 +15,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { connect } from "react-redux"
 import { onLogin } from '../store/actions/user.actions'
 
+import { UserMsg } from './user-msg'
+
 const theme = createTheme()
 
 export function _Login(props) {
@@ -28,8 +30,11 @@ export function _Login(props) {
         }
         try {
             await props.onLogin(credentials)
-            props.history.push('/explore')
-        } catch (err) { console.log(err) }
+            // props.history.push('/explore')
+        } catch (err) {
+            console.log(err)
+
+        }
 
     }
 
@@ -74,6 +79,7 @@ export function _Login(props) {
                                 autoComplete="current-password"
                             />
 
+                            <UserMsg />
                             <Button
                                 type="submit"
                                 fullWidth
@@ -94,6 +100,7 @@ export function _Login(props) {
                     </Box>
                 </Container>
             </ThemeProvider>
+
         </section>
     )
 }

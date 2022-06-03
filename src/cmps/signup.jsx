@@ -30,8 +30,8 @@ export function _Signup(props) {
             fullname: (fName + ' ' + lName)
         }
         props.onSignup(user)
-        props.history.push('/explore')
-    };
+        // props.history.push('/explore')
+    }
 
     return (
         <section className="signup">
