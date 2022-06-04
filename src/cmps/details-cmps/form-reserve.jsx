@@ -18,7 +18,7 @@ export const FormReserve = ({ stay }) => {
 
     const { dates, guests } = reserve
 
-  
+    
 
     const onCloseModal = (ev) => {
         ev.stopPropagation()
@@ -29,8 +29,7 @@ export const FormReserve = ({ stay }) => {
         if (user !== 'guest') {
             
             try {
-                const reservation = await reservationService.save(updateReserveFields())
-                console.log('reservation AFTER',reservation);
+                await reservationService.save(updateReserveFields())
                 showSuccessMsg('Your trip was booked')
             } catch (err) {
                 console.log('Cannot reserve')

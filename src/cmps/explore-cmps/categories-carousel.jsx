@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { setFilterBy } from '../../store/actions/stay.action'
 
 export const CategoriesCarousel = ({ categories }) => {
-  const [activeCategory, setActiveCategory] = useState('All Homes')
+  const [activeCategory, setActiveCategory] = useState('')
   const dispatch = useDispatch()
 
   const onChooseCategory = (categoryTitle) => {

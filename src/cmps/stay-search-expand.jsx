@@ -27,11 +27,11 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
         console.log('SearchByFields',searchByFields);
-        history.push(`/explore/?location=${searchByFields.country}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
+        history.push(`/explore/?location=${searchByFields.location}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
     }
 
     const onSelectedRegion = (region) => {
-        setSearchByFields((prevState) => ({ ...prevState, country: region }))
+        setSearchByFields((prevState) => ({ ...prevState, location: region }))
 
     }
 
@@ -54,8 +54,8 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'location')} className={`search-location-expand ${modalOpen === 'location' ? 'open' : ''}`}>
 
                     <div className='search-label'>Where</div>
-                    <input type="text" placeholder="Search destinations" name='country' value={searchByFields.country} onChange={handleChange} />
-                    {modalOpen === 'location' && <SearchCountry selectedRegion={searchByFields.country} setSelectedRegion={onSelectedRegion} />}
+                    <input type="text" placeholder="Search destinations" name='location' value={searchByFields.location} onChange={handleChange} />
+                    {modalOpen === 'location' && <SearchCountry selectedRegion={searchByFields.location} setSelectedRegion={onSelectedRegion} />}
 
                 </div>
 

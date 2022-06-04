@@ -31,7 +31,7 @@ export const stayService = {
 
 async function query(filterBy) {
     const { category, searchBy, properties } = filterBy
-    return httpService.get('stay')
+    return httpService.get('stay',filterBy)
 }
 
 // function getById(stayId) {
@@ -150,7 +150,7 @@ function _filterBySearch(stays, searchBy) {
     return stays
 }
 
-const gCategories = [{ title: 'All Homes', img: 'allhomes' },
+const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Design', img: 'design' },
 { title: 'Amazing Pools', img: 'amazingpools' },
 { title: 'Vineyards', img: 'vineyards' },
