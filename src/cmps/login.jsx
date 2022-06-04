@@ -1,5 +1,7 @@
 
 import * as React from 'react'
+import { useState } from 'react'
+
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -12,16 +14,15 @@ import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-
 import { connect } from "react-redux"
 import { onLogin } from '../store/actions/user.actions'
 
-import { UserMsg } from './user-msg'
+import is from 'date-fns/esm/locale/is/index.js'
 
 const theme = createTheme()
-
 export function _Login(props) {
 
+    const [errorMsg, setErrorMsg] = useState('')
     const handleSubmit = async (event) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
@@ -31,9 +32,10 @@ export function _Login(props) {
         }
         try {
             await props.onLogin(credentials)
-            // props.history.push('/explore')
+            props.history.push('/explore')
         } catch (err) {
             console.log(err)
+            setErrorMsg(err.response.data.err)
 
         }
 
@@ -68,6 +70,8 @@ export function _Login(props) {
                                 name="email"
                                 autoComplete="email"
                                 autoFocus
+                                helperText={errorMsg}
+
                             />
                             <TextField
                                 margin="normal"
@@ -78,9 +82,9 @@ export function _Login(props) {
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                helperText={errorMsg}
                             />
 
-                            <UserMsg />
                             <Button
                                 type="submit"
                                 fullWidth

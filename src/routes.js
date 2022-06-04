@@ -4,9 +4,15 @@ import { StayDetails } from "./pages/stay-details"
 import { Login } from "./cmps/login"
 import { Signup } from "./cmps/signup"
 import { DashboardPage } from "./pages/dashboard-page"
+import { BecomeHostPage } from "./pages/become-host-page"
 
 const routes = [
     {
+        path: '/becomehost',
+        component: BecomeHostPage
+    },
+    {
+        // path: '/dashboard/:userId',
         path: '/dashboard',
         component: DashboardPage
     },

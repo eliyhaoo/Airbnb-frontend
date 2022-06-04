@@ -18,13 +18,13 @@ function App() {
 
 
   useEffect(() => {
-    console.log('LOADING FIRST USER EVER!');
+    console.log('LOADING USER FROM ROOTCMP!');
     dispatch(loadUser())
   }, [])
 
   return (
     <div className="App main-layout">
-      {visitedPage !== 'dashboard-page' && <AppHeader />}
+      {(visitedPage !== 'dashboard-page' && visitedPage !== 'become-host-page') && <AppHeader />}
       <Switch>
         {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
       </Switch>

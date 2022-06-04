@@ -1,13 +1,11 @@
 .user-msg {
     color: white;
-    // padding: 10px;
-    // font-size: 1.4em;
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // background-color: grey;
-    border-radius: 8px;
-
+    padding: 10px;
+    font-size: 1.4em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: grey;
 }
 
 .user-msg button {
@@ -15,7 +13,7 @@
     border: 0;
     border-radius: 50%;
     margin: 5px;
-    // background-color: #222;
+    background-color: #222;
 }
 
 .user-msg.success {
@@ -23,6 +21,5 @@
 }
 
 .user-msg.danger {
-    // background-color: $secondary;
-    color: red;
+    background-color: rgb(216, 59, 59);
 }

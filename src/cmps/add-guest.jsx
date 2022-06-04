@@ -6,26 +6,23 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateReserve } from '../store/actions/reserve.action'
 
 
-export const AddGuest = ({ setSearchByFields ,onCloseModal ,guests }) => {
-    
-    const dispatch =useDispatch()
-    const {reserve}=useSelector(storeState=>storeState.reserveModule)
-    
+export const AddGuest = ({ setSearchByFields, onCloseModal, guests }) => {
 
-    const [guestsFields,setGuests] = useState(guests)
+    const dispatch = useDispatch()
+    const { reserve } = useSelector(storeState => storeState.reserveModule)
 
+    const [guestsFields, setGuests] = useState(guests)
 
-
-    const onUpdateGuests =(field,diff) =>{
-        const newGuests = {...guestsFields,[field]:guestsFields[field]+diff,total:guestsFields.total+diff}
+    const onUpdateGuests = (field, diff) => {
+        const newGuests = { ...guestsFields, [field]: guestsFields[field] + diff, total: guestsFields.total + diff }
         setGuests(newGuests)
-        dispatch(updateReserve('guests',newGuests))
-        if (setSearchByFields) setSearchByFields((prevState) => ({ ...prevState, guestsNum: newGuests.total })) 
-        
+        dispatch(updateReserve('guests', newGuests))
+        if (setSearchByFields) setSearchByFields((prevState) => ({ ...prevState, guestsNum: newGuests.total }))
+
     }
-    
-    
-    const {adults,childrens,infants}= guestsFields
+
+
+    const { adults, childrens, infants } = guestsFields
 
     return <section className="add-guest">
 
@@ -38,12 +35,12 @@ export const AddGuest = ({ setSearchByFields ,onCloseModal ,guests }) => {
                 </div>
 
                 <div className="count-container flex space-between">
-                    <button type='button' onClick={() => onUpdateGuests('adults',-1)}>
+                    <button type='button' onClick={() => onUpdateGuests('adults', -1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
                     <div>{adults}</div>
-                    <button type='button' onClick={() => onUpdateGuests('adults',+1)}>
-                        <div  className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
+                    <button type='button' onClick={() => onUpdateGuests('adults', +1)}>
+                        <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
             </div>
@@ -55,11 +52,11 @@ export const AddGuest = ({ setSearchByFields ,onCloseModal ,guests }) => {
                 </div>
 
                 <div className="count-container flex space-between">
-                    <button type='button' onClick={() => onUpdateGuests('childrens',-1)}>
+                    <button type='button' onClick={() => onUpdateGuests('childrens', -1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
                     <div>{childrens}</div>
-                    <button type='button' onClick={() => onUpdateGuests('childrens',+1)}>
+                    <button type='button' onClick={() => onUpdateGuests('childrens', +1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
@@ -71,11 +68,11 @@ export const AddGuest = ({ setSearchByFields ,onCloseModal ,guests }) => {
                     <div className="count-input-subtitle">Under 2</div>
                 </div>
                 <div className="count-container flex space-between">
-                    <button type='button' onClick={() =>onUpdateGuests('infants',-1)}>
+                    <button type='button' onClick={() => onUpdateGuests('infants', -1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
                     <div>{infants}</div>
-                    <button type='button' onClick={() => onUpdateGuests('infants',+1)}>
+                    <button type='button' onClick={() => onUpdateGuests('infants', +1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>

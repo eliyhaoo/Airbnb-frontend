@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setVisitPage } from "../store/actions/system.action"
 import { userService } from "../services/user.service"
+import { Link } from 'react-router-dom'
 
 export const HomePage = () => {
 
@@ -37,7 +38,7 @@ export const HomePage = () => {
         <div className="become-a-host-container home-page-layout">
             <div className="become-a-host-elements-container">
                 <img className="become-a-host-img" src={require('../assets/img/become-a-host.jpg')} />
-                <button className="become-a-host-btn">Become a Host</button>
+                <Link to={'/becomehost'}><button className="become-a-host-btn">Become a Host</button></Link>
             </div>
         </div>
     </section>

@@ -13,8 +13,9 @@ export function onLogin(credentials) {
             // socketService.login(user.id)
 
         } catch (err) {
-            showErrorMsg('Invalid username or password')
+            // showErrorMsg('Invalid username or password')
             console.log('Cannot login', err)
+            throw err
         }
     }
 }

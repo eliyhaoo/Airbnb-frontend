@@ -43,7 +43,7 @@ export const DashboardPage = (props) => {
         <DashboardHeader user={user} />
 
         <main className="main-dashboard">
-   
+
 
             <Switch>
                 <Route path="/dashboard/trip" component={DashboardTrips} />

@@ -12,19 +12,7 @@ import { styled } from '@mui/material/styles';
 import { utilService } from '../../services/util.service';
 
 
-
-const StyledRating = styled(Rating)({
-    '& .MuiRating-iconFilled': {
-        color: 'rgb(113 113 113)',
-        // color: 'rgb(34 34 34)',
-    },
-    '& .MuiRating-iconHover': {
-        color: 'rgb(34 34 34)',
-    },
-});
-
 export function AddReview({ stay }) {
-
 
     const [review, setReview] = useState({
         at: Date.now(),
@@ -52,11 +40,8 @@ export function AddReview({ stay }) {
     const onAddReview = (ev) => {
         ev.preventDefault()
         stay.reviews.unshift(review)
-        // utilService.calcAvgRating(stay.reviews)
-        // console.log('stay', stay)
         console.log('reviewScores', reviewScore)
-        // stay.reviews.unshift(reviewScore)
-        // dispatch(saveStay(stay))
+        console.log('review', review)
     }
 
     const handleChange = ({ target }) => {
