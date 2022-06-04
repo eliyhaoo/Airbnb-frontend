@@ -11,8 +11,8 @@ export const stayService = {
     getById,
     save,
     remove,
-    getCategories: getCategories,
-    filterByCategory: _filterByCategory
+    getCategories,
+  
     // getEmptyStay,
     // subscribe,
     // unsubscribe

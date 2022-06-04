@@ -10,7 +10,6 @@ export const UserOptions = () => {
 
     const dispatch = useDispatch()
     const { user } = useSelector(storeState => storeState.userModule)
-    console.log('user', user)
 
     const onLogOut = (ev) => {
         dispatch(logOut())

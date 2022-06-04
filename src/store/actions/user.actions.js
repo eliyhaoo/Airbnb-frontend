@@ -55,7 +55,6 @@ export function loadUser() {
     return async dispatch => {
         try {
             const user = await userService.getLoggedinUser()
-            console.log('user from action', user)
             dispatch({ type: 'SET_USER', user })
         } catch (err) {
             console.log('UserAction: err in loadUser', err)

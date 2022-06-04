@@ -9,7 +9,6 @@ import DateRangePicker from "@mui/lab/DateRangePicker";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { updateReserve } from "../store/actions/reserve.action";
 
-// import remove from "../../styles/svg/delete-date.svg";
 const mode = window.innerWidth < 780 ? 1 : 2;
 const theme = createTheme({
 	palette: {
@@ -24,13 +23,7 @@ const theme = createTheme({
 
 export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setModalOpen, setSearchByFields }) {
 	const dispatch = useDispatch();
-	// const removeUrl = (
-	// 	<img onClick={() => dispatch(setOrder({ ...order, checkIn: null, checkOut: null, guestsCount: 1, adults: 1, children: 0, infants: 0 }))} className='clear-dates' src={remove} />
-	// );
 
-	// function getWeeksAfter(date, amount) {
-	// 	return date ? addWeeks(date, amount) : undefined;
-	// }
 
 
 	const [value, setValue] = useState([null, null]);
@@ -42,20 +35,18 @@ export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setMo
 				<DateRangePicker
 					disablePast
 					calendars={mode}
-					// value={[order.checkIn, order.checkOut]}
 					value={[dates.checkIn, dates.checkOut]}
 					// maxDate={getWeeksAfter(order.checkIn, 8)}
 					onChange={(newValue) => {
 						setValue(newValue)
 						activeDatesTab === 'check-in' ? setActiveTab('check-out') : setModalOpen('guest')
-						dispatch(updateReserve('dates', newValue))
-						setSearchByFields((prevState) => ({ ...prevState, dates: { checkIn: newValue[0], checkOut: [1] } }))
+						dispatch(updateReserve('dates', { checkIn: newValue[0], checkOut: newValue[1] }))
+						setSearchByFields((prevState) => ({ ...prevState, dates: { checkIn: newValue[0], checkOut: newValue[1] } }))
 
 
 
 					}}
-					// startText='Check-in'
-					// endText='Check-out'
+			
 					renderInput={(startProps, endProps) => (
 						<div className="date-picker-inputs flex space-between full-width">
 

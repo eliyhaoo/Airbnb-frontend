@@ -7,6 +7,7 @@ import searchSvg from '../assets/svg/searchsvg.svg'
 import { AddGuest } from './add-guest'
 import { SearchbarDatePicker } from './searchbar-date-picker'
 import { utilService } from '../services/util.service'
+import _ from 'lodash'
 
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle, isSearchOpen }) => {
 
@@ -43,6 +44,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
 
 
     const {dates,guests} = reserve
+    console.log('Dates CHECKOPUt',dates);
 
     return <section className={`stay-search-expand ${isSearchOpen ? '' : 'close'}`}>
         <form onSubmit={onSearchBy}>
@@ -64,7 +66,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                         :
                         <React.Fragment>
                             <div className='search-label'>When</div>
-                            <span>Any week</span>
+                            <span>{dates.checkOut ? dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10) :'Any week'}</span>
                         </React.Fragment>
                     }
 
@@ -80,105 +82,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                     <div onClick={onSearchBy} className={`search-btn-container src-btn-${isBig ? 'big' : 'small'}-expand`}>
 
                         <div className="btn-container">
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
+                        {_.times(99, (i) => <div key={i} className="cell"></div>)}
                             <div className="content">
                                 <button className="action-btn ">
                                     <img src={searchSvg} alt="search-btn" /><span></span>
