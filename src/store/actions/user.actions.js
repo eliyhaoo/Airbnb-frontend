@@ -1,6 +1,6 @@
 import { userService } from "../../services/user.service.js"
 import { showErrorMsg } from "../../services/event-bus.service.js"
-
+import { storageService } from '../../services/async-storage.service'
 
 export function onLogin(credentials) {
     return async (dispatch) => {
@@ -59,6 +59,22 @@ export function loadUser() {
             dispatch({ type: 'SET_USER', user })
         } catch (err) {
             console.log('UserAction: err in loadUser', err)
+            // } finally {
+            //     dispatch({ type: 'LOADING_DONE' })
+            // }
+        }
+    }
+}
+
+export function updateUser(user) {
+
+    return async dispatch => {
+        try {
+            // const user = await userService.getLoggedinUser()
+            user = userService.update(user)
+            dispatch({ type: 'UPDATE_USER', user })
+        } catch (err) {
+            console.log('UserAction: err in update user', err)
             // } finally {
             //     dispatch({ type: 'LOADING_DONE' })
             // }

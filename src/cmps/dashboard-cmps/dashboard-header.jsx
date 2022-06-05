@@ -36,7 +36,13 @@ export const DashboardHeader = ({ user }) => {
 
                     </NavLink ></li>
 
-                    <li>Wish List</li>
+                    <li><NavLink to="dashboard/wishlist">
+                        <div className="after-container">
+
+                            <div> Wish List </div>
+                        </div>
+
+                    </NavLink ></li>
                 </ul>
             </nav>
 

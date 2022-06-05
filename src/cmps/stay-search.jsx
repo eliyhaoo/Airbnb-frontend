@@ -15,13 +15,10 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
 
     const { searchBy: { location, dates, guestsNum } } = filterBy
 
-
     const getDatesToDisplay = () => {
 
-       return  dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10)
+        return dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10)
     }
-
-
 
     return <section className="stay-search flex space-between align-center">
         <button onClick={(ev) => onSetModalOpen(ev, 'location')} className="search-location">
@@ -33,8 +30,8 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
         <div onClick={(ev) => onSetModalOpen(ev, 'guest')} className="search-guest">
             <div className="search-guest-container flex space-between align-center">
                 <div className="search-guest-btn">
-                    {guestsNum ? utilService.checkForPlurals('guest',guestsNum) :'Anyweek'}
-                 
+                    {guestsNum ? utilService.checkForPlurals('guest', guestsNum) : 'Anyweek'}
+
                 </div>
                 <button className="search-btn flex align-center" ><img src={searchSvg} alt="btn" /> </button>
             </div>

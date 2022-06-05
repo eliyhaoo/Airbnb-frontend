@@ -12,21 +12,19 @@ import _ from 'lodash'
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle, isSearchOpen }) => {
 
     const dispatch = useDispatch()
-    
-    const {reserve}=useSelector(storeState=>storeState.reserveModule)
+
+    const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { filterBy } = useSelector(storeState => storeState.stayModule)
     const [activeDatesTab, setActiveTab] = useState('check-in')
 
     const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
-
-
 
     const onSearchBy = (ev) => {
         ev.stopPropagation()
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        console.log('SearchByFields',searchByFields);
+        console.log('SearchByFields', searchByFields);
         history.push(`/explore/?location=${searchByFields.location}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
     }
 
@@ -43,8 +41,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
     }
 
 
-    const {dates,guests} = reserve
-    console.log('Dates CHECKOPUt',dates);
+    const { dates, guests } = reserve
 
     return <section className={`stay-search-expand ${isSearchOpen ? '' : 'close'}`}>
         <form onSubmit={onSearchBy}>
@@ -66,7 +63,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                         :
                         <React.Fragment>
                             <div className='search-label'>When</div>
-                            <span>{dates.checkOut ? dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10) :'Any week'}</span>
+                            <span>{dates.checkOut ? dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10) : 'Any week'}</span>
                         </React.Fragment>
                     }
 
@@ -76,13 +73,13 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'guest')} className={`search-guest-expand ${modalOpen === 'guest' ? 'open' : ''} flex space-between align-center`}>
                     <div>
                         <div className='search-label'>Who</div>
-                        <span>{guests.total >1 ? utilService.checkForPlurals('guest',guests.total):'Add guest'}</span>
+                        <span>{guests.total > 1 ? utilService.checkForPlurals('guest', guests.total) : 'Add guest'}</span>
 
                     </div>
                     <div onClick={onSearchBy} className={`search-btn-container src-btn-${isBig ? 'big' : 'small'}-expand`}>
 
                         <div className="btn-container">
-                        {_.times(99, (i) => <div key={i} className="cell"></div>)}
+                            {_.times(99, (i) => <div key={i} className="cell"></div>)}
                             <div className="content">
                                 <button className="action-btn ">
                                     <img src={searchSvg} alt="search-btn" /><span></span>
@@ -93,7 +90,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                     </div>
 
                     {modalOpen === 'guest' && <div className="search-modal guest-container">
-                        <AddGuest setSearchByFields={setSearchByFields} guests={guests}/>
+                        <AddGuest setSearchByFields={setSearchByFields} guests={guests} />
                     </div>}
 
                 </div>
