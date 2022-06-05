@@ -11,8 +11,8 @@ export const stayService = {
     getById,
     save,
     remove,
-    getCategories: getCategories,
-    filterByCategory: _filterByCategory
+    getCategories,
+
     // getEmptyStay,
     // subscribe,
     // unsubscribe
@@ -31,12 +31,8 @@ export const stayService = {
 
 async function query(filterBy) {
     const { category, searchBy, properties } = filterBy
-    return httpService.get('stay')
+    return httpService.get('stay', filterBy)
 }
-
-// function getById(stayId) {
-//     return storageService.get(STORAGE_KEY, stayId)
-// }
 
 async function getById(stayId) {
     return httpService.get(`stay/${stayId}`)
@@ -81,6 +77,16 @@ async function save(stay) {
         // stayChannel.postMessage(getActionAddStay(savedStay))
     }
     return savedStay
+}
+
+
+
+function getStaysMinPrice(stays) {
+    return Math.min(...stays.map(stay => stay.price))
+}
+
+function getStaysMaxPrice(stays) {
+    return Math.max(...stays.map(stay => stay.price))
 }
 
 function getCategories() {
@@ -150,7 +156,7 @@ function _filterBySearch(stays, searchBy) {
     return stays
 }
 
-const gCategories = [{ title: 'All Homes', img: 'allhomes' },
+const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Design', img: 'design' },
 { title: 'Amazing Pools', img: 'amazingpools' },
 { title: 'Vineyards', img: 'vineyards' },
@@ -168,10 +174,6 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 
 
 // function getEmptyStay() {
-
-
-
-
 
 //     return {
 //         vendor: 'Susita-' + (Date.now() % 1000),

@@ -4,13 +4,13 @@ import { store } from "../store";
 
 const initialState = {
     reserve: {
-        hostId:null,     
-        buyerId:null, 
+        hostId: null,
+        buyerId: null,
         stayId: null,
         totalPrice: 0,
         dates: {
-            checkIn:null, 
-            checkOut:null, 
+            checkIn: null,
+            checkOut: null,
         },
         guests: {
             total: 1,
@@ -20,21 +20,20 @@ const initialState = {
         },
         status: 'pending'
     },
-   
+
 }
 export function reserveReducer(state = initialState, action) {
-   
 
     var newState = state;
     switch (action.type) {
-       
+
         case 'UPDATE_RESERVE':
             const { field, value } = action.reserveField
-            return newState = { ...state, reserve:{...state.reserve,[field]:value} }
-       
+            return newState = { ...state, reserve: { ...state.reserve, [field]: value } }
+
         default:
     }
-  
+
 
     return newState;
 }

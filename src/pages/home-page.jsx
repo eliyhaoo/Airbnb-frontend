@@ -21,7 +21,7 @@ export const HomePage = () => {
 
         </div>
 
-        <div className="popular-destinations main-layout">
+        <div className="popular-destinations home-page-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
             <div className="popular-destinations-imgs-container">
                 <div className="city-container flex direction-column"><img className="city-img"
@@ -35,7 +35,7 @@ export const HomePage = () => {
             </div>
         </div>
 
-        <div className="become-a-host-container main-layout">
+        <div className="become-a-host-container home-page-layout">
             <div className="become-a-host-elements-container">
                 <img className="become-a-host-img" src={require('../assets/img/become-a-host.jpg')} />
                 <Link to={'/becomehost'}><button className="become-a-host-btn">Become a Host</button></Link>

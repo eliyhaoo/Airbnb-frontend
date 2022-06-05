@@ -80,7 +80,7 @@ function getLoggedinUser() {
 }
 
 function onUserUpdate(user) {
-    showSuccessMsg(`This user ${user.fullname} just got updated from socket, new score: ${user.score}`)
+    showSuccessMsg(`This user ${user.fullname}`)
     store.dispatch({ type: 'SET_WATCHED_USER', user })
 }
 

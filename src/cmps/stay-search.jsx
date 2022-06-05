@@ -13,7 +13,7 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
         setIsBig(true)
     }
 
-    const { searchBy: { country, dates, guestsNum } } = filterBy
+    const { searchBy: { location, dates, guestsNum } } = filterBy
 
     const getDatesToDisplay = () => {
 
@@ -22,7 +22,7 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
 
     return <section className="stay-search flex space-between align-center">
         <button onClick={(ev) => onSetModalOpen(ev, 'location')} className="search-location">
-            {country ? country : 'Anywhere'}
+            {location ? location : 'Anywhere'}
         </button>
         <button onClick={(ev) => onSetModalOpen(ev, 'dates')} className="search-date">
             {dates ? getDatesToDisplay() : 'Anyweek'}

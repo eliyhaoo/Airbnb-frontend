@@ -7,6 +7,7 @@ import searchSvg from '../assets/svg/searchsvg.svg'
 import { AddGuest } from './add-guest'
 import { SearchbarDatePicker } from './searchbar-date-picker'
 import { utilService } from '../services/util.service'
+import _ from 'lodash'
 
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle, isSearchOpen }) => {
 
@@ -24,11 +25,11 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
         console.log('SearchByFields', searchByFields);
-        history.push(`/explore/?location=${searchByFields.country}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
+        history.push(`/explore/?location=${searchByFields.location}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
     }
 
     const onSelectedRegion = (region) => {
-        setSearchByFields((prevState) => ({ ...prevState, country: region }))
+        setSearchByFields((prevState) => ({ ...prevState, location: region }))
 
     }
 
@@ -50,8 +51,8 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'location')} className={`search-location-expand ${modalOpen === 'location' ? 'open' : ''}`}>
 
                     <div className='search-label'>Where</div>
-                    <input type="text" placeholder="Search destinations" name='country' value={searchByFields.country} onChange={handleChange} />
-                    {modalOpen === 'location' && <SearchCountry selectedRegion={searchByFields.country} setSelectedRegion={onSelectedRegion} />}
+                    <input type="text" placeholder="Search destinations" name='location' value={searchByFields.location} onChange={handleChange} />
+                    {modalOpen === 'location' && <SearchCountry selectedRegion={searchByFields.location} setSelectedRegion={onSelectedRegion} />}
 
                 </div>
 
@@ -62,7 +63,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                         :
                         <React.Fragment>
                             <div className='search-label'>When</div>
-                            <span>Any week</span>
+                            <span>{dates.checkOut ? dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10) : 'Any week'}</span>
                         </React.Fragment>
                     }
 
@@ -78,105 +79,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                     <div onClick={onSearchBy} className={`search-btn-container src-btn-${isBig ? 'big' : 'small'}-expand`}>
 
                         <div className="btn-container">
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
-                            <div className="cell"></div>
+                            {_.times(99, (i) => <div key={i} className="cell"></div>)}
                             <div className="content">
                                 <button className="action-btn ">
                                     <img src={searchSvg} alt="search-btn" /><span></span>
