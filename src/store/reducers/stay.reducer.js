@@ -5,11 +5,11 @@ const initialState = {
     stay: null,
     filterBy: {
         searchBy: {
-            country: '',
+            location: '',
             dates: '',
             guestsNum: null,
         },
-        category: 'All Homes',
+        category: '',
         properties: {
             price: null,
             beds: '',

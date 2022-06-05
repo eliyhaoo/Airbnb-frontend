@@ -5,6 +5,7 @@ import { CheckoutDatePicker } from '../checkout-date-picker'
 import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.js'
 import { utilService } from '../../services/util.service'
 import _ from 'lodash'
+import { reservationService } from '../../services/reservation.service'
 
 
 export const FormReserve = ({ stay }) => {
@@ -18,10 +19,7 @@ export const FormReserve = ({ stay }) => {
 
     const { dates, guests } = reserve
 
-    useEffect(() => {
 
-        calcTotalNights()
-    }, [dates.checkOut, guests])
 
     const onCloseModal = (ev) => {
         ev.stopPropagation()
@@ -30,10 +28,9 @@ export const FormReserve = ({ stay }) => {
 
     const onReserve = async () => {
         if (user !== 'guest') {
+
             try {
-                console.log('Resercing...')
-                updateReserveFields()
-                console.log('Resercing...')
+                await reservationService.save(updateReserveFields())
                 showSuccessMsg('Your trip was booked')
             } catch (err) {
                 console.log('Cannot reserve')
@@ -43,17 +40,20 @@ export const FormReserve = ({ stay }) => {
     }
 
     const updateReserveFields = () => {
-        // reserve.stayId = stay._id
-        // reserve.userId = user._id
-        // reserve.hostId = stay.host._id
-        // reserve.totalPrice = calcTotalPrice()
-        const Totalprice = calcTotalPrice()
+        return {
+            ...reserve,
+            stayId: stay._id,
+            hostId: stay.host._id,
+            totalPrice: calcTotalPrice()
+        }
     }
 
     const calcTotalPrice = () => {
         console.log('Stay price', stay.price);
         console.log('Nights', calcTotalNights());
-        return calcTotalNights() * (stay.price * reserve.guests.total)
+
+        return calcTotalNights() * stay.price
+
     }
 
     const calcTotalNights = () => {
