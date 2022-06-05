@@ -83,6 +83,7 @@ export const PriceFilter = ({ onSetPrice }) => {
             <Typography gutterBottom>The average nightly price is</Typography>
             <AirbnbSlider
                 name='price'
+                disableSwap
                 onChange={(ev) => onSetPrice({ min: ev.target.value[0], max: ev.target.value[1] })}
                 valueLabelDisplay="on"
                 components={{ Thumb: AirbnbThumbComponent }}
@@ -91,7 +92,6 @@ export const PriceFilter = ({ onSetPrice }) => {
                 min={minPrice}
                 max={maxPrice}
             />
-
         </Box>
     )
 }

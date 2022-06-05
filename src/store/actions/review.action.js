@@ -6,7 +6,7 @@ export function getActionAddReview(review) {
 }
 
 export function addReview(review) {
-    console.log('review from action', review)
+
     return async dispatch => {
         try {
             const addedReview = await reviewService.addReview(review)

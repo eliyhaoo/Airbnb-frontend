@@ -171,6 +171,9 @@
                 &.Pets::before {
                     content: url('../../../svg/Pets allowed.svg');
                 }
+                &.Long::before {
+                    content: url('../../../svg/Long term.svg');
+                }
             }
             .amenite {
                 padding-left: 7px;

@@ -31,17 +31,17 @@ export const DashboardHeader = ({ user }) => {
                     <li><NavLink to="dashboard/trip">
                         <div className="after-container">
 
-                        <div> My Trips </div>
+                            <div> My Trips </div>
                         </div>
 
                     </NavLink ></li>
-                 
+
                     <li>Wish List</li>
                 </ul>
             </nav>
 
             <div className="dashboard-host-options">
-                {/* <img className="host-img" src={user.imgUrl} /> */}
+                <img className="host-img" src={user.imgUrl} />
             </div>
         </header>
     </div>

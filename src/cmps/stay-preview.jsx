@@ -14,7 +14,6 @@ export const StayPreview = ({ stay, history }) => {
 
     const onAddStayToWishList = (ev) => {
         ev.stopPropagation()
-        console.log('ev', ev)
         inWishList ? setStayToWishList('') : setStayToWishList('active')
     }
 

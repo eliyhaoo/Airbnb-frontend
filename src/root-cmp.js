@@ -18,7 +18,6 @@ function App() {
 
 
   useEffect(() => {
-    console.log('LOADING USER FROM ROOTCMP!');
     dispatch(loadUser())
   }, [])
 

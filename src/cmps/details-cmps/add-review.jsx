@@ -1,28 +1,31 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import * as React from 'react'
+import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
+import Rating from '@mui/material/Rating'
+import Stack from '@mui/material/Stack'
+import { styled } from '@mui/material/styles'
 
 import { saveStay } from '../../store/actions/stay.action'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
 
-import { utilService } from '../../services/util.service';
+
+
 
 
 export function AddReview({ stay }) {
 
+
+    const { user } = useSelector(storeState => storeState.userModule)
     const [review, setReview] = useState({
         at: Date.now(),
-        by: {
-            "_id": Math.random() * 1000 % 4,
-            "fullname": "Guest",
-            "imgUrl": "https://res.cloudinary.com/dqj9g5gso/image/upload/v1643443242/ikphiwhe8k6iut1ic2oa.jpg"
-        },
         txt: ''
     })
+
+    useEffect(() => {
+
+    }, [stay.reviews])
 
     const [reviewScore, setReviewScore] = useState({
         accuracy: 0,
@@ -36,17 +39,23 @@ export function AddReview({ stay }) {
 
     const dispatch = useDispatch()
 
-
     const onAddReview = (ev) => {
         ev.preventDefault()
-        stay.reviews.unshift(review)
-        console.log('reviewScores', reviewScore)
-        console.log('review', review)
+        if (!user) return // show user message please login in
+        const newReview = {
+            ...review, by: {
+                _id: user._id,
+                fullname: user.fullname,
+                imgUrl: user.imgUrl
+            }
+        }
+        stay.reviews.unshift(newReview)
+        dispatch(saveStay(stay))
     }
 
     const handleChange = ({ target }) => {
         const name = target.name
-        const value = target.type === "number" ? +target.value : target.value
+        const value = target.value
         setReview({ ...review, [name]: value })
     }
 

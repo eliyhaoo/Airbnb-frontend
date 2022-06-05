@@ -3,7 +3,6 @@ import { Carousel } from 'react-responsive-carousel';
 export function CarouselComponent({ stayImgUrls, stayId, history }) {
 
     const onClickItem = () => {
-        console.log(history)
         history.push(`/stay/${stayId}`)
     }
 

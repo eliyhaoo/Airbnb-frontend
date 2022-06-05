@@ -12,6 +12,9 @@ export const stayService = {
     save,
     remove,
     getCategories,
+    getStaysMinPrice,
+    getStaysMaxPrice,
+
 
     // getEmptyStay,
     // subscribe,
@@ -69,16 +72,16 @@ async function remove(stayId) {
 async function save(stay) {
     var savedStay
     if (stay._id) {
-        savedStay = httpService.put('stay', stay)
+        savedStay = await httpService.put(`stay/${stay._id}`, stay)
     } else {
         // Later, owner is set by the backend
         // stay.owner = userService.getLoggedinUser()
-        savedStay = httpService.post('stay', stay)
+        savedStay = await httpService.post('stay', stay)
         // stayChannel.postMessage(getActionAddStay(savedStay))
     }
+    console.log('savedStay', savedStay)
     return savedStay
 }
-
 
 
 function getStaysMinPrice(stays) {
@@ -155,6 +158,8 @@ function _filterBySearch(stays, searchBy) {
     }
     return stays
 }
+
+
 
 const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Design', img: 'design' },

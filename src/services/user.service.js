@@ -64,13 +64,11 @@ async function signup(userCred) {
 
 async function logout() {
     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
-    console.log('REMOVING ITEM');
     // socketService.logout()
     return await httpService.post('auth/logout')
 }
 
 function saveLocalUser(user) {
-    console.log('in save local user ', user)
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
     return user
 }

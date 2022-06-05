@@ -28,7 +28,6 @@ export const DashboardPage = (props) => {
 
 
     useEffect(() => {
-        console.log('MOUNTED');
         dispatch(setVisitPage('dashboard-page'))
         if (!user.isHost) {
 
