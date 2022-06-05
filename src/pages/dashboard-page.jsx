@@ -10,11 +10,7 @@ import { UserStats } from "../cmps/dashboard-cmps/user-stats"
 import { StayList } from '../cmps/stay-list'
 import reactRouterDom from "react-router-dom"
 import { loadStays } from '../store/actions/stay.action'
-// import {
-//     BrowserRouter as Router,
-//     Route,
-//     Switch
-// } from "react-router-dom";
+
 export const DashboardPage = (props) => {
 
     const { stays } = useSelector(storeState => storeState.stayModule)
@@ -64,15 +60,9 @@ export const DashboardPage = (props) => {
 
             <Switch>
                 {/* <Route path="/dashboard/trip" component={DashboardTrips} /> */}
-<<<<<<< HEAD
-                {/* <Route path="/dashboard/wishlist" render={(props) => <StayList {...props} stays={stays.filter(stayId => user.wishList.some(stayIdInWishList => stayIdInWishList === stayId))} />} /> */}
-                <Route path="/dashboard/" render={(props) => <StayList {...props} stays={stays.filter(stayId => user.wishList.some(stayIdInWishList => stayIdInWishList === stayId))} />} />
-                {/* <Route path="/dashboard" component={DashboardReservations} /> */}
-=======
                 <Route path="/dashboard/:wishlist" render={(props) => <StayList {...props} stays={stays.filter(stayId => user.wishList.some(stayIdInWishList => stayIdInWishList === stayId))} />} />
                 <Route path="/dashboard" component={DashboardReservations} />
                 {/* <Route path="/dashboard" component={DashboardWishlist} /> */}
->>>>>>> bde03a4c8f6d6050549f10830055d5effb741427
             </Switch>
 
 
