@@ -5,6 +5,7 @@ import { DashboardHeader } from "../cmps/dashboard-cmps/dashboard-header"
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min"
 import { DashboardReservations } from "../cmps/dashboard-cmps/dashboard-reservations"
 import { DashboardTrips } from "../cmps/dashboard-cmps/dashboard-trips"
+import { UserStats } from "../cmps/dashboard-cmps/user-stats"
 
 
 
@@ -41,12 +42,13 @@ export const DashboardPage = (props) => {
     return <section className="dashboard-page full main-layout">
 
         <DashboardHeader user={user} />
+        <UserStats/>
 
         <main className="main-dashboard">
 
 
             <Switch>
-                <Route path="/dashboard/trip" component={DashboardTrips} />
+                {/* <Route path="/dashboard/trip" component={DashboardTrips} /> */}
                 <Route path="/dashboard" component={DashboardReservations} />
             </Switch>
 

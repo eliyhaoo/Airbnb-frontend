@@ -1,0 +1,32 @@
+.user-stats{
+
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+    gap:15px;
+    margin-bottom: 20px;
+
+    .stats-container{
+
+        :first-child{
+            margin-bottom: em(4px);
+        }
+        border: 1px solid $borderClr;
+        padding: 15px 20px;
+        border-radius: 14px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+
+        .precentage-span{
+            color:$sucsess;
+           font-family: manrope-bold;
+           margin-inline-start:0.5em ;
+        }
+    }
+
+    .stats-img-container{
+        background-color: $primary;
+        height: 80%;
+        border-radius: 4px;
+        aspect-ratio: 1;
+    }
+
+}

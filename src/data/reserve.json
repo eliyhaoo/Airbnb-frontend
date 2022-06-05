@@ -4,10 +4,11 @@
         "hostId": "61f3b204da15b10b906xxe58",
         "buyerId": "61f3b2ddd995b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"1 BR bla bla",
         "totalPrice": 2822.8,
         "dates": {
-            "checkIn": "",
-            "checkOut": ""
+            "checkIn": "may-02",
+            "checkOut": "may-05"
         },
         "guests": {
             "total": 6,
@@ -22,8 +23,12 @@
         "hostId": "61f3b204da18510b90629e58",
         "buyerId": "61f3b5ddda15b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"3 BR bla bla",
         "totalPrice": 1582,
-        "dates": [],
+        "dates": {
+            "checkIn": "may-02",
+            "checkOut": "may-05"
+        },
         "guests": {
             "total": 3,
             "adults": 1,
@@ -37,6 +42,7 @@
         "hostId": "61f3b204da17410b90629e58",
         "buyerId": "6173b2ddda15b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"2 BR blsaassasa bla",
         "totalPrice": 745,
         "dates": {
             "checkIn": "",
@@ -55,10 +61,11 @@
         "hostId": "61f3b2048515b10b90629e58",
         "buyerId": "61f3b2ddda15b10b92029e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"2 BR bla bla",
         "totalPrice": 745,
         "dates": {
-            "checkIn": "",
-            "checkOut": ""
+            "checkIn": "may-02",
+            "checkOut": "may-05"
         },
         "guests": {
             "total": 8,
@@ -73,10 +80,11 @@
         "hostId": "61f3b204da15b12090629e58",
         "buyerId": "61f3b2dd7715b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"9 BR bla bla",
         "totalPrice": 745,
         "dates": {
-            "checkIn": "",
-            "checkOut": ""
+            "checkIn": "may-02",
+            "checkOut": "may-05"
         },
         "guests": {
             "total": 3,
@@ -91,6 +99,7 @@
         "hostId": "61f3b2049815b10b90629e58",
         "buyerId": "61f3b263da15b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"3 BR 232 bla bla",
         "totalPrice": 745,
         "dates": {
             "checkIn": "",
@@ -109,6 +118,7 @@
         "hostId": "61f3b2055a15b10b90629e58",
         "buyerId": "61f3bbbdda15b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"1333 BR bla bla",
         "totalPrice": 745,
         "dates": {
             "checkIn": "",
@@ -127,6 +137,7 @@
         "hostId": "61f3b204da15b10550629e58",
         "buyerId": "61f3bsddda15b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"33 BR bla2222 bla",
         "totalPrice": 745,
         "dates": {
             "checkIn": "",
@@ -145,6 +156,7 @@
         "hostId": "61f31104da15b10b90629e58",
         "buyerId": "61f3b2dd8815b10b90629e59",
         "stayId": "61ef1c92652f5891aa7bc38a",
+        "listingName":"333332 BR23 bla bla",
         "totalPrice": 745,
         "dates": {
             "checkIn": "",
