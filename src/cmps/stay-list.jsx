@@ -3,13 +3,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { StayPreview } from './stay-preview'
 import { updateUser } from "../store/actions/user.actions"
 import { storageService } from '../services/async-storage.service.js'
+import { useParams } from 'react-router';
 
 
-export const StayList = ({ stays, history }) => {
+export const StayList = (props, { stays, history }) => {
 
     const { user } = useSelector(storeState => storeState.userModule)
     const [wishList, setWishList] = useState(user ? user.wishList : storageService.getGuestWishList())
     const dispatch = useDispatch()
+    const { id } = useParams();
+
+    useEffect(() => {
+
+        console.log({ id })
+    }, [])
 
     useEffect(() => {
         console.log('componentremounted')
