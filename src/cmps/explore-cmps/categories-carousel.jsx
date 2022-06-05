@@ -32,7 +32,7 @@ export const CategoriesCarousel = ({ categories }) => {
             onClick={() => onChooseCategory(category.title)}>
             < button className="category-btn">
               <img className="category-img" src={require(`../../assets/img/categories/${category.img}.jpg`)} alt="btn" /> </button>
-            <p>{category.title}</p>
+            <p>{category.title || 'All Homes'}</p>
           </div>
         </Carousel.Item>
       )

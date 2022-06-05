@@ -6,16 +6,14 @@ import { storageService } from '../services/async-storage.service.js'
 import { useParams } from 'react-router';
 
 
-export const StayList = (props, { stays, history }) => {
+export const StayList = ({ stays, history }) => {
 
     const { user } = useSelector(storeState => storeState.userModule)
     const [wishList, setWishList] = useState(user ? user.wishList : storageService.getGuestWishList())
     const dispatch = useDispatch()
-    const { id } = useParams();
 
     useEffect(() => {
-
-        console.log({ id })
+        console.log(stays)
     }, [])
 
     useEffect(() => {

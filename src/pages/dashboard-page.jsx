@@ -64,8 +64,9 @@ export const DashboardPage = (props) => {
 
             <Switch>
                 {/* <Route path="/dashboard/trip" component={DashboardTrips} /> */}
-                <Route path="/dashboard/:wishlist" render={(props) => <StayList {...props} stays={stays.filter(stayId => user.wishList.some(stayIdInWishList => stayIdInWishList === stayId))} />} />
-                <Route path="/dashboard" component={DashboardReservations} />
+                {/* <Route path="/dashboard/wishlist" render={(props) => <StayList {...props} stays={stays.filter(stayId => user.wishList.some(stayIdInWishList => stayIdInWishList === stayId))} />} /> */}
+                <Route path="/dashboard/" render={(props) => <StayList {...props} stays={stays.filter(stayId => user.wishList.some(stayIdInWishList => stayIdInWishList === stayId))} />} />
+                {/* <Route path="/dashboard" component={DashboardReservations} /> */}
             </Switch>
 
 
