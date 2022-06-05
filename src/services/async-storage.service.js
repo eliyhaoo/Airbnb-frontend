@@ -5,7 +5,10 @@ export const storageService = {
     post,
     put,
     remove,
-    postMany
+    postMany,
+    getGuestWishList,
+    putGuestWishList,
+    removeGuestWishList
 }
 
 function query(entityType, delay = 600) {
@@ -83,6 +86,23 @@ function postMany(entityType, newEntities) {
 
 function _loadStays() {
     return stays
+}
+
+function putGuestWishList(wishList) {
+    _save('wishList', wishList)
+}
+
+function removeGuestWishList() {
+    window.localStorage.clear()
+
+}
+function getGuestWishList() {
+    return JSON.parse(localStorage.getItem('wishList')) || []
+    // if (!wishList) {
+    //     wishList = []
+    //     _save('wishList', wishList)
+    // }
+    // return wishList
 }
 
 const stays = [

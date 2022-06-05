@@ -17,6 +17,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { connect } from "react-redux"
 import { onLogin } from '../store/actions/user.actions'
 
+import { storageService } from '../services/async-storage.service'
 import is from 'date-fns/esm/locale/is/index.js'
 
 const theme = createTheme()
@@ -32,6 +33,7 @@ export function _Login(props) {
         }
         try {
             await props.onLogin(credentials)
+            storageService.removeGuestWishList()
             props.history.push('/explore')
         } catch (err) {
             console.log(err)

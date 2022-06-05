@@ -11,21 +11,19 @@ import { utilService } from '../services/util.service'
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle, isSearchOpen }) => {
 
     const dispatch = useDispatch()
-    
-    const {reserve}=useSelector(storeState=>storeState.reserveModule)
+
+    const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { filterBy } = useSelector(storeState => storeState.stayModule)
     const [activeDatesTab, setActiveTab] = useState('check-in')
 
     const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
-
-
 
     const onSearchBy = (ev) => {
         ev.stopPropagation()
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        console.log('SearchByFields',searchByFields);
+        console.log('SearchByFields', searchByFields);
         history.push(`/explore/?location=${searchByFields.country}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
     }
 
@@ -42,7 +40,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
     }
 
 
-    const {dates,guests} = reserve
+    const { dates, guests } = reserve
 
     return <section className={`stay-search-expand ${isSearchOpen ? '' : 'close'}`}>
         <form onSubmit={onSearchBy}>
@@ -74,7 +72,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                 <div onClick={(ev) => onSetModal(ev, 'guest')} className={`search-guest-expand ${modalOpen === 'guest' ? 'open' : ''} flex space-between align-center`}>
                     <div>
                         <div className='search-label'>Who</div>
-                        <span>{guests.total >1 ? utilService.checkForPlurals('guest',guests.total):'Add guest'}</span>
+                        <span>{guests.total > 1 ? utilService.checkForPlurals('guest', guests.total) : 'Add guest'}</span>
 
                     </div>
                     <div onClick={onSearchBy} className={`search-btn-container src-btn-${isBig ? 'big' : 'small'}-expand`}>
@@ -189,7 +187,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                     </div>
 
                     {modalOpen === 'guest' && <div className="search-modal guest-container">
-                        <AddGuest setSearchByFields={setSearchByFields} guests={guests}/>
+                        <AddGuest setSearchByFields={setSearchByFields} guests={guests} />
                     </div>}
 
                 </div>
