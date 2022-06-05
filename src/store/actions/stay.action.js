@@ -8,7 +8,6 @@ export function loadStays() {
         console.log('FILTERBY', filterBy);
         try {
             const stays = await stayService.query(filterBy)
-            console.log('STAYS', stays);
             dispatch({
                 type: 'SET_STAYS',
                 stays

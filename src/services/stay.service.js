@@ -11,6 +11,8 @@ export const stayService = {
     getById,
     save,
     remove,
+    getStaysMinPrice,
+    getStaysMaxPrice,
     getCategories: getCategories,
     filterByCategory: _filterByCategory
     // getEmptyStay,
@@ -33,10 +35,6 @@ async function query(filterBy) {
     const { category, searchBy, properties } = filterBy
     return httpService.get('stay')
 }
-
-// function getById(stayId) {
-//     return storageService.get(STORAGE_KEY, stayId)
-// }
 
 async function getById(stayId) {
     return httpService.get(`stay/${stayId}`)
@@ -81,6 +79,16 @@ async function save(stay) {
         // stayChannel.postMessage(getActionAddStay(savedStay))
     }
     return savedStay
+}
+
+
+
+function getStaysMinPrice(stays) {
+    return Math.min(...stays.map(stay => stay.price))
+}
+
+function getStaysMaxPrice(stays) {
+    return Math.max(...stays.map(stay => stay.price))
 }
 
 function getCategories() {
@@ -168,10 +176,6 @@ const gCategories = [{ title: 'All Homes', img: 'allhomes' },
 
 
 // function getEmptyStay() {
-
-
-
-
 
 //     return {
 //         vendor: 'Susita-' + (Date.now() % 1000),

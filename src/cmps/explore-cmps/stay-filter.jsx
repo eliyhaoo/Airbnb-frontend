@@ -1,9 +1,14 @@
 import { useDispatch, useSelector } from "react-redux"
-import closeModalImg from "../../assets/svg/close-modal.svg"
 import { useForm } from '../../hooks/useForm'
-import { loadStays, setFilterBy } from "../../store/actions/stay.action"
+
 import { MultiselectCheckbox } from "./multiselect-checkbox"
+import { PriceFilter } from "./price-filter"
+
+import { loadStays, setFilterBy } from "../../store/actions/stay.action"
+
+import closeModalImg from "../../assets/svg/close-modal.svg"
 import _ from 'lodash'
+
 
 export const StayFilter = ({ showFilterModal, history }) => {
 
@@ -36,11 +41,14 @@ export const StayFilter = ({ showFilterModal, history }) => {
     }
 
     const onSetBeds = (beds) => {
-        console.log('beds', beds);
         setFilterProperties((prevState) => ({ ...prevState, beds }))
     }
 
-    console.log('beds in filter', filterBy.properties.beds);
+    const onSetPrice = (price) => {
+        setFilterProperties((prevState) => ({ ...prevState, price }))
+    }
+
+
     return <div className="stay-filter">
         <div className="header-container screen" onClick={() => onCloseModal()} ></div>
         <div className="filter-modal">
@@ -53,7 +61,13 @@ export const StayFilter = ({ showFilterModal, history }) => {
 
                 <div className="filter-type price-range">
                     <h2>Price range</h2>
-                    <span className="span"><p>The average nightly price is XXXX</p></span>
+                    <PriceFilter onSetPrice={onSetPrice} />
+                    {/* <div className="price-range-container flex ">
+                        <div className="min-price">min price</div>
+                        <div>-</div>
+                        <div className="max-price">max price</div>
+                    </div> */}
+                    {/* <span className="span"><p>The average nightly price is XXXX</p></span> */}
                 </div>
 
                 <div className="filter-type type-of-place">

@@ -11,6 +11,7 @@ export const FormReserve = ({ stay }) => {
 
     const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { user } = useSelector(storeState => storeState.userModule)
+    console.log('user from form reserve', user)
 
     const [isModalOpen, setModal] = useState(false)
     const [btnMode, setIsDeley] = useState({ loader: false, reserve: false, btnTxt: "Check availability" })
@@ -22,7 +23,6 @@ export const FormReserve = ({ stay }) => {
         calcTotalNights()
     }, [dates.checkOut, guests])
 
-
     const onCloseModal = (ev) => {
         ev.stopPropagation()
         setModal(false)
@@ -33,6 +33,7 @@ export const FormReserve = ({ stay }) => {
             try {
                 console.log('Resercing...')
                 updateReserveFields()
+                console.log('Resercing...')
                 showSuccessMsg('Your trip was booked')
             } catch (err) {
                 console.log('Cannot reserve')
@@ -52,13 +53,11 @@ export const FormReserve = ({ stay }) => {
     const calcTotalPrice = () => {
         console.log('Stay price', stay.price);
         console.log('Nights', calcTotalNights());
-
         return calcTotalNights() * (stay.price * reserve.guests.total)
-
     }
+
     const calcTotalNights = () => {
         return (new Date(dates.checkOut) - new Date(dates.checkIn)) / (1000 * 60 * 60 * 24)
-
     }
 
     const getGuestsForDisplay = () => {
@@ -70,8 +69,7 @@ export const FormReserve = ({ stay }) => {
 
     const totalNights = calcTotalNights()
     const totalPrice = calcTotalPrice()
-    console.log('TOTAL PRICE', totalPrice);
-
+    console.log('TOTAL PRICE', totalPrice)
 
     return <div className="form-reserve">
         <div className="order-data">
@@ -91,7 +89,6 @@ export const FormReserve = ({ stay }) => {
                 </div>
             </div>
         </div>
-
 
         <div onClick={onReserve} className="btn-container">
             {_.times(99, (i) => <div key={i} className="cell"></div>)}
