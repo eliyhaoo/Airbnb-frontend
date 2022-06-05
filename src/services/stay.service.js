@@ -12,7 +12,8 @@ export const stayService = {
     save,
     remove,
     getCategories,
-
+    getStaysMinPrice,
+    getStaysMaxPrice
     // getEmptyStay,
     // subscribe,
     // unsubscribe

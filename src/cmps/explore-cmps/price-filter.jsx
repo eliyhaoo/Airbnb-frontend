@@ -13,6 +13,7 @@ import { stayService } from '../../services/stay.service'
 
 function ValueLabelComponent(props) {
     const { children, value } = props
+    
     return (
         <Tooltip enterTouchDelay={0} placement="top" title={value}>
             {children}
