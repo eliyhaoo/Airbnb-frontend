@@ -10,10 +10,11 @@ import { useSelector } from "react-redux"
 import { useState } from 'react'
 
 import { stayService } from '../../services/stay.service'
+import { utilService } from '../../services/util.service'
 
 function ValueLabelComponent(props) {
     const { children, value } = props
-    
+
     return (
         <Tooltip enterTouchDelay={0} placement="top" title={value}>
             {children}
@@ -72,21 +73,22 @@ AirbnbThumbComponent.propTypes = {
     children: PropTypes.node,
 }
 
-export const PriceFilter = ({ onSetPrice }) => {
+export const PriceFilter = ({ onSetPrice, price }) => {
 
     const { stays } = useSelector(storeState => storeState.stayModule)
-    const minPrice = stayService.getStaysMinPrice(stays)
-    const maxPrice = stayService.getStaysMaxPrice(stays)
+    const minPrice = utilService.getStaysMinPrice(stays)
+    const maxPrice = utilService.getStaysMaxPrice(stays)
 
-    return (
+
+    return <section className="price-filter full-width">
         <Box sx={{ width: 320 }}>
             <Box sx={{ m: 3 }} />
-            <Typography gutterBottom>The average nightly price is</Typography>
+            <Typography gutterBottom></Typography>
             <AirbnbSlider
                 name='price'
                 disableSwap
                 onChange={(ev) => onSetPrice({ min: ev.target.value[0], max: ev.target.value[1] })}
-                valueLabelDisplay="on"
+                // valueLabelDisplay="on"
                 components={{ Thumb: AirbnbThumbComponent }}
                 getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
                 defaultValue={[minPrice, maxPrice]}
@@ -94,6 +96,25 @@ export const PriceFilter = ({ onSetPrice }) => {
                 max={maxPrice}
             />
         </Box>
-    )
+        <div className="price-filter-container flex ">
+            <div className="min-max-price-filter">
+                <div className="price-container">min price</div>
+                <div className="price">
+                    <span>$</span>
+                    {price ? price.min : minPrice}
+                </div>
+            </div>
+            <div className="minus-price-filter">-</div>
+            <div className="min-max-price-filter">
+                <div className="price-container">max price</div>
+                <div className="price">
+                    <span>$</span>
+                    {/* {price ? price.max : maxPrice} */}
+                    {price ? utilService.getPriceWithCommas(price.max) : utilService.getPriceWithCommas(maxPrice)}
+                </div>
+            </div>
+        </div>
+    </section>
+
 }
 
