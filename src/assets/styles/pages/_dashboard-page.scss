@@ -1,48 +1,5 @@
 .dashboard-page {
 
-    .dashboard-header {
-        height: 8vh;
-        cursor: pointer;
-        // border-bottom: 1px solid #e4e4e4;
-
-        .header-content-container {
-            padding: 14px 0px
-        }
-
-        .dashboard-page-nav {
-            >* {
-                padding: 10px 16px;
-                display: inline-block;
-
-                a {
-                   
-                    position: relative;
-
-                    .after-container {
-                        &::before {
-                            content: "⎯";
-                            bottom: 0px;
-                            height: 2px;
-                            left: 50%;
-                            margin-left: -9px;
-                            position: absolute;
-
-                        }
-                    }
-                }
-
-                // &:hover{
-                //     border-bottom: 1px solid $secondary
-                // }
-                &:hover {
-                    border-radius: 40px;
-                    background-color: rgba(235, 235, 235, 0.357);
-                   
-                }
-            }
-        }
-    }
-
     .main-dashboard {
         min-height: 80vh;
         // background-color: aqua;

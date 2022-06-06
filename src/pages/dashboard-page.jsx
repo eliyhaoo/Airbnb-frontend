@@ -54,7 +54,7 @@ export const DashboardPage = (props) => {
 
     return <section className="dashboard-page full main-layout">
 
-        <DashboardHeader user={user} />
+        {/* <DashboardHeader user={user} /> */}
         <UserStats />
 
         <main className="main-dashboard">

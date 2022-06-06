@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import React,{ useEffect, useRef, useState } from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { StaySearch } from './stay-search'
@@ -10,6 +10,7 @@ import logoSvg from '../assets/svg/logo.svg'
 import languageSvg from '../assets/svg/lang-header.svg'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
+import { DashboardHeader } from './dashboard-cmps/dashboard-header'
 
 
 
@@ -61,7 +62,7 @@ const _AppHeader = ({ history }) => {
     }
 
 
-    return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
+    return visitedPage === 'dashboard-page' ? <DashboardHeader user={user} /> : <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
         <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
             <div className="header-content-container flex space-between align-center">
                 <NavLink to='/'><h2 className='logo-img flex space-between'><img src={logoSvg} />
@@ -78,7 +79,13 @@ const _AppHeader = ({ history }) => {
 
                     <div className="box user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
                         <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
-                        {user ? <img className="user-img" src={user.imgUrl} alt="user" /> : <img className="user-avatar" src={userAvatarSvg} alt="user" />}
+                        {user ?
+                            <div className="dashboard-host-options">
+                                <img className="user-img" src={user.imgUrl} alt="user" />
+                                <div className="new-info-indicator"></div>
+                            </div>
+                            :
+                            <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
                         <div className={`user-options-container ${modalUserOptions && 'open'}`}>
                             <UserOptions />
