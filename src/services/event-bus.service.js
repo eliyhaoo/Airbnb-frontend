@@ -1,6 +1,6 @@
 function on(eventName, listener) {
     const callListener = ({ detail }) => {
-        listener(detail);
+        listener(detail)
     }
     window.addEventListener(eventName, callListener);
     return () => {
