@@ -13,7 +13,23 @@ export const CategoriesCarousel = ({ categories }) => {
   }
 
   return (
-    <Carousel cols={14} rows={1} gap={10} responsiveLayout={[
+    <Carousel loop={false} cols={14} rows={1} gap={10} responsiveLayout={[
+      {
+        breakpoint: 3000,
+        cols: 14,
+        rows: 1,
+        gap: 15,
+        // loop: true,
+        // autoplay: 1000
+      },
+      {
+        breakpoint: 1800,
+        cols: 14,
+        rows: 1,
+        gap: 12,
+        // loop: true,
+        // autoplay: 1000
+      },
       {
         breakpoint: 1500,
         cols: 10,
@@ -21,8 +37,34 @@ export const CategoriesCarousel = ({ categories }) => {
         gap: 10,
         // loop: true,
         // autoplay: 1000
+      },
+      {
+        breakpoint: 1000,
+        cols: 10,
+        rows: 1,
+        gap: 10,
+        // loop: true,
+        // autoplay: 1000
+      },
+      {
+        breakpoint: 600,
+        cols: 6,
+        rows: 1,
+        gap: 10,
+        // loop: true,
+        // autoplay: 1000
+      },
+      {
+        breakpoint: 500,
+        cols: 8,
+        rows: 1,
+        gap: 5,
+        // loop: true,
+        // autoplay: 1000
       }
-    ]} loop>
+
+
+    ]}>
       {categories.map((category, idx) =>
         <Carousel.Item key={idx}>
           <div key={idx} className={(activeCategory === category.title) ?
