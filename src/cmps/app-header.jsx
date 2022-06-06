@@ -64,10 +64,11 @@ const _AppHeader = ({ history }) => {
     return <header onClick={onCloseSearchBig} className={`app-header ${gVisitedPage.current !== 'home-page' ? 'pages' : ''} full home-page-layout  ${isSearchOpen ? '' : 'close'}`}>
         <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
             <div className="header-content-container flex space-between align-center">
-
-                <NavLink to='/'><h2><img src={logoSvg} /></h2></NavLink>
+                <div className='logo-container flex align-center space-between'>
+                    <NavLink to='/'><h2 className='logo-img flex'><img src={logoSvg} /></h2></NavLink>
+                    <span className="app-name">homebnb</span>
+                </div>
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
-
                 <div className="box user-nav-container flex space-between align-center">
                     <nav className="box main-nav flex space-between align-items">
                         {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}

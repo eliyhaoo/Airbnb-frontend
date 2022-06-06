@@ -108,6 +108,15 @@
 
             }
         }
+
+        .app-name {
+            font-size: rem(23px);
+            color: $primary;
+            font-weight: 700;
+            font-family: cereal-bold;
+            width: 88%;
+            letter-spacing: -0.04em;
+        }
     }
 
     &.close {
