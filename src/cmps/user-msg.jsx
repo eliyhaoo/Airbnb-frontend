@@ -16,9 +16,9 @@ export class UserMsg extends React.Component {
     this.removeEvent = eventBusService.on('show-user-msg', (msg) => {
       console.log('GETTING MSG', msg);
       this.setState({ msg })
-      // setTimeout(() => {
-      //   this.setState({ msg: null })
-      // }, 2500)
+      setTimeout(() => {
+        this.setState({ msg: null })
+      }, 2500)
     })
   }
 
