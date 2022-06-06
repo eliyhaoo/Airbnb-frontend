@@ -1,69 +1,72 @@
 .stay-details-page {
     margin-bottom: 165px;
-    margin-top: 90px;
+    margin-top: rem(105px);
     font-size: 1rem;
-    color:$secondary;
+    color: $secondary;
 
-    .stay-name-details{
-        padding-top: rem(15px);
-    }
-
-    .stay-details-container{
+    .stay-details-container {
         width: 100%;
         align-items: center;
         padding-top: em(10px);
         justify-content: space-between;
         font-family: 'cereal-medium';
-        font-size: 15px;
-    
-        .stay-review-details{
+        font-size: rem(15px);
+
+        .stay-review-details {
             align-items: center;
             gap: 5px;
-            
-                img{
-                    height: 38px;
-                    aspect-ratio: 0.4;
-                    align-items: center;
-                }
 
-                .num-of-reviews{
-                    text-decoration: underline;
-                }
+            img {
+                height: rem(38px);
+                aspect-ratio: 0.4;
+                align-items: center;
+            }
 
-                .dot{
-                    padding-right: em(4px);
-                    padding-left: em(4px);
-                }
-                .reviews{
-                    text-decoration: underline;
-                }
+            .num-of-reviews {
+                text-decoration: underline;
+            }
+
+            .dot {
+                padding-right: em(4px);
+                padding-left: em(4px);
+            }
+
+            .reviews {
+                text-decoration: underline;
+            }
         }
-            .actions-container{
-                span{
-                    text-decoration: underline;
+
+        .actions-container {
+            span {
+                text-decoration: underline;
+            }
+
+            .action-container {
+                align-items: center;
+                // margin-right: 14px;
+                padding: 8px;
+                border-radius: 8px;
+                cursor: pointer;
+
+                img {
+                    padding-right: 5px;
                 }
-                .action-container{
-                    align-items: center;
-                    // margin-right: 14px;
-                    padding: 8px;
-                    border-radius: 8px;
-                    cursor: pointer;
-                        img {
-                            padding-right: 5px;
-                        }
-                        .share-img{
-                            height: 20px;
-                            width: 22px;
-                        }
-                        .save-img{
-                            height: 17px;
-                            width: 22px;
-                        }
-                    &:hover{
-                        background-color: $footer;
-                    }
+
+                .share-img {
+                    height: 20px;
+                    width: 22px;
+                }
+
+                .save-img {
+                    height: 17px;
+                    width: 22px;
+                }
+
+                &:hover {
+                    background-color: $footer;
                 }
             }
+        }
     }
 
     .details-img-container {
@@ -121,20 +124,21 @@
         grid-template-areas:
             "info reserve";
 
-        .stay-description{
+        .stay-description {
             padding-top: em(32px);
             padding-bottom: em(32px);
             border-bottom: 1px solid $borderClr;
-            p{
+
+            p {
                 margin: 0;
                 font-size: 17px;
                 letter-spacing: 0.3px;
                 line-height: 24px;
             }
 
-            .stay-info-txt p{
+            .stay-info-txt p {
 
-                    margin-bottom: 10px;     
+                margin-bottom: 10px;
             }
         }
 
