@@ -23,10 +23,11 @@
     }
 
     .stats-img-container{
-        background-color: $primary;
-        height: 80%;
+        height: 88%;
+        padding: 6px 8px;
         border-radius: 4px;
-        aspect-ratio: 1;
+        aspect-ratio: 1/1;
+        align-self: center;
     }
 
 }
