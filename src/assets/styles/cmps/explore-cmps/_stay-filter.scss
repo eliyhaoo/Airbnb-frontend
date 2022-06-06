@@ -48,20 +48,70 @@
 
         .filter-type {
 
-            // .price-range-container{
-            //     align-items: center;
-            //     justify-content: center;
-            //     margin-top: rem(28px);
 
             .price-filter-container{
-                display: flex;
                 align-items: center;
-                
+                justify-content: center;
+                padding: 0 10px;
+
+                .min-max-price-filter{
+                    min-height: 60px;
+                    width: 100%;
+                    border-radius: 8px;
+                    box-shadow: $btnBorderClr 0px 0px 0px 1px inset;
+                    padding: 10px;
+
+                    .price-container{
+                        color: $btnBorderClr;
+                    }
+
+                    .price{
+                        font-family: cereal-book;
+                        padding: 5px 0;
+                        font-size: 17px;
+                        color:$secondary;
+
+                        span{
+                            margin-inline-end: 5px;
+                        }
+                    }
+
+                }
+
+                .minus-price-filter{
+                    margin:8px;
+                    font-size:16px;
+                }
+
+
                 .css-1hjq20a{
-                     width: 75%;
+                     width: 100%;
                  }
 
             }
+
+        .css-j204z7-MuiFormControlLabel-root{
+            height: 32px;
+            }
+
+        .css-i4bv87-MuiSvgIcon-root {
+                // fill:rgb(176,176,176)
+                }
+
+        .css-1vgzwi7-MuiFormControl-root {
+            margin: 0;
+        }
+
+        .css-ahj2mt-MuiTypography-root{
+            font-size: rem(16px);
+        }
+
+        .css-1d1r5q-MuiFormHelperText-root {
+                font-size: 15px;
+                line-height: 18px; 
+                margin-left: 36px;
+                color:$btnBorderClr
+        }
 
             .css-k008qs {
                 width: 100%;
