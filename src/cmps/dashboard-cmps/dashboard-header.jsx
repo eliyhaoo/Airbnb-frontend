@@ -26,7 +26,7 @@ export const DashboardHeader = ({ user }) => {
                     </NavLink ></li>
 
 
-                    <li className='active'>Stays</li>
+                    <li className='active'>Listings</li>
 
                     <li><NavLink to="dashboard/trip">
                         <div className="after-container">
