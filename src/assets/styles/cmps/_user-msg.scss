@@ -3,9 +3,10 @@
     padding: 10px;
     font-size: 1.4em;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 150px;
+    right: 30px;
     background-color: grey;
+    height:500px;
 }
 
 .user-msg button {
@@ -16,10 +17,12 @@
     background-color: #222;
 }
 
-.user-msg.success {
-    background-color: rgb(41, 189, 73);
-}
+.user-msg{
 
-.user-msg.danger {
-    background-color: rgb(216, 59, 59);
+    &.success {
+        background-color: rgb(41, 189, 73);
+    }
+    &.danger {
+        background-color: rgb(216, 59, 59);
+    }
 }
