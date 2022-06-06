@@ -5,7 +5,8 @@ import { httpService } from './http.service.js'
 
 
 export const reservationService = {
-    save
+    save,
+    query
 
 }
 
@@ -13,13 +14,12 @@ export const reservationService = {
 async function save(newReservation) {
 
     // newReservation.buyerId = userService.getLoggedinUser()
-
-    return await httpService.post('reservation', newReservation)
-
-
+    return  httpService.post('reservation', newReservation)
 
 }
 
-
+async function query(filterBy){
+    return httpService.get('reservation', filterBy)
+}
 
 

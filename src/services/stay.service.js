@@ -13,8 +13,9 @@ export const stayService = {
     remove,
     getCategories,
     getStaysMinPrice,
-    getStaysMaxPrice
+    getStaysMaxPrice,
     // getEmptyStay,
+    
     // subscribe,
     // unsubscribe
 
@@ -31,7 +32,7 @@ export const stayService = {
 // }
 
 async function query(filterBy) {
-    const { category, searchBy, properties } = filterBy
+    console.log('FIlterBffsafsafasfsafasy',filterBy);
     return httpService.get('stay', filterBy)
 }
 
@@ -170,7 +171,7 @@ const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Camping', img: 'camping' },
 { title: 'Beachfront', img: 'beachfront' },
 { title: 'Iconic Cities', img: 'iconiccities' },
-{ title: 'Luxe', img: 'luxe' }
+{ title: 'Luxe', img: 'luxe'}
 ]
 
 

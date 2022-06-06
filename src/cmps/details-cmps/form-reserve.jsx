@@ -6,6 +6,7 @@ import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.j
 import { utilService } from '../../services/util.service'
 import _ from 'lodash'
 import { reservationService } from '../../services/reservation.service'
+import {socketService,SOCKET_EMIT_RESERVATION}from '../../services/socket.service'
 
 
 export const FormReserve = ({ stay }) => {
@@ -19,18 +20,20 @@ export const FormReserve = ({ stay }) => {
 
     const { dates, guests } = reserve
 
-
-
     const onCloseModal = (ev) => {
         ev.stopPropagation()
         setModal(false)
     }
 
+
+
     const onReserve = async () => {
         if (user !== 'guest') {
 
             try {
-                await reservationService.save(updateReserveFields())
+                const updatedReservation = updateReserveFields()
+                await reservationService.save(updatedReservation)
+                socketService.emit(SOCKET_EMIT_RESERVATION, updatedReservation)
                 showSuccessMsg('Your trip was booked')
             } catch (err) {
                 console.log('Cannot reserve')

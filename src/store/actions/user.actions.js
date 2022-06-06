@@ -67,11 +67,12 @@ export function loadUser() {
 }
 
 export function updateUser(user) {
-
+    console.log('USER BEFORE UPDATE',user);
     return async dispatch => {
         try {
             // const user = await userService.getLoggedinUser()
-            user = userService.update(user)
+            user = await userService.update(user)
+            console.log('USER AFTER UPDATE',user);
             dispatch({ type: 'UPDATE_USER', user })
         } catch (err) {
             console.log('UserAction: err in update user', err)

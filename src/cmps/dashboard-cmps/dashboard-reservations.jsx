@@ -21,182 +21,184 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import { StatusActionSelect } from './status-action-select';
 import { visuallyHidden } from '@mui/utils';
+import { reservationService } from '../../services/reservation.service';
 
 
-const reservations =   [
-    {
-        "_id": "61f907caa7cf85901696d591",
-        "hostId": "61f3b204da15b10b906xxe58",
-        "buyerId": "61f3b2ddd995b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"1 BR bla bla",
-        "totalPrice": 2822.8,
-        "dates": {
-            "checkIn": "may-02",
-            "checkOut": "may-05"
-        },
-        "guests": {
-            "total": 6,
-            "adults": 4,
-            "children": 2,
-            "infants": 0
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f907caa7cf680016974491",
-        "hostId": "61f3b204da18510b90629e58",
-        "buyerId": "61f3b5ddda15b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"3 BR bla bla",
-        "totalPrice": 1582,
-        "dates": {
-            "checkIn": "may-02",
-            "checkOut": "may-05"
-        },
-        "guests": {
-            "total": 3,
-            "adults": 1,
-            "children": 2,
-            "infants": 0
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f907caa7cf36501696d591",
-        "hostId": "61f3b204da17410b90629e58",
-        "buyerId": "6173b2ddda15b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"2 BR blsaassasa bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "",
-            "checkOut": ""
-        },
-        "guests": {
-            "total": 2,
-            "adults": 2,
-            "children": 0,
-            "infants": 0
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "968907caa7cf68014296d591",
-        "hostId": "61f3b2048515b10b90629e58",
-        "buyerId": "61f3b2ddda15b10b92029e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"2 BR bla bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "may-02",
-            "checkOut": "may-05"
-        },
-        "guests": {
-            "total": 8,
-            "adults": 6,
-            "children": 1,
-            "infants": 1
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f90789a7cf68001696c591",
-        "hostId": "61f3b204da15b12090629e58",
-        "buyerId": "61f3b2dd7715b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"9 BR bla bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "may-02",
-            "checkOut": "may-05"
-        },
-        "guests": {
-            "total": 3,
-            "adults": 2,
-            "children": 0,
-            "infants": 1
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f90789a7cf68001696c552",
-        "hostId": "61f3b2049815b10b90629e58",
-        "buyerId": "61f3b263da15b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"3 BR 232 bla bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "",
-            "checkOut": ""
-        },
-        "guests": {
-            "total": 1,
-            "adults": 1,
-            "children": 0,
-            "infants": 0
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f907caacc468001696d591",
-        "hostId": "61f3b2055a15b10b90629e58",
-        "buyerId": "61f3bbbdda15b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"1333 BR bla bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "",
-            "checkOut": ""
-        },
-        "guests": {
-            "total": 4,
-            "adults": 2,
-            "children": 2,
-            "infants": 0
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f907cac7cf68001696d591",
-        "hostId": "61f3b204da15b10550629e58",
-        "buyerId": "61f3bsddda15b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"33 BR bla2222 bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "",
-            "checkOut": ""
-        },
-        "guests": {
-            "total": 3,
-            "adults": 2,
-            "children": 1,
-            "infants": 0
-        },
-        "status": "Approved"
-    },
-    {
-        "_id": "61f907caa72228001696d591",
-        "hostId": "61f31104da15b10b90629e58",
-        "buyerId": "61f3b2dd8815b10b90629e59",
-        "stayId": "61ef1c92652f5891aa7bc38a",
-        "listingName":"333332 BR23 bla bla",
-        "totalPrice": 745,
-        "dates": {
-            "checkIn": "",
-            "checkOut": ""
-        },
-        "guests": {
-            "total": 5,
-            "adults": 2,
-            "children": 3,
-            "infants": 0
-        },
-        "status": "Approved"
-    }
-]
+// const reservations =   [
+//     {
+//         "_id": "61f907caa7cf85901696d591",
+//         "hostId": "61f3b204da15b10b906xxe58",
+//         "buyerId": "61f3b2ddd995b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"1 BR bla bla",
+//         "totalPrice": 2822.8,
+//         "dates": {
+//             "checkIn": "may-02",
+//             "checkOut": "may-05"
+//         },
+//         "guests": {
+//             "total": 6,
+//             "adults": 4,
+//             "children": 2,
+//             "infants": 0
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "61f907caa7cf680016974491",
+//         "hostId": "61f3b204da18510b90629e58",
+//         "buyerId": "61f3b5ddda15b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"3 BR bla bla",
+//         "totalPrice": 1582,
+//         "dates": {
+//             "checkIn": "may-02",
+//             "checkOut": "may-05"
+//         },
+//         "guests": {
+//             "total": 3,
+//             "adults": 1,
+//             "children": 2,
+//             "infants": 0
+//         },
+//         "status": "pending"
+//     },
+//     {
+//         "_id": "61f907caa7cf36501696d591",
+//         "hostId": "61f3b204da17410b90629e58",
+//         "buyerId": "6173b2ddda15b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"2 BR blsaassasa bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "",
+//             "checkOut": ""
+//         },
+//         "guests": {
+//             "total": 2,
+//             "adults": 2,
+//             "children": 0,
+//             "infants": 0
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "968907caa7cf68014296d591",
+//         "hostId": "61f3b2048515b10b90629e58",
+//         "buyerId": "61f3b2ddda15b10b92029e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"2 BR bla bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "may-02",
+//             "checkOut": "may-05"
+//         },
+//         "guests": {
+//             "total": 8,
+//             "adults": 6,
+//             "children": 1,
+//             "infants": 1
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "61f90789a7cf68001696c591",
+//         "hostId": "61f3b204da15b12090629e58",
+//         "buyerId": "61f3b2dd7715b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"9 BR bla bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "may-02",
+//             "checkOut": "may-05"
+//         },
+//         "guests": {
+//             "total": 3,
+//             "adults": 2,
+//             "children": 0,
+//             "infants": 1
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "61f90789a7cf68001696c552",
+//         "hostId": "61f3b2049815b10b90629e58",
+//         "buyerId": "61f3b263da15b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"3 BR 232 bla bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "",
+//             "checkOut": ""
+//         },
+//         "guests": {
+//             "total": 1,
+//             "adults": 1,
+//             "children": 0,
+//             "infants": 0
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "61f907caacc468001696d591",
+//         "hostId": "61f3b2055a15b10b90629e58",
+//         "buyerId": "61f3bbbdda15b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"1333 BR bla bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "",
+//             "checkOut": ""
+//         },
+//         "guests": {
+//             "total": 4,
+//             "adults": 2,
+//             "children": 2,
+//             "infants": 0
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "61f907cac7cf68001696d591",
+//         "hostId": "61f3b204da15b10550629e58",
+//         "buyerId": "61f3bsddda15b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"33 BR bla2222 bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "",
+//             "checkOut": ""
+//         },
+//         "guests": {
+//             "total": 3,
+//             "adults": 2,
+//             "children": 1,
+//             "infants": 0
+//         },
+//         "status": "Approved"
+//     },
+//     {
+//         "_id": "61f907caa72228001696d591",
+//         "hostId": "61f31104da15b10b90629e58",
+//         "buyerId": "61f3b2dd8815b10b90629e59",
+//         "stayId": "61ef1c92652f5891aa7bc38a",
+//         "listingName":"333332 BR23 bla bla",
+//         "totalPrice": 745,
+//         "dates": {
+//             "checkIn": "",
+//             "checkOut": ""
+//         },
+//         "guests": {
+//             "total": 5,
+//             "adults": 2,
+//             "children": 3,
+//             "infants": 0
+//         },
+//         "status": "Approved"
+//     }
+// ]
 
 
 
@@ -211,6 +213,8 @@ function descendingComparator(a, b, orderBy) {
 }
 
 function getComparator(order, orderBy) {
+    console.log('TEST ORDER',order);
+    console.log('TEST ORDERBy',orderBy);
     return order === 'desc'
         ? (a, b) => descendingComparator(a, b, orderBy)
         : (a, b) => -descendingComparator(a, b, orderBy);
@@ -244,13 +248,13 @@ const headCells = [
         label: 'Guests',
     },
     {
-        id: 'check-in',
+        id: 'checkIn',
         numeric: true,
         disablePadding: false,
         label: 'Check-in',
     },
     {
-        id: 'check-out',
+        id: 'checkOut',
         numeric: true,
         disablePadding: false,
         label: 'Check-out',
@@ -262,13 +266,13 @@ const headCells = [
         label: 'Booked',
     },
     {
-        id: 'listing',
+        id: 'listingName',
         numeric: false,
         disablePadding: false,
         label: 'Listing',
     },
     {
-        id: 'total-payout',
+        id: 'totalPrice',
         numeric: true,
         disablePadding: false,
         label: 'Total Payout',
@@ -285,6 +289,7 @@ function EnhancedTableHead(props) {
     const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
         props;
     const createSortHandler = (property) => (event) => {
+        console.log('Property go to sort',property);
         onRequestSort(event, property);
     };
 
@@ -304,10 +309,10 @@ function EnhancedTableHead(props) {
                 </TableCell>
                 {headCells.map((headCell) => (
                     <TableCell
-                        key={headCell.id}
-                        align={headCell.numeric ? 'right' : 'left'}
-                        padding={headCell.disablePadding ? 'none' : 'normal'}
-                        sortDirection={orderBy === headCell.id ? order : false}
+                    key={headCell.id}
+                    align={headCell.numeric ? 'right' : 'left'}
+                    padding={headCell.disablePadding ? 'none' : 'normal'}
+                    sortDirection={orderBy === headCell.id ? order : false}
                     >
                         <TableSortLabel
                             active={orderBy === headCell.id}
@@ -392,16 +397,38 @@ EnhancedTableToolbar.propTypes = {
     numSelected: PropTypes.number.isRequired,
 };
 
-export const   DashboardReservations=()=> {
+export const DashboardReservations=()=> {
     const [order, setOrder] = React.useState('asc');
     const [orderBy, setOrderBy] = React.useState('calories');
     const [selected, setSelected] = React.useState([]);
     const [page, setPage] = React.useState(0);
     const [dense, setDense] = React.useState(false);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [reservations, setReservation] = React.useState(null);
+
+    const user = {
+        _id: '622f3403e66c58e6164faf93',
+        imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
+        isHost: true,
+        wishList: ['6297cb852f760e2ec9f8244b']
+    }
+
+    React.useEffect(()=>{
+        loadReservations()
+    },[])
+    
+    const loadReservations = async()=>{
+        const hostReservations= await reservationService.query({hostId:user._id})
+        console.log('HOST RESERVTATIONS',hostReservations);
+        setReservation(hostReservations)
+        
+    }
 
     const handleRequestSort = (event, property) => {
+        console.log('PROPA PROPRERRERTY',property);
+        console.log('PROPA PROPRERRERTY evevnttentntte',event);
         const isAsc = orderBy === property && order === 'asc';
+        console.log('IS ASCC BITCH' , isAsc);
         setOrder(isAsc ? 'desc' : 'asc');
         setOrderBy(property);
     };
@@ -458,6 +485,7 @@ export const   DashboardReservations=()=> {
     const emptyRows =
         page > 0 ? Math.max(0, (1 + page) * rowsPerPage - reservations.length) : 0;
 
+    if (!reservations) return <div className="loader"></div> 
     return (
         <Box sx={{ width: '100%' }}>
             <Paper sx={{ width: '100%', mb: 2 }}>
@@ -512,13 +540,14 @@ export const   DashboardReservations=()=> {
                                             >
                                                 {reservation.status}
                                             </TableCell>
-                                            <TableCell align="right">{reservation.guests.total}</TableCell>
-                                            <TableCell align="right">{reservation.dates.checkIn}</TableCell>
-                                            <TableCell align="right">{reservation.dates.checkOut}</TableCell>
+                                            <TableCell align="right">{reservation.guests}</TableCell>
+                                            <TableCell align="right">{reservation.checkIn}</TableCell>
+                                            <TableCell align="right">{reservation.checkOut}</TableCell>
                                             <TableCell align="right">{'BOOKED AT'}</TableCell>
                                             <TableCell align="right">{reservation.listingName}</TableCell>
                                             <TableCell align="right">${reservation.totalPrice}</TableCell>
-                                            <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell>
+                                            <TableCell align="right"><StatusActionSelect currStatus={reservation.status}/></TableCell>
+                                            {/* <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell> */}
                                         </TableRow>
                                     );
                                 })}
@@ -552,4 +581,3 @@ export const   DashboardReservations=()=> {
     );
 }
 
-{/* <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button> */}

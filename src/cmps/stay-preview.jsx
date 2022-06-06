@@ -4,15 +4,16 @@ import { utilService } from '../services/util.service';
 import starSvg from '../assets/svg/star.svg'
 import heartGreySvg from '../assets/svg/heart-grey.svg'
 import heartPinkSvg from '../assets/svg/heart-pink.svg'
+import React from "react";
 
 export const StayPreview = ({ stay, history, onToggleInWishList, checkIsInWishList }) => {
 
     return <div className="stay-preview flex direction-column">
         <div className="preview-imgs-container">
-            {checkIsInWishList(stay._id) ?
+            {onToggleInWishList && <React.Fragment> {checkIsInWishList(stay._id) ?
                 <img className={'heart-svg'} onClick={(ev) => onToggleInWishList(ev, stay._id)} src={heartPinkSvg} />
                 :
-                <img className={'heart-svg'} onClick={(ev) => onToggleInWishList(ev, stay._id)} src={heartGreySvg} />}
+                <img className={'heart-svg'} onClick={(ev) => onToggleInWishList(ev, stay._id)} src={heartGreySvg} />}</React.Fragment>}
 
             <CarouselComponent stayImgUrls={stay.imgUrls} stayId={stay._id} history={history} />
         </div>
