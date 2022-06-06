@@ -51,5 +51,10 @@
 
     .host-img {
         height: 34px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 10px;
     }
+    
 }

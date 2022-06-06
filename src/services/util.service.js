@@ -5,6 +5,8 @@ export const utilService = {
     delay,
     checkForPlurals,
     getPriceWithCommas,
+    getStaysMinPrice,
+    getStaysMaxPrice,
     getMonthName
 }
 
@@ -31,6 +33,14 @@ function makeLorem(size = 100) {
         txt += words[Math.floor(Math.random() * words.length)] + ' ';
     }
     return txt;
+}
+
+function getStaysMinPrice(stays) {
+    return Math.min(...stays.map(stay => stay.price))
+}
+
+function getStaysMaxPrice(stays) {
+    return Math.max(...stays.map(stay => stay.price))
 }
 
 function getRandomIntInclusive(min, max) {

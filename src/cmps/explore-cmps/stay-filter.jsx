@@ -61,8 +61,9 @@ export const StayFilter = ({ showFilterModal, history }) => {
 
                 <div className="filter-type price-range">
                     <h2>Price range</h2>
+                    {/* <p>The average nightly price is</p> */}
                     <div className="price-filter-container">
-                        <PriceFilter onSetPrice={onSetPrice} />
+                        <PriceFilter onSetPrice={onSetPrice} price={filterByProperties.price} />
                     </div>
                     {/* <div className="price-range-container flex ">
                         <div className="min-price">min price</div>

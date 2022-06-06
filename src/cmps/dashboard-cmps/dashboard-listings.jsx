@@ -40,7 +40,7 @@ export const DashboardListings = ({ history }) => {
 
         <h2 className="dashboard-title">Listings</h2>
         <div className="stay-list">
-        {listings.map(listing => <StayPreview key={listing._id} stay={listing} history={history} />)}
+            {listings.map(listing => <StayPreview key={listing._id} stay={listing} history={history} />)}
         </div>
 
     </section>

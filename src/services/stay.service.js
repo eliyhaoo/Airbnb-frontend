@@ -1,6 +1,7 @@
 
 import { storageService } from './async-storage.service.js'
 import { httpService } from './http.service.js'
+import { utilService } from './util.service.js'
 
 const STORAGE_KEY = 'stay'
 // const stayChannel = new BroadcastChannel('stayChannel')
@@ -12,10 +13,8 @@ export const stayService = {
     save,
     remove,
     getCategories,
-    getStaysMinPrice,
-    getStaysMaxPrice,
     // getEmptyStay,
-    
+
     // subscribe,
     // unsubscribe
 
@@ -32,7 +31,7 @@ export const stayService = {
 // }
 
 async function query(filterBy) {
-    console.log('FIlterBffsafsafasfsafasy',filterBy);
+    console.log('FIlterBffsafsafasfsafasy', filterBy);
     return httpService.get('stay', filterBy)
 }
 
@@ -82,14 +81,6 @@ async function save(stay) {
     return savedStay
 }
 
-
-function getStaysMinPrice(stays) {
-    return Math.min(...stays.map(stay => stay.price))
-}
-
-function getStaysMaxPrice(stays) {
-    return Math.max(...stays.map(stay => stay.price))
-}
 
 function getCategories() {
     const categories = gCategories
@@ -173,7 +164,7 @@ const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Camping', img: 'camping' },
 { title: 'Beachfront', img: 'beachfront' },
 { title: 'Iconic Cities', img: 'iconiccities' },
-{ title: 'Luxe', img: 'luxe'}
+{ title: 'Luxe', img: 'luxe' }
 ]
 
 
