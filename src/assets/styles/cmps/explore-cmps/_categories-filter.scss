@@ -3,7 +3,7 @@
     z-index: 100;
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(9%, 1fr));
-    width: 92%;
+    // width: 92%;
     justify-items: center;
     height: fit-content;
     // margin-top: 5px;
@@ -15,7 +15,8 @@
         opacity: 0.6;
         margin: 0;
         cursor: pointer;
-
+        width: fit-content;
+        margin: auto;
         // & .category-elements {
         //     width: fit-content;
 

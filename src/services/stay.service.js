@@ -164,7 +164,13 @@ const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Camping', img: 'camping' },
 { title: 'Beachfront', img: 'beachfront' },
 { title: 'Iconic Cities', img: 'iconiccities' },
-{ title: 'Luxe', img: 'luxe' }
+{ title: 'Luxe', img: 'luxe' },
+{ title: 'Cabins', img: 'cabins' },
+{ title: 'Tropical', img: 'tropical' },
+{ title: 'Golfing', img: 'golfing' },
+{ title: 'Countryside', img: 'countryside' }
+
+
 ]
 
 
