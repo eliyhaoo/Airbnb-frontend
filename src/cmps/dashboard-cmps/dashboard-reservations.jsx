@@ -268,7 +268,7 @@ const headCells = [
     },
     {
         id: 'listingName',
-        numeric: false,
+        numeric: true,
         disablePadding: false,
         label: 'Listing',
     },
@@ -290,7 +290,6 @@ function EnhancedTableHead(props) {
     const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
         props;
     const createSortHandler = (property) => (event) => {
-        console.log('Property go to sort', property);
         onRequestSort(event, property);
     };
 
@@ -410,32 +409,21 @@ export const DashboardReservations = () => {
         const { user } = useSelector(storeState => storeState.userModule)
        
 
-            console.log('USER',user);
-    // const user = {
-    //     _id: '629dbc94388d60172ca60aeb',
-    //     imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
-    //     isHost: true,
-    //     wishList: ['6297cb852f760e2ec9f8244b']
-    // }
+
 
     React.useEffect(() => {
         if (!user)return
         loadReservations()
-        socketService.off(SOCKET_ON_RESERVATION_RECEIVED);
-        socketService.on(SOCKET_ON_RESERVATION_RECEIVED, onReservationReceive);
-        return () => {
-            socketService.off(SOCKET_ON_RESERVATION_RECEIVED, loadReservations);
-
-        }
-
+    
     }, [user])
 
-    const onReservationReceive = () => {
-        loadReservations()
-    }
+    // const onReservationReceive = () => {
+    //     loadReservations()
+    // }
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })
+        console.log('Host RESERVA',hostReservations);
   
         setReservation(hostReservations)
 
@@ -490,9 +478,6 @@ export const DashboardReservations = () => {
         setDense(event.target.checked);
     };
 
-    const onReserveClick = () => {
-
-    }
 
     const isSelected = (name) => selected.indexOf(name) !== -1;
 
@@ -531,7 +516,7 @@ export const DashboardReservations = () => {
                                     return (
                                         <TableRow
                                             hover
-                                            onClick={(event) => handleClick(event, reservation.listingName)}
+                                            // onClick={(event) => handleClick(event, reservation.listingName)}
                                             role="checkbox"
                                             aria-checked={isItemSelected}
                                             tabIndex={-1}
@@ -561,7 +546,7 @@ export const DashboardReservations = () => {
                                             <TableCell align="right">{'BOOKED AT'}</TableCell>
                                             <TableCell align="right">{reservation.listingName}</TableCell>
                                             <TableCell align="right">${reservation.totalPrice}</TableCell>
-                                            <TableCell align="right"><StatusActionSelect currStatus={reservation.status} /></TableCell>
+                                            <TableCell align="right"><StatusActionSelect reservation={reservation} loadReservations={loadReservations} /></TableCell>
                                             {/* <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell> */}
                                         </TableRow>
                                     );
