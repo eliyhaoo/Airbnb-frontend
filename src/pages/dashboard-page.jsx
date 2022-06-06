@@ -61,8 +61,8 @@ export const DashboardPage = (props) => {
 
 
             <Switch>
-                {/* <Route path="/dashboard/trip" component={DashboardTrips} /> */}
-                {/* <Route path="/dashboard/wishlist" exact component={DashboardWishlist} /> */}
+                {/* <Route path="/dashboard/" component={DashboardTrips} /> */}
+                {/* <Route path="/dashboard/" exact component={DashboardWishlist} /> */}
                 <Route path="/dashboard/" component={DashboardReservations} />
                 {/* <Route path="/dashboard" component={DashboardListings} /> */}
             </Switch>
