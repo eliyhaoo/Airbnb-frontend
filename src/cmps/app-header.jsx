@@ -65,8 +65,8 @@ const _AppHeader = ({ history }) => {
         <div className={`header-container full ${visitedPage === 'details-page' ? 'details-layout' : visitedPage === 'explore-page' ? 'main-layout' : 'home-page-layout'}`}>
             <div className="header-content-container flex space-between align-center">
                 <div className='logo-container flex align-center space-between'>
-                    <NavLink to='/'><h2 className='logo-img flex'><img src={logoSvg} /></h2></NavLink>
-                    <span className="app-name">homebnb</span>
+                    <NavLink to='/'><h2 className='logo-img flex space-between'><img src={logoSvg} />
+                        <span className="app-name">homebnb</span></h2></NavLink>
                 </div>
                 {!isSearchOpen && <StaySearch setModalOpen={setModalOpen} setSearchToggle={setSearchToggle} setIsBig={setIsBig} />}
                 <div className="box user-nav-container flex space-between align-center">
