@@ -24,6 +24,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { StatusActionSelect } from './status-action-select';
 import { visuallyHidden } from '@mui/utils';
 import { reservationService } from '../../services/reservation.service';
+import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
 
 
 // const reservations =   [
@@ -213,8 +214,7 @@ function descendingComparator(a, b, orderBy) {
 }
 
 function getComparator(order, orderBy) {
-    console.log('TEST ORDER',order);
-    console.log('TEST ORDERBy',orderBy);
+
     return order === 'desc'
         ? (a, b) => descendingComparator(a, b, orderBy)
         : (a, b) => -descendingComparator(a, b, orderBy);
@@ -289,7 +289,7 @@ function EnhancedTableHead(props) {
     const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
         props;
     const createSortHandler = (property) => (event) => {
-        console.log('Property go to sort',property);
+        console.log('Property go to sort', property);
         onRequestSort(event, property);
     };
 
@@ -309,10 +309,10 @@ function EnhancedTableHead(props) {
                 </TableCell>
                 {headCells.map((headCell) => (
                     <TableCell
-                    key={headCell.id}
-                    align={headCell.numeric ? 'right' : 'left'}
-                    padding={headCell.disablePadding ? 'none' : 'normal'}
-                    sortDirection={orderBy === headCell.id ? order : false}
+                        key={headCell.id}
+                        align={headCell.numeric ? 'right' : 'left'}
+                        padding={headCell.disablePadding ? 'none' : 'normal'}
+                        sortDirection={orderBy === headCell.id ? order : false}
                     >
                         <TableSortLabel
                             active={orderBy === headCell.id}
@@ -397,7 +397,7 @@ EnhancedTableToolbar.propTypes = {
     numSelected: PropTypes.number.isRequired,
 };
 
-export const DashboardReservations=()=> {
+export const DashboardReservations = () => {
     const [order, setOrder] = React.useState('asc');
     const [orderBy, setOrderBy] = React.useState('calories');
     const [selected, setSelected] = React.useState([]);
@@ -407,28 +407,40 @@ export const DashboardReservations=()=> {
     const [reservations, setReservation] = React.useState(null);
 
     const user = {
-        _id: '622f3403e66c58e6164faf93',
+        _id: '629dbc94388d60172ca60aeb',
         imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
         isHost: true,
         wishList: ['6297cb852f760e2ec9f8244b']
     }
 
-    React.useEffect(()=>{
+    React.useEffect(() => {
         loadReservations()
-    },[])
-    
-    const loadReservations = async()=>{
-        const hostReservations= await reservationService.query({hostId:user._id})
-        console.log('HOST RESERVTATIONS',hostReservations);
+        socketService.off(SOCKET_ON_RESERVATION_RECEIVED);
+        socketService.on(SOCKET_ON_RESERVATION_RECEIVED, onReservationReceive);
+        return () => {
+            socketService.off(SOCKET_ON_RESERVATION_RECEIVED, loadReservations);
+
+        }
+
+    }, [])
+
+    const onReservationReceive = (data) => {
+        console.log('RECEIVEIVEIVIEIIEDDddsadsad');
+        console.log('RECEIVEIVEIVIEIIEDD', data);
+    }
+
+    const loadReservations = async () => {
+        const hostReservations = await reservationService.query({ hostId: user._id })
+        console.log('HOST RESERVTATIONS', hostReservations);
         setReservation(hostReservations)
-        
+
     }
 
     const handleRequestSort = (event, property) => {
-        console.log('PROPA PROPRERRERTY',property);
-        console.log('PROPA PROPRERRERTY evevnttentntte',event);
+        console.log('PROPA PROPRERRERTY', property);
+        console.log('PROPA PROPRERRERTY evevnttentntte', event);
         const isAsc = orderBy === property && order === 'asc';
-        console.log('IS ASCC BITCH' , isAsc);
+        console.log('IS ASCC BITCH', isAsc);
         setOrder(isAsc ? 'desc' : 'asc');
         setOrderBy(property);
     };
@@ -475,7 +487,7 @@ export const DashboardReservations=()=> {
         setDense(event.target.checked);
     };
 
-    const onReserveClick =()=>{
+    const onReserveClick = () => {
 
     }
 
@@ -485,7 +497,7 @@ export const DashboardReservations=()=> {
     const emptyRows =
         page > 0 ? Math.max(0, (1 + page) * rowsPerPage - reservations.length) : 0;
 
-    if (!reservations) return <div className="loader"></div> 
+    if (!reservations) return <div className="loader"></div>
     return (
         <Box sx={{ width: '100%' }}>
             <Paper sx={{ width: '100%', mb: 2 }}>
@@ -546,7 +558,7 @@ export const DashboardReservations=()=> {
                                             <TableCell align="right">{'BOOKED AT'}</TableCell>
                                             <TableCell align="right">{reservation.listingName}</TableCell>
                                             <TableCell align="right">${reservation.totalPrice}</TableCell>
-                                            <TableCell align="right"><StatusActionSelect currStatus={reservation.status}/></TableCell>
+                                            <TableCell align="right"><StatusActionSelect currStatus={reservation.status} /></TableCell>
                                             {/* <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell> */}
                                         </TableRow>
                                     );

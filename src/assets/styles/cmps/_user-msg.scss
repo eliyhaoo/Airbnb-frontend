@@ -3,10 +3,13 @@
     padding: 10px;
     font-size: 1.4em;
     position: fixed;
-    top: 150px;
-    right: 30px;
+    top: 10vh;
+    right: 280px;
     background-color: grey;
-    height:500px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 20%);
+    // height:500px;
+    padding:15px 20px;
 }
 
 .user-msg button {
@@ -14,13 +17,14 @@
     border: 0;
     border-radius: 50%;
     margin: 5px;
-    background-color: #222;
+    background-color: $secondary;
+    color:$backgroundClr;
 }
 
 .user-msg{
 
     &.success {
-        background-color: rgb(41, 189, 73);
+        background-color: $sucsess;
     }
     &.danger {
         background-color: rgb(216, 59, 59);

@@ -37,7 +37,6 @@ export const StayDetails = ({ history }) => {
                 setStay(stay)
 
                 if (!stay) history.push('/explore')
-                showSuccessMsg('ELIII')
             } catch (err) {
                 console.error(err)
             }
