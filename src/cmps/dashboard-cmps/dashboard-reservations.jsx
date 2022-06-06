@@ -25,6 +25,7 @@ import { StatusActionSelect } from './status-action-select';
 import { visuallyHidden } from '@mui/utils';
 import { reservationService } from '../../services/reservation.service';
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
+import { useSelector } from 'react-redux';
 
 
 // const reservations =   [
@@ -406,14 +407,19 @@ export const DashboardReservations = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const [reservations, setReservation] = React.useState(null);
 
-    const user = {
-        _id: '629dbc94388d60172ca60aeb',
-        imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
-        isHost: true,
-        wishList: ['6297cb852f760e2ec9f8244b']
-    }
+        const { user } = useSelector(storeState => storeState.userModule)
+       
+
+            console.log('USER',user);
+    // const user = {
+    //     _id: '629dbc94388d60172ca60aeb',
+    //     imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
+    //     isHost: true,
+    //     wishList: ['6297cb852f760e2ec9f8244b']
+    // }
 
     React.useEffect(() => {
+        if (!user)return
         loadReservations()
         socketService.off(SOCKET_ON_RESERVATION_RECEIVED);
         socketService.on(SOCKET_ON_RESERVATION_RECEIVED, onReservationReceive);
@@ -422,25 +428,22 @@ export const DashboardReservations = () => {
 
         }
 
-    }, [])
+    }, [user])
 
-    const onReservationReceive = (data) => {
-        console.log('RECEIVEIVEIVIEIIEDDddsadsad');
-        console.log('RECEIVEIVEIVIEIIEDD', data);
+    const onReservationReceive = () => {
+        loadReservations()
     }
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })
-        console.log('HOST RESERVTATIONS', hostReservations);
+  
         setReservation(hostReservations)
 
     }
 
     const handleRequestSort = (event, property) => {
-        console.log('PROPA PROPRERRERTY', property);
-        console.log('PROPA PROPRERRERTY evevnttentntte', event);
+
         const isAsc = orderBy === property && order === 'asc';
-        console.log('IS ASCC BITCH', isAsc);
         setOrder(isAsc ? 'desc' : 'asc');
         setOrderBy(property);
     };
