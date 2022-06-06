@@ -16,6 +16,9 @@ import { StayAmenities } from '../cmps/details-cmps/stay-amenities'
 import { StayGeneralInfo } from '../cmps/details-cmps/stay-general-info'
 import { StayInfo } from '../cmps/details-cmps/stay-info'
 import { Loader } from '../cmps/loader'
+import { AddReview } from '../cmps/details-cmps/add-review'
+import { ReviewList } from '../cmps/details-cmps/review-list'
+
 
 import starSvg from '../assets/svg/star.svg'
 import shareSvg from '../assets/svg/Share.svg'
@@ -41,10 +44,10 @@ export const StayDetails = ({ history }) => {
         })();
     }, [])
 
-    // if (!stay) return <div className="loader">Loading...</div>
+
     if (!stay) return <Loader />
     return <section className="stay-details-page details-layout">
-        {/* <h1 className="stay-name-details">{stay.name}</h1> */}
+
         <h2 className="stay-name-details">{stay.name}</h2>
 
         <div className="stay-details-container flex space-between">
@@ -95,7 +98,11 @@ export const StayDetails = ({ history }) => {
             <StayReserve stay={stay} />
         </section>
 
+
         <StayReview stay={stay} />
+        <ReviewList stay={stay} />
+        <AddReview stay={stay} />
+
         <div className="stay-map">
             {<StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} />}
         </div>

@@ -13,7 +13,6 @@ export const FormReserve = ({ stay }) => {
 
     const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { user } = useSelector(storeState => storeState.userModule)
-    console.log('user from form reserve', user)
 
     const [isModalOpen, setModal] = useState(false)
     const [btnMode, setIsDeley] = useState({ loader: false, reserve: false, btnTxt: "Check availability" })

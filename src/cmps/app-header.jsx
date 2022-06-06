@@ -72,7 +72,7 @@ const _AppHeader = ({ history }) => {
                     <nav className="box main-nav flex space-between align-items">
                         {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}
                         <NavLink to={'/becomehost'}>Become a Host</NavLink>
-                        {user && <NavLink to={`/dashboard`}>Dashboard</NavLink>}
+                        {/* {user && <NavLink to={`/dashboard`}>Dashboard</NavLink>} */}
                         {/* <img src={languageSvg} alt="language" /> */}
 
                     </nav>

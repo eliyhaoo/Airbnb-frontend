@@ -33,10 +33,10 @@ export const StayReview = ({ stay }) => {
                 </div>
             }
             )}
-
         </div>
-        <ReviewList stay={stay} />
-        <AddReview stay={stay} />
+
+        {/* <ReviewList stay={stay} /> */}
+        {/* <AddReview stay={stay} /> */}
 
     </section>
 

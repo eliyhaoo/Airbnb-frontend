@@ -47,7 +47,7 @@ export const DashboardHeader = ({ user }) => {
             </nav>
 
             <div className="dashboard-host-options">
-                {/* <img className="host-img" src={user.imgUrl} /> */}
+                <img className="host-img" src={user.imgUrl} />
             </div>
         </header>
     </div>
