@@ -18,7 +18,7 @@ export const CategoriesCarousel = ({ categories }) => {
         breakpoint: 3000,
         cols: 14,
         rows: 1,
-        gap: 15,
+        gap: 10,
         // loop: true,
         // autoplay: 1000
       },
@@ -26,7 +26,7 @@ export const CategoriesCarousel = ({ categories }) => {
         breakpoint: 1800,
         cols: 14,
         rows: 1,
-        gap: 12,
+        gap: 10,
         // loop: true,
         // autoplay: 1000
       },
