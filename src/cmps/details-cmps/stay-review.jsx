@@ -28,7 +28,7 @@ export const StayReview = ({ stay }) => {
                     <div className={`review-${reviewField}`}>{`${reviewField}`}</div>
                     <div className="review-rates-container flex space-between ">
                         <div><meter value={stay.reviewScores[reviewField]} max="5"></meter></div>
-                        <span>{stay.reviewScores[reviewField]}</span>
+                        <span>{stay.reviewScores[reviewField].toFixed(1)}</span>
                     </div>
                 </div>
             }
