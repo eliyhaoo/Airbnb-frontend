@@ -37,29 +37,20 @@ export const DashboardPage = (props) => {
         dispatch(setVisitPage('dashboard-page'))
     }, [])
 
-
-
     const dispatch = useDispatch()
-
 
     useEffect(() => {
         dispatch(setVisitPage('dashboard-page'))
         if (!user.isHost) {
-
             // props.history.push('/dashboard/trip')
         }
-
     }, [])
 
-
     return <section className="dashboard-page full main-layout">
-
         {/* <DashboardHeader user={user} /> */}
         <UserStats />
 
         <main className="main-dashboard">
-
-
             <Switch>
                 {/* <Route path="/dashboard/" component={DashboardTrips} /> */}
                 {/* <Route path="/dashboard/" exact component={DashboardWishlist} /> */}

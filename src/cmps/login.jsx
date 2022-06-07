@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-import { connect } from "react-redux"
+import { connect } from 'react-redux'
 import { onLogin } from '../store/actions/user.actions'
 
 import { storageService } from '../services/async-storage.service'

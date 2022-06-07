@@ -1,10 +1,7 @@
 import { utilService } from "../../services/util.service"
-
 import { ReviewList } from "../details-cmps/review-list"
 import { AddReview } from './add-review'
-
 import { Loader } from "../loader"
-
 import starSvg from '../../assets/svg/star.svg'
 
 export const StayReview = ({ stay }) => {

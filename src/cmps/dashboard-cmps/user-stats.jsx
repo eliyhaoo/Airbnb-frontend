@@ -1,9 +1,7 @@
-import { useEffect } from "react"
-
-import envelopeSvg from "../../assets/svg/open-reservations.svg"
-import coinSvg from "../../assets/svg/income-coin.svg"
-import starSvg from "../../assets/svg/star.svg"
-import heartSvg from "../../assets/svg/heart.svg"
+import envelopeSvg from '../../assets/svg/open-reservations.svg'
+import coinSvg from '../../assets/svg/income-coin.svg'
+import starSvg from '../../assets/svg/star.svg'
+import heartSvg from '../../assets/svg/heart.svg'
 
 export const UserStats = () => {
     return <div className="user-stats">
@@ -37,7 +35,6 @@ export const UserStats = () => {
                 <div className="stats-title">New Messages</div>
                 <div >
                     <span className="price-span">35</span>
-                    {/* <span className="precentage-span">+53%</span> */}
                 </div>
             </div>
             <div className="stats-img-container">

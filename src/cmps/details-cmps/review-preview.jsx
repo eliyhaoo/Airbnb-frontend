@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { LongTxt } from '../long-txt'
 import { utilService } from '../../services/util.service'
 

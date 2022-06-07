@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { storageService } from "../../services/async-storage.service"
-import { stayService } from "../../services/stay.service"
-import { updateUser } from "../../store/actions/user.actions"
-import { StayPreview } from "../stay-preview"
-import { Loader } from "../loader"
+import { useEffect, useState } from 'react'
+import { stayService } from '../../services/stay.service'
+import { StayPreview } from '../stay-preview'
+import { Loader } from '../loader'
 
 
 export const DashboardListings = ({ history }) => {
 
-
-    // const { user } = useSelector(storeState => storeState.userModule)
     const [listings, setListings] = useState()
 
     const user = {
@@ -32,12 +27,8 @@ export const DashboardListings = ({ history }) => {
         setListings(listings)
     }
 
-
-
-
     if (!listings || !listings.length) return <Loader />
     return <section className="dashboard-listings flex direction-column">
-
 
         <h2 className="dashboard-title">Listings</h2>
         <div className="stay-list">
