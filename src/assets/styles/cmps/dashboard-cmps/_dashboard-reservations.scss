@@ -1,4 +1,17 @@
 
-.reservation-action-btn{
-    border:1px solid green
+// .reservation-action-btn{
+//     border:1px solid green
+// }
+
+.reservation-status-table-head{
+
+    font-family: cereal-medium;
+    font-size: 1rem;
+    &.approved {
+        color:$sucsess;   
+    }
+    &.decline {
+        color:$danger;   
+    }
+
 }

@@ -34,7 +34,7 @@ export const FormReserve = ({ stay }) => {
 
             try {
                 const updatedReservation = updateReserveFields()
-                console.log('RESERVATIONS TPO SEND ', updatedReservation);
+                console.log('RESERVATIONS TPO SEND ', updatedReservation)
                 await reservationService.save(updatedReservation)
                 socketService.emit(SOCKET_EMIT_RESERVATION, updatedReservation)
                 showReservedMsg('Your trip was booked')

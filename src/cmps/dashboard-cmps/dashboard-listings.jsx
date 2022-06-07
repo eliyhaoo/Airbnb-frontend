@@ -4,6 +4,7 @@ import { storageService } from "../../services/async-storage.service"
 import { stayService } from "../../services/stay.service"
 import { updateUser } from "../../store/actions/user.actions"
 import { StayPreview } from "../stay-preview"
+import { Loader } from "../loader"
 
 
 export const DashboardListings = ({ history }) => {
@@ -34,7 +35,7 @@ export const DashboardListings = ({ history }) => {
 
 
 
-    if (!listings || !listings.length) return <div className="loader"></div>
+    if (!listings || !listings.length) return <Loader />
     return <section className="dashboard-listings flex direction-column">
 
 

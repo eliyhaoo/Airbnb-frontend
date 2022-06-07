@@ -1,4 +1,3 @@
-// import { userService } from '../services/user.service.js'
 
 const initialState = {
     stays: [],
@@ -14,13 +13,13 @@ const initialState = {
             price: null,
             beds: '',
             roomType: {
-                'Entire place':  false,
-                'Private room': false, 
+                'Entire place': false,
+                'Private room': false,
                 'Shared room': false
             },
             amenities: {
-                'Wifi':  false,
-                'Kitchen': false, 
+                'Wifi': false,
+                'Kitchen': false,
                 'Heating': false,
                 'Breakfast': false,
                 'Pool': false,

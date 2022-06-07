@@ -24,13 +24,12 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        console.log('SearchByFields', searchByFields);
+        console.log('SearchByFields', searchByFields)
         history.push(`/explore/?location=${searchByFields.location}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
     }
 
     const onSelectedRegion = (region) => {
         setSearchByFields((prevState) => ({ ...prevState, location: region }))
-
     }
 
     const onSetModal = (ev, modal) => {

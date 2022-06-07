@@ -89,7 +89,7 @@ const _AppHeader = ({ history }) => {
                         setSearchToggle={setSearchToggle}
                         setIsBig={setIsBig} />}
 
-                    <div className="box user-nav-container flex space-between align-center">
+                    <div className="box user-nav-container flex align-center">
                         <nav className="box main-nav flex space-between align-items">
                             {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}
                             <NavLink to={'/becomehost'}>Become a Host</NavLink>
