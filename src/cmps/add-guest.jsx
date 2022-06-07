@@ -11,14 +11,15 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests }) => {
     const dispatch = useDispatch()
     const { reserve } = useSelector(storeState => storeState.reserveModule)
 
+
     const [guestsFields, setGuests] = useState(guests)
+
 
     const onUpdateGuests = (field, diff) => {
         const newGuests = { ...guestsFields, [field]: guestsFields[field] + diff, total: guestsFields.total + diff }
         setGuests(newGuests)
         dispatch(updateReserve('guests', newGuests))
         if (setSearchByFields) setSearchByFields((prevState) => ({ ...prevState, guestsNum: newGuests.total }))
-
     }
 
 
@@ -31,15 +32,15 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests }) => {
             <div className="guest-input-container flex space-between align-center">
                 <div className="flex direction-column">
                     <div className="count-input-title">Adults</div>
-                    <div className="count-input-subtitle">Age 13+</div>
+                    <div className="count-input-subtitle">Ages 13 or above</div>
                 </div>
 
                 <div className="count-container flex space-between">
-                    <button type='button' onClick={() => onUpdateGuests('adults', -1)}>
+                    <button className="add-guest-decerase-btn disbaled" type='button' onClick={() => onUpdateGuests('adults', -1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
                     <div>{adults}</div>
-                    <button type='button' onClick={() => onUpdateGuests('adults', +1)}>
+                    <button className="add-guest-decerase-btn" type='button' onClick={() => onUpdateGuests('adults', +1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
@@ -52,11 +53,11 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests }) => {
                 </div>
 
                 <div className="count-container flex space-between">
-                    <button type='button' onClick={() => onUpdateGuests('childrens', -1)}>
+                    <button className="add-guest-decerase-btn disbaled" type='button' onClick={() => onUpdateGuests('childrens', -1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
                     <div>{childrens}</div>
-                    <button type='button' onClick={() => onUpdateGuests('childrens', +1)}>
+                    <button className="add-guest-decerase-btn" type='button' onClick={() => onUpdateGuests('childrens', +1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>
@@ -68,11 +69,11 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests }) => {
                     <div className="count-input-subtitle">Under 2</div>
                 </div>
                 <div className="count-container flex space-between">
-                    <button type='button' onClick={() => onUpdateGuests('infants', -1)}>
+                    <button className="add-guest-decerase-btn disbaled" type='button' onClick={() => onUpdateGuests('infants', -1)}>
                         <div className="count-btn-container"> <img src={minusSvg} alt="minus" /></div>
                     </button>
                     <div>{infants}</div>
-                    <button type='button' onClick={() => onUpdateGuests('infants', +1)}>
+                    <button className="add-guest-decerase-btn" type='button' onClick={() => onUpdateGuests('infants', +1)}>
                         <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                     </button>
                 </div>

@@ -32,15 +32,27 @@
     }
 
     &.reserved {
-        background-color: $hoover;
-        color: $secondary;
+        background-color: $secondary;
+        color: $backgroundClr;
         position: fixed;
-        // position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        padding: rem(20px);
+        right: 160px;
+        top: 85px;
+        font-size: 1.15em;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        min-width: 17vw;
 
+        // padding: rem(15px) rem(25px);
+
+        &.user-msg button {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        &.user-msg {
+            border-radius: 5px;
+        }
     }
 }

@@ -23,7 +23,11 @@
         }
 
         .guest-input-container{
+            // margin-top: 8px;
             margin-top: 8px;
+            padding-bottom: 24px;
+            padding-top: 12px;
+            border-bottom: 1px solid rgb(235, 235, 235);
 
             p{
                 font-size: em(14px);
@@ -31,16 +35,31 @@
             }
             .count-input-title{
             
-                font-family: cereal-medium;
+                font-family: cereal-book;
                 line-height: 20px;
                 padding-bottom: 4px;
+            }
+
+            .count-input-subtitle{
+                font-size: 14.5px;
+                color:$subtext;
             }
             
             .count-container{
                 width: 104px;
                 align-items: center;
 
-                button{
+                // button{
+                //     height: 32px;
+                //     width: 32px;
+                //     flex-grow: 0;
+                //     flex-shrink: 0;
+                //     border-radius: 50%;
+                //     border:1px solid $btnBorderClr;
+                //     background-color: $backgroundClr;
+                //     cursor: pointer;
+
+                .add-guest-decerase-btn{
                     height: 32px;
                     width: 32px;
                     flex-grow: 0;
@@ -50,25 +69,33 @@
                     background-color: $backgroundClr;
                     cursor: pointer;
 
+                    &.disbaled{
+                        cursor: not-allowed;
+                        pointer-events: none;
+                        color: rgb(235, 235, 235);
+                        border-color: rgb(235, 235, 235);
+                        background: rgb(255, 255, 255);
+                    }
+    
+
                     &:hover{
                         border-color: $secondary;
                         color: $secondary;
                   
                     }
 
-
-                    &:disabled{
-                        cursor: not-allowed;
-                        color: rgb(235, 235, 235);
-                        border-color: rgb(235, 235, 235);
-                        background: rgb(255, 255, 255);
-                    }
-
-                   
-
                     .count-btn-container{
                         display: grid;
                         place-content: center;   
+
+                        &.disbaled{
+                            color: rgb(235, 235, 235);
+                            border-color: rgb(235, 235, 235);
+                            background: rgb(255, 255, 255);
+                            pointer-events: none;
+                            cursor: not-allowed;
+                        }
+                        
                         img{
                             height: 12px;
                             width: 12px;
