@@ -28,6 +28,7 @@ import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/so
 import { useSelector } from 'react-redux';
 
 
+
 // const reservations =   [
 //     {
 //         "_id": "61f907caa7cf85901696d591",
@@ -406,15 +407,15 @@ export const DashboardReservations = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const [reservations, setReservation] = React.useState(null);
 
-        const { user } = useSelector(storeState => storeState.userModule)
-       
+    const { user } = useSelector(storeState => storeState.userModule)
+
 
 
 
     React.useEffect(() => {
-        if (!user)return
+        if (!user) return
         loadReservations()
-    
+
     }, [user])
 
     // const onReservationReceive = () => {
@@ -423,8 +424,8 @@ export const DashboardReservations = () => {
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })
-        console.log('Host RESERVA',hostReservations);
-  
+        console.log('Host RESERVA', hostReservations);
+
         setReservation(hostReservations)
 
     }
@@ -485,6 +486,11 @@ export const DashboardReservations = () => {
     const emptyRows =
         page > 0 ? Math.max(0, (1 + page) * rowsPerPage - reservations.length) : 0;
 
+    const dateToDisplay = (reservationDate) => {
+        const dateToDisplay = new Date(reservationDate).toLocaleDateString('en-us', { day: "numeric", month: "short", year: "numeric" })
+        return dateToDisplay
+    }
+
     if (!reservations) return <div className="loader"></div>
     return (
         <Box sx={{ width: '100%' }}>
@@ -541,8 +547,10 @@ export const DashboardReservations = () => {
                                                 {reservation.status}
                                             </TableCell>
                                             <TableCell align="right">{reservation.guests}</TableCell>
-                                            <TableCell align="right">{reservation.checkIn}</TableCell>
-                                            <TableCell align="right">{reservation.checkOut}</TableCell>
+                                            <TableCell align="right">{dateToDisplay(reservation.checkIn)}</TableCell>
+                                            {/* <TableCell align="right">{reservation.checkIn}</TableCell> */}
+                                            <TableCell align="right">{dateToDisplay(reservation.checkOut)}</TableCell>
+                                            {/* <TableCell align="right">{reservation.checkOut}</TableCell> */}
                                             <TableCell align="right">{'BOOKED AT'}</TableCell>
                                             <TableCell align="right">{reservation.listingName}</TableCell>
                                             <TableCell align="right">${reservation.totalPrice}</TableCell>

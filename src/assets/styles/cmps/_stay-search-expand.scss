@@ -48,7 +48,8 @@
 
             &.country-container {
                 >:first-child {
-                    font-family: circular-book;
+                    // font-family: circular-book;
+                    font-family: cereal-medium;
                     margin-bottom: 28px;
                     margin-inline-start: 16px;
                 }
@@ -108,7 +109,7 @@
 
 
         .search-label{
-            font-family: manrope-semi-bold;
+            font-family: cereal-medium;
         }
         
         input {

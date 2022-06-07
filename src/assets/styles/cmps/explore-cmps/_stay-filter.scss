@@ -1,6 +1,7 @@
 .stay-filter {
     .modal-head-container {
         min-height: 64px;
+        padding: rem(30px);
     }
 
     .close-modal-btn {
@@ -11,6 +12,7 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
+        margin-left: 5px;
 
         &:hover {
             background-color: $footer;
@@ -90,13 +92,13 @@
 
             }
 
+        .css-1d1r5q-MuiFormHelperText-root{
+            font-family: cereal-book;
+        }
+
         .css-j204z7-MuiFormControlLabel-root{
             height: 32px;
             }
-
-        .css-i4bv87-MuiSvgIcon-root {
-                // fill:rgb(176,176,176)
-                }
 
         .css-1vgzwi7-MuiFormControl-root {
             margin: 0;
@@ -125,7 +127,7 @@
                         width: 100%;
 
                         .css-ahj2mt-MuiTypography-root {
-                            font-family: manrope-light;
+                            font-family: cereal-book;
                         }
                     }
                 }
@@ -168,18 +170,19 @@
             padding: 5px;
 
             p {
+                cursor: pointer;
                 text-decoration: underline;
                 font-weight: 500;
-                cursor: pointer;
+                margin-top: 26px;
             }
 
             button {
                 background-color: $secondary;
                 color: $backgroundClr;
-                margin-top: 5px;
                 margin-inline-end: 10px;
                 padding: 16px 28px;
                 border-radius: 10px;
+                margin-top: 14px;
 
                 &:hover {
                     background-color: $secondary;

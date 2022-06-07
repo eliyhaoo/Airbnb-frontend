@@ -117,8 +117,11 @@
         .header-content-container {
 
             .user-nav-container {
+                gap: 15px;
+                justify-content: flex-end;
+                
                 .main-nav {
-
+                    
                     a {
                         color: inherit;
 
