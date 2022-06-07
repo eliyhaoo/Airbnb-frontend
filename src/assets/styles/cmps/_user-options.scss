@@ -1,5 +1,4 @@
-
-.user-options{
+.user-options {
     background-color: $backgroundClr;
     border-radius: 12px;
     color: $secondary;
@@ -13,43 +12,46 @@
     box-shadow: rgb(0 0 0 / 12%) 0px 2px 16px;
     font-family: cereal-book;
 
-    .login-options-container{
+    .login-options-container {
         margin-top: 8px 0px;
         border-bottom: 1px solid $borderClr;
 
-        .sign-up{
+        .sign-up {
             font-family: cereal-bold;
         }
     }
-    
-    .login-options-container:first-child{
+
+    .login-options-container:first-child {
         margin-bottom: 4px;
+
     }
 
-    .login-options-container>*{
+    .login-options-container>* {
         font-size: 14px;
         font-weight: 600;
         line-height: 18px;
         padding: 16px 14px;
-        &:hover{
+
+        &:hover {
             background-color: $footer;
         }
     }
 
-    .host-options-container{
+    .host-options-container {
         margin-top: 8px 0px;
     }
 
-    .host-options-container:last-child{
+    .host-options-container:last-child {
         margin-top: 4px;
     }
 
-    .host-options-container>*{
+    .host-options-container>* {
         font-size: 14px;
-        font-weight: 600;
+        // font-weight: 600;
         line-height: 18px;
         padding: 16px 14px;
-        &:hover{
+
+        &:hover {
             background-color: $footer;
         }
     }

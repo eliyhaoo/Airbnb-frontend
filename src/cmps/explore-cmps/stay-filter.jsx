@@ -9,7 +9,6 @@ import { loadStays, setFilterBy } from "../../store/actions/stay.action"
 import closeModalImg from "../../assets/svg/close-modal.svg"
 import _ from 'lodash'
 
-
 export const StayFilter = ({ showFilterModal, history }) => {
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)
