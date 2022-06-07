@@ -1,8 +1,7 @@
-import { useEffect } from "react"
-import { ReviewPreview } from "./review-preview"
+import { useEffect } from 'react'
+import { ReviewPreview } from './review-preview'
 
 export const ReviewList = ({ stay }) => {
-
     useEffect(() => {
 
     }, [stay.reviews])

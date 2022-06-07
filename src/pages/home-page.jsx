@@ -25,7 +25,6 @@ export const HomePage = ({ history }) => {
         // console.log('SearchByFields', searchByFields)
         // history.push(`/explore/?location=${searchByFields.city}`)
     }
-
     const cities = ['New York', 'Paris', 'Santorini', 'Dubai']
 
     return <section className="home-page full">
@@ -40,20 +39,6 @@ export const HomePage = ({ history }) => {
             </span>
         </div>
 
-        {/* <div className="popular-destinations home-page-layout">
-            <h1 className="popular-destinations-title">Popular Destinations</h1>
-            <div className="popular-destinations-imgs-container">
-                <div className="city-container flex direction-column" ><img className="city-img"
-                    src={require("../assets/img/cities/new-york.jpg")} /><span>New York</span></div>
-                <div className="city-container flex direction-column"><img className="city-img"
-                    src={require("../assets/img/cities/paris.jpg")} /><span>Paris</span></div>
-                <div className="city-container flex direction-column"><img className="city-img"
-                    src={require("../assets/img/cities/santorini.jpg")} /><span>Santorini</span></div>
-                <div className="city-container flex direction-column"><img className="city-img"
-                    src={require("../assets/img/cities/dubai.jpg")} /><span>Dubai</span></div>
-            </div>
-        </div> */}
-
         <div className="popular-destinations home-page-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
             <div className="popular-destinations-imgs-container">
@@ -65,10 +50,6 @@ export const HomePage = ({ history }) => {
 
             </div>
         </div>
-
-
-
-
 
         <div className="become-a-host-container home-page-layout">
             <div className="become-a-host-elements-container">

@@ -1,23 +1,13 @@
 import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
 import { NavLink, Link } from 'react-router-dom'
 import logoSvg from '../../assets/svg/logo.svg'
-
 import { Loader } from '../loader'
 
-export const DashboardHeader = ({user,isNotficationOn,toggleNotifaction}) => {
+export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction }) => {
 
-    
-    // const user = {
-    //     _id: '622f3403e36c58e6164naf93',
-    //     imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
-    //     isHost: true,
-    //     wishList: ['6297cb852f760e2ec9f8244b']
-    // }
-
-    useEffect(()=>{
+    useEffect(() => {
         toggleNotifaction(false)
-    },[])
+    }, [])
 
     if (!user) return <Loader />
     return <div className="dashboard-header">
@@ -61,7 +51,7 @@ export const DashboardHeader = ({user,isNotficationOn,toggleNotifaction}) => {
 
             <div className="dashboard-host-options">
                 <img className="host-img" src={user.imgUrl} />
-               { isNotficationOn && <div className="new-info-indicator"></div>}
+                {isNotficationOn && <div className="new-info-indicator"></div>}
             </div>
         </header>
     </div>

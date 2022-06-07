@@ -1,34 +1,34 @@
 
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
-import TableSortLabel from '@mui/material/TableSortLabel';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-import DeleteIcon from '@mui/icons-material/Delete';
-import FilterListIcon from '@mui/icons-material/FilterList';
-import { StatusActionSelect } from './status-action-select';
-import { visuallyHidden } from '@mui/utils';
-import { reservationService } from '../../services/reservation.service';
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import { alpha } from '@mui/material/styles'
+import Box from '@mui/material/Box'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TablePagination from '@mui/material/TablePagination'
+import TableRow from '@mui/material/TableRow'
+import TableSortLabel from '@mui/material/TableSortLabel'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import Paper from '@mui/material/Paper'
+import Checkbox from '@mui/material/Checkbox'
+import IconButton from '@mui/material/IconButton'
+import Tooltip from '@mui/material/Tooltip'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import Switch from '@mui/material/Switch'
+import DeleteIcon from '@mui/icons-material/Delete'
+import FilterListIcon from '@mui/icons-material/FilterList'
+import { StatusActionSelect } from './status-action-select'
+import { visuallyHidden } from '@mui/utils'
+import { reservationService } from '../../services/reservation.service'
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
-import { useSelector } from 'react-redux';
-import { utilService } from '../../services/util.service';
+import { useSelector } from 'react-redux'
+import { utilService } from '../../services/util.service'
 
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 
 const themeHeader = createTheme({
     typography: {
@@ -241,15 +241,15 @@ function getComparator(order, orderBy) {
 // This method is created for cross-browser compatibility, if you don't
 // need to support IE11, you can use Array.prototype.sort() directly
 function stableSort(array, comparator) {
-    const stabilizedThis = array.map((el, index) => [el, index]);
+    const stabilizedThis = array.map((el, index) => [el, index])
     stabilizedThis.sort((a, b) => {
-        const order = comparator(a[0], b[0]);
+        const order = comparator(a[0], b[0])
         if (order !== 0) {
-            return order;
+            return order
         }
-        return a[1] - b[1];
+        return a[1] - b[1]
     });
-    return stabilizedThis.map((el) => el[0]);
+    return stabilizedThis.map((el) => el[0])
 }
 
 const headCells = [
@@ -305,10 +305,10 @@ const headCells = [
 
 function EnhancedTableHead(props) {
     const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
-        props;
+        props
     const createSortHandler = (property) => (event) => {
-        onRequestSort(event, property);
-    };
+        onRequestSort(event, property)
+    }
 
     return (
         <ThemeProvider theme={themeHeader}>
@@ -364,7 +364,7 @@ EnhancedTableHead.propTypes = {
 };
 
 const EnhancedTableToolbar = (props) => {
-    const { numSelected } = props;
+    const { numSelected } = props
 
     return (
         <Toolbar
@@ -411,7 +411,7 @@ const EnhancedTableToolbar = (props) => {
                 </Tooltip>
             )}
         </Toolbar>
-    );
+    )
 };
 
 EnhancedTableToolbar.propTypes = {
@@ -419,13 +419,13 @@ EnhancedTableToolbar.propTypes = {
 };
 
 export const DashboardReservations = () => {
-    const [order, setOrder] = React.useState('asc');
-    const [orderBy, setOrderBy] = React.useState('calories');
-    const [selected, setSelected] = React.useState([]);
-    const [page, setPage] = React.useState(0);
-    const [dense, setDense] = React.useState(false);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
-    const [reservations, setReservation] = React.useState(null);
+    const [order, setOrder] = React.useState('asc')
+    const [orderBy, setOrderBy] = React.useState('calories')
+    const [selected, setSelected] = React.useState([])
+    const [page, setPage] = React.useState(0)
+    const [dense, setDense] = React.useState(false)
+    const [rowsPerPage, setRowsPerPage] = React.useState(5)
+    const [reservations, setReservation] = React.useState(null)
 
     const { user } = useSelector(storeState => storeState.userModule)
 
@@ -444,7 +444,7 @@ export const DashboardReservations = () => {
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })
-        console.log('Host RESERVA', hostReservations);
+
 
         setReservation(hostReservations)
 
@@ -452,30 +452,30 @@ export const DashboardReservations = () => {
 
     const handleRequestSort = (event, property) => {
 
-        const isAsc = orderBy === property && order === 'asc';
-        setOrder(isAsc ? 'desc' : 'asc');
-        setOrderBy(property);
+        const isAsc = orderBy === property && order === 'asc'
+        setOrder(isAsc ? 'desc' : 'asc')
+        setOrderBy(property)
     };
 
     const handleSelectAllClick = (event) => {
         if (event.target.checked) {
             const newSelecteds = reservations.map((r) => r.listingName);
-            setSelected(newSelecteds);
-            return;
+            setSelected(newSelecteds)
+            return
         }
-        setSelected([]);
+        setSelected([])
     };
 
     const handleClick = (event, name) => {
-        const selectedIndex = selected.indexOf(name);
-        let newSelected = [];
+        const selectedIndex = selected.indexOf(name)
+        let newSelected = []
 
         if (selectedIndex === -1) {
-            newSelected = newSelected.concat(selected, name);
+            newSelected = newSelected.concat(selected, name)
         } else if (selectedIndex === 0) {
-            newSelected = newSelected.concat(selected.slice(1));
+            newSelected = newSelected.concat(selected.slice(1))
         } else if (selectedIndex === selected.length - 1) {
-            newSelected = newSelected.concat(selected.slice(0, -1));
+            newSelected = newSelected.concat(selected.slice(0, -1))
         } else if (selectedIndex > 0) {
             newSelected = newSelected.concat(
                 selected.slice(0, selectedIndex),
@@ -483,28 +483,28 @@ export const DashboardReservations = () => {
             );
         }
 
-        setSelected(newSelected);
+        setSelected(newSelected)
     };
 
     const handleChangePage = (event, newPage) => {
-        setPage(newPage);
+        setPage(newPage)
     };
 
     const handleChangeRowsPerPage = (event) => {
-        setRowsPerPage(parseInt(event.target.value, 10));
-        setPage(0);
+        setRowsPerPage(parseInt(event.target.value, 10))
+        setPage(0)
     };
 
     const handleChangeDense = (event) => {
-        setDense(event.target.checked);
+        setDense(event.target.checked)
     };
 
 
-    const isSelected = (name) => selected.indexOf(name) !== -1;
+    const isSelected = (name) => selected.indexOf(name) !== -1
 
     // Avoid a layout jump when reaching the last page with empty rows.
     const emptyRows =
-        page > 0 ? Math.max(0, (1 + page) * rowsPerPage - reservations.length) : 0;
+        page > 0 ? Math.max(0, (1 + page) * rowsPerPage - reservations.length) : 0
 
     const dateToDisplay = (reservationDate) => {
         const dateToDisplay = new Date(reservationDate).toLocaleDateString('en-us', { day: "numeric", month: "short", year: "numeric" })
