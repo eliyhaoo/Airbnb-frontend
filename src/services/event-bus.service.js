@@ -24,6 +24,10 @@ export function showErrorMsg(txt) {
     showUserMsg(txt, 'danger')
 }
 
+export function showReservedMsg(txt) {
+    showUserMsg(txt, 'reserved')
+}
+
 window.myBus = eventBusService;
 window.showUserMsg = showUserMsg;
 

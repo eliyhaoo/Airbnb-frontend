@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { AddGuest } from '../add-guest'
 import { CheckoutDatePicker } from '../checkout-date-picker'
-import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.js'
+import { showSuccessMsg, showErrorMsg, showReservedMsg } from '../../services/event-bus.service.js'
 import { utilService } from '../../services/util.service'
 import _ from 'lodash'
 import { reservationService } from '../../services/reservation.service'
@@ -13,7 +13,6 @@ export const FormReserve = ({ stay }) => {
 
     const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { user } = useSelector(storeState => storeState.userModule)
-    const [isDisabled, setReserveBtn] = useState(false)
 
     const [isModalOpen, setModal] = useState(false)
     const [btnMode, setIsDeley] = useState({ loader: false, reserve: false, btnTxt: "Check availability" })
@@ -38,8 +37,7 @@ export const FormReserve = ({ stay }) => {
                 console.log('RESERVATIONS TPO SEND ', updatedReservation);
                 await reservationService.save(updatedReservation)
                 socketService.emit(SOCKET_EMIT_RESERVATION, updatedReservation)
-                showSuccessMsg('Your trip was booked')
-                setReserveBtn(true)
+                showReservedMsg('Your trip was booked')
             } catch (err) {
                 console.log('Cannot reserve')
                 showErrorMsg('Cannot reserve')
