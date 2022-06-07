@@ -2,9 +2,6 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setVisitPage } from "../store/actions/system.action"
-import { setFilterBy } from "../store/actions/stay.action"
-import { userService } from "../services/user.service"
-import { useForm } from "../hooks/useForm"
 import { Link } from 'react-router-dom'
 
 export const HomePage = ({ history }) => {
@@ -16,14 +13,9 @@ export const HomePage = ({ history }) => {
     }, [])
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)
-    const [searchByFields, handleChange, setSearchByFields] = useForm(filterBy.searchBy)
 
     const onSelectCity = (city) => {
-        console.log('city', city)
-        // setSearchByFields((prevState) => ({ ...prevState, location: city }))
-        // dispatch(setFilterBy('searchBy', searchByFields))
-        // console.log('SearchByFields', searchByFields)
-        // history.push(`/explore/?location=${searchByFields.city}`)
+        history.push(`/explore/?location=${city}`)
     }
     const cities = ['New York', 'Paris', 'Santorini', 'Dubai']
 

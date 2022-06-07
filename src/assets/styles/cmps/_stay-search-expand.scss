@@ -1,16 +1,14 @@
 .stay-search-expand {
     position: absolute;
     left: calc(50% + $layoutPadding);
-    transform: translate((calc(-50% - (1.5*$layoutPadding)), 11vh));
+    transform: translate((calc(-50% - (1.5*$layoutPadding)), 91px));
     opacity: 1;
     transition: transform 0.2s, opacity 0.5s;
 
     &.close {
         transform: translate((calc(-50% - (1.5*$layoutPadding))), 8px) scale(0.4, 0.8);
         opacity: 0;
-
     }
-
 
     .stay-search-expand-container {
         border: 1px solid $borderClr;
@@ -232,23 +230,36 @@
     }
 }
 
-.css-1ozefeb {
 
-    .MuiPaper-root {
 
-        &.MuiPaper-elevation {
+// .MuiPaper-root {
 
-            &.MuiPaper-rounded {
+//     &.MuiPaper-elevation {
 
-                &.MuiPaper-elevation8 {
+//         &.MuiPaper-rounded {
 
-                    &.css-1smlk3z-MuiPaper-root {
-                        border-radius: 32px;
-                        margin-top: 14px;
-                    }
-                }
-            }
-        }
+//             &.MuiPaper-elevation8 {
+
+//                 &.css-1smlk3z-MuiPaper-root {
+//                     border-radius: 32px;
+//                     margin-top: 14px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.MuiPaper-root {
+
+    &.css-1smlk3z-MuiPaper-root {
+        border-radius: 32px;
+        margin-top: 14px;
+    }
+    
+    &.css-1tihz4g-MuiPaper-root{
+        border-radius: 32px;
+        margin-top: 14px;
+
     }
 
 }

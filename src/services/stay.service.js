@@ -31,7 +31,6 @@ export const stayService = {
 // }
 
 async function query(filterBy) {
-    console.log('FIlterBffsafsafasfsafasy', filterBy);
     return httpService.get('stay', filterBy)
 }
 

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useForm } from '../hooks/useForm'
 import { setFilterBy } from '../store/actions/stay.action'
 import { SearchCountry } from './search-country'
-import searchSvg from '../assets/svg/searchsvg.svg'
+import searchSvg from '../assets/svg/magnifying-glass.svg'
 import { AddGuest } from './add-guest'
 import { SearchbarDatePicker } from './searchbar-date-picker'
 import { utilService } from '../services/util.service'
@@ -24,8 +24,9 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        console.log('SearchByFields', searchByFields)
-        history.push(`/explore/?location=${searchByFields.location}&dates=${searchByFields.dates}&guests=${searchByFields.guestsNum}`)
+        console.log('SearchByFields DATEDS BEFORE QUERY', searchByFields.dates)
+        history.push(`/explore/?location=${searchByFields.location}&dates=${JSON.stringify(searchByFields.dates)}&guests=${searchByFields.guestsNum}`)
+        // history.push(`/explore/?location=${searchByFields.location}`)
     }
 
     const onSelectedRegion = (region) => {
@@ -89,7 +90,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
                     </div>
 
                     {modalOpen === 'guest' && <div className="search-modal guest-container">
-                        <AddGuest setSearchByFields={setSearchByFields} guests={guests} />
+                        <AddGuest setSearchByFields={setSearchByFields} guests={guests} isInSearch={true} />
                     </div>}
 
                 </div>
