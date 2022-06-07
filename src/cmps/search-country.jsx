@@ -16,7 +16,7 @@ export const SearchCountry = ({ selectedRegion, setSelectedRegion }) => {
                 {regions.map((region, idx) =>
                     <div key={idx} onClick={() => setSelectedRegion(region)} className={`region-container ${region === selectedRegion ? 'selected' : ''} flex direction-column`}>
                         <img className="country-img" src={require(`../assets/img/countries/${region}.webp`)} alt="house" />
-                        <span>{region}</span>
+                        <span>{(region === 'Im flexible') ? 'I\'m flexible' : region}</span>
                     </div>
                 )}
             </div>
