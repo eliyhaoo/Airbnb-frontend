@@ -11,15 +11,19 @@ export const reservationService = {
 }
 
 
-async function save(newReservation) {
-    // newReservation.buyerId = userService.getLoggedinUser()
-    return  httpService.post('reservation', newReservation)
-
-}
 
 async function query(filterBy){
-    console.log('SENDING QUERY',filterBy);
     return httpService.get('reservation', filterBy)
+}
+
+async function save(reservation) {
+    var savedReservation
+    if (reservation._id) {
+        savedReservation = await httpService.put(`reservation/${reservation._id}`, reservation)
+    } else {
+        savedReservation = await   httpService.post('reservation', reservation)  
+    }
+    return savedReservation
 }
 
 

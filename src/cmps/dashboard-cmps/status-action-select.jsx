@@ -3,14 +3,27 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { reservationService } from '../../services/reservation.service';
 
-export const StatusActionSelect = ({currStatus}) => {
-    const [status, setStatus] = React.useState('currStatus');
+export const StatusActionSelect = ({reservation,loadReservations}) => {
+    const [status, setStatus] = React.useState(reservation.status);
 
     const handleChange = (event) => {
         setStatus(event.target.value);
+        reservation.status = event.target.value
+        setReservationStatus()
     };
-    const selectProps = (currStatus !== 'pending') ? 
+    
+    const setReservationStatus= async ()=>{
+        console.log('RESERVATION BEFORE SENDING',reservation);
+        const updatedResevation =  await reservationService.save(reservation)
+        loadReservations()
+        console.log('RESERVATION AFTER SENDING',reservation);
+
+    }
+
+
+    const selectProps = (status !== 'pending') ? 
     {
         variant:"standard",
         sx:{ m: 1, minWidth: 120 },
@@ -36,8 +49,9 @@ return (
                 label="Status"
             >
 
-                <MenuItem value={'approved'}>Approve</MenuItem>
+                <MenuItem value={'approved'}>Approved</MenuItem>
                 <MenuItem value={'decline'}>Decline</MenuItem>
+                <MenuItem value={'pending'}>Pending</MenuItem>
             </Select>
         </FormControl>
         {/* <FormControl variant="filled" sx={{ m: 1, minWidth: 120 }}>
