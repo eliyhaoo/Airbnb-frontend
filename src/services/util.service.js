@@ -7,7 +7,8 @@ export const utilService = {
     getPriceWithCommas,
     getStaysMinPrice,
     getStaysMaxPrice,
-    getMonthName
+    getMonthName,
+    getDateToDisplay
 }
 
 function getPriceWithCommas(price) {
@@ -66,4 +67,9 @@ function getMonthName(date) {
         "July", "August", "September", "October", "November", "December"
     ]
     return monthNames[date.getMonth()]
+}
+
+function getDateToDisplay (date) {
+    const dateToDisplay = new Date(date).toLocaleDateString('en-us', { day: "numeric", month: "short", year: "numeric" })
+    return dateToDisplay
 }

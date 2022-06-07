@@ -31,7 +31,7 @@ export const UserOptions = () => {
             <div>Host your home</div>
             {!user ? <div>Host an experience</div> : <div><Link to="/dashboard"><div>Dashboard</div></Link></div>}
             {/* <div>Host an experience</div> */}
-            {!user ? <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> : <div>Wishlist</div>}
+            {!user ? <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> : ''}
 
             <div>Help</div>
         </div>
