@@ -35,7 +35,7 @@ export class UserMsg extends React.Component {
         <button onClick={() => {
           this.setState({ msg: null })
         }}>x</button>
-        {this.state.msg.txt}
+        <span>{this.state.msg.txt}</span>
       </section>
     )
   }

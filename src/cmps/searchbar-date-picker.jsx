@@ -46,7 +46,6 @@ export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setMo
 
 
 					}}
-			
 					renderInput={(startProps, endProps) => (
 						<div className="date-picker-inputs flex space-between full-width">
 
@@ -62,7 +61,7 @@ export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setMo
 
 						</div>
 
-						
+
 					)}
 				/>
 			</LocalizationProvider>
