@@ -21,8 +21,8 @@ export const HomePage = ({ history }) => {
     const onSelectCity = (city) => {
         console.log('city', city)
         setSearchByFields((prevState) => ({ ...prevState, location: city }))
-        dispatch(setFilterBy('searchBy', searchByFields))
-        console.log('SearchByFields', searchByFields)
+        // dispatch(setFilterBy('searchBy', searchByFields))
+        // console.log('SearchByFields', searchByFields)
         // history.push(`/explore/?location=${searchByFields.city}`)
     }
 
@@ -53,7 +53,6 @@ export const HomePage = ({ history }) => {
                     src={require("../assets/img/cities/dubai.jpg")} /><span>Dubai</span></div>
             </div>
         </div> */}
-
 
         <div className="popular-destinations home-page-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
