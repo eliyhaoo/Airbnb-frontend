@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
-import addWeeks from "date-fns/addWeeks";
-import TextField from "@mui/material/TextField";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DateRangePicker from "@mui/lab/DateRangePicker";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { updateReserve } from "../store/actions/reserve.action";
+import addWeeks from 'date-fns/addWeeks'
+import TextField from '@mui/material/TextField'
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import DateRangePicker from '@mui/lab/DateRangePicker'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { updateReserve } from '../store/actions/reserve.action'
 
 const mode = window.innerWidth < 780 ? 1 : 2;
 const theme = createTheme({

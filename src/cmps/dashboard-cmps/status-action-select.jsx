@@ -1,11 +1,10 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import { reservationService } from '../../services/reservation.service';
-
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import * as React from 'react'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
+import { reservationService } from '../../services/reservation.service'
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 
 const theme = createTheme({
     typography: {
@@ -31,7 +30,6 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
 
     }
 
-
     const selectProps = (status !== 'pending') ?
         {
             variant: "standard",
@@ -46,8 +44,6 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
         }
     return (
         <div>
-            {/* {status !== 'pending' && disabled} */}
-            {/* <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}> */}
             <ThemeProvider theme={theme}>
                 <FormControl {...selectProps}>
                     <InputLabel id="demo-simple-select-standard-label"></InputLabel>
@@ -58,7 +54,6 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
                         onChange={handleChange}
                         label="Status"
                     >
-
                         <MenuItem value={'approved'}>Approved</MenuItem>
                         <MenuItem value={'declined'}>Declined</MenuItem>
                         <MenuItem value={'pending'}>Pending</MenuItem>

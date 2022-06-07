@@ -1,6 +1,6 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { setVisitPage } from "../store/actions/system.action"
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { setVisitPage } from '../store/actions/system.action'
 import { NavLink } from 'react-router-dom'
 
 import logoSvg from '../assets/svg/logo-white.svg'

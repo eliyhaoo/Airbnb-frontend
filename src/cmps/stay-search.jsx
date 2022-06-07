@@ -16,7 +16,6 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
     const { searchBy: { location, dates, guestsNum } } = filterBy
 
     const getDatesToDisplay = () => {
-
         return dates.checkIn.toString().substring(4, 10) + '-' + dates.checkOut.toString().substring(4, 10)
     }
 

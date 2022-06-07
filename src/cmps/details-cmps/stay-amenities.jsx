@@ -1,6 +1,4 @@
 
-
-
 export const StayAmenities = ({ stay }) => {
 
     const getAmenities = () => {
@@ -22,8 +20,6 @@ export const StayAmenities = ({ stay }) => {
                 </div>
             )}
         </div>
-
-
 
     </section >
 
