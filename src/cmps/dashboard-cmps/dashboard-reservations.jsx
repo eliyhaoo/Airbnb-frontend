@@ -26,6 +26,22 @@ import { visuallyHidden } from '@mui/utils';
 import { reservationService } from '../../services/reservation.service';
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
 import { useSelector } from 'react-redux';
+import { utilService } from '../../services/util.service';
+
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const themeHeader = createTheme({
+    typography: {
+        fontFamily: 'cereal-medium'
+
+    },
+});
+const theme = createTheme({
+    typography: {
+        fontFamily: 'cereal-book'
+
+    },
+});
 
 
 // const reservations =   [
@@ -282,7 +298,7 @@ const headCells = [
         id: 'action',
         numeric: false,
         disablePadding: false,
-        label: 'action',
+        label: 'Action',
     },
 ];
 
@@ -294,10 +310,11 @@ function EnhancedTableHead(props) {
     };
 
     return (
-        <TableHead>
-            <TableRow>
-                <TableCell padding="checkbox">
-                    <Checkbox
+        <ThemeProvider theme={themeHeader}>
+            <TableHead>
+                <TableRow>
+                    <TableCell padding="checkbox">
+                        {/* <Checkbox
                         color="primary"
                         indeterminate={numSelected > 0 && numSelected < rowCount}
                         checked={rowCount > 0 && numSelected === rowCount}
@@ -305,31 +322,34 @@ function EnhancedTableHead(props) {
                         inputProps={{
                             'aria-label': 'select all desserts',
                         }}
-                    />
-                </TableCell>
-                {headCells.map((headCell) => (
-                    <TableCell
-                        key={headCell.id}
-                        align={headCell.numeric ? 'right' : 'left'}
-                        padding={headCell.disablePadding ? 'none' : 'normal'}
-                        sortDirection={orderBy === headCell.id ? order : false}
-                    >
-                        <TableSortLabel
-                            active={orderBy === headCell.id}
-                            direction={orderBy === headCell.id ? order : 'asc'}
-                            onClick={createSortHandler(headCell.id)}
-                        >
-                            {headCell.label}
-                            {orderBy === headCell.id ? (
-                                <Box component="span" sx={visuallyHidden}>
-                                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                                </Box>
-                            ) : null}
-                        </TableSortLabel>
+                    /> */}
                     </TableCell>
-                ))}
-            </TableRow>
-        </TableHead>
+                    {headCells.map((headCell) => (
+                        <TableCell
+                            key={headCell.id}
+                            // align={headCell.numeric ? 'right' : 'left'}
+                            // align={headCell.id === 'guests'?'center':'left'}
+                            align={'left'}
+                            padding={headCell.disablePadding ? 'none' : 'normal'}
+                            sortDirection={orderBy === headCell.id ? order : false}
+                        >
+                            <TableSortLabel
+                                active={orderBy === headCell.id}
+                                direction={orderBy === headCell.id ? order : 'asc'}
+                                onClick={createSortHandler(headCell.id)}
+                            >
+                                {headCell.label}
+                                {orderBy === headCell.id ? (
+                                    <Box component="span" sx={visuallyHidden}>
+                                        {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                                    </Box>
+                                ) : null}
+                            </TableSortLabel>
+                        </TableCell>
+                    ))}
+                </TableRow>
+            </TableHead>
+        </ThemeProvider>
     );
 }
 
@@ -372,7 +392,7 @@ const EnhancedTableToolbar = (props) => {
                     id="tableTitle"
                     component="div"
                 >
-                    Nutrition
+                    Reservations
                 </Typography>
             )}
 
@@ -406,15 +426,15 @@ export const DashboardReservations = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const [reservations, setReservation] = React.useState(null);
 
-        const { user } = useSelector(storeState => storeState.userModule)
-       
+    const { user } = useSelector(storeState => storeState.userModule)
+
 
 
 
     React.useEffect(() => {
-        if (!user)return
+        if (!user) return
         loadReservations()
-    
+
     }, [user])
 
     // const onReservationReceive = () => {
@@ -423,8 +443,8 @@ export const DashboardReservations = () => {
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })
-        console.log('Host RESERVA',hostReservations);
-  
+        console.log('Host RESERVA', hostReservations);
+
         setReservation(hostReservations)
 
     }
@@ -487,97 +507,100 @@ export const DashboardReservations = () => {
 
     if (!reservations) return <div className="loader"></div>
     return (
-        <Box sx={{ width: '100%' }}>
-            <Paper sx={{ width: '100%', mb: 2 }}>
-                <EnhancedTableToolbar numSelected={selected.length} />
-                <TableContainer>
-                    <Table
-                        sx={{ minWidth: 750 }}
-                        aria-labelledby="tableTitle"
-                        size={dense ? 'small' : 'medium'}
-                    >
-                        <EnhancedTableHead
-                            numSelected={selected.length}
-                            order={order}
-                            orderBy={orderBy}
-                            onSelectAllClick={handleSelectAllClick}
-                            onRequestSort={handleRequestSort}
-                            rowCount={reservations.length}
-                        />
-                        <TableBody>
-                            {/* if you don't need to support IE11, you can replace the `stableSort` call with:
+        <ThemeProvider theme={theme}>
+            <Box sx={{ width: '100%' }}>
+                <Paper sx={{ width: '100%', mb: 2 }}>
+                    <EnhancedTableToolbar numSelected={selected.length} />
+                    <TableContainer>
+                        <Table
+                            sx={{ minWidth: 750 }}
+                            aria-labelledby="tableTitle"
+                            size={dense ? 'small' : 'medium'}
+                        >
+                            <EnhancedTableHead
+                                numSelected={selected.length}
+                                order={order}
+                                orderBy={orderBy}
+                                onSelectAllClick={handleSelectAllClick}
+                                onRequestSort={handleRequestSort}
+                                rowCount={reservations.length}
+                            />
+                            <TableBody>
+                                {/* if you don't need to support IE11, you can replace the `stableSort` call with:
                  rows.slice().sort(getComparator(order, orderBy)) */}
-                            {stableSort(reservations, getComparator(order, orderBy))
-                                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                .map((reservation, index) => {
-                                    const isItemSelected = isSelected(reservation.listingName);
-                                    const labelId = `enhanced-table-checkbox-${index}`;
+                                {stableSort(reservations, getComparator(order, orderBy))
+                                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                                    .map((reservation, index) => {
+                                        const isItemSelected = isSelected(reservation.listingName);
+                                        const labelId = `enhanced-table-checkbox-${index}`;
 
-                                    return (
-                                        <TableRow
-                                            hover
-                                            // onClick={(event) => handleClick(event, reservation.listingName)}
-                                            role="checkbox"
-                                            aria-checked={isItemSelected}
-                                            tabIndex={-1}
-                                            key={reservation._id}
-                                            selected={isItemSelected}
-                                        >
-                                            <TableCell padding="checkbox">
-                                                <Checkbox
+                                        return (
+                                            <TableRow
+                                                hover
+                                                // onClick={(event) => handleClick(event, reservation.listingName)}
+                                                role="checkbox"
+                                                aria-checked={isItemSelected}
+                                                tabIndex={-1}
+                                                key={reservation._id}
+                                                selected={isItemSelected}
+                                            >
+                                                <TableCell padding="checkbox">
+                                                    {/* <Checkbox
                                                     color="primary"
                                                     checked={isItemSelected}
                                                     inputProps={{
                                                         'aria-labelledby': labelId,
                                                     }}
-                                                />
-                                            </TableCell>
-                                            <TableCell
-                                                component="th"
-                                                id={labelId}
-                                                scope="row"
-                                                padding="none"
-                                            >
-                                                {reservation.status}
-                                            </TableCell>
-                                            <TableCell align="right">{reservation.guests}</TableCell>
-                                            <TableCell align="right">{reservation.checkIn}</TableCell>
-                                            <TableCell align="right">{reservation.checkOut}</TableCell>
-                                            <TableCell align="right">{'BOOKED AT'}</TableCell>
-                                            <TableCell align="right">{reservation.listingName}</TableCell>
-                                            <TableCell align="right">${reservation.totalPrice}</TableCell>
-                                            <TableCell align="right"><StatusActionSelect reservation={reservation} loadReservations={loadReservations} /></TableCell>
-                                            {/* <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell> */}
-                                        </TableRow>
-                                    );
-                                })}
-                            {emptyRows > 0 && (
-                                <TableRow
-                                    style={{
-                                        height: (dense ? 33 : 53) * emptyRows,
-                                    }}
-                                >
-                                    <TableCell colSpan={6} />
-                                </TableRow>
-                            )}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-                <TablePagination
-                    rowsPerPageOptions={[5, 10, 25]}
-                    component="div"
-                    count={reservations.length}
-                    rowsPerPage={rowsPerPage}
-                    page={page}
-                    onPageChange={handleChangePage}
-                    onRowsPerPageChange={handleChangeRowsPerPage}
+                                                /> */}
+                                                </TableCell>
+                                                <TableCell
+                                                    component="th"
+                                                    id={labelId}
+                                                    scope="row"
+                                                    padding="none"
+                                                >
+
+                                                    <span className={`reservation-status-table-head ${reservation.status}`}>{reservation.status}</span>
+                                                </TableCell>
+                                                <TableCell align="left">{reservation.guests}</TableCell>
+                                                <TableCell align="left">{reservation.checkIn}</TableCell>
+                                                <TableCell align="left">{reservation.checkOut}</TableCell>
+                                                <TableCell align="left">{'BOOKED AT'}</TableCell>
+                                                <TableCell align="left">{reservation.listingName}</TableCell>
+                                                <TableCell align="left">${utilService.getPriceWithCommas(reservation.totalPrice)}</TableCell>
+                                                <TableCell align="left"><StatusActionSelect reservation={reservation} loadReservations={loadReservations} /></TableCell>
+                                                {/* <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell> */}
+                                            </TableRow>
+                                        );
+                                    })}
+                                {emptyRows > 0 && (
+                                    <TableRow
+                                        style={{
+                                            height: (dense ? 33 : 53) * emptyRows,
+                                        }}
+                                    >
+                                        <TableCell colSpan={6} />
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                    <TablePagination
+                        rowsPerPageOptions={[5, 10, 25]}
+                        component="div"
+                        count={reservations.length}
+                        rowsPerPage={rowsPerPage}
+                        page={page}
+                        onPageChange={handleChangePage}
+                        onRowsPerPageChange={handleChangeRowsPerPage}
+                    />
+                </Paper>
+                <FormControlLabel
+                    control={<Switch checked={dense} onChange={handleChangeDense} />}
+                    label="Dense padding"
                 />
-            </Paper>
-            <FormControlLabel
-                control={<Switch checked={dense} onChange={handleChangeDense} />}
-                label="Dense padding"
-            />
-        </Box>
+            </Box>
+        </ThemeProvider>
     );
 }
 
