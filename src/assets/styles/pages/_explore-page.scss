@@ -16,7 +16,6 @@
         .filter-btns-container {
             // padding: 8px 0 0 0;
             margin: 8px 0 0 0;
-            margin-inline-start: rem(10px)
         }
 
         .filter-btn {
@@ -31,6 +30,7 @@
             font-weight: 600;
             border: none;
             width: 85px;
+            margin-inline-start: rem(10px)
         }
 
 
