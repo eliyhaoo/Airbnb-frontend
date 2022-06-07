@@ -69,7 +69,9 @@ function getMonthName(date) {
     return monthNames[date.getMonth()]
 }
 
-function getDateToDisplay (date) {
-    const dateToDisplay = new Date(date).toLocaleDateString('en-us', { day: "numeric", month: "short", year: "numeric" })
-    return dateToDisplay
+function getDateToDisplay (date ,showYear= true) {
+    if(showYear) return  new Date(date).toLocaleDateString('en-us', { day: "numeric", month: "short", year: "numeric" })
+    return new Date(date).toLocaleDateString('en-us', { day: "numeric", month: "short"})
+    
+    
 }

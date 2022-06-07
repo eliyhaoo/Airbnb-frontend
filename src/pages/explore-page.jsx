@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { StayList } from '../cmps/stay-list'
 import { StayFilter } from '../cmps/explore-cmps/stay-filter'
 import { CategoriesFilter } from '../cmps/explore-cmps/categories-filter'
-import { loadStays } from '../store/actions/stay.action'
+import { loadStays, setFilterBy } from '../store/actions/stay.action'
 import { setVisitPage } from '../store/actions/system.action'
 import filterImg from '../assets/svg/filter.svg'
+import { updateReserve } from '../store/actions/reserve.action'
+
 
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
@@ -13,11 +15,24 @@ export const ExplorePage = ({ history }) => {
     const [isModalOpen, showFilterModal] = useState(false)
     const [isPageScroll, setisPageScroll] = useState(false)
 
+
     useEffect(() => {
 
-        dispatch(loadStays())
         dispatch(setVisitPage('explore-page'))
+        const searchParams = history.location.search
+        if (searchParams) {
+            const updatedSearchBy = JSON.parse(JSON.stringify(filterBy.searchBy))
+            const location = new URLSearchParams(searchParams).get('location');
+            if (location) updatedSearchBy.location = location
+            const guests = JSON.parse(new URLSearchParams(searchParams).get('guests'));
+            if (guests) updatedSearchBy.guestsNum = guests
+            const dates = new URLSearchParams(searchParams).get('dates');
+            if (dates) updatedSearchBy.dates = JSON.parse(dates)
 
+            dispatch(setFilterBy('searchBy', updatedSearchBy))
+        }
+
+        dispatch(loadStays())
         window.addEventListener('scroll', onScroll)
         return () => {
             window.removeEventListener('scroll', onScroll)
@@ -26,7 +41,6 @@ export const ExplorePage = ({ history }) => {
 
     useEffect(() => {
         dispatch(loadStays())
-
     }, [filterBy])
 
     const onScroll = () => {

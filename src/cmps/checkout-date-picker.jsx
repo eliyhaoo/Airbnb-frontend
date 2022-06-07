@@ -41,24 +41,30 @@ export function CheckoutDatePicker({ dates }) {
 
 					startText='Check-in'
 					endText='Check-out'
-					renderInput={(startProps, endProps) => (
+					startPlaceholder='Check-in'
+					renderInput={(startProps, endProps) => {
+						startProps.inputProps.placeholder = 'Add dates'
+						endProps.inputProps.placeholder = 'Add dates'
+						
+						return (
 
-						<div className="flex">
-
-							<div className="date-input flex direction-column">
-								<label className="">CHECK-IN</label>
-								<input autoComplete="off" ref={startProps.inputRef} {...startProps.inputProps} />
+							<div className="flex">
+	
+								<div className="date-input flex direction-column">
+									<label className="">CHECK-IN</label>
+									<input autoComplete="off" ref={startProps.inputRef} {...startProps.inputProps} />
+								</div>
+	
+								<div className="date-input flex direction-column">
+									<label className="">CHECKOUT</label>
+									<input autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
+								</div>
+	
 							</div>
-
-							<div className="date-input flex direction-column">
-								<label className="">CHECKOUT</label>
-								<input autoComplete="off" ref={endProps.inputRef} {...endProps.inputProps} />
-							</div>
-
-						</div>
-
-
-					)}
+	
+	
+						)
+					}}
 				/>
 			</LocalizationProvider>
 		</ThemeProvider>

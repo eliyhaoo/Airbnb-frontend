@@ -6,9 +6,9 @@
 
     .stay-amenities {
         font-size: 17px;
-        width: 500px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+        grid-template-columns: repeat(auto-fill, 42.9%);
+        column-gap: 61px;
 
         .amenite-img-container {
             padding-bottom: em(6px);
