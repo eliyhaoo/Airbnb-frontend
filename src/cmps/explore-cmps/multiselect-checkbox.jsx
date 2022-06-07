@@ -6,7 +6,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 
-export const MultiselectCheckbox = ({ fields, onHandleChange,titles }) => {
+export const MultiselectCheckbox = ({ fields, onHandleChange, titles }) => {
 
   const [state, setState] = useState(fields)
 
@@ -33,7 +33,7 @@ export const MultiselectCheckbox = ({ fields, onHandleChange,titles }) => {
                 control={
                   <Checkbox checked={state[stateField]} onChange={handleChange} name={`${stateField}`}
                     sx={{
-                      color: '#222222',
+                      color: '#b0b0b0',
 
                       '&.Mui-checked': {
                         color: '#222222',

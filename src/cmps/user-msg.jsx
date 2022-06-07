@@ -12,13 +12,13 @@ export class UserMsg extends React.Component {
   }
 
   componentDidMount() {
-    if(this.removeEvent) this.removeEvent()
+    if (this.removeEvent) this.removeEvent()
     this.removeEvent = eventBusService.on('show-user-msg', (msg) => {
       console.log('GETTING MSG', msg);
       this.setState({ msg })
       setTimeout(() => {
         this.setState({ msg: null })
-      }, 2500)
+      }, 8000)
     })
   }
 
@@ -29,7 +29,7 @@ export class UserMsg extends React.Component {
   render() {
     if (!this.state.msg) return <span></span>
     const msgClass = this.state.msg.type || ''
-    console.log('MSG CLASS',msgClass);
+    console.log('MSG CLASS', msgClass);
     return (
       <section className={'user-msg ' + msgClass}>
         <button onClick={() => {

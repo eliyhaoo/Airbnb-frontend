@@ -44,6 +44,7 @@ const theme = createTheme({
 });
 
 
+
 // const reservations =   [
 //     {
 //         "_id": "61f907caa7cf85901696d591",
@@ -504,6 +505,11 @@ export const DashboardReservations = () => {
     // Avoid a layout jump when reaching the last page with empty rows.
     const emptyRows =
         page > 0 ? Math.max(0, (1 + page) * rowsPerPage - reservations.length) : 0;
+
+    const dateToDisplay = (reservationDate) => {
+        const dateToDisplay = new Date(reservationDate).toLocaleDateString('en-us', { day: "numeric", month: "short", year: "numeric" })
+        return dateToDisplay
+    }
 
     if (!reservations) return <div className="loader"></div>
     return (

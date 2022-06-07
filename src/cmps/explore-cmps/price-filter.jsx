@@ -101,7 +101,8 @@ export const PriceFilter = ({ onSetPrice, price }) => {
                 <div className="price-container">min price</div>
                 <div className="price">
                     <span>$</span>
-                    {price ? price.min : minPrice}
+                    {/* {price ? price.min : minPrice} */}
+                    {price ? utilService.getPriceWithCommas(price.min) : utilService.getPriceWithCommas(minPrice)}
                 </div>
             </div>
             <div className="minus-price-filter">-</div>

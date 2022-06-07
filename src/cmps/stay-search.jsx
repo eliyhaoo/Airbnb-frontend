@@ -30,7 +30,7 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
         <div onClick={(ev) => onSetModalOpen(ev, 'guest')} className="search-guest">
             <div className="search-guest-container flex space-between align-center">
                 <div className="search-guest-btn">
-                    {guestsNum ? utilService.checkForPlurals('guest', guestsNum) : 'Anyweek'}
+                    {guestsNum ? utilService.checkForPlurals('guest', guestsNum) : 'Add guests'}
 
                 </div>
                 <button className="search-btn flex align-center" ><img src={searchSvg} alt="btn" /> </button>

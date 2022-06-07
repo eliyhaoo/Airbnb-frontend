@@ -29,6 +29,7 @@ export const StayDetails = ({ history }) => {
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
 
+
     useEffect(() => {
         (async () => {
             dispatch(setVisitPage('details-page'))

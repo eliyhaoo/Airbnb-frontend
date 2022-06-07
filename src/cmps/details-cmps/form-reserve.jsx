@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { AddGuest } from '../add-guest'
 import { CheckoutDatePicker } from '../checkout-date-picker'
-import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.js'
+import { showSuccessMsg, showErrorMsg, showReservedMsg } from '../../services/event-bus.service.js'
 import { utilService } from '../../services/util.service'
 import _ from 'lodash'
 import { reservationService } from '../../services/reservation.service'
@@ -24,7 +24,6 @@ export const FormReserve = ({ stay }) => {
         setModal(false)
     }
 
-
     const toggleModal = (ev) => {
         ev.stopPropagation()
         setModal(prevState => !prevState)
@@ -35,10 +34,10 @@ export const FormReserve = ({ stay }) => {
 
             try {
                 const updatedReservation = updateReserveFields()
-                console.log('RESERVATIONS TPO SEND ', updatedReservation);
+                console.log('RESERVATIONS TPO SEND ', updatedReservation)
                 await reservationService.save(updatedReservation)
                 socketService.emit(SOCKET_EMIT_RESERVATION, updatedReservation)
-                showSuccessMsg('Your trip was booked')
+                showReservedMsg('Your trip was booked')
             } catch (err) {
                 console.log('Cannot reserve')
                 showErrorMsg('Cannot reserve')
@@ -95,8 +94,6 @@ export const FormReserve = ({ stay }) => {
                     <img className={isModalOpen ? 'open' : ''} src={dropDownSvg} onClick={toggleModal} />
                 </div>
                 <div className={`add-guest-reserve ${isModalOpen ? 'open' : ''} `}>
-                    {/* : { dropUpSvg }} */}
-                    {/* {`${isModalOpen}` ?  */}
                     <AddGuest onCloseModal={onCloseModal} guests={reserve.guests} />
                 </div>
             </div>
