@@ -8,15 +8,29 @@
                 content:'';
                 position:absolute;
                 background: linear-gradient(90deg, #0000, $backgroundClr);
-                width: 100%;
+                // background: linear-gradient(90deg, #0000, red);
+                width: 7%;
                 height: 100%;
                 top:50%;
+                right:25px;
                 transform: translateY(-50%);
             }
-            >span{
-                
-                background-color: red;
+          
+        }
+        .sc-bwzfXH.kVtMtA{
+            
+            &::after{
+                content:'';
+                position:absolute;
+                background: linear-gradient(270deg, #0000, $backgroundClr);
+                // background: linear-gradient(90deg, #0000, red);
+                width: 7%;
+                height: 100%;
+                top:50%;
+                left:25px;
+                transform: translateY(-50%);
             }
+          
         }
     }
 }
