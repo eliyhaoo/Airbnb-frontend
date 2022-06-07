@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import searchSvg from '../assets/svg/magnifying-glass.svg'
 import { utilService } from '../services/util.service'
 
+import { utilService } from '../services/util.service'
 export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)

@@ -1,5 +1,4 @@
 .stay-search-expand {
-
     position: absolute;
     left: calc(50% + $layoutPadding);
     transform: translate((calc(-50% - (1.5*$layoutPadding)), 91px));
@@ -12,8 +11,6 @@
     }
 
     .stay-search-expand-container {
-
-
         border: 1px solid $borderClr;
         background-color: $footer;
         align-self: center;
@@ -24,6 +21,7 @@
         box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
 
         // padding: 8px 15px;
+
 
         .search-modal {
             position: absolute;
@@ -50,6 +48,7 @@
                     font-family: cereal-medium;
                     margin-bottom: 28px;
                     margin-inline-start: 16px;
+
                 }
             }
 
@@ -65,7 +64,10 @@
 
         }
 
+        // .stay-search-expand .stay-search-expand-container input 
         .search-location-expand {
+
+
 
             &.open {
                 background-color: $backgroundClr;
@@ -95,6 +97,9 @@
             //         } 
             //     } 
             // }
+            span {
+                color: $subtext;
+            }
 
             &.open {
                 padding: 0;
@@ -116,6 +121,9 @@
             border: unset;
             background-color: unset;
             width: 100%;
+            font-family: cereal-book;
+            font-size: 0.875rem;
+            padding: 0;
 
             &:focus-visible {
                 outline: unset;
@@ -163,6 +171,10 @@
 
         .search-guest-expand {
             position: relative;
+
+            span {
+                color: $subtext;
+            }
 
             .search-btn-container {
 
