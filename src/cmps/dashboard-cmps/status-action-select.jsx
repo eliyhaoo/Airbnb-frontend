@@ -60,7 +60,7 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
                     >
 
                         <MenuItem value={'approved'}>Approved</MenuItem>
-                        <MenuItem value={'decline'}>Decline</MenuItem>
+                        <MenuItem value={'declined'}>Declined</MenuItem>
                         <MenuItem value={'pending'}>Pending</MenuItem>
                     </Select>
                 </FormControl>

@@ -20,7 +20,7 @@ export const HomePage = ({ history }) => {
 
     const onSelectCity = (city) => {
         console.log('city', city)
-        setSearchByFields((prevState) => ({ ...prevState, location: city }))
+        // setSearchByFields((prevState) => ({ ...prevState, location: city }))
         // dispatch(setFilterBy('searchBy', searchByFields))
         // console.log('SearchByFields', searchByFields)
         // history.push(`/explore/?location=${searchByFields.city}`)
@@ -57,11 +57,12 @@ export const HomePage = ({ history }) => {
         <div className="popular-destinations home-page-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
             <div className="popular-destinations-imgs-container">
-                {cities.map((city, idx) =>
-                    <div key={idx} onClick={() => onSelectCity(city)} className="city-container flex direction-column">
+                {/* {cities.map((city, idx) =>
+                    // <div key={idx} onClick={() => onSelectCity(city)} className="city-container flex direction-column">
+                    <div key={idx} className="city-container flex direction-column">
                         <img className="city-img" src={require(`../assets/img/cities/${city}.jpg`)} alt="city" /> <span>{city}</span>
                     </div>
-                )}
+                )} */}
 
             </div>
         </div>
