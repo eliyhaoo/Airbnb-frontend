@@ -13,6 +13,7 @@ export const FormReserve = ({ stay }) => {
 
     const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { user } = useSelector(storeState => storeState.userModule)
+    const [isDisabled, setReserveBtn] = useState(false)
 
     const [isModalOpen, setModal] = useState(false)
     const [btnMode, setIsDeley] = useState({ loader: false, reserve: false, btnTxt: "Check availability" })
@@ -23,7 +24,6 @@ export const FormReserve = ({ stay }) => {
         ev.stopPropagation()
         setModal(false)
     }
-
 
     const toggleModal = (ev) => {
         ev.stopPropagation()
@@ -39,6 +39,7 @@ export const FormReserve = ({ stay }) => {
                 await reservationService.save(updatedReservation)
                 socketService.emit(SOCKET_EMIT_RESERVATION, updatedReservation)
                 showSuccessMsg('Your trip was booked')
+                setReserveBtn(true)
             } catch (err) {
                 console.log('Cannot reserve')
                 showErrorMsg('Cannot reserve')
@@ -95,8 +96,6 @@ export const FormReserve = ({ stay }) => {
                     <img className={isModalOpen ? 'open' : ''} src={dropDownSvg} onClick={toggleModal} />
                 </div>
                 <div className={`add-guest-reserve ${isModalOpen ? 'open' : ''} `}>
-                    {/* : { dropUpSvg }} */}
-                    {/* {`${isModalOpen}` ?  */}
                     <AddGuest onCloseModal={onCloseModal} guests={reserve.guests} />
                 </div>
             </div>

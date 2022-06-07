@@ -32,7 +32,7 @@ export const CategoriesCarousel = ({ categories }) => {
       },
       {
         breakpoint: 1500,
-        cols: 10,
+        cols: 14,
         rows: 1,
         gap: 10,
         // loop: true,
