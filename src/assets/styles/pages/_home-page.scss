@@ -2,8 +2,9 @@
     .hero-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 0.7fr;
 
+       
         // height: 150vh;
         .hero {
             // background-image: url(https://a0.muscache.com/im/pictures/monet/Select-34444025/original/944d56fa-e9a6-48fb-a9c5-e4e3778042d7?im_w=1200);
@@ -55,7 +56,8 @@
             font-size: rem(48px);
             color: #ffffff;
             font-weight: 600;
-            // text-shadow: 2px 2px 4px #000000d1;
+            align-self: flex-end;
+         
         }
     }
 
@@ -94,6 +96,7 @@
             margin-top: 1rem;
             font-size: 1.3em;
             font-family: manrope-medium;
+            
 
         }
     }

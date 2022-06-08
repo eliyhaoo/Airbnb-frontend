@@ -17,8 +17,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
     const titles = ['A place all to yourself', 'Your own room in a home or a hotel, plus some shared common spaces', 'A sleeping space and common areas that may be shared with others']
 
     const onSetFilterBy = (ev) => {
-        console.log('EVENT', ev);
-        console.log('FILTER BY PROP', filterByProperties);
+   
         if (!ev.target) return
         ev.preventDefault()
         dispatch(setFilterBy('properties', filterByProperties))

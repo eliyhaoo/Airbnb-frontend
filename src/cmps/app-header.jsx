@@ -49,6 +49,7 @@ const _AppHeader = ({ history }) => {
     }, [visitedPage])
 
     useEffect(() => {
+        console.log('NOTIFICATIONS',isNotficationOn);
     }, [isSearchOpen, isNotficationOn])
 
     const onScroll = () => {

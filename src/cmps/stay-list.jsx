@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { StayPreview } from './stay-preview'
 import { updateUser } from "../store/actions/user.actions"
 import { storageService } from '../services/async-storage.service.js'
+import { Loader } from './loader'
 
 export const StayList = ({ stays, history }) => {
 
