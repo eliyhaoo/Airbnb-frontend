@@ -17,7 +17,8 @@ export const HomePage = ({ history }) => {
     const onSelectCity = (city) => {
         history.push(`/explore/?location=${city}`)
     }
-    const cities = ['New York', 'Paris', 'Santorini', 'Dubai']
+    const cities = ['New York', 'Santorini', 'Paris', 'Dubai']
+    // const cities = ['New York', 'Paris', 'Santorini', 'Dubai']
 
     return <section className="home-page full">
         <div className="hero-container full">
