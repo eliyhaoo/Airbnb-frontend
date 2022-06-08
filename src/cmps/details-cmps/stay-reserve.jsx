@@ -1,8 +1,17 @@
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import starSvg from '../../assets/svg/star.svg'
 import { utilService } from '../../services/util.service'
+import { setStay } from '../../store/actions/stay.action'
 
 import { FormReserve } from './form-reserve'
+
 export const StayReserve = ({ stay }) => {
+
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(setStay(stay))
+    },[])
 
     if (!stay) return <div>Loading...</div>
     return <div className="stay-reserve">

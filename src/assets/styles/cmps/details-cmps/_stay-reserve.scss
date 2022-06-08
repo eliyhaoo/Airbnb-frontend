@@ -164,6 +164,9 @@
     }
 }
 
+
+
+
 .btn-container {
     position: relative;
     width: 100%;
@@ -204,6 +207,7 @@
         align-items: center;
         height: 100%;
         border-radius: 8px;
+       
 
         background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
                 rgb(241, 37, 75) 0%,
@@ -230,8 +234,7 @@
             color: white;
             font-size: 16px;
             line-height: 20px;
-            font-weight: 600;
-            // font-family: sans-serif;
+            font-family: manrope-semi-bold;
         }
 
     }
