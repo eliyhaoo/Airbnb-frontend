@@ -24,16 +24,18 @@ export const UserOptions = () => {
 
         <div className="login-options-container" >
             {!user ? <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> : <div>Wishlist</div>}
-            {!user ? <div onClick={onLogin} ><Link to="/login"><div>Log in</div></Link> </div> : <div onClick={onLogOut}>Log out</div>}
+            {!user ? <div onClick={onLogin} ><Link to="/login"><div>Log in</div></Link> </div> : <div><Link to="/dashboard"><div>Dashboard</div></Link></div>}
         </div>
 
         <div className="host-options-container ">
+            {!user ? <div>Wishlist</div> : ''}
             <div>Host your home</div>
-            {!user ? <div>Host an experience</div> : <div><Link to="/dashboard"><div>Dashboard</div></Link></div>}
+            {!user ? <div>Host an experience</div> : <div onClick={onLogOut}>Log out</div>}
             {/* <div>Host an experience</div> */}
-            {!user ? <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> : ''}
+            {/* <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> */}
 
             <div>Help</div>
+
         </div>
 
     </section>

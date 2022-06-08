@@ -1,21 +1,16 @@
 .stay-search-expand {
-
     position: absolute;
     left: calc(50% + $layoutPadding);
-    transform: translate((calc(-50% - (1.5*$layoutPadding)),11vh));
+    transform: translate((calc(-50% - (1.5*$layoutPadding)), 91px));
     opacity: 1;
-    transition: transform  0.2s, opacity 0.5s;
+    transition: transform 0.2s, opacity 0.5s;
 
     &.close {
         transform: translate((calc(-50% - (1.5*$layoutPadding))), 8px) scale(0.4, 0.8);
         opacity: 0;
-        
     }
 
-
     .stay-search-expand-container {
-
-
         border: 1px solid $borderClr;
         background-color: $footer;
         align-self: center;
@@ -24,8 +19,9 @@
         height: 66px;
         border-radius: 40px;
         box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
-        
+
         // padding: 8px 15px;
+
 
         .search-modal {
             position: absolute;
@@ -43,7 +39,7 @@
             background-color: $backgroundClr;
             margin-top: 12px;
             padding: 16px 32px;
-            
+
             box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 8px 16px rgb(0 0 0 / 15%);
 
             &.country-container {
@@ -52,6 +48,7 @@
                     font-family: cereal-medium;
                     margin-bottom: 28px;
                     margin-inline-start: 16px;
+
                 }
             }
 
@@ -67,7 +64,10 @@
 
         }
 
+        // .stay-search-expand .stay-search-expand-container input 
         .search-location-expand {
+
+
 
             &.open {
                 background-color: $backgroundClr;
@@ -77,7 +77,7 @@
             }
         }
 
-        .search-date-expand{
+        .search-date-expand {
 
             // .css-1ozefeb{
 
@@ -97,6 +97,9 @@
             //         } 
             //     } 
             // }
+            span {
+                color: $subtext;
+            }
 
             &.open {
                 padding: 0;
@@ -109,15 +112,18 @@
         }
 
 
-        .search-label{
+        .search-label {
             font-family: cereal-medium;
             margin-left: 1px;
         }
-        
+
         input {
             border: unset;
             background-color: unset;
             width: 100%;
+            font-family: cereal-book;
+            font-size: 0.875rem;
+            padding: 0;
 
             &:focus-visible {
                 outline: unset;
@@ -166,16 +172,24 @@
         .search-guest-expand {
             position: relative;
 
+            span {
+                color: $subtext;
+            }
+
             .search-btn-container {
 
                 &.src-btn-small-expand {
                     width: 48px;
-
+               
+                  
+                    
                     .content {
-                        padding: 13px;
+                        background: $primary;
+                        padding: 16px;
                         aspect-ratio: 1;
                         width: 48px;
                         border-radius: 50%;
+                        
                     }
                 }
 
@@ -186,9 +200,9 @@
                         height: 48px;
                         border-radius: 24px;
                         color: $backgroundClr;
-                        padding: 0 10px;
+                        padding: 2.9px 14px;
                         gap: 10px;
-                        font-size: rem(18px);
+                        font-size: 1rem;
                     }
 
                     .action-btn {
@@ -201,7 +215,10 @@
                             flex-grow: 1;
 
                             &::before {
-                                content: "Search"
+                                content: "Search";
+                                color:$backgroundClr;
+                                // font-family: manrope-semi-bold;
+                                font-family: cereal-book;
                             }
                         }
 
@@ -220,23 +237,36 @@
     }
 }
 
-.css-1ozefeb{
 
-    .MuiPaper-root{
 
-        &.MuiPaper-elevation{
+// .MuiPaper-root {
 
-            &.MuiPaper-rounded{
+//     &.MuiPaper-elevation {
 
-                &.MuiPaper-elevation8{
+//         &.MuiPaper-rounded {
 
-                    &.css-1smlk3z-MuiPaper-root{
-                        border-radius: 32px ;
-                        margin-top:14px;
-                    }
-                } 
-            } 
-        } 
-    }  
+//             &.MuiPaper-elevation8 {
+
+//                 &.css-1smlk3z-MuiPaper-root {
+//                     border-radius: 32px;
+//                     margin-top: 14px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.MuiPaper-root {
+
+    &.css-1smlk3z-MuiPaper-root {
+        border-radius: 32px;
+        margin-top: 14px;
+    }
+    
+    &.css-1tihz4g-MuiPaper-root{
+        border-radius: 32px;
+        margin-top: 14px;
+
+    }
 
 }

@@ -50,9 +50,9 @@
         box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px !important;
         background: $backgroundClr;
         z-index: 999;
-        width: calc(100% - 40px);
-        left: 20px;
-        top: 208px;
+        width: calc(100% - 48px);
+        left: 24px;
+        top: 175px;
         // height: 0px;
         opacity: 0;
         transition: height opacity 0.6s ease-in;
@@ -64,6 +64,7 @@
             // height: 700px;
             transform: translateX(0);
             opacity: 1;
+
 
         }
 
@@ -114,7 +115,7 @@
 
         input {
             border: none;
-            // padding: 0 0;
+            padding: 0;
             width: 100%;
             outline: none;
         }
@@ -164,6 +165,9 @@
     }
 }
 
+
+
+
 .btn-container {
     position: relative;
     width: 100%;
@@ -204,6 +208,7 @@
         align-items: center;
         height: 100%;
         border-radius: 8px;
+       
 
         background-image: radial-gradient(circle at calc((0 + var(--positionX, 0)) * 10%) calc((0 + var(--positionY, 0)) * 5%),
                 rgb(241, 37, 75) 0%,
@@ -230,8 +235,7 @@
             color: white;
             font-size: 16px;
             line-height: 20px;
-            font-weight: 600;
-            // font-family: sans-serif;
+            font-family: manrope-semi-bold;
         }
 
     }

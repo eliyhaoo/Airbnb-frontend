@@ -3,7 +3,7 @@
     height: 193px;
     width: 100%;
     background-color: unset;
-    z-index: 10000;
+    z-index: 450;
     transition: 1s;
 
     .header-container {
@@ -98,6 +98,8 @@
             }
         }
 
+       
+
         .logo-img {
             width: 135px;
 
@@ -134,7 +136,7 @@
 
     &.pages {
 
-        height: 19vh;
+        // height: 193px;
         border-bottom: 1px solid $borderClr;
 
         background-color: $backgroundClr;

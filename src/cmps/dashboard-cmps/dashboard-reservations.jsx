@@ -577,7 +577,7 @@ export const DashboardReservations = () => {
                                                     <TableCell align="left">{utilService.getDateToDisplay(reservation.bookedAt)}</TableCell>
                                                     <TableCell align="left">{reservation.listingName}</TableCell>
                                                     <TableCell align="left">${utilService.getPriceWithCommas(reservation.totalPrice)}</TableCell>
-                                                    <TableCell align="left"><StatusActionSelect reservation={reservation} loadReservations={loadReservations} /></TableCell>
+                                                    <TableCell align="right"><StatusActionSelect reservation={reservation} loadReservations={loadReservations} /></TableCell>
                                                     {/* <TableCell align="right"> <button className='reservation-action-btn' onClick={onReserveClick}>ACTION HERE</button></TableCell> */}
                                                 </TableRow>
                                             );
