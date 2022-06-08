@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import searchSvg from '../assets/svg/magnifying-glass.svg'
 import { utilService } from '../services/util.service'
 
-import { utilService } from '../services/util.service'
 export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)
@@ -18,14 +17,14 @@ export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
     const { searchBy: { location, dates, guestsNum } } = filterBy
 
     const getCheckinDatesToDisplay = () => {
-        return utilService.getDateToDisplay(dates.checkIn,false) + '-' +utilService.getDateToDisplay(dates.checkOut,false) 
+        return utilService.getDateToDisplay(dates.checkIn, false) + '-' + utilService.getDateToDisplay(dates.checkOut, false)
     }
 
     return <section className="stay-search flex space-between align-center">
 
         <button onClick={(ev) => onSetModalOpen(ev, 'location')} className="search-location">
-            {location ?  <span className="capital">{location}</span> : 'Anywhere'}
-           
+            {location ? <span className="capital">{location}</span> : 'Anywhere'}
+
         </button>
 
         <button onClick={(ev) => onSetModalOpen(ev, 'dates')} className="search-date">
