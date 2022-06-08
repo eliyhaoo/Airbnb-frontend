@@ -180,12 +180,16 @@
 
                 &.src-btn-small-expand {
                     width: 48px;
-
+               
+                  
+                    
                     .content {
-                        padding: 13px;
+                        background: $primary;
+                        padding: 16px;
                         aspect-ratio: 1;
                         width: 48px;
                         border-radius: 50%;
+                        
                     }
                 }
 
@@ -196,9 +200,9 @@
                         height: 48px;
                         border-radius: 24px;
                         color: $backgroundClr;
-                        padding: 0 10px;
+                        padding: 2.9px 14px;
                         gap: 10px;
-                        font-size: rem(18px);
+                        font-size: 1rem;
                     }
 
                     .action-btn {
@@ -211,7 +215,10 @@
                             flex-grow: 1;
 
                             &::before {
-                                content: "Search"
+                                content: "Search";
+                                color:$backgroundClr;
+                                // font-family: manrope-semi-bold;
+                                font-family: cereal-book;
                             }
                         }
 

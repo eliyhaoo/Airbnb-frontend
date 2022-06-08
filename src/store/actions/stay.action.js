@@ -5,10 +5,12 @@ import { stayService } from '../../services/stay.service.js'
 export function loadStays() {
     return async (dispatch, getState) => {
         const { filterBy } = getState().stayModule
-        console.log('FILTERBY', filterBy);
+        const filterByToQuery = JSON.parse(JSON.stringify(filterBy))
+        if(filterBy.searchBy.location === 'Im flexible'){
+            filterByToQuery.searchBy.location = ''
+        }
         try {
-            const stays = await stayService.query(filterBy)
-            // console.log('STAYS',stays);
+            const stays = await stayService.query(filterByToQuery)
             dispatch({
                 type: 'SET_STAYS',
                 stays
@@ -42,7 +44,7 @@ export function saveStay(stay) {
     }
 }
 
-export function setStayInStore(stay) {
+export function setStay(stay) {
     return async (dispatch) => {
         try {
             dispatch({
@@ -50,13 +52,13 @@ export function setStayInStore(stay) {
                 stay
             })
         } catch (err) {
-            console.log('StayActions : err in setStayInStore', err)
+            console.log('StayActions : err in setStay', err)
         }
     }
 }
 
 export function setFilterBy(field, value) {
-    return async dispatch => {
+    return  dispatch => {
         try {
             dispatch({
                 type: 'SET_FILTERBY',
