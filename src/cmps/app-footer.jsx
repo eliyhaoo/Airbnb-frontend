@@ -44,7 +44,7 @@ export const AppFooter = () => {
             </div>}
             <div className="footer-content flex align-center space-between">
                 <div className="footer-right-side flex align-center space-between">
-                    <span>© 2022 Topbnb,</span> <span>Inc.</span><span> ·</span><span>Privacy</span><span> · </span><span>Terms</span><span>·</span> <span>Sitemap</span>
+                    <span>© 2022 homebnb,</span> <span>Inc.</span><span> ·</span><span>Privacy</span><span> · </span><span>Terms</span><span>·</span> <span>Sitemap</span>
                 </div>
                 <div className="footer-left-side flex align-center space-between">
                     <img className="language-icon" src={(languageIcon)} alt="language-icon" />
