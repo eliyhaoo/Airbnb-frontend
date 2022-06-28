@@ -7,6 +7,7 @@ import { loadStays, setFilterBy } from '../store/actions/stay.action'
 import { setVisitPage } from '../store/actions/system.action'
 import filterImg from '../assets/svg/filter.svg'
 import { updateReserve } from '../store/actions/reserve.action'
+import { Loader } from '../cmps/loader'
 
 
 export const ExplorePage = ({ history }) => {
@@ -51,7 +52,7 @@ export const ExplorePage = ({ history }) => {
             setisPageScroll(false)
         }
     }
-
+    
     return <section className="explore-page full main-layout">
         <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full main-layout`}>
             <div className="filter-btns-container flex align-center space-between">
@@ -64,6 +65,9 @@ export const ExplorePage = ({ history }) => {
                 {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
             </div>
         </div>
-        <StayList stays={stays} history={history} />
+    
+            <StayList stays={stays} history={history} />
+         
+        
     </section >
 }
