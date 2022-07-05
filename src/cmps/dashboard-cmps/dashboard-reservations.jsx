@@ -14,7 +14,6 @@ import TableSortLabel from '@mui/material/TableSortLabel'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper'
-import Checkbox from '@mui/material/Checkbox'
 import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import FormControlLabel from '@mui/material/FormControlLabel'
@@ -24,11 +23,11 @@ import FilterListIcon from '@mui/icons-material/FilterList'
 import { StatusActionSelect } from './status-action-select'
 import { visuallyHidden } from '@mui/utils'
 import { reservationService } from '../../services/reservation.service'
-import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
-import { useSelector } from 'react-redux'
 import { utilService } from '../../services/util.service'
 
 import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { Loader } from '../general-cmps/loader'
+import { useSelector } from 'react-redux'
 
 const themeHeader = createTheme({
     typography: {
@@ -44,180 +43,6 @@ const theme = createTheme({
 });
 
 
-
-// const reservations =   [
-//     {
-//         "_id": "61f907caa7cf85901696d591",
-//         "hostId": "61f3b204da15b10b906xxe58",
-//         "buyerId": "61f3b2ddd995b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"1 BR bla bla",
-//         "totalPrice": 2822.8,
-//         "dates": {
-//             "checkIn": "may-02",
-//             "checkOut": "may-05"
-//         },
-//         "guests": {
-//             "total": 6,
-//             "adults": 4,
-//             "children": 2,
-//             "infants": 0
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "61f907caa7cf680016974491",
-//         "hostId": "61f3b204da18510b90629e58",
-//         "buyerId": "61f3b5ddda15b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"3 BR bla bla",
-//         "totalPrice": 1582,
-//         "dates": {
-//             "checkIn": "may-02",
-//             "checkOut": "may-05"
-//         },
-//         "guests": {
-//             "total": 3,
-//             "adults": 1,
-//             "children": 2,
-//             "infants": 0
-//         },
-//         "status": "pending"
-//     },
-//     {
-//         "_id": "61f907caa7cf36501696d591",
-//         "hostId": "61f3b204da17410b90629e58",
-//         "buyerId": "6173b2ddda15b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"2 BR blsaassasa bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "",
-//             "checkOut": ""
-//         },
-//         "guests": {
-//             "total": 2,
-//             "adults": 2,
-//             "children": 0,
-//             "infants": 0
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "968907caa7cf68014296d591",
-//         "hostId": "61f3b2048515b10b90629e58",
-//         "buyerId": "61f3b2ddda15b10b92029e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"2 BR bla bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "may-02",
-//             "checkOut": "may-05"
-//         },
-//         "guests": {
-//             "total": 8,
-//             "adults": 6,
-//             "children": 1,
-//             "infants": 1
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "61f90789a7cf68001696c591",
-//         "hostId": "61f3b204da15b12090629e58",
-//         "buyerId": "61f3b2dd7715b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"9 BR bla bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "may-02",
-//             "checkOut": "may-05"
-//         },
-//         "guests": {
-//             "total": 3,
-//             "adults": 2,
-//             "children": 0,
-//             "infants": 1
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "61f90789a7cf68001696c552",
-//         "hostId": "61f3b2049815b10b90629e58",
-//         "buyerId": "61f3b263da15b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"3 BR 232 bla bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "",
-//             "checkOut": ""
-//         },
-//         "guests": {
-//             "total": 1,
-//             "adults": 1,
-//             "children": 0,
-//             "infants": 0
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "61f907caacc468001696d591",
-//         "hostId": "61f3b2055a15b10b90629e58",
-//         "buyerId": "61f3bbbdda15b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"1333 BR bla bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "",
-//             "checkOut": ""
-//         },
-//         "guests": {
-//             "total": 4,
-//             "adults": 2,
-//             "children": 2,
-//             "infants": 0
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "61f907cac7cf68001696d591",
-//         "hostId": "61f3b204da15b10550629e58",
-//         "buyerId": "61f3bsddda15b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"33 BR bla2222 bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "",
-//             "checkOut": ""
-//         },
-//         "guests": {
-//             "total": 3,
-//             "adults": 2,
-//             "children": 1,
-//             "infants": 0
-//         },
-//         "status": "Approved"
-//     },
-//     {
-//         "_id": "61f907caa72228001696d591",
-//         "hostId": "61f31104da15b10b90629e58",
-//         "buyerId": "61f3b2dd8815b10b90629e59",
-//         "stayId": "61ef1c92652f5891aa7bc38a",
-//         "listingName":"333332 BR23 bla bla",
-//         "totalPrice": 745,
-//         "dates": {
-//             "checkIn": "",
-//             "checkOut": ""
-//         },
-//         "guests": {
-//             "total": 5,
-//             "adults": 2,
-//             "children": 3,
-//             "infants": 0
-//         },
-//         "status": "Approved"
-//     }
-// ]
 
 
 
@@ -428,6 +253,7 @@ export const DashboardReservations = () => {
     const [reservations, setReservation] = React.useState(null)
 
     const { user } = useSelector(storeState => storeState.userModule)
+    
 
 
 
@@ -511,7 +337,7 @@ export const DashboardReservations = () => {
         return dateToDisplay
     }
 
-    if (!reservations) return <div className="loader"></div>
+    if (!reservations) return <Loader/>
     return (
         <section className="dashboard-reservations">
             <h2>Reservations</h2>

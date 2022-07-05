@@ -48,12 +48,8 @@ export function stayReducer(state = initialState, action) {
         case 'SET_FILTERBY':
             const { field, value } = action.filterField
             newState = { ...state, filterBy: { ...state.filterBy, [field]: value } }
-            // console.log('newState', newState)
             return newState
         default:
     }
-    // For debug:
-    // window.userState = newState;
-    // console.log('State:', newState);
     return newState;
 }

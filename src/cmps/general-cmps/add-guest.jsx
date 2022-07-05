@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateReserve } from '../store/actions/reserve.action'
+import { updateReserve } from '../../store/actions/reserve.action'
 
-import plusSvg from '../assets/svg/plus.svg'
-import minusSvg from '../assets/svg/minus.svg'
-import disabledMinusSvg from '../assets/svg/minus-disabled.svg'
+import plusSvg from '../../assets/svg/plus.svg'
+import minusSvg from '../../assets/svg/minus.svg'
+import disabledMinusSvg from '../../assets/svg/minus-disabled.svg'
 
 
 export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }) => {

@@ -1,6 +1,3 @@
-// import { userService } from '../services/user.service.js'
-import { userReducer } from "./user.reducer";
-import { store } from "../store";
 
 const initialState = {
     reserve: {

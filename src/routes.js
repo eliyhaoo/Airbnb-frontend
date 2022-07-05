@@ -1,8 +1,8 @@
 import { HomePage } from "./pages/home-page"
 import { ExplorePage } from "./pages/explore-page"
 import { StayDetails } from "./pages/stay-details"
-import { Login } from "./cmps/login"
-import { Signup } from "./cmps/signup"
+import { Login } from "./pages/login"
+import { Signup } from "./pages/signup"
 import { DashboardPage } from "./pages/dashboard-page"
 import { BecomeHostPage } from "./pages/become-host-page"
 
@@ -12,7 +12,6 @@ const routes = [
         component: BecomeHostPage
     },
     {
-        // path: '/dashboard/:userId',
         path: '/dashboard',
         component: DashboardPage
     },
@@ -29,19 +28,16 @@ const routes = [
     {
         path: '/stay/:stayId?',
         component: StayDetails,
-        label: 'StayDetails',
     },
 
     {
         path: '/explore',
         component: ExplorePage,
-        label: 'ExplorePage',
     },
 
     {
         path: '/',
         component: HomePage,
-        label: 'Home 🏠',
     },
 
 ]

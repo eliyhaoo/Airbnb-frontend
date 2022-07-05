@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { StayList } from '../cmps/stay-list'
+import { StayList } from '../cmps/general-cmps/stay-list'
 import { StayFilter } from '../cmps/explore-cmps/stay-filter'
 import { CategoriesFilter } from '../cmps/explore-cmps/categories-filter'
 import { loadStays, setFilterBy } from '../store/actions/stay.action'
 import { setVisitPage } from '../store/actions/system.action'
 import filterImg from '../assets/svg/filter.svg'
-import { updateReserve } from '../store/actions/reserve.action'
-import { Loader } from '../cmps/loader'
 
 
 export const ExplorePage = ({ history }) => {
@@ -53,8 +51,9 @@ export const ExplorePage = ({ history }) => {
         }
     }
     
-    return <section className="explore-page full main-layout">
-        <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full main-layout`}>
+    // return <section className="explore-page full main-layout">
+    return <section className="explore-page ">
+        <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full`}>
             <div className="filter-btns-container flex align-center space-between">
                 <CategoriesFilter />
                 <button className="filter-btn flex align-center space-between"

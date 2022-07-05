@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 // import searchSvg from '../assets/svg/searchsvg.svg'
-import searchSvg from '../assets/svg/magnifying-glass.svg'
-import { utilService } from '../services/util.service'
+import searchSvg from '../../assets/svg/magnifying-glass.svg'
+import { utilService } from '../../services/util.service'
 
 export const StaySearch = ({ setModalOpen, setSearchToggle, setIsBig }) => {
 

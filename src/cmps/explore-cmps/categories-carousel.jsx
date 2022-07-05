@@ -13,7 +13,8 @@ export const CategoriesCarousel = ({ categories }) => {
   }
 
   return (
-    <Carousel loop={false} cols={14} rows={1} gap={10} responsiveLayout={[
+    // <Carousel loop={false} cols={14} rows={1} gap={10} responsiveLayout={[
+    <Carousel loop={false} responsiveLayout={[
       {
         breakpoint: 3000,
         cols: 14,
@@ -39,10 +40,26 @@ export const CategoriesCarousel = ({ categories }) => {
         // autoplay: 1000
       },
       {
-        breakpoint: 1000,
+        breakpoint: 1450,
+        cols: 12,
+        rows: 1,
+        gap: 10,
+        // loop: true,
+        // autoplay: 1000
+      },
+      {
+        breakpoint: 1380,
         cols: 10,
         rows: 1,
         gap: 10,
+        // loop: true,
+        // autoplay: 1000
+      },
+      {
+        breakpoint: 1350,
+        cols: 6,
+        rows: 1,
+        gap: 0,
         // loop: true,
         // autoplay: 1000
       },

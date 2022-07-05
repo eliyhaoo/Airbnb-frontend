@@ -1,15 +1,24 @@
 import { useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import logoSvg from '../../assets/svg/logo.svg'
-import { Loader } from '../loader'
+import userAvatarSvg from '../../assets/svg/user-avatar.svg'
 
-export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction }) => {
+import { Loader } from '../../cmps/general-cmps/loader'
+import { UserOptions } from '../app-header-cmps/user-options'
+
+export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction,setModalUserOptions ,modalUserOptions}) => {
 
     useEffect(() => {
         toggleNotifaction(false)
     }, [])
 
-    if (!user) return <Loader />
+const setModal = ()=>{
+    console.log("SETTING",modalUserOptions);
+    setModalUserOptions(!modalUserOptions)
+    console.log('MODAL',modalUserOptions);
+}
+
+    // if (!user) return <Loader />
     return <div className="dashboard-header">
         <header className="header-content-container flex space-between align-center">
 
@@ -20,39 +29,51 @@ export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction }) =>
             <nav className="dashboard-page-nav-container">
                 <ul className="dashboard-page-nav flex space-between align-center clean-list">
 
-                    <li><NavLink to="dashboard/">
+                    <li><NavLink to="/dashboard/listings">
                         <div className="after-container">
 
-                            <div> Reservations </div>
+                            <div className='dashboard-link-title'> Reservations </div>
                         </div>
 
                     </NavLink ></li>
 
 
-                    <li className='active'>Listings</li>
+                    <li className='dashboard-link-title'>Listings</li>
 
-                    <li><NavLink to="dashboard/trip">
-                        <div className="after-container">
+                    <li><NavLink to="/dashboard/trip">
+                        {/* <div className="after-container"> */}
 
-                            <div> My Trips </div>
-                        </div>
+                        <div className='dashboard-link-title'> My Trips </div>
+                        {/* </div> */}
 
                     </NavLink ></li>
 
-                    <li><NavLink to="dashboard/wishlist">
-                        <div className="after-container">
+                    <li><NavLink to="/dashboard/wishlist">
+                        {/* <div className="after-container"> */}
 
-                            <div> Wish List </div>
-                        </div>
+                        <div className='dashboard-link-title'> Wish List </div>
+                        {/* </div> */}
 
                     </NavLink ></li>
                 </ul>
             </nav>
 
-            <div className="dashboard-host-options">
-                <img className="host-img" src={user.imgUrl} />
-                {isNotficationOn && <div className="new-info-indicator"></div>}
+            <div className="box user-details-container flex space between align-center" onClick={setModal}>
+                {/* <img className="user-menu" src={hamburgerMenu} alt="user-menu" /> */}
+                {user ?
+                    <div className="dashboard-host-options">
+                        <img className="user-img" src={user.imgUrl} alt="user" />
+                        {isNotficationOn && <div className="new-info-indicator"></div>}
+                    </div>
+                    :
+                    <img className="user-avatar" src={userAvatarSvg} alt="user" />}
+
+                <div className={`user-options-container ${modalUserOptions && 'open'}`}>
+                    <UserOptions />
+                </div>
+
             </div>
+
         </header>
     </div>
 

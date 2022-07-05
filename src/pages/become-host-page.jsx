@@ -7,12 +7,6 @@ import logoSvg from '../assets/svg/logo-white.svg'
 
 export const BecomeHostPage = () => {
 
-    // const { user } = useSelector(storeState => storeState.userModule)
-
-    // useEffect(() => {
-
-    // }, [user])
-
     const dispatch = useDispatch()
 
     useEffect(() => {
