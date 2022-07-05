@@ -40,4 +40,3 @@ export const StayList = ({ stays, history ,onRemoveStay }) => {
         {stays.map(stay => <StayPreview key={stay._id} stay={stay} history={history} onToggleInWishList={onToggleInWishList} checkIsInWishList={checkIsInWishList} />)}
     </section>
 }
-
