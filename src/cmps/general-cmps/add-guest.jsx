@@ -65,7 +65,6 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
 
                 <div className="count-container flex space-between">
                     <button className={`add-guest-decerase-btn ${decreaseBtnMode[input.id]?'':'disbaled' }`} type='button' onClick={() => onUpdateGuests(input.id, -1)}>
-                        {/* <div className="count-btn-container"> <img src={disabledMinusSvg} alt="minus" /></div> */}
                         <div className="count-btn-container"> <img src={decreaseBtnMode[input.id]? minusSvg:disabledMinusSvg} alt="minus" /></div>
                     </button>
                     <div>{guestsFields[input.id]}</div>
@@ -75,8 +74,6 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
                 </div>
             </div>
        ) }
-
-            
             {!isInSearch && 
             <React.Fragment>
                 <div className="guest-input-container flex space-between align-center">

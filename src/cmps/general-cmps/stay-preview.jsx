@@ -1,9 +1,9 @@
+import React from 'react'
 import { CarouselComponent } from '../explore-cmps/carousel.component'
 import { utilService } from '../../services/util.service'
 import starSvg from '../../assets/svg/star.svg'
 import heartGreySvg from '../../assets/svg/heart-grey.svg'
 import heartPinkSvg from '../../assets/svg/heart-pink.svg'
-import React from 'react'
 
 export const StayPreview = ({ stay, history, onToggleInWishList, checkIsInWishList }) => {
     return <div className="stay-preview flex direction-column">

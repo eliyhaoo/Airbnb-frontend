@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Carousel from 'react-grid-carousel'
 import { useDispatch } from 'react-redux'
+import Carousel from 'react-grid-carousel'
 import { setFilterBy } from '../../store/actions/stay.action'
 
 export const CategoriesCarousel = ({ categories }) => {

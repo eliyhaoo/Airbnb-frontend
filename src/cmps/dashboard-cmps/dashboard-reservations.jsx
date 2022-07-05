@@ -43,9 +43,6 @@ const theme = createTheme({
 });
 
 
-
-
-
 function descendingComparator(a, b, orderBy) {
     if (b[orderBy] < a[orderBy]) {
         return -1;
@@ -63,8 +60,7 @@ function getComparator(order, orderBy) {
         : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-// This method is created for cross-browser compatibility, if you don't
-// need to support IE11, you can use Array.prototype.sort() directly
+
 function stableSort(array, comparator) {
     const stabilizedThis = array.map((el, index) => [el, index])
     stabilizedThis.sort((a, b) => {
@@ -129,7 +125,7 @@ const headCells = [
 ];
 
 function EnhancedTableHead(props) {
-    const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
+    const {  order, orderBy, onRequestSort } =
         props
     const createSortHandler = (property) => (event) => {
         onRequestSort(event, property)
@@ -139,23 +135,10 @@ function EnhancedTableHead(props) {
         <ThemeProvider theme={themeHeader}>
             <TableHead>
                 <TableRow>
-                    {/* <TableCell padding="checkbox">
-                        <Checkbox
-                        color="primary"
-                        indeterminate={numSelected > 0 && numSelected < rowCount}
-                        checked={rowCount > 0 && numSelected === rowCount}
-                        onChange={onSelectAllClick}
-                        inputProps={{
-                            'aria-label': 'select all desserts',
-                        }}
-                    />
-                    </TableCell> */}
                     {headCells.map((headCell) => (
                         <TableCell
                             key={headCell.id}
-                            // align={headCell.numeric ? 'right' : 'left'}
                             align={headCell.id === 'action' ? 'right' : 'left'}
-                            // align={'left'}
                             padding={headCell.disablePadding ? 'none' : 'normal'}
                             sortDirection={orderBy === headCell.id ? order : false}
                         >
@@ -253,20 +236,12 @@ export const DashboardReservations = () => {
     const [reservations, setReservation] = React.useState(null)
 
     const { user } = useSelector(storeState => storeState.userModule)
-    
-
-
-
-
+  
     React.useEffect(() => {
         if (!user) return
         loadReservations()
 
     }, [user])
-
-    // const onReservationReceive = () => {
-    //     loadReservations()
-    // }
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })

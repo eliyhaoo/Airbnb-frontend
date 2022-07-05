@@ -50,8 +50,7 @@ export const ExplorePage = ({ history }) => {
             setisPageScroll(false)
         }
     }
-    
-    // return <section className="explore-page full main-layout">
+
     return <section className="explore-page ">
         <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full`}>
             <div className="filter-btns-container flex align-center space-between">
@@ -64,9 +63,9 @@ export const ExplorePage = ({ history }) => {
                 {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
             </div>
         </div>
-    
-            <StayList stays={stays} history={history} />
-         
-        
+
+        <StayList stays={stays} history={history} />
+
+
     </section >
 }

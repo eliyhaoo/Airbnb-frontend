@@ -4,7 +4,7 @@ import { StayPreview } from '../general-cmps/stay-preview'
 import { updateUser } from '../../store/actions/user.actions'
 import { storageService } from '../../services/async-storage.service.js'
 
-export const StayList = ({ stays, history ,onRemoveStay }) => {
+export const StayList = ({ stays, history, onRemoveStay }) => {
 
     let { user } = useSelector(storeState => storeState.userModule)
     const [wishList, setWishList] = useState(user ? user.wishList : storageService.getGuestWishList())
@@ -15,7 +15,7 @@ export const StayList = ({ stays, history ,onRemoveStay }) => {
         let newWishList
         if (checkIsInWishList(stayId)) {
             newWishList = wishList.filter(itemId => itemId !== stayId)
-           
+
         } else {
             newWishList = [...wishList, stayId]
         }
@@ -24,16 +24,16 @@ export const StayList = ({ stays, history ,onRemoveStay }) => {
         if (user) {
             user = { ...user, wishList: newWishList }
             dispatch(updateUser(user))
-            if(onRemoveStay)onRemoveStay(newWishList)
+            if (onRemoveStay) onRemoveStay(newWishList)
         } else {
             storageService.putGuestWishList(newWishList)
-            if(onRemoveStay)onRemoveStay(newWishList)
+            if (onRemoveStay) onRemoveStay(newWishList)
 
         }
     }
 
     const checkIsInWishList = (stayId) => {
-       return wishList.some(itemId => itemId === stayId)
+        return wishList.some(itemId => itemId === stayId)
     }
 
     return <section className="stay-list">

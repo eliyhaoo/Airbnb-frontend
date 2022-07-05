@@ -52,11 +52,7 @@ export const FormReserve = ({ stay }) => {
     }
 
     const calcTotalPrice = () => {
-        console.log('Stay price', stay.price);
-        console.log('Nights', calcTotalNights());
-
         return calcTotalNights() * stay.price
-
     }
 
     const calcTotalNights = () => {
