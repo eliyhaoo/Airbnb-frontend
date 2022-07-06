@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateReserve } from '../store/actions/reserve.action'
+import { updateReserve } from '../../store/actions/reserve.action'
 
-import plusSvg from '../assets/svg/plus.svg'
-import minusSvg from '../assets/svg/minus.svg'
-import disabledMinusSvg from '../assets/svg/minus-disabled.svg'
+import plusSvg from '../../assets/svg/plus.svg'
+import minusSvg from '../../assets/svg/minus.svg'
+import disabledMinusSvg from '../../assets/svg/minus-disabled.svg'
 
 
 export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }) => {
@@ -72,11 +72,12 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
                             <div className="count-btn-container"><img src={plusSvg} alt="plus" /></div>
                         </button>
                     </div>
-                </div>
+                </div >
             )}
 
 
-            {!isInSearch &&
+            {
+                !isInSearch &&
                 <React.Fragment>
                     <div className="guest-input-container flex space-between align-center">
                         {<p>This place has a maximum of 10 guests, not including infants. Pets aren't allowed.</p>}
@@ -88,6 +89,6 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
                 </React.Fragment>
             }
 
-        </div>
-    </section>
+        </div >
+    </section >
 }

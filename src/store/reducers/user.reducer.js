@@ -1,8 +1,6 @@
-import { userService } from '../../services/user.service'
 
 
 let initialState = {
-    // user: userService.getLoggedinUser() || {}
     user: null
 }
 export function userReducer(state = initialState, action) {

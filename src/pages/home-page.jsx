@@ -1,8 +1,8 @@
 
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { setVisitPage } from "../store/actions/system.action"
 import { Link } from 'react-router-dom'
+import { setVisitPage } from "../store/actions/system.action"
 
 export const HomePage = ({ history }) => {
 
@@ -12,13 +12,11 @@ export const HomePage = ({ history }) => {
         dispatch(setVisitPage('home-page'))
     }, [])
 
-    const { filterBy } = useSelector(storeState => storeState.stayModule)
 
     const onSelectCity = (city) => {
         history.push(`/explore/?location=${city}`)
     }
     const cities = ['New York', 'Santorini', 'Paris', 'Dubai']
-
 
     return <section className="home-page full">
         <div className="hero-container full">

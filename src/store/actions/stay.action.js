@@ -1,16 +1,15 @@
-// import { userService } from "../services/user.service.js";
 import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service.js'
 import { stayService } from '../../services/stay.service.js'
 
 export function loadStays() {
     return async (dispatch, getState) => {
         const { filterBy } = getState().stayModule
-        const filterByToQuery = JSON.parse(JSON.stringify(filterBy))
+        const queryFilterBy = JSON.parse(JSON.stringify(filterBy))
         if(filterBy.searchBy.location === 'Im flexible'){
-            filterByToQuery.searchBy.location = ''
+            queryFilterBy.searchBy.location = ''
         }
         try {
-            const stays = await stayService.query(filterByToQuery)
+            const stays = await stayService.query(queryFilterBy)
             dispatch({
                 type: 'SET_STAYS',
                 stays

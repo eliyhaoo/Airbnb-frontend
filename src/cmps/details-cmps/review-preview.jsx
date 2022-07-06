@@ -1,4 +1,4 @@
-import { LongTxt } from '../long-txt'
+import { LongTxt } from '../general-cmps/long-txt'
 import { utilService } from '../../services/util.service'
 
 

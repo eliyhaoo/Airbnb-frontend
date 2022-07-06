@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { AddGuest } from '../add-guest'
-import { CheckoutDatePicker } from '../checkout-date-picker'
-import { showSuccessMsg, showErrorMsg, showReservedMsg } from '../../services/event-bus.service.js'
+import { AddGuest } from '../general-cmps/add-guest'
+import { CheckoutDatePicker } from '../../cmps/details-cmps/checkout-date-picker'
+import { showSuccessMsg, showErrorMsg, showReservedMsg } from '../../services/event-bus.service'
 import { utilService } from '../../services/util.service'
 import _ from 'lodash'
 import { reservationService } from '../../services/reservation.service'
@@ -15,7 +15,6 @@ export const FormReserve = ({ stay }) => {
     const { user } = useSelector(storeState => storeState.userModule)
 
     const [isModalOpen, setModal] = useState(false)
-    const [btnMode, setIsDeley] = useState({ loader: false, reserve: false, btnTxt: "Check availability" })
 
     const { dates, guests } = reserve
 
@@ -53,11 +52,7 @@ export const FormReserve = ({ stay }) => {
     }
 
     const calcTotalPrice = () => {
-        console.log('Stay price', stay.price);
-        console.log('Nights', calcTotalNights());
-
         return calcTotalNights() * stay.price
-
     }
 
     const calcTotalNights = () => {

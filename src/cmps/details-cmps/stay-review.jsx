@@ -1,7 +1,5 @@
-import { utilService } from "../../services/util.service"
-import { ReviewList } from "../details-cmps/review-list"
-import { AddReview } from './add-review'
-import { Loader } from "../loader"
+import { utilService } from '../../services/util.service'
+import { Loader } from '../../cmps/general-cmps/loader'
 import starSvg from '../../assets/svg/star.svg'
 
 export const StayReview = ({ stay }) => {
@@ -32,8 +30,7 @@ export const StayReview = ({ stay }) => {
             )}
         </div>
 
-        {/* <ReviewList stay={stay} /> */}
-        {/* <AddReview stay={stay} /> */}
+      
 
     </section>
 

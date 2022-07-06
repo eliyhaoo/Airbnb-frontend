@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useForm } from '../hooks/useForm'
-import { setFilterBy } from '../store/actions/stay.action'
+import { useForm } from '../../hooks/useForm'
+import { setFilterBy } from '../../store/actions/stay.action'
 import { SearchCountry } from './search-country'
-import searchSvg from '../assets/svg/magnifying-glass-big.svg'
-import { AddGuest } from './add-guest'
-import { SearchbarDatePicker } from './searchbar-date-picker'
-import { utilService } from '../services/util.service'
+import { AddGuest } from '../general-cmps/add-guest'
+import { SearchbarDatePicker } from '../app-header-cmps/searchbar-date-picker'
+import { utilService } from '../../services/util.service'
 import _ from 'lodash'
+import searchSvg from '../../assets/svg/magnifying-glass-big.svg'
 
 export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, history, setSearchToggle, isSearchOpen }) => {
 
