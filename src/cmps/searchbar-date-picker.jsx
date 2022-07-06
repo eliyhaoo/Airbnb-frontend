@@ -21,8 +21,6 @@ const theme = createTheme({
 export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setModalOpen, setSearchByFields }) {
 	const dispatch = useDispatch();
 
-
-
 	return (
 		<ThemeProvider theme={theme}>
 			<LocalizationProvider dateAdapter={AdapterDateFns}>

@@ -14,7 +14,6 @@ import { connect } from "react-redux"
 
 import { onSignup } from '../store/actions/user.actions'
 
-
 const theme = createTheme();
 
 export function _Signup(props) {

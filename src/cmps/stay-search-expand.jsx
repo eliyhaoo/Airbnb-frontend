@@ -4,7 +4,6 @@ import { useForm } from '../hooks/useForm'
 import { setFilterBy } from '../store/actions/stay.action'
 import { SearchCountry } from './search-country'
 import searchSvg from '../assets/svg/magnifying-glass-big.svg'
-// import searchSvg from '../assets/svg/magnifying-glass.svg'
 import { AddGuest } from './add-guest'
 import { SearchbarDatePicker } from './searchbar-date-picker'
 import { utilService } from '../services/util.service'
@@ -27,7 +26,7 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         setSearchToggle(false)
         console.log('SearchByFields DATEDS BEFORE QUERY', searchByFields.dates)
         history.push(`/explore/?location=${searchByFields.location}&dates=${JSON.stringify(searchByFields.dates)}&guests=${searchByFields.guestsNum}`)
-        // history.push(`/explore/?location=${searchByFields.location}`)
+
     }
 
     const onSelectedRegion = (region) => {

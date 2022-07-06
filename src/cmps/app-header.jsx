@@ -6,15 +6,12 @@ import { StaySearch } from './stay-search'
 import { StaySearchExpand } from './stay-search-expand'
 import { UserOptions } from './user-options'
 
-
 import logoSvg from '../assets/svg/logo.svg'
 import userAvatarSvg from '../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../assets/svg/hamburger.svg'
 import { DashboardHeader } from './dashboard-cmps/dashboard-header'
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../services/socket.service'
 import { HeaderReservation } from './app-header-cmps/header-reservation'
-
-
 
 const _AppHeader = ({ history }) => {
     const gVisitedPage = useRef()
@@ -42,14 +39,13 @@ const _AppHeader = ({ history }) => {
     }, [])
 
 
-
     useEffect(() => {
         gVisitedPage.current = visitedPage
         gVisitedPage.current === 'home-page' ? setSearchToggle(true) : setSearchToggle(false)
     }, [visitedPage])
 
     useEffect(() => {
-        console.log('NOTIFICATIONS',isNotficationOn);
+        console.log('NOTIFICATIONS', isNotficationOn);
     }, [isSearchOpen, isNotficationOn])
 
     const onScroll = () => {

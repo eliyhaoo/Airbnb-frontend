@@ -9,7 +9,6 @@ export const UserOptions = () => {
 
     const onLogOut = (ev) => {
         dispatch(logOut())
-
     }
 
     const onLogin = (ev) => {
@@ -31,8 +30,7 @@ export const UserOptions = () => {
             {!user ? <div>Wishlist</div> : ''}
             <div>Host your home</div>
             {!user ? <div>Host an experience</div> : <div onClick={onLogOut}>Log out</div>}
-            {/* <div>Host an experience</div> */}
-            {/* <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> */}
+
 
             <div>Help</div>
 

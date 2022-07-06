@@ -7,12 +7,6 @@ import logoSvg from '../assets/svg/logo-white.svg'
 
 export const BecomeHostPage = () => {
 
-    // const { user } = useSelector(storeState => storeState.userModule)
-
-    // useEffect(() => {
-
-    // }, [user])
-
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -25,7 +19,6 @@ export const BecomeHostPage = () => {
             <div className="general flex">
                 <div className="header-host-page-elements">
                     <NavLink to='/'><img className="logo-img" src={logoSvg} /></NavLink>
-
                     <span>Open your door
                         to hosting</span>
 
