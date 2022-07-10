@@ -1,6 +1,5 @@
 import { userService } from "../../services/user.service.js"
 import { showErrorMsg } from "../../services/event-bus.service.js"
-import { storageService } from '../../services/async-storage.service'
 
 export function onLogin(credentials) {
     return async (dispatch) => {
@@ -10,11 +9,8 @@ export function onLogin(credentials) {
                 type: 'SET_USER',
                 user
             })
-            // socketService.login(user.id)
-
         } catch (err) {
-            // showErrorMsg('Invalid username or password')
-            console.log('Cannot login', err)
+            showErrorMsg('Invalid username or password')
             throw err
         }
     }
@@ -28,7 +24,6 @@ export function logOut() {
                 type: 'SET_USER',
                 user: null
             })
-
         } catch (err) {
             showErrorMsg('Cannot logout')
             console.log('Cannot logout', err)
@@ -59,9 +54,6 @@ export function loadUser() {
             dispatch({ type: 'SET_USER', user })
         } catch (err) {
             console.log('UserAction: err in loadUser', err)
-            // } finally {
-            //     dispatch({ type: 'LOADING_DONE' })
-            // }
         }
     }
 }
@@ -69,14 +61,11 @@ export function loadUser() {
 export function updateUser(user) {
     return async dispatch => {
         try {
-            // const user = await userService.getLoggedinUser()
-            user = await userService.update(user)
-            dispatch({ type: 'UPDATE_USER', user })
+            const updatedUser = await userService.update(user)
+            dispatch({ type: 'UPDATE_USER', updatedUser })
         } catch (err) {
             console.log('UserAction: err in update user', err)
-            // } finally {
-            //     dispatch({ type: 'LOADING_DONE' })
-            // }
+
         }
     }
 }

@@ -8,6 +8,8 @@ export const DashboardTrips =()=>{
 
     return <div className="dasboard-reservation">
 
-    DASHHBOARD TRIPS
+<h2>
+    My Trips
+    </h2>
     </div>
 }

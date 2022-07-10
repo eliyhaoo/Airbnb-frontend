@@ -6,7 +6,7 @@ import { reservationService } from '../../services/reservation.service'
 import { socketService, SOCKET_EMIT_RESERVATION } from '../../services/socket.service'
 import { showErrorMsg, showReservedMsg } from '../../services/event-bus.service'
 
-export const HeaderReservation = () => {
+export const ReservationHeader = () => {
 
     const { stay } = useSelector(storeState => storeState.stayModule)
     const { user } = useSelector(storeState => storeState.userModule)

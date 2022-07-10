@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { logOut } from '../store/actions/user.actions'
+import { logOut } from '../../store/actions/user.actions'
 
 export const UserOptions = () => {
 
@@ -9,7 +9,6 @@ export const UserOptions = () => {
 
     const onLogOut = (ev) => {
         dispatch(logOut())
-
     }
 
     const onLogin = (ev) => {
@@ -23,16 +22,15 @@ export const UserOptions = () => {
     return <section className="user-options flex direction-column">
 
         <div className="login-options-container" >
-            {!user ? <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> : <div>Wishlist</div>}
+            {!user && <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div>}
             {!user ? <div onClick={onLogin} ><Link to="/login"><div>Log in</div></Link> </div> : <div><Link to="/dashboard"><div>Dashboard</div></Link></div>}
         </div>
-
+  
         <div className="host-options-container ">
-            {!user ? <div>Wishlist</div> : ''}
+        <div><Link to="/dashboard/wishlist">Wishlist</Link></div>
             <div>Host your home</div>
             {!user ? <div>Host an experience</div> : <div onClick={onLogOut}>Log out</div>}
-            {/* <div>Host an experience</div> */}
-            {/* <div onClick={onSignup}><Link to="/signup"><div className="sign-up">Sign up</div></Link></div> */}
+
 
             <div>Help</div>
 

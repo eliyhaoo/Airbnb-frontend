@@ -11,10 +11,10 @@ export function addReview(review) {
         try {
             const addedReview = await reviewService.addReview(review)
             dispatch(getActionAddReview(addedReview))
-            console.log('Review Added')
             showSuccessMsg('Review Added')
 
         } catch (err) {
+            showErrorMsg('Failed to add review')
             throw err
 
         }

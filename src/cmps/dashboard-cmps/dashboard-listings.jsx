@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { stayService } from '../../services/stay.service'
-import { StayPreview } from '../stay-preview'
-import { Loader } from '../loader'
+import { StayPreview } from '../general-cmps/stay-preview'
+import { Loader } from '../../cmps/general-cmps/loader'
 
 
 export const DashboardListings = ({ history }) => {

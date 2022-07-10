@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { StayPreview } from './stay-preview'
-import { updateUser } from "../store/actions/user.actions"
-import { storageService } from '../services/async-storage.service.js'
-import { Loader } from '../cmps/loader'
+import { StayPreview } from '../general-cmps/stay-preview'
+import { updateUser } from '../../store/actions/user.actions'
+import { storageService } from '../../services/async-storage.service.js'
 
-export const StayList = ({ stays, history }) => {
+export const StayList = ({ stays, history, onRemoveStay }) => {
 
     let { user } = useSelector(storeState => storeState.userModule)
     const [wishList, setWishList] = useState(user ? user.wishList : storageService.getGuestWishList())
@@ -16,21 +15,25 @@ export const StayList = ({ stays, history }) => {
         let newWishList
         if (checkIsInWishList(stayId)) {
             newWishList = wishList.filter(itemId => itemId !== stayId)
+
         } else {
             newWishList = [...wishList, stayId]
         }
+
         setWishList(newWishList)
         if (user) {
             user = { ...user, wishList: newWishList }
             dispatch(updateUser(user))
+            if (onRemoveStay) onRemoveStay(newWishList)
         } else {
             storageService.putGuestWishList(newWishList)
+            if (onRemoveStay) onRemoveStay(newWishList)
 
         }
     }
 
     const checkIsInWishList = (stayId) => {
-        if (wishList.some(itemId => itemId === stayId)) return true
+        return wishList.some(itemId => itemId === stayId)
     }
 
     return <section className="stay-list">

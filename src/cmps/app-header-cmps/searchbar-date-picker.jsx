@@ -4,7 +4,7 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import LocalizationProvider from '@mui/lab/LocalizationProvider'
 import DateRangePicker from '@mui/lab/DateRangePicker'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { updateReserve } from '../store/actions/reserve.action'
+import { updateReserve } from '../../store/actions/reserve.action'
 
 const mode = window.innerWidth < 780 ? 1 : 2;
 const theme = createTheme({
@@ -20,8 +20,6 @@ const theme = createTheme({
 
 export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setModalOpen, setSearchByFields }) {
 	const dispatch = useDispatch();
-
-
 
 	return (
 		<ThemeProvider theme={theme}>

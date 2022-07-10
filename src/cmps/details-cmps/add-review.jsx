@@ -6,17 +6,10 @@ import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import Rating from '@mui/material/Rating'
 import Stack from '@mui/material/Stack'
-import { styled } from '@mui/material/styles'
 
 import { saveStay } from '../../store/actions/stay.action'
 
-
-
-
-
 export function AddReview({ stay }) {
-
-
     const { user } = useSelector(storeState => storeState.userModule)
     const [review, setReview] = useState({
         at: Date.now(),
@@ -41,7 +34,7 @@ export function AddReview({ stay }) {
 
     const onAddReview = (ev) => {
         ev.preventDefault()
-        if (!user) return // show user message please login in
+        if (!user) return 
         const newReview = {
             ...review, by: {
                 _id: user._id,

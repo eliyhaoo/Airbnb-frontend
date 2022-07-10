@@ -1,8 +1,8 @@
 
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { setVisitPage } from "../store/actions/system.action"
 import { Link } from 'react-router-dom'
+import { setVisitPage } from "../store/actions/system.action"
 
 export const HomePage = ({ history }) => {
 
@@ -12,19 +12,15 @@ export const HomePage = ({ history }) => {
         dispatch(setVisitPage('home-page'))
     }, [])
 
-    const { filterBy } = useSelector(storeState => storeState.stayModule)
 
     const onSelectCity = (city) => {
         history.push(`/explore/?location=${city}`)
     }
     const cities = ['New York', 'Santorini', 'Paris', 'Dubai']
-    // const cities = ['New York', 'Paris', 'Santorini', 'Dubai']
 
     return <section className="home-page full">
         <div className="hero-container full">
             <div className="hero full flex">
-                {/* <img src="https://a0.muscache.com/im/pictures/miso/Hosting-5904771/original/ab9a30d4-a6cf-4b3a-8416-cf7314ed5432.jpeg?im_w=1200" alt="hero" /> */}
-                {/* <span>Home Away From Home</span> */}
             </div>
 
             <span className="hero-text">

@@ -1,9 +1,8 @@
 import { useParams } from 'react-router-dom'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+
 import { utilService } from '../services/util.service'
-import { showSuccessMsg } from '../services/event-bus.service'
 import { stayService } from '../services/stay.service'
 import { setVisitPage } from '../store/actions/system.action'
 import { StayMap } from "../cmps/details-cmps/stay-map"
@@ -12,7 +11,7 @@ import { StayReview } from "../cmps/details-cmps/stay-review"
 import { StayAmenities } from '../cmps/details-cmps/stay-amenities'
 import { StayGeneralInfo } from '../cmps/details-cmps/stay-general-info'
 import { StayInfo } from '../cmps/details-cmps/stay-info'
-import { Loader } from '../cmps/loader'
+import { Loader } from '../cmps/general-cmps/loader'
 import { AddReview } from '../cmps/details-cmps/add-review'
 import { ReviewList } from '../cmps/details-cmps/review-list'
 

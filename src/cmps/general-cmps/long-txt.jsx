@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-
 export const LongTxt = ({ txt, maxLength }) => {
     const [isLongTxtShown, setLongTxt] = useState(false)
 

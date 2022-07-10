@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import languageIcon from '../assets/svg/language-icon.svg'
+import languageIcon from '../../assets/svg/language-icon.svg'
 
 export const AppFooter = () => {
 

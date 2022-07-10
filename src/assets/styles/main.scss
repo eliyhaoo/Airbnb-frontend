@@ -4,7 +4,6 @@
 @import './setup/mixins';
 @import './setup/typography';
 
-
 // BASICS
 @import './basics/base';
 @import './basics/layout';
@@ -16,36 +15,33 @@
 @import './pages/stay-details-page';
 @import './pages/dashboard-page';
 @import './pages/become-host-page';
+@import './pages/login';
+@import './pages/signup';
 
 
-// CMPS
-@import './cmps/app-header';
-@import './cmps/app-footer';
-@import './cmps/stay-search';
-@import './cmps/stay-search-expand';
-@import './cmps/stay-search-expand';
-@import './cmps/explore-cmps/categories-filter';
-@import './cmps/carousel-component';
-@import './cmps/add-guest';
-@import './cmps/date-picker';
-@import './cmps/longTxt';
-@import './cmps/user-options';
-@import './cmps/login';
-@import './cmps/loader';
-@import './cmps/signup';
-@import './cmps/user-msg';
-@import './cmps/header-reservation';
+
+
+// GENERAL CMPS
+@import './cmps/general-cmps/app-footer';
+@import './cmps/general-cmps/add-guest';
+@import './cmps/general-cmps/date-picker';
+@import './cmps/general-cmps/longTxt';
+@import './cmps/general-cmps/loader';
+@import './cmps/general-cmps/user-msg';
 
 
 // EXPLORE CMPS
 
-@import './cmps/search-cmps/search-country';
 @import './cmps/explore-cmps/stay-filter';
 @import './cmps/explore-cmps/stay-list';
 @import './cmps/explore-cmps/stay-preview';
 @import './cmps/explore-cmps/categories-carousel';
+@import './cmps/explore-cmps/categories-filter';
+@import './cmps/explore-cmps/carousel-component';
 
-// Details CMPS
+
+
+// DETAILS CMPS
 
 @import './cmps/details-cmps/review-list';
 @import './cmps/details-cmps/stay-map';
@@ -56,6 +52,16 @@
 @import './cmps/details-cmps/stay-amenities';
 @import './cmps/details-cmps/stay-info';
 @import './cmps/details-cmps/stay-general-info';
+
+// APP-HEADER CMPS
+
+@import './cmps/app-header-cmps/app-header';
+@import './cmps/app-header-cmps/stay-search';
+@import './cmps/app-header-cmps/stay-search-expand';
+@import './cmps/app-header-cmps/header-reservation';
+@import './cmps/app-header-cmps/search-country';
+@import './cmps/app-header-cmps/user-options';
+
 
 // Dashboard CMPS
 @import './cmps/dashboard-cmps/dashboard-header';

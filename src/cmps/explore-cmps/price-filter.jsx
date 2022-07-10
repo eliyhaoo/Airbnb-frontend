@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useSelector } from "react-redux"
 import PropTypes from 'prop-types'
 import Slider, { SliderThumb } from '@mui/material/Slider'
 import { styled } from '@mui/material/styles'
@@ -6,10 +7,7 @@ import Typography from '@mui/material/Typography'
 import Tooltip from '@mui/material/Tooltip'
 import Box from '@mui/material/Box'
 
-import { useSelector } from "react-redux"
-import { useState } from 'react'
 
-import { stayService } from '../../services/stay.service'
 import { utilService } from '../../services/util.service'
 
 function ValueLabelComponent(props) {
@@ -36,9 +34,7 @@ const AirbnbSlider = styled(Slider)(({ theme }) => ({
         width: 27,
         backgroundColor: '#fff',
         border: '1px solid currentColor',
-        // '&:hover': {
-        //     boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)',
-        // },
+    
         '& .airbnb-bar': {
             height: 9,
             width: 1,

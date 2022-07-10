@@ -1,6 +1,6 @@
 
 import { utilService } from '../../services/util.service'
-import { LongTxt } from '../long-txt'
+import { LongTxt } from '../general-cmps/long-txt'
 
 export const StayInfo = ({ stay }) => {
     return <section className="stay-info-container">
