@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import LocalizationProvider from '@mui/lab/LocalizationProvider'
@@ -33,9 +32,11 @@ export function SearchbarDatePicker({ dates, activeDatesTab, setActiveTab, setMo
 						dispatch(updateReserve('dates', { checkIn: newValue[0], checkOut: newValue[1] }))
 						setSearchByFields((prevState) => ({ ...prevState, dates: { checkIn: newValue[0], checkOut: newValue[1] } }))
 					}}
+
 					renderInput={(startProps, endProps) => {
 						startProps.inputProps.placeholder = 'Add dates'
 						endProps.inputProps.placeholder = 'Add dates'
+
 						return (
 							<div className="date-picker-inputs flex space-between full-width">
 

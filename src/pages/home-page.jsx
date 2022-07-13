@@ -20,12 +20,14 @@ export const HomePage = ({ history }) => {
 
     return <section className="home-page full">
         <div className="hero-container full">
+
             <div className="hero full flex">
             </div>
 
             <span className="hero-text">
                 Not sure where to go? Perfect.
             </span>
+
         </div>
 
         <div className="popular-destinations home-page-layout">

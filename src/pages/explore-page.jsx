@@ -53,6 +53,7 @@ export const ExplorePage = ({ history }) => {
 
     return <section className="explore-page ">
         <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full`}>
+
             <div className="filter-btns-container flex align-center space-between">
                 <CategoriesFilter />
                 <button className="filter-btn flex align-center space-between"
@@ -62,10 +63,10 @@ export const ExplorePage = ({ history }) => {
                 </button>
                 {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
             </div>
+
         </div>
 
         <StayList stays={stays} history={history} />
-
-
+        
     </section >
 }

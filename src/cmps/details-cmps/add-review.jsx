@@ -111,7 +111,7 @@ export function AddReview({ stay }) {
 
                 }}
             >
-                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} autoComplete="off" fullWidth label="Share your exprience with this stay" id="fullWidth" />
+                <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} autoComplete="off" fullWidth label="Share your exprience with this stay" />
             </Box>
 
 

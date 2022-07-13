@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { UserOptions } from "./user-options"
+import { UserMenu } from "./user-menu"
 import userAvatarSvg from '../../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../../assets/svg/hamburger.svg'
 export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage, user, isNotficationOn }) => {
@@ -21,7 +21,7 @@ export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage,
                 <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
             <div className={`user-options-container ${modalUserOptions && 'open'}`}>
-                <UserOptions setModalUserOptions={setModalUserOptions} modalUserOptions={modalUserOptions} />
+                <UserMenu setModalUserOptions={setModalUserOptions} modalUserOptions={modalUserOptions} />
 
             </div>
 
@@ -29,11 +29,3 @@ export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage,
     </div>
 }
 
-
-// <MainHeader
-//                             setModalUserOptions={setModalUserOptions}
-//                             modalUserOptions={modalUserOptions}
-//                             visitedPage={visitedPage}
-//                             user={user}
-//                             isNotficationOn={isNotficationOn}
-//                             />

@@ -4,60 +4,56 @@ import starSvg from '../../assets/svg/star.svg'
 import heartSvg from '../../assets/svg/heart.svg'
 
 export const UserStats = () => {
+
+    const statsFields = [
+        {
+            title: 'This month income',
+            info: '$13,420',
+            precentage: '+67%',
+            svg: coinSvg,
+            alt: 'coin'
+        },
+        {
+            title: 'Added to wishlist',
+            info: '67',
+            precentage: '+18%',
+            svg: heartSvg,
+            alt: 'heart'
+        },
+        {
+            title: 'New Messages',
+            info: '35',
+            svg: envelopeSvg,
+            alt: 'envelope'
+        },
+        {
+            title: 'Rating',
+            info: '4.9',
+            precentage: '+12%',
+            svg: starSvg,
+            alt: 'star'
+        },
+    ]
+
     return <div className="user-stats">
 
-        <div className="stats-container flex space-between align-center">
-            <div className="stats-info-container flex direction-column">
-                <div className="stats-title">This month income</div>
-                <div >
-                    <span className="price-span">$13,420</span><span className="precentage-span">+67%</span>
+        {statsFields.map(field =>
+            <div className="stats-container flex space-between align-center">
+
+                <div className="stats-info-container flex direction-column">
+                    <div className="stats-title">{field.title}</div>
+                    <div >
+                        <span className="price-span">{field.info}</span>
+                        {field.precentage && <span className="precentage-span">{field.precentage}</span>}
+                    </div>
                 </div>
-            </div>
-            <div className="stats-img-container">
-                <img src={coinSvg} alt="coin" />
-            </div>
-        </div>
 
-        <div className="stats-container flex space-between align-center">
-            <div className="stats-info-container flex direction-column">
-                <div className="stats-title">Added to wishlist</div>
-                <div >
-                    <span className="price-span">67</span><span className="precentage-span">+18%</span>
+                <div className="stats-img-container">
+                    <img src={field.svg} alt={field.alt} />
                 </div>
+
             </div>
-            <div className="stats-img-container">
-                <img src={heartSvg} alt="heart" />
-            </div>
-        </div>
-
-        <div className="stats-container flex space-between align-center">
-            <div className="stats-info-container flex direction-column">
-                <div className="stats-title">New Messages</div>
-                <div >
-                    <span className="price-span">35</span>
-                </div>
-            </div>
-            <div className="stats-img-container">
-                <img src={envelopeSvg} alt="envelope" />
-            </div>
-
-        </div>
-
-        <div className="stats-container flex space-between align-center">
-            <div className="stats-info-container flex direction-column">
-                <div className="stats-title">Rating</div>
-                <div >
-                    <span className="price-span">4.9</span><span className="precentage-span">+12%</span>
-                </div>
-            </div>
-            <div className="stats-img-container">
-                <img src={starSvg} alt="star" />
-            </div>
-        </div>
-
-
-
-
-
+        )}
+        
     </div>
 }
