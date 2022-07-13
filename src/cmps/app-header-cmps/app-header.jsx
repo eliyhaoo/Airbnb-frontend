@@ -7,12 +7,9 @@ import { StaySearchExpand } from './stay-search-expand'
 import { DashboardHeader } from '../dashboard-cmps/dashboard-header'
 import { ReservationHeader } from './reservation-header'
 
-
 import logoSvg from '../../assets/svg/logo.svg'
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
 import { MainHeader } from './main-header'
-
-
 
 const _AppHeader = ({ history }) => {
     const gVisitedPage = useRef()
@@ -134,7 +131,6 @@ const _AppHeader = ({ history }) => {
                         modalOpen={modalOpen}
                         setModalOpen={setModalOpen}
                     />
-
                 </div>
             </header>
 

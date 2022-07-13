@@ -26,6 +26,10 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         setSearchToggle(false)
         console.log('SearchByFields DATEDS BEFORE QUERY', searchByFields.dates)
         history.push(`/explore/?location=${searchByFields.location}&dates=${JSON.stringify(searchByFields.dates)}&guests=${searchByFields.guestsNum}`)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4858738e59d08c08ee5f179e8b04aa9562365d77
     }
 
     const onSelectedRegion = (region) => {
