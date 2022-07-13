@@ -14,8 +14,10 @@ $pending:rgb(255, 179, 0);
 
 // LAYOUT
 $layoutPadding: 80px;
+$mobilePadding: 20px;
 
 // LAYOUT BREAKPOINTS
+$mobile-breakpoint: 680px;
 $break-narrow: 1000px;
 $break-normal: 1360px;
 $break-wide-details: 1220px;

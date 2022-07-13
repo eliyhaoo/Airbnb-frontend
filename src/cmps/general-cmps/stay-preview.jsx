@@ -1,5 +1,6 @@
 import React from 'react'
 import { CarouselComponent } from '../explore-cmps/carousel.component'
+// import { CarouselComponent } from '../explore-cmps/carousel.componentTest'
 import { utilService } from '../../services/util.service'
 import starSvg from '../../assets/svg/star.svg'
 import heartGreySvg from '../../assets/svg/heart-grey.svg'

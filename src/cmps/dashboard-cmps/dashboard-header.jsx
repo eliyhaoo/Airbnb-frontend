@@ -65,7 +65,7 @@ const setModal = ()=>{
                     <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
                 <div className={`user-options-container ${modalUserOptions && 'open'}`}>
-                    <UserMenu />
+                    <UserMenu setModalUserOptions={setModalUserOptions} modalUserOptions={modalUserOptions} />
                 </div>
 
             </div>

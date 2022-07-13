@@ -1,6 +1,7 @@
 import React from 'react'
 import { stayService } from '../../services/stay.service'
-import { CategoriesCarousel } from './categories-carousel'
+// import { CategoriesCarousel } from './categories-carousel'
+import { CategoriesCarousel } from './categories-carouselTest'
 export const CategoriesFilter = () => {
 
     const categories = stayService.getCategories()

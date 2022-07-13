@@ -21,7 +21,7 @@ export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage,
                 <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
             <div className={`user-options-container ${modalUserOptions && 'open'}`}>
-                <UserOptions setModalUserOptions={setModalUserOptions} modalUserOptions={modalUserOptions} />
+                <UserMenu setModalUserOptions={setModalUserOptions} modalUserOptions={modalUserOptions} />
 
             </div>
 

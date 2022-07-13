@@ -22,11 +22,11 @@ export const HomePage = ({ history }) => {
         <div className="hero-container full">
 
             <div className="hero full flex">
+            </div>
 
             <span className="hero-text">
                 Not sure where to go? Perfect.
             </span>
-            </div>
 
         </div>
 
