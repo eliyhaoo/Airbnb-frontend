@@ -3,8 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import logoSvg from '../../assets/svg/logo.svg'
 import userAvatarSvg from '../../assets/svg/user-avatar.svg'
 
-import { Loader } from '../../cmps/general-cmps/loader'
-import { UserOptions } from '../app-header-cmps/user-options'
+import { UserMenu } from '../app-header-cmps/user-menu'
 
 export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction,setModalUserOptions ,modalUserOptions}) => {
 
@@ -13,12 +12,9 @@ export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction,setMo
     }, [])
 
 const setModal = ()=>{
-    console.log("SETTING",modalUserOptions);
     setModalUserOptions(!modalUserOptions)
-    console.log('MODAL',modalUserOptions);
 }
 
-    // if (!user) return <Loader />
     return <div className="dashboard-header">
         <header className="header-content-container flex space-between align-center">
 
@@ -69,7 +65,7 @@ const setModal = ()=>{
                     <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
                 <div className={`user-options-container ${modalUserOptions && 'open'}`}>
-                    <UserOptions />
+                    <UserMenu />
                 </div>
 
             </div>

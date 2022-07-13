@@ -4,14 +4,11 @@ import { useSelector } from 'react-redux'
 
 import { StaySearch } from './stay-search'
 import { StaySearchExpand } from './stay-search-expand'
-import { UserOptions } from './user-options'
 import { DashboardHeader } from '../dashboard-cmps/dashboard-header'
 import { ReservationHeader } from './reservation-header'
 
 
 import logoSvg from '../../assets/svg/logo.svg'
-import userAvatarSvg from '../../assets/svg/user-avatar.svg'
-import hamburgerMenu from '../../assets/svg/hamburger.svg'
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
 import { MainHeader } from './main-header'
 
@@ -41,8 +38,6 @@ const _AppHeader = ({ history }) => {
             window.removeEventListener('scroll', onScroll)
         }
     }, [])
-
-
 
     useEffect(() => {
         gVisitedPage.current = visitedPage

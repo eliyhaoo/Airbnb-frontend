@@ -6,18 +6,17 @@ import heartGreySvg from '../../assets/svg/heart-grey.svg'
 import heartPinkSvg from '../../assets/svg/heart-pink.svg'
 
 export const StayPreview = ({ stay, history, onToggleInWishList, checkIsInWishList }) => {
+
+    const heartSvg = checkIsInWishList(stay._id) ? heartPinkSvg : heartGreySvg
     return <div className="stay-preview flex direction-column">
+
         <div className="preview-imgs-container">
             {onToggleInWishList &&
-                <React.Fragment> {checkIsInWishList(stay._id) ?
-                    <img className={'heart-svg'} onClick={(ev) => onToggleInWishList(ev, stay._id)} src={heartPinkSvg} />
-                    :
-                    <img className={'heart-svg'} onClick={(ev) => onToggleInWishList(ev, stay._id)} src={heartGreySvg} />}
-                </React.Fragment>
+                <img className={'heart-svg'} onClick={(ev) => onToggleInWishList(ev, stay._id)} src={heartSvg} />
             }
-
             <CarouselComponent stayImgUrls={stay.imgUrls} stayId={stay._id} history={history} />
         </div>
+
         <div className="preview-details-container">
             <h4 className="preview-country-city">{stay.address.city}, {stay.address.country}</h4>
             <p className="preview-room-type">{stay.roomType}</p>
@@ -28,5 +27,6 @@ export const StayPreview = ({ stay, history, onToggleInWishList, checkIsInWishLi
             </div>
             <p className="preview-price"><span className="price-span">${utilService.getPriceWithCommas(stay.price)}</span> night</p>
         </div>
+
     </div >
 }

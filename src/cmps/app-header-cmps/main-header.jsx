@@ -1,40 +1,33 @@
 import { NavLink } from "react-router-dom"
-import { UserOptions } from "./user-options"
+import { UserMenu } from "./user-menu"
 import userAvatarSvg from '../../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../../assets/svg/hamburger.svg'
 
-export const MainHeader=({setModalUserOptions,modalUserOptions,visitedPage,user,isNotficationOn})=>{
+export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage, user, isNotficationOn }) => {
 
-    return  <div className="box user-nav-container flex align-center">
-    <nav className="box main-nav flex space-between align-items">
-        {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}
-        <NavLink to={'/becomehost'}>Become a Host</NavLink>
-    </nav>
+    return <div className="box user-nav-container flex align-center">
 
-    <div className="user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
-        <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
-        {user ?
-            <div className="dashboard-host-options">
-                <img className="user-img" src={user.imgUrl} alt="user" />
-                {isNotficationOn && <div className="new-info-indicator"></div>}
-            </div> 
-            :
-            <img className="user-avatar" src={userAvatarSvg} alt="user" />}
+        <nav className="box main-nav flex space-between align-items">
+            {visitedPage !== 'explore-page' && <NavLink to='/explore'>Explore</NavLink>}
+            <NavLink to={'/becomehost'}>Become a Host</NavLink>
+        </nav>
 
-        <div className={`user-options-container ${modalUserOptions && 'open'}`}>
-            <UserOptions />
+        <div className="user-details-container flex space between align-center" onClick={() => setModalUserOptions(!modalUserOptions)}>
+            <img className="user-menu" src={hamburgerMenu} alt="user-menu" />
+            {user &&
+                <div className="dashboard-host-options">
+                    <img className="user-img" src={user.imgUrl} alt="user" />
+                    {isNotficationOn && <div className="new-info-indicator"></div>}
+                </div>
+            }
             
-        </div>
+            {!user && <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
+            <div className={`user-options-container ${modalUserOptions && 'open'}`}>
+                <UserMenu />
+            </div>
+
+        </div>
     </div>
-</div>
 }
 
-
-// <MainHeader 
-//                             setModalUserOptions={setModalUserOptions} 
-//                             modalUserOptions={modalUserOptions}
-//                             visitedPage={visitedPage}
-//                             user={user}
-//                             isNotficationOn={isNotficationOn}
-//                             />
