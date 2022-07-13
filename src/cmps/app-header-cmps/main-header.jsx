@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom"
 import { UserOptions } from "./user-options"
 import userAvatarSvg from '../../assets/svg/user-avatar.svg'
 import hamburgerMenu from '../../assets/svg/hamburger.svg'
-
 export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage, user, isNotficationOn }) => {
 
     return <div className="box user-nav-container flex align-center">
@@ -22,7 +21,7 @@ export const MainHeader = ({ setModalUserOptions, modalUserOptions, visitedPage,
                 <img className="user-avatar" src={userAvatarSvg} alt="user" />}
 
             <div className={`user-options-container ${modalUserOptions && 'open'}`}>
-                <UserOptions />
+                <UserOptions setModalUserOptions={setModalUserOptions} modalUserOptions={modalUserOptions} />
 
             </div>
 
