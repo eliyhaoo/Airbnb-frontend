@@ -18,6 +18,7 @@ import { ReviewList } from '../cmps/details-cmps/review-list'
 import starSvg from '../assets/svg/star.svg'
 import shareSvg from '../assets/svg/Share.svg'
 import saveSvg from '../assets/svg/Save.svg'
+import { CarouselComponent } from '../cmps/explore-cmps/carousel.component'
 
 export const StayDetails = ({ history }) => {
     const dispatch = useDispatch()
@@ -79,9 +80,18 @@ export const StayDetails = ({ history }) => {
 
         </div>
 
-        <div className="details-img-container">
+        {/* <div className="details-img-container">
             {stay.imgUrls.map((imgUrl, idx) => <img className={`img${idx + 1}`} key={idx} src={imgUrl} alt="house" />)}
-        </div>
+        </div> */}
+        <CarouselComponent 
+        stayImgUrls={stay.imgUrls}
+        stayId={stayId}
+        history={history}
+        showStatus={true}
+        
+
+        />
+
 
         <section className="stay-display-info">
             <div className="stay-summary-container">

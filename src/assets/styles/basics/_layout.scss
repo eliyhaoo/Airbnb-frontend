@@ -18,9 +18,6 @@
     @include for-mobile-layout {
         @include layoutGTC($mobile-breakpoint,$mobilePadding);
     }
-    // @include for-narrow-layout {
-    //     @include layoutGTC($break-narrow);
-    // }
     @include for-normal-layout {
         @include layoutGTC($break-normal);
     }
@@ -62,6 +59,9 @@
         @include layoutGTC($break-wide-details);
     }
 
+    @include for-mobile-layout {
+        @include layoutGTC($mobile-breakpoint,$mobilePadding);
+    }
 
 
 }

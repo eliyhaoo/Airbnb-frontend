@@ -46,14 +46,15 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         <form onSubmit={onSearchBy}>
             <div className="stay-search-expand-container flex space-between align-center">
 
-
-                <div onClick={(ev) => onSetModal(ev, 'location')} className={`search-location-expand ${modalOpen === 'location' ? 'open' : ''}`}>
+                <div onClick={(ev) => onSetModal(ev, 'location')} 
+                className={`search-location-expand ${modalOpen === 'location' ? 'open' : ''}`}>
                     <div className='search-label'>Where</div>
                     <input type="text" placeholder="Search destinations" name='location' value={searchByFields.location} onChange={handleChange} />
                     {modalOpen === 'location' && <SearchCountry selectedRegion={searchByFields.location} setSelectedRegion={onSelectedRegion} />}
                 </div>
 
-                <div onClick={(ev) => onSetModal(ev, 'dates')} className={`search-date-expand ${modalOpen === 'dates' ? 'open' : ''}`}>
+                <div onClick={(ev) => onSetModal(ev, 'dates')} 
+                className={`search-date-expand ${modalOpen === 'dates' ? 'open' : ''}`}>
                     {modalOpen === 'dates' ?
                         <SearchbarDatePicker dates={dates} setModalOpen={setModalOpen} activeDatesTab={activeDatesTab} setActiveTab={setActiveTab} setSearchByFields={setSearchByFields} />
                         :

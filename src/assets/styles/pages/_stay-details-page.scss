@@ -14,7 +14,7 @@
 
         .stay-review-details {
             align-items: center;
-            gap: 5px;
+            gap: rem(5px);
 
             img {
                 height: rem(38px);
@@ -44,12 +44,12 @@
             .action-container {
                 align-items: center;
                 // margin-right: 14px;
-                padding: 8px;
-                border-radius: 8px;
+                padding: rem(8px);
+                border-radius: rem(8px);
                 cursor: pointer;
 
                 img {
-                    padding-right: 5px;
+                    padding-right: rem(5px);
                 }
 
                 .share-img {
@@ -131,9 +131,9 @@
 
             p {
                 margin: 0;
-                font-size: 17px;
-                letter-spacing: 0.3px;
-                line-height: 24px;
+                font-size: rem(17px);
+                letter-spacing:rem(0.3px);
+                line-height: rem(24px)
             }
 
             .stay-info-txt p {
@@ -152,6 +152,43 @@
             margin: 0 5px;
         }
 
+    }
+
+    @include for-mobile-layout {
+        margin-top:0;
+        grid-column: 1 / -1;
+        
+        .details-img-container{
+            display:none;
+        }
+        .carousel-component{
+            order: -1;
+            grid-column: 1 / -1;
+            .preview-img {
+             
+            
+                height:300px;
+                border-radius:0 ;
+            }
+        }
+
+        h2{
+            margin-top:20px;
+        }
+        .reviews-stats-container {
+            grid-template-columns: 1fr;
+
+        }
+        .stay-display-info{
+            padding-top: 0;
+            grid-template-columns: 1fr;
+        }
+
+       
+
+        .add-review-container{
+            display:none;
+        }
     }
 
 }

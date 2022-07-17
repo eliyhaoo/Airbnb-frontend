@@ -10,6 +10,7 @@ import { ReservationHeader } from './reservation-header'
 import logoSvg from '../../assets/svg/logo.svg'
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
 import { MainHeader } from './main-header'
+import { MobileHeader } from './mobile-header'
 
 const _AppHeader = ({ history }) => {
     const gVisitedPage = useRef()
@@ -97,42 +98,45 @@ const _AppHeader = ({ history }) => {
                 setModalUserOptions={setModalUserOptions}
                 modalUserOptions={modalUserOptions} />
 
-            : <header onClick={onCloseSearchBig}
-                className={getMainHeaderClass()}>
+            : 
+            visitedPage !== 'details-page' ? <MobileHeader></MobileHeader> : <React.Fragment></React.Fragment>
+            // <header onClick={onCloseSearchBig}
+            //     className={getMainHeaderClass()}>
 
-                <div className={getHeaderContainerClass()}>
-                    <div className="header-content-container flex space-between align-center">
-                        <NavLink to='/'><h2 className='logo-img flex space-between'><img src={logoSvg} />
-                            <span className="app-name">homebnb</span></h2></NavLink>
+               
+            //     <div className={getHeaderContainerClass()}>
+            //         <div className="header-content-container flex space-between align-center">
+            //             <NavLink to='/'><h2 className='logo-img flex space-between'><img src={logoSvg} />
+            //                 <span className="app-name">homebnb</span></h2></NavLink>
 
-                        {!isSearchOpen && <StaySearch
-                            setModalOpen={setModalOpen}
-                            setSearchToggle={setSearchToggle}
-                            setIsBig={setIsBig} />
-                        }
+            //             {!isSearchOpen && <StaySearch
+            //                 setModalOpen={setModalOpen}
+            //                 setSearchToggle={setSearchToggle}
+            //                 setIsBig={setIsBig} />
+            //             }
 
-                        {isReservationVisible ?
-                            <ReservationHeader />
-                            :
-                            <MainHeader
-                                setModalUserOptions={setModalUserOptions}
-                                modalUserOptions={modalUserOptions}
-                                visitedPage={visitedPage}
-                                user={user}
-                                isNotficationOn={isNotficationOn}
-                            />
-                        }
-                    </div>
+            //             {isReservationVisible ?
+            //                 <ReservationHeader />
+            //                 :
+            //                 <MainHeader
+            //                     setModalUserOptions={setModalUserOptions}
+            //                     modalUserOptions={modalUserOptions}
+            //                     visitedPage={visitedPage}
+            //                     user={user}
+            //                     isNotficationOn={isNotficationOn}
+            //                 />
+            //             }
+            //         </div>
 
-                    <StaySearchExpand
-                        setSearchToggle={setSearchToggle}
-                        isSearchOpen={isSearchOpen} history={history}
-                        isBig={isBig} setIsBig={setIsBig}
-                        modalOpen={modalOpen}
-                        setModalOpen={setModalOpen}
-                    />
-                </div>
-            </header>
+            //         <StaySearchExpand
+            //             setSearchToggle={setSearchToggle}
+            //             isSearchOpen={isSearchOpen} history={history}
+            //             isBig={isBig} setIsBig={setIsBig}
+            //             modalOpen={modalOpen}
+            //             setModalOpen={setModalOpen}
+            //         />
+            //     </div>
+            // </header>
 
 }
 
