@@ -68,7 +68,6 @@ export const FormReserve = ({ stay }) => {
 
     const totalNights = calcTotalNights()
     const totalPrice = calcTotalPrice()
-    console.log('TOTAL PRICE', totalPrice)
 
     return <div className="form-reserve">
         <div className="order-data">
