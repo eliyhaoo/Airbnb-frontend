@@ -11,7 +11,7 @@ import filterImg from '../assets/svg/filter.svg'
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
     const { stays, filterBy } = useSelector(storeState => storeState.stayModule)
-    const [isModalOpen, showFilterModal] = useState(false)
+    const [isModalOpen, setFilterModal] = useState(false)
     const [isPageScroll, setisPageScroll] = useState(false)
 
 
@@ -59,12 +59,12 @@ export const ExplorePage = ({ history }) => {
                 <CategoriesFilter />
 
                 <button className="filter-btn flex align-center space-between"
-                    onClick={() => showFilterModal(true)} ><div className="img-container flex align-center">
+                    onClick={() => setFilterModal(true)} ><div className="img-container flex align-center">
                         <img className="filter-img-btn" src={filterImg} /></div>
                     <span>Filters</span>
                 </button>
 
-                {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
+                {isModalOpen && <StayFilter history={history} showFilterModal={setFilterModal} />}
 
             </div>
         </div>

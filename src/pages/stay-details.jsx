@@ -54,8 +54,6 @@ export const StayDetails = ({ history }) => {
             stayId={stayId}
             history={history}
             showStatus={true}
-
-
         />
 
 

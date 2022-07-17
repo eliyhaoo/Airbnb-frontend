@@ -5,8 +5,9 @@ import { useSelector } from 'react-redux'
 import { reservationService } from '../../services/reservation.service'
 import { socketService, SOCKET_EMIT_RESERVATION } from '../../services/socket.service'
 import { showErrorMsg, showReservedMsg } from '../../services/event-bus.service'
+import { Loader } from './loader'
 
-export const ReservationHeader = () => {
+export const ReservationComponent = () => {
 
     const { stay } = useSelector(storeState => storeState.stayModule)
     const { user } = useSelector(storeState => storeState.userModule)
@@ -36,20 +37,17 @@ export const ReservationHeader = () => {
     }
 
     const calcTotalPrice = () => {
-        console.log('Stay price', stay.price);
-        console.log('Nights', calcTotalNights());
-
         return calcTotalNights() * stay.price
-
     }
 
     const calcTotalNights = () => {
         return (new Date(reserve.dates.checkOut) - new Date(reserve.dates.checkIn)) / (1000 * 60 * 60 * 24)
     }
 
-    return <section className="header-reservation">
+    if (!stay) return <Loader/>
+    return <section className="header-component">
 
-        <div className="reservation-header-container flex">
+        <div className="reservation-component-container flex">
 
             <div className="order-details-container flex direction-column space-between">
                 <div className="price-pernight-container">
