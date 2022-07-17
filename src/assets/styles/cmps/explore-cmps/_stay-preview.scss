@@ -84,4 +84,17 @@
         }
     }
 
+    @include for-mobile-layout{
+            font-size: 12px !important;
+
+            .price-span{
+                font-size: 12px !important;
+            }
+
+            .preview-rating-container{
+                width: 26% !important;
+            }
+    }
+
+
 }

@@ -1,6 +1,13 @@
 .mobile-header {
 
-    padding: 16px 24px;
+    padding: 20px 20px;
+    font-size: rem(24px);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 100;
+    background-color: $backgroundClr;
 
     .mobile-search-container {
         border: 1px solid $borderClr;
@@ -28,7 +35,6 @@
                 background-color: unset;
                 width: 100%;
                 font-family: cereal-book;
-                font-size: 0.875rem;
                 padding: 0;
     
                 &:focus-visible {

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { StaySearch } from './stay-search'
 import { StaySearchExpand } from './stay-search-expand'
 import { DashboardHeader } from '../dashboard-cmps/dashboard-header'
-import { ReservationHeader } from './reservation-header'
+import { ReservationComponent } from '../general-cmps/reservationComponent'
 
 import logoSvg from '../../assets/svg/logo.svg'
 import { socketService, SOCKET_ON_RESERVATION_RECEIVED } from '../../services/socket.service'
@@ -116,7 +116,7 @@ const _AppHeader = ({ history }) => {
             //             }
 
             //             {isReservationVisible ?
-            //                 <ReservationHeader />
+            //                 <ReservationComponent />
             //                 :
             //                 <MainHeader
             //                     setModalUserOptions={setModalUserOptions}
