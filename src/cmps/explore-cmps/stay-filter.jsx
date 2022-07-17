@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useForm } from '../../hooks/useForm'
-
 import { MultiselectCheckbox } from "./multiselect-checkbox"
 import { PriceFilter } from "./price-filter"
-
 import { loadStays, setFilterBy } from "../../store/actions/stay.action"
 
 import closeModalImg from "../../assets/svg/close-modal.svg"

@@ -1,7 +1,7 @@
 
 
 let initialState = {
-    user: null
+    user: null,
 }
 export function userReducer(state = initialState, action) {
     var newState = state;

@@ -2,23 +2,15 @@ import { useEffect, useState } from 'react'
 import { stayService } from '../../services/stay.service'
 import { StayPreview } from '../general-cmps/stay-preview'
 import { Loader } from '../../cmps/general-cmps/loader'
+import { useSelector } from 'react-redux'
 
 
 export const DashboardListings = ({ history }) => {
 
     const [listings, setListings] = useState()
-
-    const user = {
-        _id: '622f3403e36c58e6164naf93',
-        imgUrl: 'https://res.cloudinary.com/dys1y33zj/image/upload/v1653814932/8_o4nctw.jpg',
-        isHost: true,
-        wishList: ['6297cb852f760e2ec9f8244b']
-    }
-
-
+    const { user } = useSelector(storeState => storeState.userModule)
 
     useEffect(() => {
-
         loadListings()
     }, [])
 

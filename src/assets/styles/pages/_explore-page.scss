@@ -1,9 +1,9 @@
 .explore-page {
     margin-top: 95px;
-    
+
 
     .filter-container {
-        height:86px;
+        height: 86px;
         position: sticky;
         top: 78px;
         background-color: white;
@@ -44,5 +44,14 @@
         .img-container {
             display: inline;
         }
+    }
+
+    @include for-mobile-layout {
+            margin-top: 0;
+
+            .filter-container {
+                display: none;
+            }
+        
     }
 }

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setVisitPage } from '../store/actions/system.action'
 import { NavLink } from 'react-router-dom'
 
@@ -13,15 +13,14 @@ export const BecomeHostPage = () => {
         dispatch(setVisitPage('become-host-page'))
     }, [])
 
-
     return <section className="become-host-page full">
         <div className="header-host-page-container full">
             <div className="general flex">
+
                 <div className="header-host-page-elements">
                     <NavLink to='/'><img className="logo-img" src={logoSvg} /></NavLink>
                     <span>Open your door
                         to hosting</span>
-
                     <button className="become-host-btn">Try hosting</button>
                 </div>
 
@@ -32,12 +31,15 @@ export const BecomeHostPage = () => {
                             <path d="M27.024 14.273L6.008 2.013c-.461-.268-1-.342-1.517-.206A2 2 0 0 0 3 3.741V28.26a2.002 2.002 0 0 0 3.008 1.728l21.015-12.26a2.003 2.003 0 0 0 .001-3.454z"></path></svg>
                         </span></button></div>
                 </div>
+
             </div>
         </div>
+
         <div className="text">
             You can host
             <br></br>
             anything, anywhere
         </div>
+
     </section >
 }

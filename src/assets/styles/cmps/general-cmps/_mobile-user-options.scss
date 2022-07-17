@@ -1,0 +1,7 @@
+.mobile-user-options {
+    display: none;
+
+    @include for-mobile-layout {
+        display: block;
+    }
+}

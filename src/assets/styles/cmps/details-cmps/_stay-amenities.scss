@@ -179,4 +179,11 @@
 
         }
     }
+
+    @include for-mobile-layout {
+      
+        .stay-amenities{
+            grid-template-columns:1fr
+        }
+    }
 }
