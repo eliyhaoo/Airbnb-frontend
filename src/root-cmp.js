@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import routes from './routes.js'
 import { AppHeader } from './cmps/app-header-cmps/app-header'
 import { AppFooter } from './cmps/general-cmps/app-footer'
+import { MobileUserOptions } from './cmps/general-cmps/mobile-user-options'
 import { UserMsg } from './cmps/general-cmps/user-msg'
 import { useDispatch } from 'react-redux'
 import { loadUser } from './store/actions/user.actions'
@@ -25,6 +26,7 @@ function App() {
         </Switch>
       </main>
       <UserMsg />
+      <MobileUserOptions />
       <AppFooter />
 
     </div>
