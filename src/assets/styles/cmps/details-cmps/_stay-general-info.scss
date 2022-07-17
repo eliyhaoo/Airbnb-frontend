@@ -37,9 +37,9 @@
         border-bottom: 1px solid rgb(221, 221, 221);
         border-top: 1px solid rgb(221, 221, 221);
         margin: 0;
-    font-size: 17px;
-    letter-spacing: 0.3px;
-    line-height: 24px;
+        font-size: 17px;
+        letter-spacing: 0.3px;
+        line-height: 24px;
 
         img{
             height: rem(32px);
@@ -52,5 +52,20 @@
         }
     }
 
+    @include for-mobile-layout{
+        .title{
+            font-size: 14px ;
+        }
+
+        .subtitle{
+            font-size: 12px !important;
+        }
+
+        .air-cover{
+            p{
+                font-size: 14px;
+            }
+        }
+    }
 
 }

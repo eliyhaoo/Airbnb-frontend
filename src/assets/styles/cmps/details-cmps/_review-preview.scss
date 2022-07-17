@@ -36,4 +36,16 @@
         font-size: rem(14px);
         color: $subtext;
     }
+
+    @include for-mobile-layout{
+        .review-user-info{
+            h4{
+                font-size: 14px;
+            }
+
+            span{
+                font-size: 11px !important;
+            }
+        }
+    }
 }
