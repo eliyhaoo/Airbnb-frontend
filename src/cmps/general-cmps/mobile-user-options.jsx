@@ -1,8 +1,8 @@
 
-export const MobileUserOptions = () => {
+export const MobileFooter = () => {
 
-    return <div className="mobile-user-options">
+    return <div className="mobile-footer">
 
-        HELLO FROM MOBILE USER OPTIONS
+        HELLO FROM MOBILE FOOTER
     </div>
 }
