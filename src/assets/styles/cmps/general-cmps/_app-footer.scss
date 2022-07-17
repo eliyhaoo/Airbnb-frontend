@@ -46,4 +46,7 @@
         font-weight: 500;
     }
 
+    @include for-mobile-layout {
+        display: none;
+    }
 }
