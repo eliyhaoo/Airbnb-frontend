@@ -13,10 +13,9 @@ import { StayInfo } from '../cmps/details-cmps/stay-info'
 import { Loader } from '../cmps/general-cmps/loader'
 import { AddReview } from '../cmps/details-cmps/add-review'
 import { ReviewList } from '../cmps/details-cmps/review-list'
+import { StayHeaderActions } from '../cmps/details-cmps/stay-header-actions'
+import { StayHeaderInfo } from '../cmps/details-cmps/stay-header-info'
 
-import starSvg from '../assets/svg/star.svg'
-import shareSvg from '../assets/svg/Share.svg'
-import saveSvg from '../assets/svg/Save.svg'
 import { CarouselComponent } from '../cmps/explore-cmps/carousel.component'
 
 export const StayDetails = ({ history }) => {
@@ -45,7 +44,7 @@ export const StayDetails = ({ history }) => {
         <h2 className="stay-name-details">{stay.name}</h2>
         <div className="stay-details-container flex space-between">
             <StayHeaderInfo stay={stay} />
-            <StayHeaderActions />
+            <StayHeaderActions history={history} />
         </div>
 
         {/* <div className="details-img-container">
