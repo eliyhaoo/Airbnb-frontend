@@ -7,7 +7,7 @@ import { loadStays, setFilterBy } from "../../store/actions/stay.action"
 import closeModalImg from "../../assets/svg/close-modal.svg"
 import _ from 'lodash'
 
-export const StayFilter = ({ showFilterModal, history }) => {
+export const StayFilter = ({ setFilterModal, history }) => {
 
     const { filterBy } = useSelector(storeState => storeState.stayModule)
     const [filterByProperties, handleChange, setFilterProperties] = useForm(filterBy.properties)
@@ -24,7 +24,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
     }
 
     const onCloseModal = () => {
-        showFilterModal(false)
+        setFilterModal(false)
         history.push('/explore')
     }
 
@@ -95,7 +95,7 @@ export const StayFilter = ({ showFilterModal, history }) => {
 
                 </div>
 
-                <div className="filter-footer flex space-between align-center">
+                <div className="filter-footer flex space-between ">
                     <p>Clear all</p>
                     <button type="submit" className="filter-footer-btn">Show Stays</button>
                 </div>
