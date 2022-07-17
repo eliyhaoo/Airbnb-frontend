@@ -55,15 +55,18 @@ export const ExplorePage = ({ history }) => {
         <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full`}>
 
             <div className="filter-btns-container flex align-center space-between">
+
                 <CategoriesFilter />
+
                 <button className="filter-btn flex align-center space-between"
                     onClick={() => showFilterModal(true)} ><div className="img-container flex align-center">
                         <img className="filter-img-btn" src={filterImg} /></div>
                     <span>Filters</span>
                 </button>
-                {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
-            </div>
 
+                {isModalOpen && <StayFilter history={history} showFilterModal={showFilterModal} />}
+
+            </div>
         </div>
 
         <StayList stays={stays} history={history} />

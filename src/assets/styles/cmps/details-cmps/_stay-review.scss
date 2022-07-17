@@ -49,6 +49,13 @@
         
         
     }
+
+    @include for-mobile-layout {
+        .reviews-stats-container {
+            grid-template-columns: 1fr;
+
+        }
+    }
 }
 
 

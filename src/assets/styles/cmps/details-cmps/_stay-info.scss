@@ -18,15 +18,14 @@
     }
 
     h2 {
-        letter-spacing: 0.5px;
+        letter-spacing: rem(0.5px);
         margin-bottom: 8px;
-        font-size: 25px;
+        font-size: rem(25px);
         padding: 0;
-        // font-family: 'cereal-medium';
     }
 
     span{
-        font-size: 17px;
+        font-size: rem(17px);
     }
 
 
