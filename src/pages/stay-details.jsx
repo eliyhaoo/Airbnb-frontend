@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { utilService } from '../services/util.service'
 import { stayService } from '../services/stay.service'
 import { setVisitPage } from '../store/actions/system.action'
 import { StayMap } from "../cmps/details-cmps/stay-map"
@@ -14,16 +13,13 @@ import { StayInfo } from '../cmps/details-cmps/stay-info'
 import { Loader } from '../cmps/general-cmps/loader'
 import { AddReview } from '../cmps/details-cmps/add-review'
 import { ReviewList } from '../cmps/details-cmps/review-list'
-
-import starSvg from '../assets/svg/star.svg'
-import shareSvg from '../assets/svg/Share.svg'
-import saveSvg from '../assets/svg/Save.svg'
+import { StayHeaderInfo } from '../cmps/details-cmps/stay-header-info'
+import { StayHeaderActions } from '../cmps/details-cmps/stay-header-actions'
 
 export const StayDetails = ({ history }) => {
     const dispatch = useDispatch()
     const { stayId } = useParams()
     const [stay, setStay] = useState(null)
-
 
     useEffect(() => {
         (async () => {
@@ -41,42 +37,12 @@ export const StayDetails = ({ history }) => {
 
 
     if (!stay) return <Loader />
+
     return <section className="stay-details-page details-layout">
-
         <h2 className="stay-name-details">{stay.name}</h2>
-
         <div className="stay-details-container flex space-between">
-            <div className="stay-review-details flex">
-                <img src={starSvg} alt="star" />
-                <div>
-                    {stay.reviewScores.Rating}
-                </div>
-                <span>·</span>
-                <div className="reviews flex">
-                    <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
-                </div>
-                <span className="dot">·</span>
-                <div className="num-of-reviews flex gap-5">
-                    {stay.host.isSuperhost && <div>
-                        <span className="superhost">Superhost</span>
-                    </div>}
-                    <div className="city-address">{stay.address.city},</div>
-                    <div className="country-address">{stay.address.country}</div>
-                </div>
-            </div>
-
-            <div className="actions-container flex">
-                <div className="action-container flex">
-                    <img className="share-img" src={shareSvg} alt="share" />
-                    <span>Share</span>
-                </div>
-
-                <div className="action-container flex">
-                    <img className="save-img" src={saveSvg} alt="save" />
-                    <span>Save</span>
-                </div>
-            </div>
-
+            <StayHeaderInfo stay={stay} />
+            <StayHeaderActions />
         </div>
 
         <div className="details-img-container">
@@ -89,10 +55,8 @@ export const StayDetails = ({ history }) => {
                 <StayGeneralInfo />
                 <StayAmenities stay={stay} />
             </div>
-
             <StayReserve stay={stay} />
         </section>
-
 
         <StayReview stay={stay} />
         <ReviewList stay={stay} />
@@ -101,5 +65,6 @@ export const StayDetails = ({ history }) => {
         <div className="stay-map">
             {<StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} />}
         </div>
+
     </section >
 }
