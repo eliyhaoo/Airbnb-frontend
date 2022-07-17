@@ -15,7 +15,6 @@ import { AddReview } from '../cmps/details-cmps/add-review'
 import { ReviewList } from '../cmps/details-cmps/review-list'
 import { StayHeaderActions } from '../cmps/details-cmps/stay-header-actions'
 import { StayHeaderInfo } from '../cmps/details-cmps/stay-header-info'
-
 import { CarouselComponent } from '../cmps/explore-cmps/carousel.component'
 
 export const StayDetails = ({ history }) => {
