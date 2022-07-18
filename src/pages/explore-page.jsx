@@ -58,7 +58,7 @@ export const ExplorePage = ({ history }) => {
 
                 <CategoriesFilter />
 
-                <button className="filter-btn flex align-center space-between"
+                <button className="filter-btn flex align-center"
                     onClick={() => setFilterModal(true)} ><div className="img-container flex align-center">
                         <img className="filter-img-btn" src={filterImg} /></div>
                     <span>Filters</span>
@@ -70,6 +70,6 @@ export const ExplorePage = ({ history }) => {
         </div>
 
         <StayList stays={stays} history={history} />
-        
+
     </section >
 }
