@@ -30,7 +30,7 @@ export const StayFilter = ({ setFilterModal, history }) => {
 
     const onCloseModal = () => {
         setFilterModal(false)
-        history.push('/explore')
+        // history.push('/explore')
     }
 
     const onSetRoomType = (roomType) => {
@@ -46,6 +46,7 @@ export const StayFilter = ({ setFilterModal, history }) => {
     }
 
     const onSetPrice = (price) => {
+        console.log('price', price)
         setFilterProperties((prevState) => ({ ...prevState, price }))
     }
 
@@ -70,13 +71,9 @@ export const StayFilter = ({ setFilterModal, history }) => {
                 'Private entrance': false,
             }
         }
-        dispatch(setFilterBy('properties', cleanFilter))
-        // setFilterProperties(cleanFilter)
-        onSetRoomType(cleanFilter.roomType)
 
-        // setTimeout(() => {
-        //     console.log('filterByProperties')
-        // }, 1500);
+        dispatch(setFilterBy('properties', cleanFilter))
+
     }
 
 
@@ -94,7 +91,6 @@ export const StayFilter = ({ setFilterModal, history }) => {
                 <div className="filter-type price-range">
 
                     <h2>Price range</h2>
-                    {/* <p>The average nightly price is</p> */}
                     <div className="price-filter-container">
                         <PriceFilter onSetPrice={onSetPrice} price={filterByProperties.price} />
                     </div>

@@ -64,12 +64,12 @@ export const ExplorePage = ({ history }) => {
                     <span>Filters</span>
                 </button>
 
-                {isModalOpen && <StayFilter history={history} showFilterModal={setFilterModal} />}
+                {isModalOpen && <StayFilter history={history} setFilterModal={setFilterModal} />}
 
             </div>
         </div>
 
         <StayList stays={stays} history={history} />
-        
+
     </section >
 }

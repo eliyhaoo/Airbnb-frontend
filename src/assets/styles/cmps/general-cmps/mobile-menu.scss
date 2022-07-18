@@ -8,10 +8,16 @@
             width: 25px;
         }
 
+        .user-img{
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         & .active {
             img {
                 filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%);
             }
+            
 
             .name {
                 font-weight: 600;

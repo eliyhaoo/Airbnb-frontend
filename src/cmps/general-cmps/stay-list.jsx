@@ -10,6 +10,7 @@ export const StayList = ({ stays, history, onRemoveStay }) => {
     const [wishList, setWishList] = useState(user ? user.wishList : storageService.getGuestWishList())
     const dispatch = useDispatch()
 
+
     const onToggleInWishList = (ev, stayId) => {
         ev.stopPropagation()
         let newWishList
@@ -22,8 +23,8 @@ export const StayList = ({ stays, history, onRemoveStay }) => {
 
         setWishList(newWishList)
         if (user) {
-            user = { ...user, wishList: newWishList }
-            dispatch(updateUser(user))
+            const updatedUser = { ...user, wishList: newWishList }
+            dispatch(updateUser(updatedUser))
             if (onRemoveStay) onRemoveStay(newWishList)
         } else {
             storageService.putGuestWishList(newWishList)
