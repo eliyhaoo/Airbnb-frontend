@@ -6,6 +6,7 @@ import { loadStays, setFilterBy } from "../../store/actions/stay.action"
 
 import closeModalImg from "../../assets/svg/close-modal.svg"
 import _ from 'lodash'
+import { useEffect } from "react"
 
 export const StayFilter = ({ setFilterModal, history }) => {
 
@@ -13,6 +14,10 @@ export const StayFilter = ({ setFilterModal, history }) => {
     const [filterByProperties, handleChange, setFilterProperties] = useForm(filterBy.properties)
     const dispatch = useDispatch()
     const titles = ['A place all to yourself', 'Your own room in a home or a hotel, plus some shared common spaces', 'A sleeping space and common areas that may be shared with others']
+
+    useEffect(() => {
+
+    }, [filterByProperties])
 
     const onSetFilterBy = (ev) => {
 
@@ -44,6 +49,36 @@ export const StayFilter = ({ setFilterModal, history }) => {
         setFilterProperties((prevState) => ({ ...prevState, price }))
     }
 
+    const onClearFilter = () => {
+
+        const cleanFilter = {
+            price: null,
+            beds: '',
+            roomType: {
+                'Entire place': false,
+                'Private room': false,
+                'Shared room': false
+            },
+            amenities: {
+                'Wifi': false,
+                'Kitchen': false,
+                'Heating': false,
+                'Breakfast': false,
+                'Pool': false,
+                'TV': false,
+                'Air conditioning': false,
+                'Private entrance': false,
+            }
+        }
+        dispatch(setFilterBy('properties', cleanFilter))
+        // setFilterProperties(cleanFilter)
+        onSetRoomType(cleanFilter.roomType)
+
+        // setTimeout(() => {
+        //     console.log('filterByProperties')
+        // }, 1500);
+    }
+
 
     return <div className="stay-filter">
         <div className="header-container screen" onClick={() => onCloseModal()} ></div>
@@ -57,7 +92,7 @@ export const StayFilter = ({ setFilterModal, history }) => {
             <form className="filter-form" onSubmit={onSetFilterBy}>
 
                 <div className="filter-type price-range">
-                    
+
                     <h2>Price range</h2>
                     {/* <p>The average nightly price is</p> */}
                     <div className="price-filter-container">
@@ -96,7 +131,7 @@ export const StayFilter = ({ setFilterModal, history }) => {
                 </div>
 
                 <div className="filter-footer flex space-between ">
-                    <p>Clear all</p>
+                    <p onClick={onClearFilter}>Clear all</p>
                     <button type="submit" className="filter-footer-btn">Show Stays</button>
                 </div>
             </form>

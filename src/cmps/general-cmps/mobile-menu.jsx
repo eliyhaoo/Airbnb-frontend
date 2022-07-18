@@ -3,10 +3,11 @@ import wishListSvg from '../../assets/svg/heart-mobile-menu.svg'
 import profileSvg from '../../assets/svg/profile-mobile-menu.svg'
 import travelsSvg from '../../assets/svg/logo-mobile-menu.svg'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export const MobileMenu = () => {
 
-    // const { user } = useSelector(storeState => storeState.userModule)
+    const { user } = useSelector(storeState => storeState.userModule)
 
     return <div className="mobile-menu flex direction-column align-center">
         <div className="mobile-menu-elements-container flex">
