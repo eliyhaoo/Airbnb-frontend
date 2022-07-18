@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react"
 import { useSelector } from "react-redux";
 import { reservationService } from "../../services/reservation.service";
@@ -25,7 +25,11 @@ export const DashboardTrips = ({history}) => {
 
     }
 
-    if (!user) return <div className="no-stays"><h2>Please login first</h2></div>
+    if (!user) return <React.Fragment>
+        
+    <div className="no-stays"><h2>Please login first</h2></div>
+    <div className="no-stay-img"></div>
+    </React.Fragment>
     if (listings.length === 0) return <div className="no-stays"><h2>No trips reserved yet!</h2></div>
     return <div className="dasboard-reservation">
 

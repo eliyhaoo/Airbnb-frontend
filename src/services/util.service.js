@@ -24,10 +24,12 @@ function makeId(length = 6) {
 }
 
 function getStaysMinPrice(stays) {
+    if (stays.length === 0) return 0
     return Math.min(...stays.map(stay => stay.price))
 }
 
 function getStaysMaxPrice(stays) {
+    if (stays.length === 0) return 10000
     return Math.max(...stays.map(stay => stay.price))
 }
 

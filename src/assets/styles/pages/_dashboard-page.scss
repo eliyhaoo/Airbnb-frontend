@@ -16,10 +16,24 @@
         margin: 10px;
     }
 
+
+    .no-stay-img{
+        background-image: url('../../svg/logo-mobile-menu.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        height: 80vh;
+        opacity: 0.2;
+        
+    }
+
     @include for-mobile-layout {
 
         .no-stays{
             font-size:1rem;
+        }
+        .no-stay-img{
+
         }
             
     }

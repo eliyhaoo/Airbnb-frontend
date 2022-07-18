@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { storageService } from '../../services/async-storage.service'
 import { loadStays } from '../../store/actions/stay.action'
@@ -29,9 +29,12 @@ export const DashboardWishlist = ({ history }) => {
         return stays.filter(stay => wishList.some(stayIdInWishList => stayIdInWishList === stay._id))
     }
 
-    if (!getStaysToDisplay().length) return <div className="no-stays">
-        <h2>Nothing saved yet...</h2>
-    </div>
+    if (!getStaysToDisplay().length) return <React.Fragment>
+        <div className="no-stays">
+            <h2>Nothing saved yet...</h2>
+        </div>
+        <div className="no-stay-img"></div>
+    </React.Fragment>
     return <section className="dashboard-wishlist flex direction-column">
 
         <h2 className="dashboard-title">Wishlist</h2>
