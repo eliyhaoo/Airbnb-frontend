@@ -10,6 +10,7 @@ export const MultiselectCheckbox = ({ fields, onHandleChange, titles }) => {
 
   const [state, setState] = useState(fields)
 
+
   const handleChange = (event) => {
     const newState = {
       ...state,
