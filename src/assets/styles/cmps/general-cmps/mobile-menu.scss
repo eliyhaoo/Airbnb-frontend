@@ -7,5 +7,17 @@
             height: 25px;
             width: 25px;
         }
+
+        .mobile-element-container {
+            &.active {
+                img {
+                    filter: invert(38%) sepia(74%) saturate(4464%) hue-rotate(330deg) brightness(100%) contrast(95%);
+                }
+
+                .name {
+                    font-weight: 600;
+                }
+            }
+        }
     }
 }

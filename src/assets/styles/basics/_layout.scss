@@ -42,7 +42,7 @@
     }
 
     @include for-mobile-layout {
-        grid-template-columns: 5px 1fr 5px;
+        grid-template-columns: 0 1fr 0;
 
     }
 

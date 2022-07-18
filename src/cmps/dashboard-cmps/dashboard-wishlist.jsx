@@ -7,7 +7,7 @@ import { StayList } from '../general-cmps/stay-list'
 
 
 export const DashboardWishlist = ({ history }) => {
-    
+
     const dispatch = useDispatch()
     const { stays } = useSelector(storeState => storeState.stayModule)
     const { user } = useSelector(storeState => storeState.userModule)
@@ -15,12 +15,12 @@ export const DashboardWishlist = ({ history }) => {
 
 
     useEffect(() => {
-       if (!stays.length){
-        dispatch(loadStays())
-       }
+        if (!stays.length) {
+            dispatch(loadStays())
+        }
     }, [])
-    
-    const onRemoveStay = (wishList)=>{
+
+    const onRemoveStay = (wishList) => {
         setWishList(wishList)
     }
 
@@ -29,11 +29,13 @@ export const DashboardWishlist = ({ history }) => {
         return stays.filter(stay => wishList.some(stayIdInWishList => stayIdInWishList === stay._id))
     }
 
-    if (!getStaysToDisplay().length) return <div className="no-stays">Nothing saved yet...</div>
+    if (!getStaysToDisplay().length) return <div className="no-stays">
+        <h2>Nothing saved yet...</h2>
+    </div>
     return <section className="dashboard-wishlist flex direction-column">
-  
+
         <h2 className="dashboard-title">Wishlist</h2>
-        <StayList stays={getStaysToDisplay()} history={history} onRemoveStay={onRemoveStay}/>
+        <StayList stays={getStaysToDisplay()} history={history} onRemoveStay={onRemoveStay} />
 
     </section>
 }
