@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import searchSvg from '../../assets/svg/search-mobile-menu.svg'
 import wishListSvg from '../../assets/svg/heart-mobile-menu.svg'
 import profileSvg from '../../assets/svg/profile-mobile-menu.svg'
 import travelsSvg from '../../assets/svg/logo-mobile-menu.svg'
-import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
+import home from '../../assets/svg/home-mobile-menu.svg'
+
 
 export const MobileMenu = () => {
     const [activeOption, setActiveOption] = useState('')
@@ -34,7 +36,10 @@ export const MobileMenu = () => {
             <Link to="/login"><div className={("mobile-element-container flex direction-column align-center" + ((activeOption === 'login') ? ' active' : ''))} onClick={() => onChooseActiveOption('login')}>
                 <img className="Profile-img" src={profileSvg} />
                 <span className="name">Log in</span>
-
+            </div></Link>
+            <Link to="/"><div className={("mobile-element-container flex direction-column align-center" + ((activeOption === 'home') ? ' active' : ''))} onClick={() => onChooseActiveOption('home')}>
+                <img className="Profile-img" src={home} />
+                <span className="name">Home</span>
             </div></Link>
         </div>
     </div>
