@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import { Link } from "react-router-dom"
-import { connect } from 'react-redux'
+import { connect, useDispatch } from 'react-redux'
 
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
@@ -16,12 +16,18 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import { storageService } from '../services/async-storage.service'
 import { onLogin } from '../store/actions/user.actions'
+import { setVisitPage } from '../store/actions/system.action'
 
 
 const theme = createTheme()
 export function _Login(props) {
 
     const [errorMsg, setErrorMsg] = useState('')
+    const dispatch = useDispatch()
+
+    React.useEffect(()=>{
+        dispatch(setVisitPage('login-page'))
+    },[])
     const handleSubmit = async (event) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)

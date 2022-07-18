@@ -86,8 +86,15 @@ const _AppHeader = ({ history }) => {
 
     }
 
+    const isHeaderHidden = () => {
+        if (visitedPage === 'become-host-page' ||
+            visitedPage === 'login-page' ||
+            visitedPage === 'signup-page') return true
+            return false
+    }
 
-    return visitedPage === 'become-host-page' ?
+
+    return isHeaderHidden() ?
         <React.Fragment></React.Fragment>
         :
         visitedPage === 'dashboard-page' ?
@@ -102,7 +109,7 @@ const _AppHeader = ({ history }) => {
             // visitedPage !== 'details-page' ? 
             // <MobileHeader history={history}/> : <React.Fragment></React.Fragment>
             <React.Fragment>
-                {visitedPage !== 'details-page' && <MobileHeader history={history}/> }
+                {visitedPage !== 'details-page' && <MobileHeader history={history} />}
                 <header onClick={onCloseSearchBig}
                     className={getMainHeaderClass()}>
 
