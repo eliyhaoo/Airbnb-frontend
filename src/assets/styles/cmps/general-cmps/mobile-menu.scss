@@ -2,11 +2,20 @@
     .mobile-menu-elements-container {
         width: 100%;
         justify-content: space-around;
-        margin-bottom: 10px;
 
         img {
             height: 25px;
             width: 25px;
+        }
+
+        & .active {
+            img {
+                filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%);
+            }
+
+            .name {
+                font-weight: 600;
+            }
         }
     }
 }
