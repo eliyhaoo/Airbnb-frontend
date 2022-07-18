@@ -25,13 +25,14 @@ export const StayDetails = ({ history }) => {
     useEffect(() => {
         (async () => {
             dispatch(setVisitPage('details-page'))
+            let stay
             try {
-                const stay = await stayService.getById(stayId)
+                stay = await stayService.getById(stayId)
                 setStay(stay)
-
-                if (!stay) history.push('/explore')
+                console.log('STAYfsafa', stay);
             } catch (err) {
                 console.error(err)
+                if (!stay) history.push('/explore')
             }
         })();
     }, [])
