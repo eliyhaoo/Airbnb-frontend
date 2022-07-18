@@ -31,18 +31,17 @@ export const DashboardHeader = ({ user, isNotficationOn, toggleNotifaction, setM
                         </div>
                     </NavLink ></li>}
 
-                   { user?.isHost && <li><NavLink to="/dashboard/listings">
+                    {user?.isHost && <li><NavLink to="/dashboard/listings">
                         <div className="after-container">
                             <div className='dashboard-link-title'>Listings</div>
                         </div>
                     </NavLink ></li>}
 
-                   { user && <li><NavLink to="/dashboard/trip">
+                    <li><NavLink to="/dashboard/trip">
                         <div className="after-container">
                             <div className='dashboard-link-title'> My Trips </div>
                         </div>
-                    </NavLink ></li>}
-
+                    </NavLink ></li>
                     <li><NavLink to="/dashboard/wishlist">
                         <div className="after-container">
                             <div className='dashboard-link-title'> Wish List </div>

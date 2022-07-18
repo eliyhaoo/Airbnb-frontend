@@ -60,6 +60,11 @@
             font-weight: 600;
             align-self: flex-end;
 
+            @include for-mobile-layout {
+                align-self: center;
+                margin-inline-start: 20px;
+            }
+
         }
     }
 
@@ -73,7 +78,7 @@
         font-family: manrope-bold;
 
         @include for-mobile-layout {
-            margin-top: 1.5rem;
+            margin: 1.5rem auto 1rem auto;
             font-size: 20px;
         }
     }
@@ -125,8 +130,7 @@
             font-family: manrope-medium;
 
             @include for-mobile-layout {
-                margin-top: unset;
-                margin-bottom: 1rem;
+                margin-inline-start: 20px;
                 grid-row: 1/-1;
                 grid-column: 1/-1;
                 color: white;

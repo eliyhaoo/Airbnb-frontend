@@ -14,8 +14,6 @@ export const DashboardTrips = ({history}) => {
     useEffect(() => {
         if (user){
             loadReservations()
-        }else{
-            history.push('/explore')
         }
     }, [])
 
@@ -27,7 +25,8 @@ export const DashboardTrips = ({history}) => {
 
     }
 
-    if (listings.length === 0) return <div className="no-stays">No trips reserved yet!</div>
+    if (!user) return <div className="no-stays"><h2>Please login first</h2></div>
+    if (listings.length === 0) return <div className="no-stays"><h2>No trips reserved yet!</h2></div>
     return <div className="dasboard-reservation">
 
         <h2>

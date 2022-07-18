@@ -15,5 +15,13 @@
         object-fit: cover;
         margin: 10px;
     }
+
+    @include for-mobile-layout {
+
+        .no-stays{
+            font-size:1rem;
+        }
+            
+    }
     
 }
