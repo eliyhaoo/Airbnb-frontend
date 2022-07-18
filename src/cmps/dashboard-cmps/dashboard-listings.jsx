@@ -11,6 +11,7 @@ export const DashboardListings = ({ history }) => {
     const { user } = useSelector(storeState => storeState.userModule)
 
     useEffect(() => {
+        console.log('user',user);
         loadListings()
     }, [])
 

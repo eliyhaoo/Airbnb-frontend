@@ -18,7 +18,7 @@ const initialState = {
                 'Shared room': false
             },
             amenities: {
-                'Wifi': false,
+                'Wifi': false,  
                 'Kitchen': false,
                 'Heating': false,
                 'Breakfast': false,

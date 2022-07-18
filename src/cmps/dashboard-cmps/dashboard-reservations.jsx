@@ -22,10 +22,9 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import { StatusActionSelect } from './status-action-select'
 import { visuallyHidden } from '@mui/utils'
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { reservationService } from '../../services/reservation.service'
 import { utilService } from '../../services/util.service'
-
-import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { Loader } from '../general-cmps/loader'
 import { useSelector } from 'react-redux'
 
@@ -245,10 +244,7 @@ export const DashboardReservations = () => {
 
     const loadReservations = async () => {
         const hostReservations = await reservationService.query({ hostId: user._id })
-
-
         setReservation(hostReservations)
-
     }
 
     const handleRequestSort = (event, property) => {

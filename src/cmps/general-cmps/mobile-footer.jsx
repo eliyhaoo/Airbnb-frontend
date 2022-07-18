@@ -6,6 +6,10 @@ export const MobileFooter = () => {
 
     const {visitedPage} = useSelector(storeState => storeState.systemModule)
     return <div className="mobile-footer">
-        <MobileMenu/>
-       { visitedPage === 'details-page' && <ReservationComponent/>}    </div>
+
+       { visitedPage === 'details-page' ? <ReservationComponent/>
+       :
+       <MobileMenu/>
+       }    
+       </div>
 }

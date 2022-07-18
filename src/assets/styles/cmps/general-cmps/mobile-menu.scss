@@ -13,14 +13,15 @@
             object-fit: cover;
         }
 
-        & .active {
-            img {
-                filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%);
-            }
-            
+        .mobile-element-container {
+            &.active {
+                img {
+                    filter: invert(38%) sepia(74%) saturate(4464%) hue-rotate(330deg) brightness(100%) contrast(95%);
+                }
 
-            .name {
-                font-weight: 600;
+                .name {
+                    font-weight: 600;
+                }
             }
         }
     }

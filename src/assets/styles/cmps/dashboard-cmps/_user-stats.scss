@@ -1,37 +1,43 @@
-.user-stats{
+.user-stats {
 
- 
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
-    gap:15px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 15px;
     background-color: $backgroundClr;
 
     margin-bottom: 3rem;
 
-    .stats-container{
+    .stats-container {
 
-        :first-child{
+        :first-child {
             margin-bottom: em(4px);
         }
+
         border: 1px solid $borderClr;
         padding: 15px 20px;
         border-radius: 14px;
-        box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+        box-shadow: 0 1px 2px rgb(0 0 0 / 8%),
+        0 4px 12px rgb(0 0 0 / 5%);
 
-        .precentage-span{
-            color:$sucsess;
-        //    font-family: manrope-bold;
+        .precentage-span {
+            color: $sucsess;
+            //    font-family: manrope-bold;
             font-family: cereal-medium;
-           margin-inline-start:0.5em ;
+            margin-inline-start: 0.5em;
         }
     }
 
-    .stats-img-container{
+    .stats-img-container {
         height: 88%;
         padding: 6px 8px;
         border-radius: 4px;
         aspect-ratio: 1/1;
         align-self: center;
+    }
+
+    @include for-mobile-layout {
+        grid-template-columns: repeat(auto-fill, minmax(189px, 1fr));
     }
 
 
