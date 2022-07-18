@@ -9,7 +9,7 @@ import home from '../../assets/svg/home-mobile-menu.svg'
 
 
 export const MobileMenu = () => {
-    const [activeOption, setActiveOption] = useState('')
+    const [activeOption, setActiveOption] = useState('home')
 
     useEffect(() => {
         console.log(activeOption)
@@ -21,6 +21,10 @@ export const MobileMenu = () => {
 
     return <div className="mobile-menu flex direction-column align-center">
         <div className="mobile-menu-elements-container flex">
+            <Link to="/"><div className={("mobile-element-container flex direction-column align-center" + ((activeOption === 'home') ? ' active' : ''))} onClick={() => onChooseActiveOption('home')}>
+                <img className="Profile-img" src={home} />
+                <span className="name">Home</span>
+            </div></Link>
             <Link to='/explore'><div className={("mobile-element-container flex direction-column align-center" + ((activeOption === 'explore') ? ' active' : ''))} onClick={() => onChooseActiveOption('explore')}>
                 <img className="search-img" src={searchSvg} />
                 <span className="name">Explore</span>
@@ -37,10 +41,7 @@ export const MobileMenu = () => {
                 <img className="Profile-img" src={profileSvg} />
                 <span className="name">Log in</span>
             </div></Link>
-            <Link to="/"><div className={("mobile-element-container flex direction-column align-center" + ((activeOption === 'home') ? ' active' : ''))} onClick={() => onChooseActiveOption('home')}>
-                <img className="Profile-img" src={home} />
-                <span className="name">Home</span>
-            </div></Link>
+
         </div>
     </div>
 }
