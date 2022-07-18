@@ -18,6 +18,7 @@ html {
     @include for-mobile-layout {
         font-size: 0.7rem;
 
+
     }
 
 
@@ -27,7 +28,11 @@ body {
     font-family: cereal-book;
     margin: 0;
     font-size: rem(14px);
+
+
 }
+
+
 
 
 a {

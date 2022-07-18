@@ -28,7 +28,6 @@ export const StayDetails = ({ history }) => {
             try {
                 const stay = await stayService.getById(stayId)
                 setStay(stay)
-
                 if (!stay) history.push('/explore')
             } catch (err) {
                 console.error(err)

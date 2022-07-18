@@ -86,8 +86,15 @@ const _AppHeader = ({ history }) => {
 
     }
 
+    const isHeaderHidden = () => {
+        if (visitedPage === 'become-host-page' ||
+            visitedPage === 'login-page' ||
+            visitedPage === 'signup-page') return true
+            return false
+    }
 
-    return visitedPage === 'become-host-page' ?
+
+    return isHeaderHidden() ?
         <React.Fragment></React.Fragment>
         :
         visitedPage === 'dashboard-page' ?
@@ -98,45 +105,49 @@ const _AppHeader = ({ history }) => {
                 setModalUserOptions={setModalUserOptions}
                 modalUserOptions={modalUserOptions} />
 
-            : 
-            visitedPage !== 'details-page' ? <MobileHeader></MobileHeader> : <React.Fragment></React.Fragment>
-            // <header onClick={onCloseSearchBig}
-            //     className={getMainHeaderClass()}>
+            :
+            // visitedPage !== 'details-page' ? 
+            // <MobileHeader history={history}/> : <React.Fragment></React.Fragment>
+            <React.Fragment>
+                {visitedPage !== 'details-page' && <MobileHeader history={history} />}
+                <header onClick={onCloseSearchBig}
+                    className={getMainHeaderClass()}>
 
-               
-            //     <div className={getHeaderContainerClass()}>
-            //         <div className="header-content-container flex space-between align-center">
-            //             <NavLink to='/'><h2 className='logo-img flex space-between'><img src={logoSvg} />
-            //                 <span className="app-name">homebnb</span></h2></NavLink>
+                    <div className={getHeaderContainerClass()}>
+                        <div className="header-content-container flex space-between align-center">
+                            <NavLink to='/'><h2 className='logo-img flex space-between'><img src={logoSvg} />
+                                <span className="app-name">homebnb</span></h2></NavLink>
 
-            //             {!isSearchOpen && <StaySearch
-            //                 setModalOpen={setModalOpen}
-            //                 setSearchToggle={setSearchToggle}
-            //                 setIsBig={setIsBig} />
-            //             }
+                            {!isSearchOpen && <StaySearch
+                                setModalOpen={setModalOpen}
+                                setSearchToggle={setSearchToggle}
+                                setIsBig={setIsBig} />
+                            }
 
-            //             {isReservationVisible ?
-            //                 <ReservationComponent />
-            //                 :
-            //                 <MainHeader
-            //                     setModalUserOptions={setModalUserOptions}
-            //                     modalUserOptions={modalUserOptions}
-            //                     visitedPage={visitedPage}
-            //                     user={user}
-            //                     isNotficationOn={isNotficationOn}
-            //                 />
-            //             }
-            //         </div>
+                            {isReservationVisible ?
+                                <ReservationComponent />
+                                :
+                                <MainHeader
+                                    setModalUserOptions={setModalUserOptions}
+                                    modalUserOptions={modalUserOptions}
+                                    visitedPage={visitedPage}
+                                    user={user}
+                                    isNotficationOn={isNotficationOn}
+                                />
+                            }
+                        </div>
 
-            //         <StaySearchExpand
-            //             setSearchToggle={setSearchToggle}
-            //             isSearchOpen={isSearchOpen} history={history}
-            //             isBig={isBig} setIsBig={setIsBig}
-            //             modalOpen={modalOpen}
-            //             setModalOpen={setModalOpen}
-            //         />
-            //     </div>
-            // </header>
+                        <StaySearchExpand
+                            setSearchToggle={setSearchToggle}
+                            isSearchOpen={isSearchOpen} history={history}
+                            isBig={isBig} setIsBig={setIsBig}
+                            modalOpen={modalOpen}
+                            setModalOpen={setModalOpen}
+                        />
+                    </div>
+
+                </header>
+            </React.Fragment>
 
 }
 
