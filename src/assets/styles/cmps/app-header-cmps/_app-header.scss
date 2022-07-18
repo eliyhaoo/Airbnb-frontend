@@ -161,6 +161,10 @@
             }
         }
     }
+
+    @include for-mobile-layout {
+        display: none;
+    }
 }
 
 
@@ -179,3 +183,5 @@
         border-radius: 50%;
     }
 }
+
+
