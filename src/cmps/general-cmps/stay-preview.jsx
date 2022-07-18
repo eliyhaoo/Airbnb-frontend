@@ -8,7 +8,11 @@ import heartPinkSvg from '../../assets/svg/heart-pink.svg'
 
 export const StayPreview = ({ stay, history, onToggleInWishList, checkIsInWishList }) => {
 
-    const heartSvg = checkIsInWishList(stay._id) ? heartPinkSvg : heartGreySvg
+    let heartSvg
+    if (onToggleInWishList){
+
+       heartSvg = checkIsInWishList(stay._id) ? heartPinkSvg : heartGreySvg
+    }
     return <div className="stay-preview flex direction-column">
 
         <div className="preview-imgs-container">

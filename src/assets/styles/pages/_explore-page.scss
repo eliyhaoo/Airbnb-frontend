@@ -47,11 +47,8 @@
     }
 
     @include for-mobile-layout {
-
             .filter-container {
                 display: none;
-            }
-            
-        
+            }        
     }
 }

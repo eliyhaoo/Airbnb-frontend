@@ -72,6 +72,10 @@
         }
     }
 
+    .carousel-component{
+        display: none;
+    }
+
     .details-img-container {
         width: 100%;
         padding-top: em(22px);
@@ -165,6 +169,7 @@
             display:none;
         }
         .carousel-component{
+            display: block;
             order: -1;
             grid-column: 1 / -1;
             .preview-img {

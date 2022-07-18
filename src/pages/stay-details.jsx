@@ -45,9 +45,10 @@ export const StayDetails = ({ history }) => {
             <StayHeaderActions history={history} />
         </div>
 
-        {/* <div className="details-img-container">
+        <div className="details-img-container">
             {stay.imgUrls.map((imgUrl, idx) => <img className={`img${idx + 1}`} key={idx} src={imgUrl} alt="house" />)}
-        </div> */}
+        </div> 
+        
         <CarouselComponent
             stayImgUrls={stay.imgUrls}
             stayId={stayId}

@@ -1,7 +1,7 @@
 .dashboard-header {
 
     cursor: pointer;
-    position:relative;
+    position: relative;
     top: 0px;
     background-color: $backgroundClr;
     margin-bottom: 1.6rem;
@@ -24,7 +24,7 @@
         }
 
         .user-img {
-            
+
             height: 34px;
             flex-grow: 1;
             border-radius: 50%;
@@ -68,9 +68,10 @@
 
     .dashboard-page-nav {
 
-        .dashboard-link-title{
+        .dashboard-link-title {
             font-family: cereal-medium;
         }
+
         >* {
             padding: 10px 16px;
             display: inline-block;
@@ -79,23 +80,23 @@
 
                 position: relative;
 
-                .after-container {
-                    &::before {
-                        content: "⎯";
-                        bottom: 0px;
-                        height: 2px;
-                        left: 50%;
-                        margin-left: -9px;
-                        position: absolute;
+                &.active {
 
+                    .after-container {
+                        &::before {
+                            content: "⎯";
+                            bottom: 0px;
+                            height: 2px;
+                            left: 50%;
+                            margin-left: -9px;
+                            position: absolute;
+
+                        }
                     }
                 }
             }
 
-            
-            // &:hover{
-            //     border-bottom: 1px solid $secondary
-            // }
+
             &:hover {
                 border-radius: 40px;
                 background-color: rgba(235, 235, 235, 0.357);
@@ -103,18 +104,16 @@
             }
         }
     }
+
+    @include for-mobile-layout {
+
+        .user-details-container,
+        .logo-app {
+            display: none;
+        }
+
+        .header-content-container {
+            margin: 0 auto;
+        }
+    }
 }
-
-
-// .new-info-indicator {
-//     position: absolute;
-//     z-index: 1;
-//     cursor: pointer;
-//     height: 10px;
-//     min-width: 10px;
-//     top: 2px;
-//     right: 4px;
-//     box-shadow: 0 0 0 1.5px $backgroundClr;
-//     background-color: $primary;
-//     border-radius: 50%;
-// }

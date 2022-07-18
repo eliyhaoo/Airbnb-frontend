@@ -10,7 +10,9 @@ export const MobileHeader = ({history}) => {
     const dispatch = useDispatch()
     const [isFilterOpen, setFilterModal]=useState(false)
     const { filterBy } = useSelector(storeState => storeState.stayModule)
+    const { visitedPage } = useSelector(storeState => storeState.systemModule)
     const [location,setLocation] = useState('')
+    
     
 
     const onSearchBy = (ev) => {
@@ -26,7 +28,7 @@ export const MobileHeader = ({history}) => {
         setLocation(target.value)
     }
 
-    return <section className="mobile-header">
+    return <section className={`mobile-header ${visitedPage === 'home-page' && 'home'}`}>
         <form onSubmit={onSearchBy}>
             <div className="mobile-search-container flex space-between align-center">
 

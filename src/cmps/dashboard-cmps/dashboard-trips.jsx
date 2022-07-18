@@ -1,15 +1,42 @@
+import { useState } from "react";
 import { useEffect } from "react"
+import { useSelector } from "react-redux";
+import { reservationService } from "../../services/reservation.service";
+import { StayPreview } from "../general-cmps/stay-preview";
 
-export const DashboardTrips =()=>{
+export const DashboardTrips = ({history}) => {
 
-     useEffect(()=>{
-         console.log('TRIPS MOUNTED!!!!!!!!!!!');
-     },[])
+    const { user } = useSelector(storeState => storeState.userModule)
+    const { stays } = useSelector(storeState => storeState.stayModule)
+    const [listings, setlistings]=useState([])
+    
 
+    useEffect(() => {
+        if (user){
+            loadReservations()
+        }else{
+            history.push('/explore')
+        }
+    }, [])
+
+    const loadReservations= async ()=>{
+        const reservations = await reservationService.query({buyerId:user._id})
+        const userListings = stays.filter(stay=>reservations.some(reservation=>reservation.stayId === stay._id))
+        setlistings(userListings)
+        console.log('RESERV LISTINGS',userListings);
+
+    }
+
+    if (listings.length === 0) return <div className="no-stays">No trips reserved yet!</div>
     return <div className="dasboard-reservation">
 
-<h2>
-    My Trips
-    </h2>
+        <h2>
+            My Trips
+        </h2>
+
+        <div className="stay-list">
+            {listings.map(listing => <StayPreview key={listing._id} stay={listing} history={history} />)}
+        </div>
+        
     </div>
 }

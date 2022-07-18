@@ -1,6 +1,6 @@
 
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { Route, Switch } from "react-router-dom"
 import { DashboardReservations } from "../cmps/dashboard-cmps/dashboard-reservations"
 import { DashboardTrips } from "../cmps/dashboard-cmps/dashboard-trips"
@@ -11,14 +11,17 @@ import { setVisitPage } from "../store/actions/system.action"
 
 export const DashboardPage = () => {
 
+    const { user } = useSelector(sotreState => sotreState.userModule)
+
+
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(setVisitPage('dashboard-page'))
     }, [])
 
     return <section className="dashboard-page full main-layout">
-       
-        <UserStats />
+
+        {user?.isHost && <UserStats />}
         <main className="main-dashboard">
 
             <Switch>
@@ -31,7 +34,7 @@ export const DashboardPage = () => {
 
 
         </main>
-     
+
 
     </section>
 }
