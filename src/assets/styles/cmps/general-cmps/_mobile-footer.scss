@@ -1,11 +1,12 @@
 .mobile-footer {
     display: none;
     position: fixed;
-    width:100%;
-    bottom:0;
-    left:0;
-    padding:20px 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 13px 13px;
     background-color: $backgroundClr;
+    border-top: 1px solid rgb(235, 235, 235);
 
     @include for-mobile-layout {
         display: block;

@@ -24,7 +24,6 @@ export const StaySearchExpand = ({ setModalOpen, modalOpen, isBig, setIsBig, his
         ev.preventDefault()
         dispatch(setFilterBy('searchBy', searchByFields))
         setSearchToggle(false)
-        console.log('SearchByFields DATEDS BEFORE QUERY', searchByFields.dates)
         history.push(`/explore/?location=${searchByFields.location}&dates=${JSON.stringify(searchByFields.dates)}&guests=${searchByFields.guestsNum}`)
     }
 

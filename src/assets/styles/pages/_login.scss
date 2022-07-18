@@ -1,17 +1,21 @@
-.login{
+.login {
     margin: 150px 0;
 
+    @include for-mobile-layout {
+        margin: unset;
+    }
 
-        .css-1999axt-MuiAvatar-root{
-            background-color: $secondary;
+    .css-1999axt-MuiAvatar-root {
+        background-color: $secondary;
+    }
+
+    .css-1vhaqj4-MuiButtonBase-root-MuiButton-root {
+        background-color: $secondary;
+
+        &:hover {
+            background-color: $secondary
         }
-        
-        .css-1vhaqj4-MuiButtonBase-root-MuiButton-root {
-            background-color: $secondary;
-                &:hover{
-                    background-color: $secondary
-                }
-        }        
+    }
 
 
 
