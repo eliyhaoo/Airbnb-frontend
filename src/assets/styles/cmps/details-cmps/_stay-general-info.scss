@@ -1,37 +1,36 @@
-
-.stay-general-info{
+.stay-general-info {
     padding-top: 32px;
     padding-bottom: 32px;
-    
 
-    .general-info-container{
+    .general-info-container {
         margin-bottom: 24px;
-        img{
+
+        img {
             height: 24px;
             width: 24px;
         }
 
-    .general-info{
-        margin-left: 16px;
+        .general-info {
+            margin-left: 16px;
 
-        .title{
-            font-weight: 600;
-            line-height: em(20px);
-            margin-bottom: 4px;
-            font-family: cereal-medium;
+            .title {
+                font-weight: 600;
+                line-height: em(20px);
+                margin-bottom: 4px;
+                font-family: cereal-medium;
+            }
+
+            .subtitle {
+                color: $subtext;
+                font-weight: 400;
+                font-size: em(14px);
+                line-height: em(20px);
+            }
+
         }
-
-        .subtitle{
-            color: $subtext;
-            font-weight: 400;
-            font-size: em(14px);
-            line-height: em(20px);
-        }
-
     }
-}
-    
-    .air-cover{
+
+    .air-cover {
         padding-top: em(32px);
         padding-bottom: em(32px);
         border-bottom: 1px solid rgb(221, 221, 221);
@@ -41,31 +40,30 @@
         letter-spacing: 0.3px;
         line-height: 24px;
 
-        img{
+        img {
             height: rem(32px);
         }
 
-        p{
+        p {
             padding-top: em(14px);
             margin: 0;
-            
+
         }
     }
 
-    @include for-mobile-layout{
-        .title{
-            font-size: 14px ;
+    @include for-mobile-layout {
+        .title {
+            font-size: 14px;
         }
 
-        .subtitle{
+        .subtitle {
             font-size: 12px !important;
         }
 
-        .air-cover{
-            p{
+        .air-cover {
+            p {
                 font-size: 14px;
             }
         }
     }
-
 }

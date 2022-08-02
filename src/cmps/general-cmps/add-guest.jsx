@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateReserve } from '../../store/actions/reserve.action'
-
 import plusSvg from '../../assets/svg/plus.svg'
 import minusSvg from '../../assets/svg/minus.svg'
 import disabledMinusSvg from '../../assets/svg/minus-disabled.svg'
 
-
 export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }) => {
-
     const dispatch = useDispatch()
     const [guestsFields, setGuests] = useState(guests)
     const [decreaseBtnMode, setBtnMode] = useState({
@@ -18,14 +15,13 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
     })
 
     const onUpdateGuests = (field, diff) => {
-
         if (diff === -1 && guestsFields[field] <= ((field !== 'adults') ? 0 : 1)) {
             setBtnMode({ ...decreaseBtnMode, [field]: false })
             return
         }
+
         if (diff === -1 && guestsFields[field] <= ((field !== 'adults') ? 1 : 2)) setBtnMode({ ...decreaseBtnMode, [field]: false })
         else setBtnMode({ ...decreaseBtnMode, [field]: true })
-
 
         const newGuests = { ...guestsFields, [field]: guestsFields[field] + diff, total: guestsFields.total + diff }
         setGuests(newGuests)
@@ -53,16 +49,12 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
 
     return <section className="add-guest">
         <div className={`guest-inputs ${isInSearch && 'search-bar'} flex direction-column `}>
-
-
             {guestInputs.map(input =>
-
                 <div key={input.id} className="guest-input-container flex space-between align-center">
                     <div className="flex direction-column">
                         <div className="count-input-title">{input.title}</div>
                         <div className="count-input-subtitle">{input.subtitle}</div>
                     </div>
-
                     <div className="count-container flex space-between">
                         <button className={`add-guest-decerase-btn ${decreaseBtnMode[input.id] ? '' : 'disbaled'}`} type='button' onClick={() => onUpdateGuests(input.id, -1)}>
                             <div className="count-btn-container"> <img src={decreaseBtnMode[input.id] ? minusSvg : disabledMinusSvg} alt="minus" /></div>
@@ -74,7 +66,6 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
                     </div>
                 </div >
             )}
-
 
             {
                 !isInSearch &&
@@ -88,7 +79,6 @@ export const AddGuest = ({ setSearchByFields, onCloseModal, guests, isInSearch }
                     </div>
                 </React.Fragment>
             }
-
         </div >
     </section >
 }

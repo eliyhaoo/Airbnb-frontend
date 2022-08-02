@@ -1,9 +1,8 @@
 .explore-page {
     margin-top: 95px;
 
-
     .filter-container {
-        height: 86px;
+        height: 78px;
         position: sticky;
         top: 78px;
         background-color: white;
@@ -11,12 +10,9 @@
 
         &.scroll {
             box-shadow: -1px 6px 7px -6px $borderClr;
-
         }
 
-
         .filter-btns-container {
-            // padding: 8px 0 0 0;
             margin: 8px 0 0 0;
         }
 
@@ -36,7 +32,6 @@
             justify-content: space-around;
         }
 
-
         .filter-img-btn {
             height: 14px;
             font-weight: 400;
@@ -48,8 +43,8 @@
     }
 
     @include for-mobile-layout {
-            .filter-container {
-                display: none;
-            }        
+        .filter-container {
+            display: none;
+        }
     }
 }

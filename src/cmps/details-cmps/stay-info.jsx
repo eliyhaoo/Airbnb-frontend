@@ -3,8 +3,8 @@ import { utilService } from '../../services/util.service'
 import { LongTxt } from '../general-cmps/long-txt'
 
 export const StayInfo = ({ stay }) => {
-    return <section className="stay-info-container">
 
+    return <section className="stay-info-container">
         <div className="stay-info">
             <div>
                 <h2>{stay.roomType} hosted by {stay.host.fullname}</h2>
@@ -20,11 +20,8 @@ export const StayInfo = ({ stay }) => {
             </div>
             <img src={stay.host.thumbnailUrl} alt="profile" />
         </div>
-
         <div className="stay-description">
             <LongTxt txt={stay.summary} maxLength={200} />
         </div>
-
-
     </section>
 }

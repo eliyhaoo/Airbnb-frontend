@@ -16,8 +16,6 @@ export const userService = {
     update
 }
 
-
-
 function getUsers() {
     return httpService.get(`user`)
 }
@@ -40,7 +38,6 @@ async function login(userCred) {
     const user = await httpService.post('auth/login', userCred)
     socketService.login(user.id)
     return saveLocalUser(user)
-
 }
 
 async function signup(userCred) {

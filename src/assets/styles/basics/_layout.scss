@@ -14,7 +14,6 @@
         min-height: 100vh
     }
 
-
     @include for-mobile-layout {
         @include layoutGTC($mobile-breakpoint, $mobilePadding);
     }
@@ -26,7 +25,6 @@
     @include for-wide-layout {
         @include layoutGTC($break-wide);
     }
-
 }
 
 .home-page-layout {
@@ -45,7 +43,6 @@
         grid-template-columns: 0 1fr 0;
 
     }
-
 }
 
 .details-layout {
@@ -67,6 +64,4 @@
     @include for-mobile-layout {
         @include layoutGTC($mobile-breakpoint, $mobilePadding);
     }
-
-
 }

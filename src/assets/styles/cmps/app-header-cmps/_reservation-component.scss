@@ -1,6 +1,4 @@
 .header-component {
-
-
     .reservation-component-container {
         width: 300px;
         justify-content: flex-end;
@@ -42,17 +40,18 @@
 
     @include for-mobile-layout {
         .reservation-component-container {
-            width:100%;
-            justify-content:space-between
+            width: 100%;
+            justify-content: space-between
         }
 
-        .preview-rating{
+        .preview-rating {
             font-size: 12px !important;
         }
 
-        .stay-reserve-price{
+        .stay-reserve-price {
             font-size: 12px !important;
-            .price-span{
+
+            .price-span {
                 font-size: 14px !important;
             }
         }

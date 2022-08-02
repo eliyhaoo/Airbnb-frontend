@@ -8,8 +8,8 @@ export function CarouselComponent({ stayImgUrls, stayId, history, showStatus = f
         history.push(`/stay/${stayId}`)
     }
 
-    // if (!stayImgUrls) return <Loader/>
     if (!stayImgUrls) return <React.Fragment></React.Fragment>
+
     return (
         <div className="carousel-component">
             <Carousel className="preview-carousel" showThumbs={false} showStatus={showStatus} showIndicators={false} selectedItem={0} onClickItem={onClickItem} >
@@ -18,7 +18,6 @@ export function CarouselComponent({ stayImgUrls, stayId, history, showStatus = f
                         <img className="preview-img" src={img} />
                     </div>
                 )}
-
             </Carousel >
         </div >
     )

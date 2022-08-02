@@ -1,14 +1,12 @@
 .dashboard-reservations {
-
-    h2{
+    h2 {
         margin-bottom: 3rem;
     }
 
     .reservation-status-table-head {
-
         font-family: cereal-medium;
         font-size: 1rem;
-        margin-inline-start:1rem;
+        margin-inline-start: 1rem;
 
         &.approved {
             color: $sucsess;
@@ -21,7 +19,5 @@
         &.pending {
             color: $pending;
         }
-
     }
-
 }

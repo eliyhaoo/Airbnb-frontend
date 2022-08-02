@@ -1,5 +1,4 @@
 .amenities-container {
-
     .amenities {
         padding-bottom: em(22px);
     }
@@ -169,10 +168,12 @@
                 &.Pets::before {
                     content: url('../../../svg/Pets allowed.svg');
                 }
+
                 &.Long::before {
                     content: url('../../../svg/Long term.svg');
                 }
             }
+
             .amenite {
                 padding-left: 7px;
             }
@@ -181,16 +182,15 @@
     }
 
     @include for-mobile-layout {
-      
-        .stay-amenities{
-            grid-template-columns:1fr
+        .stay-amenities {
+            grid-template-columns: 1fr
         }
 
-        .amenite-img-container{
+        .amenite-img-container {
             font-size: 14px;
         }
 
-        .amenite-img{
+        .amenite-img {
             height: 32px;
         }
     }

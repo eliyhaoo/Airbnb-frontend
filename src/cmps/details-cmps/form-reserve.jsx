@@ -10,14 +10,10 @@ import { socketService, SOCKET_EMIT_RESERVATION } from '../../services/socket.se
 import dropDownSvg from '../../assets/svg/arrow-down.svg'
 
 export const FormReserve = ({ stay }) => {
-
     const { reserve } = useSelector(storeState => storeState.reserveModule)
     const { user } = useSelector(storeState => storeState.userModule)
-
     const [isModalOpen, setModal] = useState(false)
-
     const { dates, guests } = reserve
-
     const onCloseModal = (ev) => {
         ev.stopPropagation()
         setModal(false)
@@ -30,7 +26,6 @@ export const FormReserve = ({ stay }) => {
 
     const onReserve = async () => {
         if (user !== 'guest') {
-
             try {
                 const updatedReservation = updateReserveFields()
                 await reservationService.save(updatedReservation)
@@ -75,11 +70,9 @@ export const FormReserve = ({ stay }) => {
 
                 <CheckoutDatePicker dates={dates} />
             </div>
-
             <div className="guest-input flex space-between align-center" onClick={() => setModal(true)}>
                 <div className="flex direction-column">
                     <label>GUESTS</label>
-
                     <input placeholder={getGuestsForDisplay()}></input>
                 </div>
                 <div className={"img-container"} >
@@ -90,7 +83,6 @@ export const FormReserve = ({ stay }) => {
                 </div>
             </div>
         </div>
-
         <div onClick={onReserve} className="btn-container">
             {_.times(99, (i) => <div key={i} className="cell"></div>)}
             <div className="content">
@@ -98,15 +90,10 @@ export const FormReserve = ({ stay }) => {
                     <span>Reserve</span>
                 </button>
             </div>
-
         </div>
-
         <p>You won't be charged yet</p>
-
         {totalPrice > 0 && <React.Fragment>
-
             <div className='order-summary-container'>
-
                 <div className="summary-details flex space-between">
                     <div className="summary-label">{`${stay.price} x ${utilService.checkForPlurals('night', totalNights)}`}</div>
                     <div className="summary-total">${utilService.getPriceWithCommas(totalPrice)}</div>
@@ -119,15 +106,12 @@ export const FormReserve = ({ stay }) => {
                     <div className="summary-label">Service fee</div>
                     <div className="summary-total">$0</div>
                 </div>
-
             </div>
-
             <div className="total-price flex space-between">
                 <div>Total</div>
                 <div >${utilService.getPriceWithCommas(totalPrice + 149)}</div>
             </div >
         </React.Fragment >
-
         }
     </div >
 }

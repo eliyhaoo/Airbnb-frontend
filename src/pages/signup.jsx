@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
-
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -12,7 +11,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-
 import { onSignup } from '../store/actions/user.actions'
 
 const theme = createTheme();
@@ -32,7 +30,7 @@ export function _Signup(props) {
             await props.onSignup(user)
             props.history.push('/explore')
         } catch (err) { console.log(err) }
-  
+
     }
 
     return (
@@ -98,7 +96,6 @@ export function _Signup(props) {
                                         autoComplete="new-password"
                                     />
                                 </Grid>
-
                             </Grid>
                             <Button
                                 type="submit"
@@ -117,19 +114,18 @@ export function _Signup(props) {
                             </Grid>
                         </Box>
                     </Box>
-
                 </Container>
             </ThemeProvider>
         </section>
     )
 }
 
-
 function mapStateToProps(storeState) {
     return {
         user: storeState.userModule.user,
     }
 }
+
 const mapDispatchToProps = {
     onSignup,
 }

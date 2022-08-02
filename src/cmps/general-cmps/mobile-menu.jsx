@@ -8,10 +8,8 @@ import profileSvg from '../../assets/svg/profile-mobile-menu.svg'
 import travelsSvg from '../../assets/svg/logo-mobile-menu.svg'
 import home from '../../assets/svg/home-mobile-menu.svg'
 
-
 export const MobileMenu = () => {
     const dispatch = useDispatch()
-
     const [activeOption, setActiveOption] = useState('home')
     const { user } = useSelector(storeState => storeState.userModule)
 
@@ -64,7 +62,6 @@ export const MobileMenu = () => {
                     <span className="name">Logout</span>
                 </div>
             }
-
         </div>
     </div>
 }

@@ -31,7 +31,6 @@ import { useSelector } from 'react-redux'
 const themeHeader = createTheme({
     typography: {
         fontFamily: 'cereal-medium'
-
     },
 });
 const theme = createTheme({
@@ -40,7 +39,6 @@ const theme = createTheme({
 
     },
 });
-
 
 function descendingComparator(a, b, orderBy) {
     if (b[orderBy] < a[orderBy]) {
@@ -53,12 +51,10 @@ function descendingComparator(a, b, orderBy) {
 }
 
 function getComparator(order, orderBy) {
-
     return order === 'desc'
         ? (a, b) => descendingComparator(a, b, orderBy)
         : (a, b) => -descendingComparator(a, b, orderBy);
 }
-
 
 function stableSort(array, comparator) {
     const stabilizedThis = array.map((el, index) => [el, index])
@@ -124,7 +120,7 @@ const headCells = [
 ];
 
 function EnhancedTableHead(props) {
-    const {  order, orderBy, onRequestSort } =
+    const { order, orderBy, onRequestSort } =
         props
     const createSortHandler = (property) => (event) => {
         onRequestSort(event, property)
@@ -172,7 +168,6 @@ EnhancedTableHead.propTypes = {
 
 const EnhancedTableToolbar = (props) => {
     const { numSelected } = props
-
     return (
         <Toolbar
             sx={{
@@ -200,7 +195,7 @@ const EnhancedTableToolbar = (props) => {
                     id="tableTitle"
                     component="div"
                 >
-                    
+
                 </Typography>
             )}
 
@@ -233,9 +228,8 @@ export const DashboardReservations = () => {
     const [dense, setDense] = React.useState(false)
     const [rowsPerPage, setRowsPerPage] = React.useState(5)
     const [reservations, setReservation] = React.useState(null)
-
     const { user } = useSelector(storeState => storeState.userModule)
-  
+
     React.useEffect(() => {
         if (!user) return
         loadReservations()
@@ -296,7 +290,6 @@ export const DashboardReservations = () => {
         setDense(event.target.checked)
     };
 
-
     const isSelected = (name) => selected.indexOf(name) !== -1
 
     // Avoid a layout jump when reaching the last page with empty rows.
@@ -308,7 +301,7 @@ export const DashboardReservations = () => {
         return dateToDisplay
     }
 
-    if (!reservations) return <Loader/>
+    if (!reservations) return <Loader />
     return (
         <section className="dashboard-reservations">
             <h2>Reservations</h2>

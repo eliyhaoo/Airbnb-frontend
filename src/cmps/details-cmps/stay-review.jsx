@@ -3,7 +3,6 @@ import { Loader } from '../../cmps/general-cmps/loader'
 import starSvg from '../../assets/svg/star.svg'
 
 export const StayReview = ({ stay }) => {
-
     if (!stay) return <Loader />
 
     const reviewScoreKeys = Object.keys(stay.reviewScores)
@@ -15,7 +14,6 @@ export const StayReview = ({ stay }) => {
             <span>·</span>
             <span>{utilService.checkForPlurals('review', stay.reviews.length)} </span>
         </div>
-
         <div className="reviews-stats-container">
             {reviewScoreKeys.map((reviewField, idx) => {
                 if (reviewField === 'Rating') return
@@ -29,10 +27,5 @@ export const StayReview = ({ stay }) => {
             }
             )}
         </div>
-
-      
-
     </section>
-
-
 }

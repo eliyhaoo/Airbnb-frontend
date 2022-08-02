@@ -20,18 +20,13 @@
         border-radius: 40px;
         box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
 
-        // padding: 8px 15px;
-
-
         .search-modal {
             position: absolute;
             left: -23px;
             top: 12px;
-            // top:100%;
             opacity: 1;
             z-index: 510;
             margin-top: 20px;
-            // height: 245px;
             max-height: calc(100vh - 150px);
             min-height: calc(50vh - 150px);
             width: 486px;
@@ -44,11 +39,9 @@
 
             &.country-container {
                 >:first-child {
-                    // font-family: circular-book;
                     font-family: cereal-medium;
                     margin-bottom: 28px;
                     margin-inline-start: 16px;
-
                 }
             }
 
@@ -56,7 +49,6 @@
                 top: 65px;
                 left: -127px;
                 width: 406px;
-                // padding: 34px 32px;
                 padding: 16px 32px;
                 font-size: 1rem;
 
@@ -64,11 +56,7 @@
 
         }
 
-        // .stay-search-expand .stay-search-expand-container input 
         .search-location-expand {
-
-
-
             &.open {
                 background-color: $backgroundClr;
                 border-radius: 40px;
@@ -78,7 +66,6 @@
         }
 
         .search-date-expand {
-
             span {
                 color: $subtext;
             }
@@ -86,13 +73,8 @@
             &.open {
                 padding: 0;
                 height: 100%;
-                // background-color: $backgroundClr;
-                // border-radius: 40px;
-                // flex-grow: 0.6;
-                // box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px 0px;
             }
         }
-
 
         .search-label {
             font-family: cereal-medium;
@@ -110,7 +92,6 @@
             &:focus-visible {
                 outline: unset;
             }
-
         }
 
         >* {
@@ -119,7 +100,6 @@
             &:hover {
                 background-color: $hoover;
                 border-radius: 40px;
-
             }
 
             &.open {
@@ -132,7 +112,6 @@
         >*:not(:nth-child(2)) {
             flex-grow: 1;
         }
-
 
         >:nth-child(2) {
             flex-grow: 2.5;
@@ -159,19 +138,16 @@
             }
 
             .search-btn-container {
-
                 &.src-btn-small-expand {
                     width: 48px;
-               
-                  
-                    
+
                     .content {
                         background: $primary;
                         padding: 16px;
                         aspect-ratio: 1;
                         width: 48px;
                         border-radius: 50%;
-                        
+
                     }
                 }
 
@@ -188,7 +164,6 @@
                     }
 
                     .action-btn {
-
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -198,7 +173,7 @@
 
                             &::before {
                                 content: "Search";
-                                color:$backgroundClr;
+                                color: $backgroundClr;
                                 // font-family: manrope-semi-bold;
                                 font-family: cereal-book;
                             }
@@ -209,46 +184,21 @@
                         }
                     }
                 }
-
-
-
-
             }
 
         }
     }
 }
 
-
-
-// .MuiPaper-root {
-
-//     &.MuiPaper-elevation {
-
-//         &.MuiPaper-rounded {
-
-//             &.MuiPaper-elevation8 {
-
-//                 &.css-1smlk3z-MuiPaper-root {
-//                     border-radius: 32px;
-//                     margin-top: 14px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .MuiPaper-root {
-
     &.css-1smlk3z-MuiPaper-root {
         border-radius: 32px;
         margin-top: 14px;
     }
-    
-    &.css-1tihz4g-MuiPaper-root{
+
+    &.css-1tihz4g-MuiPaper-root {
         border-radius: 32px;
         margin-top: 14px;
-
     }
 
 }

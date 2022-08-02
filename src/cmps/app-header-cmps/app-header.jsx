@@ -82,17 +82,14 @@ const _AppHeader = ({ history }) => {
         className += visitedPage === 'details-page' ? 'details-layout ' :
             visitedPage === 'explore-page' ? 'main-layout ' : 'home-page-layout '
         return className
-
-
     }
 
     const isHeaderHidden = () => {
         if (visitedPage === 'become-host-page' ||
             visitedPage === 'login-page' ||
             visitedPage === 'signup-page') return true
-            return false
+        return false
     }
-
 
     return isHeaderHidden() ?
         <React.Fragment></React.Fragment>
@@ -106,8 +103,6 @@ const _AppHeader = ({ history }) => {
                 modalUserOptions={modalUserOptions} />
 
             :
-            // visitedPage !== 'details-page' ? 
-            // <MobileHeader history={history}/> : <React.Fragment></React.Fragment>
             <React.Fragment>
                 {visitedPage !== 'details-page' && <MobileHeader history={history} />}
                 <header onClick={onCloseSearchBig}

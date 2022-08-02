@@ -1,23 +1,21 @@
 import * as React from 'react'
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import Rating from '@mui/material/Rating'
 import Stack from '@mui/material/Stack'
-
 import { saveStay } from '../../store/actions/stay.action'
 
 export function AddReview({ stay }) {
     const { user } = useSelector(storeState => storeState.userModule)
+    const dispatch = useDispatch()
     const [review, setReview] = useState({
         at: Date.now(),
         txt: ''
     })
 
     useEffect(() => {
-
     }, [stay.reviews])
 
     const [reviewScore, setReviewScore] = useState({
@@ -30,11 +28,9 @@ export function AddReview({ stay }) {
         rating: 0
     })
 
-    const dispatch = useDispatch()
-
     const onAddReview = (ev) => {
         ev.preventDefault()
-        if (!user) return 
+        if (!user) return
         const newReview = {
             ...review, by: {
                 _id: user._id,
@@ -59,13 +55,9 @@ export function AddReview({ stay }) {
     }
 
     return <div className="add-review-container">
-
-
         <h3>Add a review about this stay</h3>
         <form className="review-form" onSubmit={(onAddReview)}>
-
             <div className="review-rating-container">
-
                 <div className='review-rating'>
                     <p>Cleanliness:</p>
                     <Stack spacing={1.5} >
@@ -103,22 +95,16 @@ export function AddReview({ stay }) {
                     </Stack>
                 </div>
             </div>
-
-
             <Box
                 sx={{
                     maxWidth: '100%',
-
                 }}
             >
                 <TextField name="txt" id="txt" value={review.txt} onChange={handleChange} autoComplete="off" fullWidth label="Share your exprience with this stay" />
             </Box>
-
-
             <button>Add Review</button>
         </form>
     </div>
-
 }
 
 

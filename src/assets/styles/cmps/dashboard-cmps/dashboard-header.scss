@@ -1,5 +1,4 @@
 .dashboard-header {
-
     cursor: pointer;
     position: relative;
     top: 0px;
@@ -8,7 +7,6 @@
 
     .user-details-container {
         height: 42px;
-        // border: 1px solid $borderClr;
         background-color: $backgroundClr;
         border-radius: 50%;
         cursor: pointer;
@@ -24,19 +22,14 @@
         }
 
         .user-img {
-
             height: 34px;
             flex-grow: 1;
             border-radius: 50%;
             object-fit: cover;
-            // margin: 10px;
-            // margin-top:14px;
         }
 
         .user-menu {
             height: 1rem;
-            // height: fit-content;
-
         }
 
         .user-options-container {
@@ -51,7 +44,6 @@
                 transform: translateX(3px);
             }
         }
-
     }
 
     .host-img {
@@ -77,11 +69,9 @@
             display: inline-block;
 
             a {
-
                 position: relative;
 
                 &.active {
-
                     .after-container {
                         &::before {
                             content: "⎯";
@@ -90,17 +80,14 @@
                             left: 50%;
                             margin-left: -9px;
                             position: absolute;
-
                         }
                     }
                 }
             }
 
-
             &:hover {
                 border-radius: 40px;
                 background-color: rgba(235, 235, 235, 0.357);
-
             }
         }
     }
@@ -115,6 +102,7 @@
         .header-content-container {
             margin: 0 auto;
         }
+
         .dashboard-link-title {
             font-family: cereal-medium;
             font-size: 1rem;

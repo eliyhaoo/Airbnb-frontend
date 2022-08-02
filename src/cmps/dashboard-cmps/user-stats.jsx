@@ -36,10 +36,8 @@ export const UserStats = () => {
     ]
 
     return <div className="user-stats">
-
         {statsFields.map(field =>
             <div className="stats-container flex space-between align-center">
-
                 <div className="stats-info-container flex direction-column">
                     <div className="stats-title">{field.title}</div>
                     <div >
@@ -47,13 +45,10 @@ export const UserStats = () => {
                         {field.precentage && <span className="precentage-span">{field.precentage}</span>}
                     </div>
                 </div>
-
                 <div className="stats-img-container">
                     <img src={field.svg} alt={field.alt} />
                 </div>
-
             </div>
         )}
-        
     </div>
 }

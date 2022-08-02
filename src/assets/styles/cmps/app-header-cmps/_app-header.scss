@@ -7,20 +7,14 @@
     transition: 1s;
 
     .header-container {
-        
-
         .header-content-container {
-
             display: relative;
-            // background-color: $backgroundClr;
+
             >:first-child {
                 width: 300px;
             }
 
             height: 80px;
-
-
-        
 
             .user-nav-container {
                 width: 300px;
@@ -46,19 +40,16 @@
                     }
 
                     .user-img {
-                        
                         height: 34px;
                         flex-grow: 1;
                         border-radius: 50%;
                         object-fit: cover;
                         margin: 10px;
-                        margin-top:14px;
+                        margin-top: 14px;
                     }
 
                     .user-menu {
                         height: 1rem;
-                        // height: fit-content;
-
                     }
 
                     .user-options-container {
@@ -73,7 +64,6 @@
                             transform: translateX(3px);
                         }
                     }
-
                 }
 
                 .main-nav {
@@ -87,18 +77,16 @@
                         height: 100%;
 
                         &:hover {
-
                             color: $secondary;
                             border-radius: 32px;
                             background-color: rgba(235, 235, 235, 0.357);
                         }
                     }
                 }
-
             }
         }
 
-       
+
 
         .logo-img {
             width: 135px;
@@ -118,13 +106,11 @@
         background-color: $backgroundClr;
 
         .header-content-container {
-
             .user-nav-container {
                 gap: 15px;
                 justify-content: flex-end;
-                
+
                 .main-nav {
-                    
                     a {
                         color: inherit;
 
@@ -135,17 +121,12 @@
     }
 
     &.pages {
-
-        // height: 193px;
         border-bottom: 1px solid $borderClr;
-
         background-color: $backgroundClr;
 
         .header-content-container {
-
             a {
                 color: $secondary;
-
             }
         }
 
@@ -153,10 +134,8 @@
             height: unset;
 
             .header-content-container {
-
                 a {
                     color: inherit;
-
                 }
             }
         }
@@ -167,9 +146,9 @@
     }
 }
 
-
 .dashboard-host-options {
-    position:relative;
+    position: relative;
+
     .new-info-indicator {
         position: absolute;
         z-index: 1;
@@ -183,5 +162,3 @@
         border-radius: 50%;
     }
 }
-
-

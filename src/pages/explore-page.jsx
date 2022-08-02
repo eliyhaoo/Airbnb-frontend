@@ -7,16 +7,13 @@ import { loadStays, setFilterBy } from '../store/actions/stay.action'
 import { setVisitPage } from '../store/actions/system.action'
 import filterImg from '../assets/svg/filter.svg'
 
-
 export const ExplorePage = ({ history }) => {
     const dispatch = useDispatch()
     const { stays, filterBy } = useSelector(storeState => storeState.stayModule)
     const [isModalOpen, setFilterModal] = useState(false)
     const [isPageScroll, setisPageScroll] = useState(false)
 
-
     useEffect(() => {
-
         dispatch(setVisitPage('explore-page'))
         const searchParams = history.location.search
         if (searchParams) {
@@ -53,23 +50,16 @@ export const ExplorePage = ({ history }) => {
 
     return <section className="explore-page ">
         <div className={`filter-container ${isPageScroll ? 'scroll' : ''} full`}>
-
             <div className="filter-btns-container flex align-center space-between">
-
                 <CategoriesFilter />
-
                 <button className="filter-btn flex align-center"
                     onClick={() => setFilterModal(true)} ><div className="img-container flex align-center">
                         <img className="filter-img-btn" src={filterImg} /></div>
                     <span>Filters</span>
                 </button>
-
                 {isModalOpen && <StayFilter history={history} setFilterModal={setFilterModal} />}
-
             </div>
         </div>
-
         <StayList stays={stays} history={history} />
-
     </section >
 }
