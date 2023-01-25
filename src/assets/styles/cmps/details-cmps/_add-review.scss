@@ -1,71 +1,60 @@
-
-.add-review-container{
+.add-review-container {
     padding-top: em(32px);
     padding-bottom: em(32px);
     border-bottom: 1px solid $borderClr;
 
-    h3{
+    h3 {
         padding-bottom: 1.375em;
     }
 
-    button{
-    font-weight: 500;
-    margin-top: 2.3em;
-    font-size: 0.875rem;
-    line-height: 1.75;
-    letter-spacing: 0.02857em;
-    text-transform: uppercase;
-    min-width: 64px;
-    padding: 5px 15px;
-    border-radius: 4px;
-    border: 1px solid $btnBorderClr;
-        &:hover{
+    button {
+        font-weight: 500;
+        margin-top: 2.3em;
+        font-size: 0.875rem;
+        line-height: 1.75;
+        letter-spacing: 0.02857em;
+        text-transform: uppercase;
+        min-width: 64px;
+        padding: 5px 15px;
+        border-radius: 4px;
+        border: 1px solid $btnBorderClr;
+
+        &:hover {
             background: $footer;
         }
     }
-    
-    .review-rating-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 20px;
-    column-gap: 6rem;
 
+    .review-rating-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 20px;
+        column-gap: 6rem;
 
-        
-    .review-rating{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        column-gap: 1.6rem;
+        .review-rating {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1.6rem;
+        }
+    }
+
+    .css-iljtu2-MuiRating-root {
+        color: $secondary;
+    }
+
+    .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+        height: 75px;
+    }
+
+    .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+        color: $secondary
+    }
+
+    .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: $secondary;
+    }
+
+    .css-1kty9di-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+        color: $secondary
     }
 }
-.css-iljtu2-MuiRating-root {
-    color: $secondary;
-}
-
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
-    height: 75px;
-}
-
-// .css-iljtu2-MuiRating-root:active {
-//     // color: $secondary;
-//     color: $subtext;
-// }
-
-
-.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
-    color:$secondary
-}
-
-.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
-    border-color: $secondary;
-}
-
-.css-1kty9di-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-    color:$secondary
-}
-
-}
-
-
-

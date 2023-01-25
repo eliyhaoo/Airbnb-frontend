@@ -10,7 +10,6 @@ export const StayList = ({ stays, history, onRemoveStay }) => {
     const [wishList, setWishList] = useState(user ? user.wishList : storageService.getGuestWishList())
     const dispatch = useDispatch()
 
-
     const onToggleInWishList = (ev, stayId) => {
         ev.stopPropagation()
         let newWishList

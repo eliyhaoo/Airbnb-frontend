@@ -23,10 +23,7 @@
         border-inline-end: 1px solid $borderClr;
     }
 
-    // margin-inline-start: 15px;
-
     .search-guest {
-
         .search-guest-btn {
             flex-grow: 1;
             padding-inline-start: 15px;
@@ -41,10 +38,7 @@
             padding: 10px;
             aspect-ratio: 1;
         }
-
     }
-
-
 
     transition: box-shadow 0.2s ease;
 }

@@ -1,36 +1,29 @@
-.categories-container{
-
-    >div{
-
-        .sc-bdVaJa.etbmwA{
-            
-            &::after{
-                content:'';
-                position:absolute;
+.categories-container {
+    >div {
+        .sc-bdVaJa.etbmwA {
+            &::after {
+                content: '';
+                position: absolute;
                 background: linear-gradient(90deg, #0000, $backgroundClr);
-                // background: linear-gradient(90deg, #0000, red);
                 width: 7%;
                 height: 100%;
-                top:50%;
-                right:25px;
+                top: 50%;
+                right: 25px;
                 transform: translateY(-50%);
             }
-          
         }
-        .sc-bwzfXH.kVtMtA{
-            
-            &::after{
-                content:'';
-                position:absolute;
+
+        .sc-bwzfXH.kVtMtA {
+            &::after {
+                content: '';
+                position: absolute;
                 background: linear-gradient(270deg, #0000, $backgroundClr);
-                // background: linear-gradient(90deg, #0000, red);
                 width: 7%;
                 height: 100%;
-                top:50%;
-                left:25px;
+                top: 50%;
+                left: 25px;
                 transform: translateY(-50%);
             }
-          
         }
     }
 }
@@ -40,7 +33,6 @@
         margin: 0;
     }
 }
-
 
 .sc-ifAKCX {
     &.bqyzQp {
@@ -53,9 +45,7 @@
                     height: 8px;
                     width: 8px;
                 }
-
             }
-
         }
     }
 
@@ -75,22 +65,6 @@
 
 }
 
-// .sc-ifAKCX {
-//     &.bqyzQp {
-//         .sc-bdVaJa {
-//             &.etbmwA {
-//                 height: 28px;
-//                 width: 28px;
-
-//                 &::before {
-//                     height: 8px;
-//                     width: 10px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .sc-dnqmqq .bVoXXg {
     max-width: fit-content;
 }
@@ -98,29 +72,3 @@
 .tjQrB {
     justify-items: center;
 }
-
-// .bhRnqO,
-// .kVtMtA {
-//     height: 28px;
-//     width: 28px;
-
-//     border: 1px solid $subtext;
-//     box-shadow: unset;
-
-//     &:hover {
-//         box-shadow: 0 0 5px 0 #0009;
-//     }
-
-// }
-
-
-
-// .sc-bdVaJa .etbmwA {
-
-//     span .bhRnqO::before {
-//         height: 7px;
-//         width: 7px;
-
-
-//     }
-// }

@@ -1,43 +1,43 @@
 .search-country {
     position: relative;
 
-        .regions-grid {
+    .regions-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 124px);
+        gap: 24px 10px;
+        margin-inline-start: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
 
-            width:100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 124px);
-            gap: 24px 10px;
-            margin-inline-start: 15px;
-            margin-top: 10px ;
-            margin-bottom: 20px ;
+        .region-container {
 
-            .region-container {
+            height: 153px;
 
-                height: 153px;
+            .country-img {
+                border-radius: 12px;
+
+            }
+
+            > :last-child {
+                margin-top: 8px
+            }
+
+            &:hover {
+
                 .country-img {
-                    // min-height: 124px;
-                    border-radius:12px ;
-
+                    border: 2px solid $secondary
                 }
-                > :last-child{
-                    margin-top:8px
-                }
+            }
 
-                &:hover{
-
-                    .country-img{
-                        border: 2px solid $secondary
-                    }
-                }
-
-                &.selected{
-                    .country-img{
-                        border: 3px solid $secondary
-                    }
+            &.selected {
+                .country-img {
+                    border: 3px solid $secondary
                 }
             }
         }
+    }
 
-    
+
 
 }

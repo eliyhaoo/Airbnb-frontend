@@ -5,13 +5,11 @@ import { Link } from 'react-router-dom'
 import { setVisitPage } from "../store/actions/system.action"
 
 export const HomePage = ({ history }) => {
-
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(setVisitPage('home-page'))
     }, [])
-
 
     const onSelectCity = (city) => {
         history.push(`/explore/?location=${city}`)
@@ -20,16 +18,12 @@ export const HomePage = ({ history }) => {
 
     return <section className="home-page full">
         <div className="hero-container full">
-
             <div className="hero full flex">
             </div>
-
             <span className="hero-text">
                 Not sure where to go? Perfect.
             </span>
-
         </div>
-
         <div className="popular-destinations home-page-layout">
             <h1 className="popular-destinations-title">Popular Destinations</h1>
             <div className="popular-destinations-imgs-container">
@@ -40,10 +34,8 @@ export const HomePage = ({ history }) => {
                         </div>
                     </div>
                 )}
-
             </div>
         </div>
-
         <div className="become-a-host-container home-page-layout">
             <div className="become-a-host-elements-container">
                 <img className="become-a-host-img" src={require('../assets/img/become-a-host.jpg')} />

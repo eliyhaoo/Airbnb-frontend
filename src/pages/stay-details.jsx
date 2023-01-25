@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-
 import { stayService } from '../services/stay.service'
 import { setVisitPage } from '../store/actions/system.action'
 import { StayMap } from "../cmps/details-cmps/stay-map"
@@ -35,7 +34,6 @@ export const StayDetails = ({ history }) => {
         })();
     }, [])
 
-
     if (!stay) return <Loader />
 
     return <section className="stay-details-page details-layout">
@@ -44,19 +42,15 @@ export const StayDetails = ({ history }) => {
             <StayHeaderInfo stay={stay} />
             <StayHeaderActions history={history} />
         </div>
-
         <div className="details-img-container">
             {stay.imgUrls.map((imgUrl, idx) => <img className={`img${idx + 1}`} key={idx} src={imgUrl} alt="house" />)}
-        </div> 
-        
+        </div>
         <CarouselComponent
             stayImgUrls={stay.imgUrls}
             stayId={stayId}
             history={history}
             showStatus={true}
         />
-
-
         <section className="stay-display-info">
             <div className="stay-summary-container">
                 <StayInfo stay={stay} />
@@ -65,14 +59,11 @@ export const StayDetails = ({ history }) => {
             </div>
             <StayReserve stay={stay} />
         </section>
-
         <StayReview stay={stay} />
         <ReviewList stay={stay} />
         <AddReview stay={stay} />
-
         <div className="stay-map">
             {<StayMap latlng={{ lat: stay.address.location.lat, lng: stay.address.location.lng }} />}
         </div>
-
     </section >
 }

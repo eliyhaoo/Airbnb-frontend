@@ -1,7 +1,5 @@
-
-.stay-review{
-
-    .reviews-stats-header{
+.stay-review {
+    .reviews-stats-header {
         font-family: cereal-medium;
         display: flex;
         align-items: center;
@@ -10,44 +8,51 @@
         line-height: 26px;
         margin-top: rem(48px);
         margin-bottom: rem(36px);
+
         span:first-child:last-child {
             padding-right: 8px;
         }
-        span{
+
+        span {
             padding-right: 4px;
         }
-        img{
+
+        img {
             height: 20px;
         }
     }
 
-    .reviews-stats-container{
+    .reviews-stats-container {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px 10.5%;
         margin-bottom: 30px;
         padding: 5px;
- 
-        .reviews-stats{
+
+        .reviews-stats {
             display: flex;
             justify-content: space-between;
             margin-bottom: 16px;
 
-            .review-rates-container{
+            .review-rates-container {
                 gap: 4px;
                 font-size: 14px;
-                meter{
-                    // height: 0.8rem;
+
+                meter {
                     height: rem(14.5px);
                     width: 7rem;
                 }
-                meter::-webkit-meter-bar {background:$border;} /*background color of bar*/
-                meter::-webkit-meter-optimum-value {background:$secondary;}
+
+                meter::-webkit-meter-bar {
+                    background: $border;
+                }
+
+                meter::-webkit-meter-optimum-value {
+                    background: $secondary;
+                }
             }
         }
-        
-        
     }
 
     @include for-mobile-layout {
@@ -58,7 +63,3 @@
         }
     }
 }
-
-
-
-

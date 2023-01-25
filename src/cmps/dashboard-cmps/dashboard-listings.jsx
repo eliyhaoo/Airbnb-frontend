@@ -4,16 +4,14 @@ import { StayPreview } from '../general-cmps/stay-preview'
 import { Loader } from '../../cmps/general-cmps/loader'
 import { useSelector } from 'react-redux'
 
-
 export const DashboardListings = ({ history }) => {
-
     const [listings, setListings] = useState()
     const { user } = useSelector(storeState => storeState.userModule)
 
     useEffect(() => {
-        if (user){
+        if (user) {
             loadListings()
-        }else{
+        } else {
             history.push('/explore')
         }
     }, [])
@@ -25,11 +23,9 @@ export const DashboardListings = ({ history }) => {
 
     if (!listings || !listings.length) return <Loader />
     return <section className="dashboard-listings flex direction-column">
-
         <h2 className="dashboard-title">Listings</h2>
         <div className="stay-list">
             {listings.map(listing => <StayPreview key={listing._id} stay={listing} history={history} />)}
         </div>
-
     </section>
 }

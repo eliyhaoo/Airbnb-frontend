@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux'
 import languageIcon from '../../assets/svg/language-icon.svg'
 
 export const AppFooter = () => {
-
     const { visitedPage } = useSelector(storeState => storeState.systemModule)
 
     return <section className={("app-footer full " + visitedPage)}>

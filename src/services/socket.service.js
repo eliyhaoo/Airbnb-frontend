@@ -6,13 +6,10 @@ const SOCKET_EMIT_LOGOUT = 'unset-user-socket'
 export const SOCKET_EMIT_RESERVATION = 'reservation-made'
 export const SOCKET_ON_RESERVATION_RECEIVED = 'reservation-receive'
 
-
 const baseUrl = (process.env.NODE_ENV === 'production') ? '' : '//localhost:3030'
 export const socketService = createSocketService()
 
-
 socketService.setup()
-
 
 function createSocketService() {
   var socket = null;

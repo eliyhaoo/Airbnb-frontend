@@ -1,12 +1,10 @@
 import { LongTxt } from '../general-cmps/long-txt'
 import { utilService } from '../../services/util.service'
 
-
-
 export const ReviewPreview = ({ review }) => {
     const date = new Date(review.at)
-    return <div className="review">
 
+    return <div className="review">
         <div className="review-user-info">
             <img src={review.by.imgUrl} alt="profile picture" />
             <div className="flex direction-column">
@@ -14,10 +12,7 @@ export const ReviewPreview = ({ review }) => {
                 <span className="review-date">{utilService.getMonthName(date)} {date.getFullYear()}</span>
             </div>
         </div>
-
         <LongTxt txt={review.txt} maxLength={100} />
-
-
     </div>
 
 

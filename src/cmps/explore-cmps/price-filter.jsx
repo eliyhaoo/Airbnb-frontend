@@ -8,7 +8,6 @@ import Tooltip from '@mui/material/Tooltip'
 import Box from '@mui/material/Box'
 
 import { utilService } from '../../services/util.service'
-
 function ValueLabelComponent(props) {
     const { children, value } = props
 
@@ -33,7 +32,7 @@ const AirbnbSlider = styled(Slider)(({ theme }) => ({
         width: 27,
         backgroundColor: '#fff',
         border: '1px solid currentColor',
-    
+
         '& .airbnb-bar': {
             height: 9,
             width: 1,

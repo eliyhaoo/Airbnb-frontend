@@ -10,31 +10,22 @@ import { DashboardListings } from "../cmps/dashboard-cmps/dashboard-listings"
 import { setVisitPage } from "../store/actions/system.action"
 
 export const DashboardPage = () => {
-
     const { user } = useSelector(sotreState => sotreState.userModule)
-
-
     const dispatch = useDispatch()
+
     useEffect(() => {
         dispatch(setVisitPage('dashboard-page'))
     }, [])
 
     return <section className="dashboard-page full main-layout">
-
         {user?.isHost && <UserStats />}
         <main className="main-dashboard">
-
             <Switch>
                 <Route path="/dashboard/trip" component={DashboardTrips} />
                 <Route path="/dashboard/wishlist" component={DashboardWishlist} />
                 <Route path="/dashboard/listings" component={DashboardListings} />
                 <Route path="" component={DashboardReservations} />
             </Switch>
-
-
-
         </main>
-
-
     </section>
 }

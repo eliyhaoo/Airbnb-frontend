@@ -25,9 +25,6 @@
         }
     }
 
-
-
-    /* Black w/ opacity */
     .filter-modal {
         animation-name: filter-modal;
         animation-duration: 10s;
@@ -52,9 +49,14 @@
             border-top: 1px solid rgb(235, 235, 235);
             padding: rem(30px);
             overflow-y: scroll;
+<<<<<<< HEAD
             // max-height: 60vh;
             height: 60vh;
             position:relative;
+=======
+            height: 100%;
+            position: relative;
+>>>>>>> 9acf024549499d4cf1d0759b144f50865088f132
 
             .form-grid {
                 display: grid;
@@ -68,8 +70,6 @@
             }
 
             .filter-type {
-
-
                 .price-filter-container {
                     align-items: center;
                     justify-content: center;
@@ -96,14 +96,12 @@
                                 margin-inline-end: 5px;
                             }
                         }
-
                     }
 
                     .minus-price-filter {
                         margin: 8px;
                         font-size: 16px;
                     }
-
 
                     .css-1hjq20a {
                         width: 100%;
@@ -224,31 +222,28 @@
     }
 
     @include for-mobile-layout {
-
         .filter-modal {
             width: 90%;
             height: 90%;
             transform: translate(-50%, 0);
             top: 20px;
 
-            .modal-title{
+            .modal-title {
                 font-size: 1.5rem;
             }
-            
-            .filter-form{
-                height:90%;
+
+            .filter-form {
+                height: 90%;
             }
 
-            .filter-footer{
+            .filter-footer {
                 position: sticky;
                 bottom: -10px;
                 background-color: $backgroundClr;
                 padding: 20px 0;
             }
         }
-
     }
-
 }
 
 .screen {
@@ -262,7 +257,6 @@
     z-index: 500;
 
     &.header-open {
-        // top: rem(165px);
         top: 165px;
     }
 

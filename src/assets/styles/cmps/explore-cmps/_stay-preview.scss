@@ -11,7 +11,6 @@
 
         .carousel-component {
             border-radius: 12px;
-            // aspect-ratio: 1;
             object-fit: cover;
             grid-column: 1/-1;
             grid-row: 1/-1;
@@ -22,18 +21,9 @@
             grid-column: -1/2;
             grid-row: 1;
             z-index: 20;
-            // color: $subtext;
             align-self: flex-end;
             transform: scale(0.92);
-            // filter: opacity(0.5);
-
-            // &.active {
-            //     // fill: #f8385c;
-            //     filter: invert(29%) sepia(64%) saturate(2726%) hue-rotate(331deg) brightness(103%) contrast(95%);
-
-            // }
         }
-
     }
 
     .preview-details-container {
@@ -56,7 +46,6 @@
         }
 
         .preview-rating-container {
-            // width: rem(40px);
             grid-column: 2;
             grid-row: 1;
             justify-self: flex-end;
@@ -65,8 +54,6 @@
 
         .preview-country-city {
             line-height: 19px;
-            // font-weight: 600;
-            // font-family: 'cereal-medium';
         }
 
         .preview-room-type,
@@ -94,6 +81,4 @@
             width: 26% !important;
         }
     }
-
-
 }

@@ -1,24 +1,10 @@
-
-.review-list{
+.review-list {
     columns: 300px 2;
     column-gap: 94px;
     padding-bottom: em(32px);
     border-bottom: 1px solid rgb(221, 221, 221);
-    .review{
+
+    .review {
         -webkit-column-break-inside: avoid;
     }
 }
-
-
-// .review-list{
-//     display: flex;
-//     flex-wrap: wrap;
-//     width: 100%;
-//     .review-list>*{
-//         flex: 1 1;
-//     }
-// }
-
-
-
-

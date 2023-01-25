@@ -2,7 +2,6 @@
     background-color: $footer;
     bottom: 0;
     width: 100%;
-    // position: static;
     box-shadow: inset 0 0.5px 0 0 $border;
     z-index: 50;
 
@@ -30,7 +29,6 @@
             line-height: 2.5;
         }
     }
-
 
     .language-icon {
         height: 14px;

@@ -23,11 +23,10 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
     };
 
     const setReservationStatus = async () => {
-        console.log('RESERVATION BEFORE SENDING', reservation);
+        // console.log('RESERVATION BEFORE SENDING', reservation);
         const updatedResevation = await reservationService.save(reservation)
         loadReservations()
-        console.log('RESERVATION AFTER SENDING', reservation);
-
+        // console.log('RESERVATION AFTER SENDING', reservation);
     }
 
     const selectProps = (status !== 'pending') ?
@@ -40,8 +39,8 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
         {
             variant: "standard",
             sx: { m: 0, minWidth: 120 },
-
         }
+
     return (
         <div>
             <ThemeProvider theme={theme}>
@@ -60,7 +59,6 @@ export const StatusActionSelect = ({ reservation, loadReservations }) => {
                     </Select>
                 </FormControl>
             </ThemeProvider>
-
         </div>
     );
 }

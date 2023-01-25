@@ -18,16 +18,13 @@ import { storageService } from '../services/async-storage.service'
 import { onLogin } from '../store/actions/user.actions'
 import { setVisitPage } from '../store/actions/system.action'
 
-
 const theme = createTheme()
 export function _Login(props) {
-
     const [errorMsg, setErrorMsg] = useState('')
     const dispatch = useDispatch()
-
-    React.useEffect(()=>{
+    React.useEffect(() => {
         dispatch(setVisitPage('login-page'))
-    },[])
+    }, [])
     const handleSubmit = async (event) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
@@ -42,9 +39,7 @@ export function _Login(props) {
         } catch (err) {
             console.log(err)
             setErrorMsg(err.response.data.err)
-
         }
-
     }
 
     return (
@@ -77,7 +72,6 @@ export function _Login(props) {
                                 autoComplete="email"
                                 autoFocus
                                 helperText={errorMsg}
-
                             />
                             <TextField
                                 margin="normal"
@@ -90,7 +84,6 @@ export function _Login(props) {
                                 autoComplete="current-password"
                                 helperText={errorMsg}
                             />
-
                             <Button
                                 type="submit"
                                 fullWidth
@@ -99,9 +92,7 @@ export function _Login(props) {
                             >
                                 Sign In
                             </Button>
-
                             <Grid container>
-
                                 <Grid item>
                                     <Link to="/signup" variant="body2">
                                         {"Don't have an account? Sign Up"}
@@ -112,7 +103,6 @@ export function _Login(props) {
                     </Box>
                 </Container>
             </ThemeProvider>
-
         </section>
     )
 }
@@ -122,6 +112,7 @@ function mapStateToProps(storeState) {
         user: storeState.userModule.user,
     }
 }
+
 const mapDispatchToProps = {
     onLogin,
 }

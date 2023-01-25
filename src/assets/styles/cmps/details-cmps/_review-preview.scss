@@ -1,6 +1,5 @@
 .review {
     padding: 10px 0px;
-    // flex-basis: 50%;
     padding-inline-end: rem(100px);
     color: $secondary;
 
@@ -18,8 +17,6 @@
         h4 {
             letter-spacing: 0.5px;
             line-height: 1.5rem;
-            // font-size: em(26px);
-            // padding-top: rem(22px);
             font-family: cereal-medium;
         }
 
@@ -37,13 +34,13 @@
         color: $subtext;
     }
 
-    @include for-mobile-layout{
-        .review-user-info{
-            h4{
+    @include for-mobile-layout {
+        .review-user-info {
+            h4 {
                 font-size: 14px;
             }
 
-            span{
+            span {
                 font-size: 11px !important;
             }
         }

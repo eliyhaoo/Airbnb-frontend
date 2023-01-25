@@ -1,12 +1,11 @@
-.stay-map{
-
+.stay-map {
     padding-top: 48px;
 
-    h2{
-       padding-bottom: 24px;
+    h2 {
+        padding-bottom: 24px;
     }
 
-    @include for-mobile-layout{
+    @include for-mobile-layout {
         padding-top: 15px;
     }
 }

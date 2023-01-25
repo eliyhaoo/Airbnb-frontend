@@ -15,7 +15,6 @@ export const ReservationComponent = () => {
 
     const onReserve = async () => {
         if (user !== 'guest') {
-            
             try {
                 const updatedReservation = updateReserveFields()
                 await reservationService.save(updatedReservation)
@@ -44,24 +43,20 @@ export const ReservationComponent = () => {
         return (new Date(reserve.dates.checkOut) - new Date(reserve.dates.checkIn)) / (1000 * 60 * 60 * 24)
     }
 
-    if (!stay) return <Loader/>
+    if (!stay) return <Loader />
+
     return <section className="header-component">
-
         <div className="reservation-component-container flex">
-
             <div className="order-details-container flex direction-column space-between">
                 <div className="price-pernight-container">
                     <p className="stay-reserve-price"><span className="price-span">${utilService.getPriceWithCommas(stay.price)}</span> night</p>
                 </div>
-
                 <div className="preview-rating flex space-between">
                     <img src={starSvg} alt="star" />
                     <div>{stay.reviewScores.Rating} ·  </div>
                     <span className="reviews-count-span">{stay.reviews.length} reviews</span>
                 </div>
-
             </div>
-
             <div onClick={onReserve} className="btn-container">
                 {_.times(99, (i) => <div key={i} className="cell"></div>)}
                 <div className="content">
@@ -70,7 +65,6 @@ export const ReservationComponent = () => {
                     </button>
                 </div>
             </div>
-
         </div>
     </section>
 }

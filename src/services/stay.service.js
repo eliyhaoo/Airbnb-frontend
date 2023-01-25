@@ -17,7 +17,6 @@ async function getById(stayId) {
     return httpService.get(`stay/${stayId}`)
 }
 
-
 async function remove(stayId) {
     return httpService.delete(`stay/${stayId}`)
 }
@@ -32,14 +31,10 @@ async function save(stay) {
     return savedStay
 }
 
-
 function getCategories() {
     const categories = gCategories
     return categories
 }
-
-
-
 
 const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Design', img: 'design' },
@@ -59,8 +54,6 @@ const gCategories = [{ title: '', img: 'allhomes' },
 { title: 'Tropical', img: 'tropical' },
 { title: 'Golfing', img: 'golfing' },
 { title: 'Countryside', img: 'countryside' }
-
-
 ]
 
 
