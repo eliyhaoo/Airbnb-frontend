@@ -19,12 +19,12 @@
             // background-image: url(https://images.unsplash.com/photo-1512552288940-3a300922a275?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80);
             // background-image: url(https://a0.muscache.com/im/pictures/4f9936a6-d61f-45e1-af8d-edffba22da3f.jpg?im_w=1200);
 
-            // background-image: url(https://a0.muscache.com/im/pictures/13be3768-e560-4edf-9df4-0d0bc3fdec70.jpg?im_w=1200);        
-            // background-image: url(https://a0.muscache.com/im/pictures/monet/Luxury-54242274/original/f0e883c4-b3fc-4cee-b84b-e4e08ff8b54c?im_w=1200);        
+            background-image: url(https://a0.muscache.com/im/pictures/13be3768-e560-4edf-9df4-0d0bc3fdec70.jpg?im_w=1200);
+            // background-image: url(https://a0.muscache.com/im/pictures/monet/Luxury-54242274/original/f0e883c4-b3fc-4cee-b84b-e4e08ff8b54c?im_w=1200);
             // background-image: url(https://a0.muscache.com/im/pictures/8291374d-ecb4-4448-9b74-ee241406a3fb.jpg?im_w=1200);        
 
             // background-image: url(https://a0.muscache.com/im/pictures/8291374d-ecb4-4448-9b74-ee241406a3fb.jpg?im_w=1200);        
-            background-image: url(https://a0.muscache.com/im/pictures/prohost-api/Hosting-46540982/original/02dac999-dcbb-450f-9cef-1751e44254d3.jpeg?im_w=1200);
+            // background-image: url(https://a0.muscache.com/im/pictures/prohost-api/Hosting-46540982/original/02dac999-dcbb-450f-9cef-1751e44254d3.jpeg?im_w=1200);
 
 
             // background-image: url(https://a0.muscache.com/im/pictures/2cb244ef-2dc3-4743-abfa-03947ea18b90.jpg?im_w=1200);        
@@ -45,7 +45,7 @@
             @include for-mobile-layout {
                 grid-template-columns: repeat(1, 1fr);
                 row-gap: 5px;
-                background-position-y:0px;
+                background-position-y: 0px;
             }
 
             img {
